@@ -1,0 +1,1 @@
+<p><span class="code-span">df</span>コマンドはLinuxにマウントされているファイルシステムのディスク使用量を一覧することができるコマンドです。</p><pre class="sample"> df -h</pre><ul><li><span class="code-span">df</span> … コマンド名です</li><li><span class="code-span">-h</span> … ディスクのサイズを読み易い単位で表します。</li></ul><div class="code" name="ターミナル"><pre>プロンプト$ df -h [Enter]ファイルシス   サイズ  使用  残り 使用% マウント位置

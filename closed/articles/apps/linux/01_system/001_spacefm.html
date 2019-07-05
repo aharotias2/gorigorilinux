@@ -1,0 +1,81 @@
+<h3>SpaceFM - マルチタブ・マルチペーンの便利なファイルマネージャー</h3>
+<p>SpaceFMはGTKベースのファイルマネージャーです。</p>
+<p>軽量デスクトップ環境「LXDE」のデフォルトファイルマネージャである「PCmanFM」のフォークですが、デスクトップ環境依存をなくしてバグを修正し、かなり利便性が向上しております。</p>
+<img class="figure" src="images/apps/spacefm1.png" alt="SpaceFMのウィンドウ">
+<div class="outline"></div>
+<h4>リンク</h4>
+<ul>
+    <li><a href="https://ignorantguru.github.io/spacefm/">SpeceFMホームページ</a></li>
+    <li><a href="https://wiki.archlinux.jp/index.php/SpaceFM">SpeceFM - ArchWiki</a></li>
+</ul>
+<h4>特徴</h4>
+<ul>
+    <li>ルートウィンドウにデスクトップアイコンを表示できます。</li>
+    <li>ウィンドウを最大2x2に分割できます。</li>
+    <li>FTP、SSH接続ができます。</li>
+</ul>
+<h4>インストール方法</h4>
+<h5>Ubuntuの場合</h5>
+<p>Ubuntuではaptを使ってインストールできます。</p>
+<ol>
+    <li>Ctrl + Alt + tでターミナルを起動します。</li>
+    <li>「sudo apt udpate」でリポジトリをアップデートします。</li>
+    <li>「sudo apt install curlftpfs」と打ってCurlFtpFSをインストールします。</li>
+    <li>「sudo apt install udevil」と打ってudevilをインストールします。</li>
+    <li>「sudo apt install spacefm-gtk3」と打ってSpaceFMのGTK3バージョンをインストールします。</li>
+</ol>
+<p>zenityはUbuntuに最初から入っているのでインストールしなくてOKです。</p>
+<p>root権限での操作を可能にするには先にrootパスワードを設定しておく必要があります。rootパスワードはターミナルで「sudo passwd root」を打つことで決められます。</p>
+<h5>Fedoraの場合</h5>
+<ol>
+    <li>ターミナル(端末)を開きます。</li>
+    <li>依存性の解決 (インストール済みの場合はとばして下さい)
+        <ol>
+            <li>「sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm」を打ってRPM Fusionをインストールします。</li>
+            <li>ブラウザで「<a href="https://github.com/rpmsphere/noarch/tree/master/r">https://github.com/rpmsphere/noarch/tree/master/r</a>」にアクセスし、「rpmsphere」をページ内検索して、最新版のリリースをダウンロードします。</li>
+            <li>「sudo rpm -Uvh rpmsphere-release*rpm」でダウンロードしたパッケージをインストールします。</li>
+            <li>「sudo dnf install udevil」と打ってudevilをインストールします。</li>
+            <li>「sudo dnf install curlftpfs」と打ってCurlFtpFSをインストールします。</li>
+        </ol>
+    </li>
+    <li>「sudo dnf install spacefm」を打ってSpaceFMをインストールします。</li>
+</ol>
+<h5>Arch Linuxの場合</h5>
+<ol>
+    <li>「git clone https://aur.archlinux.org/spacefm.git」でAURのspacefmをクローンします。</li>
+    <li>クローンしたspacefmのディレクトリに入ります。</li>
+    <li>「makepkg -si」と打ってパッケージを作ります。依存性解決とかは勝手にやってくれますので勝手にやらせてください。成り行きにまかせているとインストールまでやってくれますので、[Y/n]という選択肢がでたら全部そのままエンターしてください (もし[y/N]でしたら「y」と打ってエンターしてください)。</li>
+</ol>
+<h5>Slackwareの場合</h5>
+<p><a href="http://slackbuilds.org">SlackBuilds.org</a>にアクセスし、「spacefm」で検索します。</p>
+<ol>
+    <li>ページ下部から「spacefm.tar.gz」と「spacefm-1.0.6.tar.gz」をダウンロードします。</li>
+    <li>ダウンロードした「spacefm.tar.gz」を解凍し、展開された「spacefm」というディレクトリに「spacefm-1.0.6.tar.gz」を移動します。</li>
+    <li>「spacefm」の中にある「spacefm.SlackBuild」をroot権限で実行します。</li>
+    <li>「/tmp」に作成された「spacefm-1.0.6-x86_64-1_Sbo.tgz」を「installpkg」コマンドでインストールします。</li>
+</ol>
+<p>また、SpaceFMには依存パッケージはありませんが、curlftpfsとudevilをインストールすることでFTPを使えるようにできます。</p>
+<ol>
+    <li><a href="https://slackbuilds.org/repository/14.2/system/curlftpfs/">curlftpfs</a> - リモートファイルシステムに接続するために使います</li>
+    <li><a href="https://slackbuilds.org/repository/14.2/desktop/zenity/">zenity</a> - udevilのエラーメッセージなどを表示するために使います</li>
+    <li><a href="https://slackbuilds.org/repository/14.2/system/udevil/">udevil</a> - 様々なデバイス、ファイルシステムのマウントを行います</li>
+</ol>
+<p>全てSlackBuilds.orgでダウンロードできます。</p>
+<h4>使い方</h4>
+<h5>ウィンドウを分割する</h5>
+<p>ウィンドウの左上のマルをクリックすると、ウィンドウを分割できます。</p>
+<img class="figure" src="images/apps/spacefm2.png">
+<img class="figure" src="images/apps/spacefm3.png">
+<h5>ファイルをroot権限で開く</h5>
+<ol>
+    <li>rootで開きたいファイルを右クリック</li>
+    <li>「Edit As Root」を選択</li>
+    <li>ターミナルが開くので、rootのパスワードを入力する</li>
+    <li>rootでファイルが開きます。</li>
+</ol>
+<h5>rootでファイルを開く時に使うテキストエディタを選択する</h5>
+<p>メニューバー⇒表示(V)⇒Preferences⇒「高度な設定」タブ⇒「Root's Editor」に「gedit %f」などとお好きなエディタを入力してください。</p>
+<h5>FTPホストに接続する</h5>
+<p>SpaceFMでFTP接続するにはアドレスバーに「ftp://[ユーザ名]:[パスワード]@[FTPホスト]」を入力してエンターすればOKです。</p>
+<h4>終わりに</h4>
+<p>FTP、SSHの機能があるのではっきり言ってDropboxよりも便利と言えるかもしれません。私は無料のレンタルFTPサーバを借りてDropboxの代わりに使っています。デバイス数制限などがないので良いですよ。</p>

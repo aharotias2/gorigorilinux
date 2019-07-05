@@ -1,0 +1,115 @@
+<h3>Slackwareのhttpdを起動する</h3>
+<div class="outline"></div>
+<h4>サーバーの名前をローカルホストに決める</h4>
+<p><b>/etc/httpd/httpd.conf</b>というファイルを編集してサーバーの設定を行います。</p>
+<p>まず始めに決めなければならないのは以下の2点です。</p>
+<ul>
+    <li>ServerName</li>
+    <li>ServerAdmin</li>
+</ul>
+<p>ServerNameにはとりあえず「localhost」と設定しておけばOKです。ServerAdminには何か適当なメールアドレスを設定します。</p>
+<p>編集する際はrootユーザになってviなどですると良いでしょう。</p>
+<div class="code" name="ターミナル">
+    <pre>root@あなたのホスト:~# cd /etc/httpd
+root@あなたのホスト:/etc/httpd# vim httpd.conf
+    </pre>
+</div>
+<p>httpd.confを以下のように設定します。実際のファイルにはコメントがたくさん書いてあるので、それを省いたものになります。</p>
+<div class="code" name="/etc/httpd/httpd.conf">
+    <pre>
+Listen 80
+ServerAdmin あなたのメールアドレス
+ServerName localhost</pre>
+</div>
+<p>ここでアパッチサーバを再起動します。</p>
+<div class="code" name="ターミナル">
+    <pre>root@あなたのホスト:~# /etc/rc.d/rc.httpd restart</pre>
+</div>
+<p>http://localhostにアクセスしてみます。It works!という文字が表示されれば成功です。</p>
+<img class="figure" src="images/screenshot-20190209014355.png" alt="http://localhostを表示したところ">
+<h4>CGIを使えるようにする</h4>
+<p>また、httpd.confを編集します。やることは次のものになります。</p>
+<ol>
+    <li>mpm_prefork_moduleというモジュールの有効化</li>
+    <li>cgi_moduleというモジュールの有効化</li>
+    <li>AddHandler cgi-scriptにPHPなどの拡張子を追加</li>
+</ol>
+<p>1. mpm_prefork_moduleというモジュールを有効にします。LoadModuleの行頭の「#」を削除して有効にします。</p>
+<div class="code" name="/etc/httpd/httpd.conf">
+    <pre>LoadModule mpm_prefork_module lib64/httpd/modules/mod_mpm_prefork.so</pre>
+</div>
+<p>名前にmpmが付くモジュールは3種類あり、有効にできるのは一つだけなので、「mpm_prefork_module」以外のmpm系モジュールをコメントアウトします。</p>
+<div class="code" name="/etc/httpd/httpd.conf">
+    <pre>#LoadModule mpm_event_module lib64/httpd/modules/mod_mpm_event.so
+LoadModule mpm_prefork_module lib64/httpd/modules/mod_mpm_prefork.so
+#LoadModule mpm_worker_module lib64/httpd/modules/mod_mpm_worker.so</pre>
+</div>
+<p>2. CGIのモジュールを有効にします。「LoadModule」の行頭にある「#」を削除すると有効になります。</p>
+<div class="code" name="/etc/httpd/httpd.conf">
+    <pre>&lt;IfModule mpm_prefork_module&gt;
+        LoadModule cgi_module lib64/httpd/modules/mod_cgi.so
+&lt;/IfModule&gt;
+    </pre>
+</div>
+<p>3. サーバーがCGIとして認識する拡張子を設定します。</p>
+<div class="code" name="/etc/httpd/httpd.conf">
+    <pre>&lt;IfModule mime_module&gt; <span class="comment"># ※IfModule mime_moduleのブロックの中を探します。</span>
+    AddHandler cgi-script .cgi .php .pl .rb .py <span class="comment"># ※自分がCGIとして使いたいファイルの拡張子を設定します。</span>
+&lt;/IfModule&gt;</pre>
+</div>
+<p>実際にはもっと多くの行がありますが、「<b>&lt;IfModule mime_module&gt;</b>」から「<b>&lt;/IfModule mime_module&gt;</b>」までの間の行に「<b>AddHandler cgi-script</b>」で始まる行があればOKです。そこでphpやrubyなどのファイル拡張子をCGIとして設定してください。</p>
+<p>またアパッチサーバーを再起動します。</p>
+<div class="code" name="ターミナル">
+    <pre>root@あなたのホスト:/etc/httpd# /etc/rc.d/rc.httpd restart [Enter]</pre>
+</div>
+<h4>ユーザーごとのディレクトリを設定する</h4>
+<p>ユーザーのホームディレクトリにhtmlなどを置いたらサーバーが解釈してブラウザに表示してくれたら便利ですよね。その方法をご紹介します。やることは以下になります。</p>
+<ol>
+    <li>userdir_moduleというモジュールの有効化</li>
+    <li>ユーザーディレクトリの名前を決める</li>
+    <li>ユーザーディレクトリでExecCGIを設定する</li>
+</ol>
+<p>1. httpd.confを開き、mod_userdirを有効にします。有効にするにはやはり「LoadModule」の行頭の「#」を削除します。</p>
+<div class="code" name="/etc/httpd/httpd.conf">
+    <pre>LoadModule userdir_module lib64/httpd/modules/mod_userdir.so</pre>
+</div>
+<p>そして、/etc/httpd/httpd.confに/etc/httpd/extra/httpd-userdir.confをIncludeします。これもIncludeの行頭の「#」を削除してインクルードします。</p>
+<div class="code" name="/etc/httpd/httpd.conf">
+    <pre>Include /etc/httpd/extra/httpd-userdir.conf</pre>
+</div>
+<p>2. /etc/httpd/extra/httpd-userdir.confを開き、ユーザごとの公開ディレクトリの名称を決めます。初期値はpublic_htmlなのですが、ここではPublicにしました。</p>
+<div class="code" name=""/etc/httpd/extra/httpd-userdir.conf">
+    <pre><span class="comment">#UserDir public_html ※ここは消す</span>
+UserDir Public
+
+<span class="comment">#&lt;Directory "/home/*/public_html&gt; ※ここも消す</span>
+&lt;Directory "/home/*/Public"&gt;
+    AllowOverride FileInfo AuthConfig Limit Indexes
+    Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec ExecCGI <span class="comment"># ※ExecCGIを足してください</span>
+    Require method GET POST OPTIONS
+&lt;/Directory&lt;</pre>
+</div>
+<p>こうするとユーザのホームディレクトリにあるPublicというディレクトリをサーバーに公開することができます。</p>
+<p>ここにindex.htmlを置いてブラウザからhttp://localhost/~ユーザー名/index.htmlを開くとサイトが表示されます。</p>
+<h4>PHPをCGIモードで動作させる</h4>
+<p>PHPをCGIモードで動作させるためには一箇所だけPHPの設定ファイルを修正すればOKです。</p>
+<div class="code" name="/etc/php.ini">
+    <pre>cgi.force_redirect = 0</pre>
+</div>
+<p>PHPのファイルを作ります。</p>
+<div class="code" name="~/Public/test.php">
+    <pre>#!/usr/bin/php-cgi
+&lt;html lang="ja"&gt;
+  &lt;head&gt;
+    &lt;title&gt;PHPのテストページです&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;?php
+    phpinfo();
+    ?&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<p>http://localhost/~ユーザ名/test.phpを開いて次の様な表示になっていれば成功です。</p>
+<img class="figure" src="images/itworksphp.png" alt="test.phpをブラウザで表示したところ">
+<p>ちなみにせっかく高速なPHPモジュールがあるのに何故今回PHPをCGIで動かしたかと言いますと、私が使っているレンタルサーバーがCGI版のPHPしかサポートしていないので、その動きをエミュレートしようと思ったからです。</p>

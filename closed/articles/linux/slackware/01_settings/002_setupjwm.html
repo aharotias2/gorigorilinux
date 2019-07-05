@@ -1,0 +1,34 @@
+<h3>Slackware 14.2 に軽量ウィンドウマネージャJWMを導入する</h3>
+<p><strong>Slackware 14.2</strong> には、デスクトップ環境としてKDE、Xfceが用意されています。ウィンドウの扱いだけを担当するウィンドウマネージャ単体では、TWM、FVWM、Fluxbox、WindowMaker、Blackboxがあります。</p>
+<p>Slackwareに始めから入っていないウィンドウマネージャには、JWM、OpenBox、IceWMなどがあります。別にどれでも良いのですが、JWMは軽量Linuxとして有名なPuppy LinuxやArch Linuxの派生ディストリビューションのManjaroで採用されており、信頼性、知名度、申し分ありません。今回はSlackwareにJWMを導入していきます。</p>
+<div class="outline"></div>
+<h4>JWMをダウンロードする</h4>
+<p>おおざっぱに言って方法は二つあります。</p>
+<p>一つは、<span style="text-decoration: underline;">公式サイト</span>でソースをダウンロードする。</p>
+<p>もう一つは<span style="text-decoration: underline;">SlackBuilds.org</span>からダウンロードする。</p>
+<p>簡単なのは後者なので後者でやります。</p>
+<p><span style="text-decoration: underline;">https://slackbuilds.org</span>にアクセスし、<strong>JWM</strong>を検索します。</p>
+<img class="figure" src="images/20190206214031.png" alt="slackbuilds.orgトップ">
+<p><span style="font-size: 80%;">（※この時点で既にJWM使ってる件はおいておきます。）</span></p>
+<img class="figure" src="images/20190206214134.png" alt="slackbuilds.orgのjwmのページ">
+<p> </p>
+<p>jwm.tar.gzとjwm-2.3.7.tar.xzをダウンロードします。</p>
+<h4>JWMをインストールする</h4>
+<p>jwm.tar.gzを展開し、jwm-2.3.7.tar.xzをその中に移動します。</p>
+<div class="code" name="ターミナル">
+    <pre>testuser@testhost:~/Downloads$ tar -xf jwm.tar.gz
+testuser@testhost:~/Downloads$ cd jwm
+testuser@testhost:~/Downloads/jwm$ mv ../jwm-2.3.7.tar.xz .</pre>
+</div>
+<p>suでrootになり、jwm.SlackBuildを実行します。</p>
+<div class="code" name="ターミナル">
+    <pre>testuser@testhost:~/Downloads/jwm$ su
+root@testhost:/home/testuesr/Downloads/jwm# ./jwm.SlackBuild</pre>
+</div>
+<p>/tmp/jwm-2.3.7-x86_64-1_SBo.tgzができあがりますので、rootのまま、installpkgコマンドでjwmをインストールします。</p>
+<div class="code" name="ターミナル">
+    <pre>root@testhost:/home/testuser/Downloads/jwm# installpkg /tmp/jwm-2.3.7-x86_64_SBo.tgz</pre>
+</div>
+<p>以上でJWMのインストールは完了です。</p>
+<p> </p>
+<p><span style="font-size: 80%;">（※この記事は編集中です。おいおい、設定方法とか影の付け方とかの説明を足していきます。）</span></p>

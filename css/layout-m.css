@@ -1,0 +1,154 @@
+/**********************************************************************
+ * ヘッダー
+ **********************************************************************/
+.header {
+    //position: fixed;
+    width: 100%;
+}
+
+.menu-header {
+    border: 1px solid #707880;
+    height: 50px;
+    background-color: #404850;
+}
+
+.menubutton {
+    float: right;
+    display: block;
+    cursor: pointer;
+}
+
+
+.header-space {
+    height: 0px;
+}
+
+.big-title {
+
+}
+
+.big-menu {
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+}
+
+.big-menu .header-inner {
+    max-width: 1200px;
+    margin: 5px 0px 0px 0px;
+}
+
+.big-menu ul {
+    padding: 5px 0;
+    list-style: none;
+    display: block;
+    margin: 0;
+}
+
+.big-menu li {
+    margin: 0;
+    padding: 5px 20px;
+    display: inline;
+}
+
+.pankuzu {
+    max-width: 1200px;
+    margin: 5px auto 5px auto;
+}
+
+/**********************************************************************
+ * コンテンツ
+ **********************************************************************/
+.contents {
+    max-width: 1200px;
+    margin: 0px auto 0px auto;
+    padding: 0;
+}
+
+.centerpane {
+    max-width: 100%;
+    margin: 0px 10px 10px 10px;
+    padding: 0px;
+}
+
+
+.centerpane .index_category_menu {
+    text-align: center;
+    background-color: #202830;
+}
+
+.centerpane .index_latest_articles {
+    float:left;
+    width: 100%;
+}
+
+.leftpane {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: none;
+    overflow-y: scroll;
+    background-color: rgba(50, 60, 70, 1.0);
+}
+
+.rightpane {
+    float: right;
+    margin: 0px 10px 30px 10px;
+}
+
+/**********************************************************************
+ * TOC
+ **********************************************************************/
+.toc {
+    margin: 10px 12px 20px 12px;
+}
+
+/**********************************************************************
+ * フッター
+ **********************************************************************/
+.footer {
+    width: 100%;
+}
+
+.footer .footer-inner {
+    max-width: 1200px;
+    margin: 10px auto 0 auto;
+    padding: 30px 10px 30px 10px;
+}
+
+.footer .footer-inner .footer-block {
+    margin: 10px;
+    float: left;
+}
+
+.footer_toc {
+    margin-left: 0px;
+}
+
+.footer_toc ul {
+    margin-left: 28px;
+    list-style-image: url("../images/listmark.png");
+}
+
+.footer_toc li {
+    margin-left: 0px;
+}
+
+.footer-inner td {
+    margin: 0px 20px;
+    padding: 0px 20px;
+}
+
+.footer-inner h5 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.footer-inner h5 a {
+    margin-top: 0;
+    padding-top: 0;
+}
+

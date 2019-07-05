@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.left_float {
+    float: left;
+}
+
+.right_float {
+    float: right;
+}
+
+.clear_both {
+    clear: both;
+}
+
+.max_width_30per {
+    max-width: 30%;
+}
+
+.empty {
+    display: none;
+}
+
+/**************************************************************
+ * 前後ページへのリンク
+ **************************************************************/
+.contents .pagenavi {
+    vertical-align: middle;
+}
+
+/**************************************************************
+ * コメント
+ **************************************************************/
+.post_block {
+    display: none;
+}
+
+pre {
+    vertical-align: middle;
+}

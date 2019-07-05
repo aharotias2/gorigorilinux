@@ -1,0 +1,162 @@
+/**********************************************************************
+ * ヘッダー
+ **********************************************************************/
+.header {
+    //position: fixed;
+    width: 100%;
+}
+
+.menubutton {
+    display: none;
+    float: right;
+}
+
+.header-space {
+    height: 0px;
+}
+
+.big-title {
+
+}
+
+.big-menu {
+}
+
+.header-inner {
+    max-width: 1194px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px;
+}
+
+.big-menu .header-inner {
+    max-width: 1200px;
+    margin: 5px auto 0px auto;
+}
+
+.big-menu ul {
+    padding: 5px 0;
+    list-style: none;
+    display: block;
+    margin: 0;
+}
+
+.big-menu li {
+    margin: 0;
+    padding: 5px 20px;
+    display: inline;
+}
+
+.pankuzu {
+    max-width: 1194px;
+    margin: 5px auto 5px auto;
+}
+
+/**********************************************************************
+ * コンテンツ
+ **********************************************************************/
+.contents {
+    max-width: 1200px;
+    margin: 0px auto 0px auto;
+    padding: 0;
+}
+
+.big-tux {
+    float: left;
+    background-color: white;
+    width: 300px;
+    background-image: url("../images/linux-tux.png");
+}
+
+.tocarea {
+    float: left;
+}
+
+.centerpane {
+    max-width: 100%;
+    margin: 0px auto 30px auto;
+    padding: 0px 0px;
+}
+
+.centerpane .index_category_menu {
+    float: left;
+    background-color: #384048;
+    background-image: url("../images/mbtwms_Penguin.png"), url("../images/scriptbgimg.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom right;
+    text-align: right;
+    width: 248px;
+}
+
+.centerpane .index_latest_articles {
+    float: left;
+    width: 948px;
+}
+
+.leftpane {
+    float: right;
+    display: block;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.0);
+    margin-top: -20px;
+}
+
+
+
+.rightpane {
+    float: right;
+    margin-bottom: 20px;
+}
+
+/**********************************************************************
+ * TOC
+ **********************************************************************/
+.toc {
+    margin: 10px 30px 20px 30px;
+}
+
+/**********************************************************************
+ * フッター
+ **********************************************************************/
+.footer {
+    width: 100%;
+}
+
+.footer .footer-inner {
+    max-width: 1200px;
+    margin: 10px auto 0 auto;
+    padding: 30px 10px 30px 10px;
+}
+
+.footer .footer-inner .footer-block {
+    margin: 30px;
+    float: left;
+}
+
+.footer_toc {
+    margin-left: 0px;
+}
+
+.footer_toc ul {
+    margin-left: 28px;
+    list-style-image: url("../images/listmark.png");
+}
+
+.footer_toc li {
+    margin-left: 0px;
+}
+
+.footer-inner td {
+    margin: 0px 20px;
+    padding: 0px 20px;
+}
+
+.footer-inner h5 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.footer-inner h5 a {
+    margin-top: 0;
+    padding-top: 0;
+}
+

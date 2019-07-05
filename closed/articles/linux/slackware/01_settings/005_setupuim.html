@@ -1,0 +1,49 @@
+<h3>Slackware 14.2に日本語入力メソッドUIMをインストールする</h3>
+<p>Slackware14.2には多言語入力ソフトウェアとしてSCIMが入っており、日本語入力メソッドとしてAnthyが入っています。しかしAnthyは漢字変換があまり賢くないといわれていたり、開発がだいぶ昔に終了していたりなどの難点があります。</p>
+<p>そこで他のアクティブに開発されている日本語入力メソッドであるUIMをインストールしようと思います。</p>
+<div class="outline"></div>
+<h4>UIMをダウンロードする</h4>
+<p>UimのGithubページからリリース・バージョンのUIMをダウンロードします。</p>
+<img class="figure" src="images/uim-github.png" alt="GithhubのUIMのページ">
+<p>コードタブを選びます。</p>
+<img class="figure" src="images/uim-github2.png" alt="UIMのGithubのコードのページ">
+<p>「release」をクリックします。</p>
+<img class="figure" src="images/uim-github3.png" alt="UIMのダウンロードページ">
+<p>現在最新のリリースバージョンであるuim-1.8.8.tar.gzをクリックしてダウンロードします。</p>
+<h4>UIMをインストールする</h4>
+<p>インストール方法は一般的な confiture、make、make install の手順ですが、configureの際にオプションでprefixに/usrを指定しておかないと後でインストールに失敗します。</p>
+<div class="code" name="ターミナル">
+    <pre>testuser@testhost:~/Downloads$ tar -xf uim-1.8.8.tar.gz
+testuser@testhost:~/Downloads$ cd uim-1.8.8
+testuser@testhost:~/Downloads/uim-1.8.8$ ./configure --prefix=/usr --libdir=/usr/lib64
+testuser@testhost:~/Downloads/uim-1.8.8$ make
+testuser@testhost:~/Downloads/uim-1.8.8$ su
+root@testhost:/home/testuser/Downloads/uim-1.8.8$ make install</pre>
+</div>
+<p>これでインストールは完了です。</p>
+<h4>UIMを起動する</h4>
+<p>UIMを実際に使うには、.xinitrcファイルに設定を書き込むのが一般的です。</p>
+<div class="code" name=".xinitrc">
+    <pre>export LANG=ja_JP.UTF-8
+export XMODIFIERS="@im=uim"
+export GTK_IM_MODULE="uim"
+export QT_IM_MODULE="uim"
+export XIM_PROGRAM="uim-xim"
+uim-xim & <span class="comment"># UIMの入力メソッドを起動する</span>
+uim-toolbar-gtk-systray & <span class="comment"># UIMのシステムアイコンを起動する</span></pre>
+</div>
+<p>これでXを再起動後、システムトレイにUIMのアイコンが表示されていれば成功です。</p>
+<img class="figure" src="images/systray-uim2.png" alt="システムトレイにUIMアイコンが表示されている">
+<h4>UIMの設定をする</h4>
+<p>UIMの特徴はズバリSKKが使えることにあります。SKKとは一風変わったかな漢字変換システムです。もっと普通なかな漢字変換システムとしてはAnthyが一般的です。ここではUIMを使ったAnthyとSKKの設定を見ていきましょう。</p>
+<p>まず、システムトレイのUIMアイコンを右クリックし、プルダウンメニューを開き、設定をクリックします。</p>
+<p>このようなダイアログが表示されます。</p>
+<img class="figure" src="images/dialog-uim1.png" alt="UIM全体設定タブ">
+<p>「全体設定タブ」→「入力方式の利用準備」→「標準の入力方式を指定」をチェック→「標準の入力方式」コンボボックスから「SKK」を選択。</p>
+<p>「SKK辞書」タブ→「辞書ファイル」→「システム辞書ファイル」に、Emacs用にダウンロードしたSKK辞書ファイルを指定することもできます。</p>
+<img class="figure" src="images/uim-dialog2.png" alt="SKK辞書タブ">
+<p>「SKK (高度)」タブ→「再帰学習を使用する」にチェックを入れると、単語登録の際に便利です。</p>
+<img class="figure" src="images/uim-dialog3.png" alt="SKK (高度) タブ">
+<p>あとは好きなように設定してみてください。</p>
+
+

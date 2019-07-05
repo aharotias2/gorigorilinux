@@ -1,0 +1,18 @@
+SCRIPT_NAME: /home/ta/Public/get-article-list.php
+DOCUMENT_ROOT: 
+SERVER_URI: /~ta/get-article-list.php?article=Linux/Slackware/%E8%A8%AD%E5%AE%9A/006_setupwacom.md
+cate: Linux/Slackware/設定/006_setupwacom.md
+cate: linux/slackware/01_settings/006_setupwacom.md
+path: /home/ta/Public/closed/articles/linux/slackware/01_settings/006_setupwacom.md
+filemtime: 2019-6-29-20-12-00
+RESULT: {
+    "itemLink": "https://gorigorilinux.net/article.php?entry=linux/slackware/01_settings/006", 
+    "itemAuthor": "msg@singersongwriter.ciao.jp (田中喬之)", 
+    "itemCategory": "Linux", 
+    "itemComment": "", 
+    "itemGuid": "https://gorigorilinux.net/article.php?entry=linux/slackware/01_settings/006", 
+    "itemSource": "", 
+    "itemTitle": "Wacomタブレットを使えるようにする", 
+    "itemDescription": "まず、以下のサイトに行き、必要なソースをダウンロードします。The Linux Wacom Projectカーネルドライバー (Kernel Driver) というリンクからGithubのサイトに飛びます。GithubのWikiページに飛ぶので、Codeタブを開きます。GithubのCodeページからReleaseタブを開きます。GithubのReleaseページに飛んだら下にスクロールします。GithubのReleaseをスクロールし、「input-wacom-XXXX.tar.bz2」(XXXXは最新の数字) をクリックしてドライバーのソースをダウンロードします。ソースをダウンロードしたら、以下の手順で解凍、ビルド、インストールを行います。(バージョンが0.43.0の場合)プロンプト$ tar -xf input-wacom-input-wacom-0.43.0.tar.gz [Enter]プロンプト$ cd input-wacom-input-wacom-0.43.0 [Enter]プロンプト$ ./autogen.sh prefix=/usr libdir=/lib64 [Enter]autoreconf: Entering directory `.'autoreconf: configure.ac: not...", 
+    "itemPubDate": "2019-6-29-20-12-00"
+}

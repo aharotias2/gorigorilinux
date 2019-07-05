@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <atom:link href="https://gorigorilinux.net/rss.xml" rel="self" type="application/rss+xml" />
+  <title>ごりごりりぬっくす</title>
+  <link>https://gorigorilinux.net</link>
+  <description>ITブログ - LinuxメインでプログラミングとかITニュースとか雑談とかいろいろ好き勝手に話します</description>
+  <language>ja</language>
+  <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
+  <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
+  <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
+  <lastBuildDate>Sun, 30 Jun 2019 05:54:02 GMT</lastBuildDate>
+  <category>IT</category>
+  <ttl>60</ttl>
+  <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
+  <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>Wacomタブレットを使えるようにする</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/slackware/01_settings/006</link>
+    <description>まず、以下のサイトに行き、必要なソースをダウンロードします。The Linux Wacom Projectカーネルドライバー (Kernel Driver) というリンクからGithubのサイトに飛びます。GithubのWikiページに飛ぶので、Codeタブを開きます。GithubのCodeページからReleaseタブを開きます。GithubのReleaseページに飛んだら下にスクロールします。GithubのReleaseをスクロールし、「input-wacom-XXXX.tar.bz2」(XXXXは最新の数字) をクリックしてドライバーのソースをダウンロードします。ソースをダウンロードしたら、以下の手順で解凍、ビルド、インストールを行います。(バージョンが0.43.0の場合)プロンプト$ tar -xf input-wacom-input-wacom-0.43.0.tar.gz [Enter]プロンプト$ cd input-wacom-input-wacom-0.43.0 [Enter]プロンプト$ ./autogen.sh prefix=/usr libdir=/lib64 [Enter]autoreconf: Entering directory `.'autoreconf: configure.ac: not...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/slackware/01_settings/006</guid>
+    <pubDate>Sat, 29 Jun 2019 11:10:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>growisofs - DVD-RにISOイメージを焼き込む</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/commands/08_dvd/001</link>
+    <description>growisofsはISOイメージをDVDに書き込むことができるコマンドです。例 growisofs -dvd-compat -Z /dev/sr0 /home/あなた/フォルダ/archlinux-2019.06.01-x86_64.isogrowisofs … コマンド名です。-dvd-compat … DVD-Rに書き込む時はこのオプションを付けます。-Z … DVDに新規書き込みするときのフラグでこの後に続けてデバイスのパス (例:/dev/sr0)を置きます。〜.iso … ISOイメージファイルです。絶対パス、相対パスどちらでも良いです。ISOファイルをダウンロードする下のリンクにはISOファイルの一例としてUbuntuのインストールディスクがあります。Ubuntu Desktop 日本語 Remixのダウンロード | Ubuntu Japanese Team上のサイトのISOイメージをダウンロードします。出力先を決めるDVDを入れますlsblkコマンドでDVDドライブを探します。プロンプト$ lsblk --output=KNAME,LABEL,SIZE,TYPE,MODEL | sortKNAME ...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/08_dvd/001</guid>
+    <pubDate>Sat, 22 Jun 2019 03:40:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>我が家のゴールデン・コンビ</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/others/01_self/008</link>
+    <description>ASUSのVIVOBOOKをまた買いました。TP203Nです。MacBook Airとよく似ています。今日から我が家のゴールデンコンビです。見た目はMacの方がカッコいいです。写真だと見分けつきませんが。背面です。それにしても良く似ているから一瞬くらいなら人を騙せそうです。Mac使いこなせないからこのVivoBookを何とかMacに見せるしかありません。(俺の馬鹿Mac買った時についてきたオマケのAppleステッカー捨てちゃったよ……)金のVivoBookの使い道は今考え中です。タブレットモードができるのが良い所。このサイト的にはGNOMEのLinuxを入れてタッチスクリーンの動作を試してみるのを直近の目標とします。</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/others/01_self/008</guid>
+    <pubDate>Fri, 21 Jun 2019 15:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>「不良品」という言葉について再考</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/005</link>
+    <description>あらまし最初にこの話題が出てから2週間も経ってしまいまい今更ですが少し気になることがありました。以前の記事 (「一人で死ね」という言葉について) にて触れたお笑い芸人・松本人志さんのコメント「不良品」について考え直しました。松本さんの「不良品」発言に対する批判はネット上でも非常に多く、私が「不良品」という言葉を問題視しなかったのはちょっと人道的にまずかったような気がしてきましたので、恥ずかしいですがちょっとここで弁解させて下さい。「不良品」発言は何故問題ではないのか感覚的には決して自分には欠点はなく、完璧な人間だと思っているから「不良品」という言葉を聞いて不快にならなかったわけではありません。では何故なのかと言うと後付けですが、私は松本さんの「不良品」という言葉か...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/005</guid>
+    <pubDate>Sun, 16 Jun 2019 06:30:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>コメント欄のマークダウンの書き方</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/others/01_self/003</link>
+    <description> このサイトのコメント欄ではマークダウン(Markdown)という記法をお使いいただけます。  マークダウンの書き方は基本的に下にリストアップしたサイトを参考にしていますが、このサイト独自実装になっていて微妙に違うのでこの記事で例を出して説明したいと思いますので宜しければご覧になってください。    Githubのマークダウン  多分最も有名な文書だと思われます。    CommonMark 0.29 仕様  CommonMarkはあいまいなところのあるマークダウンの厳密なルールを提案したものです。ここまでしっかり作っていません。    CommonMark 簡易説明  CommonMarkの簡単な例です。    Wikipediaのマークダウン  基本的な内容がまとまっています。    記法の例 見出し タイトルなど見出しとなる文は行頭に「#」を付けることで表現できます。 マークダウン   # 見出し1 ...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/others/01_self/003</guid>
+    <pubDate>Sun, 16 Jun 2019 01:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>ロリポおじさんが復活? ロリポをなめるなと咆哮!!!!</title>
+    <link>https://gorigorilinux.net/article.php?entry=itnews/2019/06_june/001</link>
+    <description>いやぁ〜ついに来ましたよこの時が。ロリポをなめるな！レンサバ界のドン露璃舗悪慈酸が復活！？｜ロリポップ！レンタルサーバー https://t.co/ylVxVOR5hO #ロリポをなめるな&amp;mdash; 田中喬之＠ごりごりりぬっくす管理人 (@goodslacktanaka) 2019年6月13日クォリティ高っか!!露璃舗悪慈酸=ロリポおじさんって誰？と思いましたが、レンタルサーバ・ロリポップのマスコットであり、どうやら2年前に溶鉱炉に沈められていたようです。どうりで見たことないと思いました。ロリポップはとにかく遅い、重い、障害多い、セキュリティ弱い、などの弱点が指摘され「安かろう悪かろう」なサーバと見られがちです。しかしそれは違うぞ、と言う訳ですから、低価格が魅力だけど使い勝手とか大丈夫かな…と思っている方々の不安を払拭する激作となっており...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>ITニュース</category>
+    <guid>https://gorigorilinux.net/article.php?entry=itnews/2019/06_june/001</guid>
+    <pubDate>Fri, 14 Jun 2019 04:10:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>find - ファイルを探す</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/004</link>
+    <description>findコマンドはディレクトリを指定し、そこから辿れる全てファイルの一覧を表示します。引数の構文 find [オプション] [パス] [エクスプレッション]findコマンドではオプションを指定する機会はあまりないと思います。つまり、findの後にパスを指定して、その後の[エクスプレッション]によって検索条件を制御します。[エクスプレッション]には[オプション]、[テスト]、[アクション]の3種類があります。ディレクトリ内のファイルを全て表示する普通に実行するfindコマンドを引数なしで実行すると、現在の作業ディレクトリから辿れる全てのディレクトリとファイルの一覧を出力します。プロンプト$ find [Enter]../.bash_profile./.mozilla./.mozilla/systemextensionsdev./.mozilla/extensions./.mozilla/firefox./.mozilla/firefox/1d5vmv5t.default./.mozilla/firefox/1d5vmv5t.default/prefs.js./.mo...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/004</guid>
+    <pubDate>Mon, 10 Jun 2019 14:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>シェルスクリプトを書く</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/004</link>
+    <description>シェルスクリプトとはコマンドはシェルから実行するのが基本ですが、ファイルにコマンドを書いておいてそれをシェルから実行させることもできます。そういったファイルをシェルスクリプトと言います。シェルスクリプトファイルは普通のテキストファイルです。スクリプトとはスクリプト言語が記述されたテキストファイルのことです。スクリプト言語とはテキストとして記述されたソースを別のプログラムが読み込んで実行する形式のプログラミング言語です。BashやPerl、Python、Rubyなどのことです。シェルスクリプトを実行するのはBashなどのシェルです。簡単なスクリプトの例スクリプトのソース「こんにちは」というメッセージを出力するシェルスクリプトは以下のようになります。#!/bin/bashecho &amp;quot;こんにちは&amp;quot;Shebang (シバン)...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/004</guid>
+    <pubDate>Sun, 09 Jun 2019 14:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>pwd - ここはどこ?</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/001</link>
+    <description>Linuxコマンドラインは必ずファイルシステム中のどこかのディレクトリを作業ディレクトリとして使っています。作業ディレクトリにあるファイルはフルパスの指定をしなくてもファイル名の指定だけで使うことができます。pwdコマンドでは作業ディレクトリがどこなのかを表示するコマンドです。使い方は下記のようになります。プロンプト$ pwd [Enter]/home/me/anywhere/you/wantオプション/-P: リンクを伝わないシンボリックリンクによってディレクトリを本来の親ディレクトリ以外のディレクトリから開いた場合、通常pwdコマンドは親ディレクトリをリンク元のディレクトリとしますが、-Pオプションによってディレクトリの実体があるところの親ディレクトリを表示できます。例えば/aaa/bbb/cccというディレクトリへのシンボリックリンクが/eee/fff...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/001</guid>
+    <pubDate>Sun, 02 Jun 2019 14:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>for - コマンドを繰り返す</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/005</link>
+    <description>基本的な使い方forはシェルの構文の「予約語」です。決まった順番で単語を並べることで意図した動作をさせることができるのが構文で、for文はその一つです。for [ループ変数] in [リスト]do [コマンド]doneこのような構文になります。「for」「in」「do」「done」は予約語と言ってシェルで決められた単語であり、[]で囲まれた「ループ変数」「リスト」「コマンド」は任意になります。ループ変数は繰り返し文の中で使われる変数で、1回の繰り返しにつきリストの単語が1つずつ割り当てられます。リストは単語をスペースで空けて行末まで並べたものです。リストはコマンドの出力にすることもできます。例えばseqコマンドで1〜10までのリストを作り、それをfor文に渡すことができます。seq 1 10の出力が1 2 3 4 5 6 7 8 9 10になるのでそれを利用す...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/005</guid>
+    <pubDate>Thu, 06 Jun 2019 13:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>echo - 文字列を書き出す</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/003</link>
+    <description>echoは文字列をファイルに書き出すシェル組込みコマンドです。デフォルトのファイルは「標準出力」であり、普通これはコマンドラインを指します(※注)。今回はこのechoコマンドについてさらりと説明します。(注：LinuxなどUNIX系のシステムではコマンドラインへの入出力もファイルへの入出力と同様に扱われます)基本的な使い方プロンプト$ echo こんにちは! [Enter]こんにちは!このように使います。変数の値を表示する変数は名前の頭に「$」を付けると中身を取り出すことができます。例えば「A」という変数に「こんにちは!」という値が設定されている時、echoコマンドで表示すると、プロンプト$ echo $Aこんにちは!このような結果となります。変数の値を設定する変数は「=」記号を使って設定できます。プロンプト$ A=こんにちは!この際「=...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/003</guid>
+    <pubDate>Sun, 02 Jun 2019 11:10:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>コマンドを入力する</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/002</link>
+    <description>ログインした後コマンドラインでログインした場合、変な設定をしていない限りそのまま指定されたシェルプログラムのプロンプトが表示されます。多くの場合、「Bash (バッシュ、バッシェルと呼ぶ人もいます)」というプログラムがデフォルトで指定されていますので、このサイトでもBashを前提に説明を行います。(「変な設定」とはログインしたら即GUIを立ち上げる設定などのことです。でも普通はしないと思いますが)プロンプトは普通「$ 」のような文字のあとに長方形のカーソルが点滅しており、ここでキーボードによるコマンドの入力待ち状態になっています。GUI環境でターミナルエミュレータを起動するログインは通常コマンドプロンプトから行いますが、GUI環境を使っている場合は「ターミナルエミュレータ(端末とも呼ばれる)...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/002</guid>
+    <pubDate>Sun, 02 Jun 2019 07:50:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>ログイン・ログアウト</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/001</link>
+    <description>Linuxを起動して最初に行なう作業であるログインと、ログアウトについて説明します。ログインとはLinuxを使うには起動した後まず登録されているユーザのユーザ名とパスワードによって認証を得る必要があります。これをログインと言います。ログインの方法基本的にはLinuxがインストールされているコンピュータの電源を入れて、起動処理が終わるとログインプロンプトが表示されるので、そこにユーザ名とパスワードを打ち込んでEnterキーを押せば良いだけです。また、suコマンドなどを使って別のユーザに切り替える時にもユーザ名とパスワードを指定してそれが正しければ別のユーザとしてログインできます。sshコマンドを使えば、ネットワーク接続している別のコンピュータにログインすることもでき、その時はそのコンピュータ...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/001</guid>
+    <pubDate>Sun, 02 Jun 2019 08:20:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>今すぐLinuxを始めるメリット6選</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/beginners/01_reason/001</link>
+    <description>   このブログのテーマのひとつがLinuxの敷居の高いイメージをやわらげ、親しみを持ってもらうこと、というのがあるので、今回は、全くの初心者目線でLinuxを始める理由について考えたいと思います。 Linuxをやってみたくなるきっかけ Linuxをやってみたくなるきっかけは何があるだろうと考えてみました。   プログラミングの勉強がしたい  Windowsのアップデートについていけない  黒い画面に憧れている  好きな女の子がLinuxを使っている (別に女の子じゃなくても良いが)  タダで手に入る  仕事のため  こんなところでしょうか。 いずれにしても、それらの「きっかけ」は、実際にLinuxを始めてみるとあまりの難しさに耐ええないという感じもしますが。 Linuxをやる理由1: 好きな女の子がLinuxを使っている (別に女の子じゃなくても良いが) 案...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/beginners/01_reason/001</guid>
+    <pubDate>Sun, 16 Jun 2019 06:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>「一人で死ね」という言葉について</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/004</link>
+    <description>川崎殺傷「１人で死ねば」の声　事件や自殺誘うと懸念も | 朝日新聞デジタル 2019.5.31安藤優子キャスターが出演者に語りかけた。「社会に不満を持つ犯人像であれば」と前置きして、「すべてを敵に回して死んでいくわけですよね。自分１人で自分の命を絶てばすむことじゃないですか」。コメンテーターの北村晴男弁護士も「言ってはいけないことかもしれないけど、死にたいなら１人で死ねよ、と言いたくなりますよね」と続けた。落語家の立川志らくさんが「１人の頭のおかしい人が出てきて、死にたいなら１人で死んでくれよって、そういう人は」とコメント。そんな状況にネット上で異論を唱えたのが、貧困者らを支援するＮＰＯ「ほっとプラス」の藤田孝典代表理事。「次の凶行を生まないためにも、『１人で死ぬべき』とい...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/004</guid>
+    <pubDate>Tue, 04 Jun 2019 15:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>KAT-TUN田口容疑者の大麻報道について</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/003</link>
+    <description>カップルでハマる大麻の危険性 こっそり使うことにおもしろさ 週刊女性PRIME livedoorlivedoorニュースの人気コーナー「ざっくり言うと」によりますと田口淳之介容疑者らがハマった大麻の危険性を、週刊女性PRIMEが伝えたカップルの間だと、ふたりでこっそり使うことにおもしろさを覚える、と医師秘密を共有している優越感で周りに話したくなり、それが原因で捕まることもだそうです。このように最近有名芸能人の方々が相次いで薬物により逮捕されています。まあ大麻なんて別に殺人でも窃盗でもないので人生終わったというほどのものでもありません。ゆっくり人生考えなおせば良いと思います。大麻やら、コカインやら、やらないというのは社会人の最低限の資格みたいなものなので、犯罪とはちょっと違うと思います。世に出てく...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/003</guid>
+    <pubDate>Wed, 29 May 2019 11:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>ローラさん、電車内での自撮りを批判されてしまう</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/002</link>
+    <description>ローラが電車内の自撮りを投稿、乗客の顔隠さず 好感度急落中で「インスタ芸人」と揶揄も1次ソース(リアルライブ)モデルでタレントのローラがインスタグラムのストーリーズに投稿したある写真が、物議を醸している。記事によるとモデルでタレントのローラさんが小田原市の電車内で撮ってインスタグラムに投稿した写真が問題となっているようです。なんでも乗客の顔を隠してなかったとか。顔を隠すのは当然ですが、通行人が女性だった場合は胸まで隠した方が良いと思います。女性の胸が真夏日の強い日射しの下でくっきりとした影をつけているのが写っている状態で顔だけ隠すと想像力がかき立てられて余計まずいことになりかねませんので。本来ならお尻も隠した方が良いですが、さすがにその位置にボカシがあると逆に脱...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/002</guid>
+    <pubDate>Wed, 29 May 2019 11:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>登戸で男がナイフを振り回し児童含む不特定多数を殺傷しその後自害</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/001</link>
+    <description>ZOZO前澤社長　川崎殺傷事件に沈痛「企業の社会的責任は人を作ることだ、と強く思った一日」 スポニチ川崎で子供達を狙う無差別殺傷事件が発生しました。ネットにはすでに多くの記事が挙がっておりどれをソースにしようか迷いましたがとりあえずファッション通販ZOZOTOWNの前澤社長のツイートの記事にします。ZOZOの前澤友作社長（43）が28日、自身のツイッターを更新。川崎市多摩区の路上で通学のバスを待つ小学生ら十数人が刃物で刺された事件について言及した。この日の夕方に再びツイッターで「みんながみんな、オギャーって希望を持って産まれてくるのに。どうして。。。」「企業の社会的責任は、商品やサービスを作るだけではなく、人を作ることだ、と強く思った一日」と自身の思いを投稿した。何故こんな事件が起きた...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/001</guid>
+    <pubDate>Wed, 29 May 2019 11:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Red Hatがロゴを変更し、謎の男が姿を消した</title>
+    <link>https://gorigorilinux.net/article.php?entry=itnews/2019/05_may/003</link>
+    <description>Redhatが長年お馴染だったロゴマークを換える発表をしました。ソース 1: 次世代の赤いフェドラハット・マークのお知らせ | RED HAT BLOGソース 2: Red Hatが新ロゴ発表、Shadowmanが消えフェドラハットのみに ～“不吉”なイメージを払拭 | PC Watch米Red Hatは、同社の新コーポレートロゴマークを発表した。以前のRed Hatロゴは、顔を隠してフェドラハットを被った「Shadowman」をあしらったものだったが、スマートフォンなどで上手くレンダリングできないことから、今回のロゴデザイン変更が行なわれた。?スマートフォンなどで上手くレンダリングできないという謎な理由にまごつきます。ロゴから想起する感情や考え、印象についての調査を実施したところ、「不吉、秘密っぽい、悪、コソコソしている」といった“憂慮すべき回答”がいくつか寄せ...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>ITニュース</category>
+    <guid>https://gorigorilinux.net/article.php?entry=itnews/2019/05_may/003</guid>
+    <pubDate>Tue, 28 May 2019 11:50:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>椎名町住み始めた感想</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/life/01_housing/003</link>
+    <description>椎名町に引っ越して来て1週間経ちました。引っ越して良かったこと目白駅が使える (池袋回避)意外と池袋より目白の方が近くて、それが一番よかったです。下図は埼玉県から池袋に出る鉄道を赤く塗りつぶしたものです。青のエリアは池袋以外の山手線の駅に出るルートです。埼玉から通勤する人の大部分がいやがおうにも池袋に集結することになる気がします。もちろんこれは埼玉県民が悪いと言っているのではありません。画像はこちらからお借りしています： 埼玉鉄道バス路線図その池袋を回避して山手線に乗ると、本当に人が少なく空いていてかなり快適です。これは嬉しい誤算でしたわ。目白の駅舎は小さいのですがデザインはオシャレに感じます。これは朝のお出迎えとして悪くないですな。その他の良い所良い所良い理由銭...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/life/01_housing/003</guid>
+    <pubDate>Mon, 27 May 2019 11:40:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

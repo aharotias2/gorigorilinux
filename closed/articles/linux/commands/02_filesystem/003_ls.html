@@ -1,0 +1,151 @@
+<h3>ls - ディレクトリの中のファイルを一覧する</h3>
+<p>こんにちは。この記事では、「ls」コマンドについて解説してみようと思います。うまくできるかな。</p>
+<div class="outline"></div>
+<p>lsコマンドは、ディレクトリ内にあるファイルの一覧を出力するコマンドです。</p>
+<p>こんな感じで打ちます。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre>$ ls</pre>
+</div>
+<p>「$ 」はプロンプトと言って、コマンドの入力を受け付ける記号です。プロンプトの後にコマンドを書いてEnterを押すとコマンドが実行されます。</p>
+<p>すると、現在の作業ディレクトリにあるファイルの一覧が出力されます。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre>
+Documents  DropboxMail  Music     Videos    メモ.txt
+Downloads  Mail         Pictures  test.txt
+</div>
+<h4>ファイルを色分けする</h4>
+<p>「--color」オプションを付けることで、lsの出力に色を付けることができます。色はファイルの種類や権限によって分けられます。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre>$ ls --color
+<span class="filetype_directory">Documents  DropboxMail  Music     Videos</span>    <span class="filetype_executable">コマンド.sh</span>
+<span class="filetype_directory">Downloads  Mail         Pictures</span>  test.txt
+</div>
+<p>上の例ではディレクトリ(フォルダ)が青に、実行可能ファイル(コマンド)が赤になっています。</p>
+<h4>隠しファイルを表示する</h4>
+<p>「-a」オプションを付けることで、隠しファイルを表示できます隠しファイルと言っても、ファイル名の1文字目が「.」(ピリオド)であるというだけです。それらのファイルは「ls」コマンドではデフォルトでは表示されません。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre>$ ls -a
+.	     .bash_aliases  .dbus      .uim.d	 .xinitrc-backup   Documents  Pictures
+..	     .bash_history  .esd_auth  .vim	 .xsession	   Downloads  Public
+.Xauthority  .cache	    .local     .viminfo  .xsession-backup  GNUstep    Templates
+.anthy	     .config	    .mozilla   .xinitrc  Desktop	   Music      Videos
+    </pre>
+</div>
+<h4>ファイルの詳細情報を表示する</h4>
+<p>「-l」オプションを付けることで、ファイルの詳細な情報を表示できます。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre>$ ls -l
+drwxr-xr-x 16 ta users  4096  2月  9 21:41 Documents
+drwxr-xr-x 34 ta users 12288  3月 31 13:07 Downloads
+drwx------ 15 ta users  4096  3月 26 21:27 Dropbox
+drwx------  9 ta users  4096  9月 19  2016 Mail
+drwxr-xr-x 10 ta users  4096  1月 31 23:40 Pictures
+drwxr-xr-x 12 ta users  4096  3月 30 23:05 Public
+drwxr-xr-x  2 ta users  4096  4月 15  2018 Videos
+-rwxr-xr-x  1 ta users   112  3月  3 20:28 コマンド.sh
+-rw-r--r--  1 ta users   112  3月  3 20:28 メモ.txt
+    </pre>
+</div>
+<p>上の例では、ファイルの実行権限、ファイルの所有者とグループ、ファイルサイズ、最終更新日時、ファイル名が表示されています。</p>
+<p>ファイルの実行権限は「-rwxr-xr-x」のように表示されていますが大体下の図のようになっています。</p>
+<img class="figure" src="images/Linux/ls-rwx.png" alt="lsコマンドの権限の読み方">
+<p>下手糞ですみません。</p>
+<p>しかし組み合わせは大体決まっています。</p>
+<table>
+    <tr><th>表記</th><th>表記(数字)</th><th>種類</th><th>説明</th></tr>
+    <tr><td><span clas="code">-rw-r--r--</span></td><td>644</td><td>ファイル</td><td>自分だけ読み書きができて、他の人は読取だけできる。</td></tr>
+    <tr><td><span clas="code">-rwx-r-xr-x</span></td><td>755</td><td>ファイル</td><td>自分だけ読み書き実行ができて、他の人は読み込みと実行だけできる。</td></tr>
+    <tr><td><span clas="code">-rwxrwxrwx</span></td><td>777</td><td>ファイル</td><td>誰でも読み書き実行ができる。</td></tr>
+    <tr><td><span clas="code">-rw-------</span></td><td>600</td><td>ファイル</td><td>自分だけ読み書きできて、他の人は読み書きできない。</td></tr>
+    <tr><td><span clas="code">drwx-r-xr-x</span></td><td>755</td><td>ディレクトリ</td><td>自分だけファイルの作成、削除、更新ができて他の人は読取だけができる。</td></tr>
+    <tr><td><span clas="code">drwx------</span></td><td>700</td><td>ディレクトリ</td><td>自分だけファイルの作成、削除、更新ができて他の人は開くことができない。</td></tr>
+    <tr><td><span clas="code">lrwxrwxrwx</span></td><td>777</td><td>リンク</td><td>リンク先のファイル権限に従う(リンクは常にこの権限)。</td></tr>
+</table>
+<p>ちなみに、rootは何でもできるので、隠しても無駄です。</p>
+<h4>ディレクトリーが先にまとまるようにする</h4>
+<p>「--group-directories-first」オプションでディレクトリを先に纏めることができます。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre>$ ls -la --color --group-directories-first
+drwx--x--x 25 ti   users  4096  4月  2 21:36 <span class="filetype_directory">.</span>
+drwxr-xr-x  9 root root   4096  2月 10 04:42 <span class="filetype_directory">..</span>
+drwxr-xr-x  8 ti   users  4096  2月 24 23:18 <span class="filetype_directory">.cache</span>
+drwxr-xr-x  8 ti   users  4096  2月 28 23:04 <span class="filetype_directory">.config</span>
+drwx------  3 ti   users  4096  2月  9 23:13 <span class="filetype_directory">.dbus</span>
+drwxr-xr-x  3 ti   users  4096  2月  9 23:13 <span class="filetype_directory">.local</span>
+drwx------  5 ti   users  4096  2月 24 23:18 <span class="filetype_directory">.mozilla</span>
+drwxr-xr-x  2 ti   users  4096  2月  9 23:13 <span class="filetype_directory">Desktop</span>
+drwxr-xr-x  2 ti   users  4096  2月  9 23:13 <span class="filetype_directory">Documents</span>
+drwxr-xr-x  2 ti   users  4096  2月  9 23:13 <span class="filetype_directory">Downloads</span>
+drwxr-xr-x  4 ti   users  4096  2月 28 23:05 <span class="filetype_directory">GNUstep</span>
+drwxr-xr-x  2 ti   users  4096  2月  9 23:13 <span class="filetype_directory">Music</span>
+drwxr-xr-x  2 ti   users  4096  2月  9 23:13 <span class="filetype_directory">Pictures</span>
+drwxr-xr-x  2 ti   users  4096  2月  9 23:13 <span class="filetype_directory">Public</span>
+drwxr-xr-x  2 ti   users  4096  2月  9 23:13 <span class="filetype_directory">Templates</span>
+drwxr-xr-x  2 ti   users  4096  2月  9 23:13 <span class="filetype_directory">Videos</span>
+-rw-------  1 ti   users     0  3月  2 15:08 .Xauthority
+-rw-r--r--  1 ti   users   103  4月  2 21:36 .bash_aliases
+-rw-------  1 ti   users   262  4月  2 21:36 .bash_history
+-rw-------  1 ti   users  1442  4月  2 21:36 .viminfo
+-rw-r--r--  1 ti   users   661  2月 28 23:07 .xinitrc
+    </pre>
+</div>
+<h4>ファイルサイズを見やすくする</h4>
+<p>「-h」オプションでファイルサイズに単位(「K」=キロバイト、「M」=メガバイト)を付けて見やすくできます。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre>$ ls -lh
+合計 36K
+drwxr-xr-x 2 ti users 4.0K  2月  9 23:13 Desktop
+drwxr-xr-x 2 ti users 4.0K  2月  9 23:13 Documents
+drwxr-xr-x 2 ti users 4.0K  2月  9 23:13 Downloads
+drwxr-xr-x 4 ti users 4.0K  2月 28 23:05 GNUstep
+drwxr-xr-x 2 ti users 4.0K  2月  9 23:13 Music
+drwxr-xr-x 2 ti users 4.0K  2月  9 23:13 Pictures
+drwxr-xr-x 2 ti users 4.0K  2月  9 23:13 Public
+drwxr-xr-x 2 ti users 4.0K  2月  9 23:13 Templates
+drwxr-xr-x 2 ti users 4.0K  2月  9 23:13 Videos
+    </pre>
+</div>
+<h4>日時の形式を変更する</h4>
+<p>日時の形式を変更したい場合は、「--time-style」オプションを使います。このオプションの引数は「date」コマンドと同じです。私のおすすめは「+'%Y-%m/%d-%H:%M:%S'」です。こうすると「2019-04/02-21:16:20」という感じに出力されます。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre>$ ls -l -h --time-style=+'%Y-%m/%d-%H:%M:%S'
+合計 36K
+drwxr-xr-x 2 ti users 4.0K 2019-02/09-23:13:33 Desktop
+drwxr-xr-x 2 ti users 4.0K 2019-02/09-23:13:33 Documents
+drwxr-xr-x 2 ti users 4.0K 2019-02/09-23:13:33 Downloads
+drwxr-xr-x 4 ti users 4.0K 2019-02/28-23:05:08 GNUstep
+drwxr-xr-x 2 ti users 4.0K 2019-02/09-23:13:33 Music
+drwxr-xr-x 2 ti users 4.0K 2019-02/09-23:13:33 Pictures
+drwxr-xr-x 2 ti users 4.0K 2019-02/09-23:13:33 Public
+drwxr-xr-x 2 ti users 4.0K 2019-02/09-23:13:33 Templates
+drwxr-xr-x 2 ti users 4.0K 2019-02/09-23:13:33 Videos
+    </pre>
+</div>
+<h4>ファイルを日時でソートする</h4>
+<p>「-t」オプションで、ファイルを新しいものから並べることができます。「-r」オプションと併用することで、ファイルを古いものから並べることもできます。</p>
+<h4>エイリアスを設定する</h4>
+<p>さて、おおまかに説明してきましたが、いちいちオプションを指定せずに始めからそうしてほしいという場合もあると思います。そんな時にはBashのエイリアス機能を使うと常に付けたいオプションを設定できます。</p>
+<div class="code">
+    <div class="code-header"><h5>.bashrc</h5></div>
+    <pre>#!/bin/bash
+alias ls="ls --group-directories-first -h --time-style=+'%Y-%m/%d-%H:%M:%S' --color"
+    </pre>
+</div>
+<p>.bashrcはログイン時に必ず読み込まれるファイルで、ここに「alias」を書いておけば勝手に読み込まれるので便利です。上の例ではディレクトリーを先にまとめるのと、ファイルサイズに単位を付けるのと、時間の形式と、色を着けるオプションを指定しています。</p>
+<p>エイリアスの設定だけをまとめた「.bash_aliases」というファイルを作りそれを以下のように.bashrcから呼び出す方法もインターネット上の例ではよく見ます。</p>
+<div class="code">
+    <div class="code-header"><h5>.bashrc</h5></div>
+    <pre>#!/bin/bash
+. .bash_aliases
+    </pre>
+</div>
+<h4>終わり</h4>
+<p>いかがでしたか？お探しの情報は見付かりましたでしょうか。lsにはまだまだ機能がありますので、応用編をまとめたいと思います。それではご機嫌ようさようなら。</p>

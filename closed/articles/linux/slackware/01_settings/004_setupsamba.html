@@ -1,0 +1,73 @@
+<h3>Sambaを使ってLinuxのファイルをWindowsと共有する</h3>
+<p>Windowsにはファイル共有という機能があってローカル・ネットワーク上に共有したいフォルダを公開することができます。このファイル共有の輪に自分のLinuxも加えたい、という時に使われるのがSambaというソフトウェアです。今回はそのSambaを使ってLinuxのファイルをWindowsと共有する方法について説明します。</p>
+<div class="outline"></div>
+<h4>Linuxでのファイル公開手順</h4>
+<p>まず、このブログでの記事はSlackware Linux 14.2がインストールされている前提で進めます。別のディストリビューションを使用している方は適宜対応をお願い致します。</p>
+<p>また以下の作業はrootでの作業になりますので大事なファイルを削除などしないように十分気を付けて行ってください。</p>
+<p>好きな場所に共有用ディレクトリを作成します。 （例: /home/Shares）</p>
+<div class="code" name="ターミナル">
+    <pre>root@testhost:~# mkdir <u>/home/Shares</u>
+root@testhost:~# mkdir /home/Shares/{Documents,Music,Videos,Pictures}</pre>
+</div>
+<p>共有フォルダの所有者を一般ユーザーにします</p>
+<div class="code" name="ターミナル">
+    <pre>root@testhost:~# chown -R <u>ユーザ名</u>:users /home/Shares</pre>
+</div>
+<p>/etc/samba/smb.conf-sampleをコピーし、/etc/samba/smb.confを作成します。</p>
+<div class="code" name="ターミナル">
+    <pre>root@testhost:~# cd /etc/samba
+root@testhost:/etc/samba# <u>cp smb.conf-sample smb.conf</u></pre>
+</div>
+<p> </p>
+<p>smb.confを開き、ワークグループ名を編集します。これはWindowsのワークグループ名に合わせます。</p>
+<div class="code" name="/etc/samba/smb.conf">
+    <pre>[global]
+
+    # workgroup = NT-Domain-Name or Workgroup-Name, eg: LINUX2
+    workgroup = <u>WORKGROUP</u></pre>
+</div>
+<p>続いて、以下の内容を追記します。</p>
+<div class="code" name="/etc/samba/smb.conf">
+    <pre><u>[Shares]</u>
+        <u>comment = Shared Files</u>
+        <u>path = /home/Shares</u>
+        <u>browsable = yes</u>
+        <u>read only = no</u></pre>
+</div>
+<ul>
+    <li>[Shares]はネットワーク上に表示される名前です。自由に決めて構いません。</li>
+    <li>pathで共有するディレクトリを指定します</li>
+    <li>browsable = yesとすると他のユーザから見られるようになります。</li>
+    <li>read only = yesとすると共有ディレクトリは読み込み専用となります</li>
+</ul>
+<p>以下の内容は削除またはコメントアウトします。コメントアウトは文頭に#または;を置くと行末までコメントになります。</p>
+<div class="code" name="/etc/samba/smb.conf">
+    <pre><span style="text-decoration: line-through;">[homes]</span>
+        <span style="text-decoration: line-through;">comment = Home Directories</span>
+        <span style="text-decoration: line-through;">browsable = no</span>
+        <span style="text-decoration: line-through;">writable = yes</span></pre>
+</div>
+<p> </p>
+<p>smbpasswdコマンドで、共有フォルダにアクセスする為のユーザー名とパスワードを設定します。</p>
+<div class="code" name="ターミナル">
+    <pre>root@testhost:~# smbpasswd -a <u>ユーザ名</u>
+New SMB password:
+Retype new SMB password:</pre>
+</div>
+<p>Sambaサーバを起動します。</p>
+<div class="code" name="ターミナル">
+    <pre>root@testhost:~# bash /etc/rc.d/rc.samba start</pre>
+</div>
+<p>rc.sambaを実行可能ファイルにすることで、次回Linuxのブート時に自動的にSambaが起動し、共有フォルダが有効になります。</p>
+<div class="code" name="ターミナル">
+    <pre>root@testhost:~# chmod +x /etc/rc.d/rc.samba</pre>
+</div>
+<h4>WindowsからLinuxの共有フォルダにアクセスする。</h4>
+<p>Explorerのサイドパネルのネットワークを開きます。SLACKWAREと表示されているのはLinuxのuname -nコマンドで出力されるネットワークのノード名で、この名に共有フォルダがあります。</p>
+<img class="figure" src="images/20190203152201.png" alt="WindowsのExplorerでネットワークを開く">
+<p>SLACKWAREを選択します。ダイアログが開き、ユーザー名とパスワードを要求されるので、先ほどsmbpasswdで設定したユーザー名とパスワードを入力します。</p>
+<img class="figure" src="images/20190203150537.png" alt="Linuxの共有フォルダ一覧画面">
+<p>無事、共有フォルダに入れました。</p>
+<img class="figure" src="images/20190203150756.png" alt="Linuxの共有フォルダの中に入ったところ">
+<div class="spacer"></div>
+

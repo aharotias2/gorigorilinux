@@ -1,0 +1,99 @@
+<h3>初めてのCプログラミング (Mac OS X 編)</h3>
+<div class="outline"></div>
+<h4>GCCでやる</h4>
+<h5>GCCのインストール</h5>
+<p>MacでCプログラミングを始めるには、普通にGCCをインストールするのが一番てっとり早いです。</p>
+<div class="code" name="ターミナル">
+    <pre>bash:~$ gcc [Enter]</pre>
+</div>
+<p>すると、下図ようなダイアログが出ますので、「インストール」を押します。</p>
+<img class="figure-flat" src="images/C/installmacgcc1.png" alt="GCCインストールの確認">
+<p>するとGCCがインストールできますので、インストールできたことを「gcc --version」と打って確認してみます。</p>
+<div class="code" name="ターミナル">
+    <pre>あなたのホスト:~ あなた$ gcc --version [Enter]
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1
+Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+Target: x86_64-apple-darwin18.2.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+    </pre>
+</div>
+<p>GCCなのにclangとLLVMなどと書いてあるのが気になりますが、ソース公開するのでもない限りライセンスとか気にしなくて大丈夫です。</p>
+<h5>C言語ソースの作成</h5>
+<p>次に、C言語のソースファイルを作成します。プリインストールの「テキストエディット」か前回の記事でインストールした「mi」などのエディタを起動して、以下のようなファイルを作成します。</p>
+<div class="code" name="Desktop/hello.c">
+    <pre>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, world!\n");
+    return 0;
+}
+    </pre>
+</div>
+<p>ここで注意すべき点ですが、Macでは「\」(バックスラッシュ)を打つには「Option」キーを押しながら半角の「¥」を押さないといけません。Windowsと違って、バックスラッシュと¥マークが混同されないのですね。</p>
+<div class="column"><p>あと今さらですがこの「Hello World」プログラムはC言語を初めて作ったデニス・リッチー氏の著作「The C Programming Language」で紹介されている有名なサンプルであり、多分ですが著作権はデニス・リッチー氏にあると思います。正直有名すぎるものの著作権ってクレームとか来ないので自分が考えたと言わない限り気にしなくても大丈夫だと思います。アバウトな判断基準ですみません。ちなみに私が持っているデニス・リッチー氏によるものでないC言語の教本のサンプルは「Hello, world」ではなく単に「Hello」になってました。やはり、著作権とか気にしてるのでしょうかね。売り物にするなら気にするに越したことはないでしょうな。</p></div>
+<h5>GCCでコンパイル</h5>
+<p>さて、ではコンパイルします。ターミナルを開き以下の入力をします。</p>
+<div class="code" name="ターミナル">
+    <pre>あなたのホスト:~ あなた$ cd Desktop [Enter]
+あなたのホスト:Desktop あなた$ gcc -o hello hello.c [Enter]
+あなたのホスト:Desktop あなた$</pre>
+</div>
+<h5>デバッグタイム</h5>
+<p>さて、ではデバッグしていきましょう。</p>
+<h6>文末のセミコロンがない</h6>
+<p>「hello.c」をこんな感じに書いたらどうなるのかということです。</p>
+<div class="code" name="Desktop/hello.c">
+    <pre>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, world!\n") <b>←文末のセミコロンが無い</b>
+    return 0;
+}
+    </pre>
+</div>
+<p>gccでコンパイルしてみます。</p>
+<div class="code" name="ターミナル">
+    <pre>あなたのホスト:Desktop あなた$ gcc -o hello hello.c  [Enter]
+hello.c:4:28: <b>error</b>: expected ';' after expression
+        printf("Hello, world!\n")
+                                 <b>^</b>
+                                 <b>;</b>
+1 error generated.
+    </pre>
+</div>
+<p>TCCよりは親切なメッセージが出ます。まあずっと開発が続いていますからね。流石にここはGCCに軍配が挙がりますよ。</p>
+<p>まああとはこんな感じでデバッグしていきましょうということで終わりにします。手抜きゴメンナサイ!</p>
+<h5>作ったプログラムを実行する</h5>
+<p>できたプログラムを実行するには、Linuxと同じように、プログラムがあるディレクトリ(フォルダ)にて、「./hello」と打つだけです。</p>
+<div class="code" name="ターミナル">
+    <pre>あなたのホスト:Desktop あなた$ ./hello  [Enter]
+Hello, world!
+    </pre>
+</div>
+<p>はい、できた方、おめでとうございます! できなかった方、デバッグ作業に戻りましょう。というか今は、上のコードをコピペで良いですのでまずは走らた方が良いと思います。</p>
+<h4>Xcodeをインストールした場合</h4>
+<p>Mac OSにおける正式な開発環境はXcodeと呼ばれるもののようです。</p>
+<p>これはApple Storeから無料でインストールができます。</p>
+<p>注意点は、これをインストールした後ですとGCCの実行する前にライセンス同意が必要になります。</p>
+<p>やり方はいつも通り「gcc」と打つと、</p>
+<div class="code" name="ターミナル">
+    <pre>
+
+Agreeing to the Xcode/iOS license requires admin privileges, please run “sudo xcodebuild -license” and then retry this command.
+
+
+    </pre>
+</div>
+<p>こんな感じのメッセージが出るので、</p>
+<div class="code" name="ターミナル">
+    <pre>あなたのホスト:Desktop あなた$ sudo xcodebuild -license [Enter]
+Password: <b>←ここであなたのパスワードを打ちます</b>
+    </pre>
+</div>
+<p>すると「Xcode and Apple SDKs Agreement」の文書がターミナルに出力されますので、スペースキーなどを押して一番下までスクロールし、止まったところで「agree」と打って同意します。</p>
+<p>それで、以降は今まで通りGCCを使うことができるようになるのですが… 一体何に同意させられたのかが分からないのが怖いですね。万が一Appleに何か言われたら下手に抵抗せず言うこと聞いた方が良いかもしれません。恐らくですが自分で作ったプログラムを配布する時の約束ごとに関わると思いますので、練習中のうちは気にしないで大丈夫でしょう。</p>
+<h4>終わりに</h4>
+<p>いかがでしたか? Macだからと別に特別視する必要はありません。C言語自体はどのOSでも共通した作法で使えるように作られています。その秘訣が、「入力」と「出力」の作法にある訳ですが、それは以後の章で学んでいきたいと思います。</p>
+
+

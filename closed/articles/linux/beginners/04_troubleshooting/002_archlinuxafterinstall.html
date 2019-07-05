@@ -1,0 +1,42 @@
+<h3>Arch Linuxディスプレイ解像度を修正する</h3>
+<p>とりあえず容量は十分あるDynabookにArch Linuxをインストールし、KDE 5 Plasmaを起動してみてビックリ! 画面が妙に拡大感ある…!</p>
+<p>調べてみると1366x768の画面のはずなのに960x540の解像度になっていることが分かりました。</p>
+<p>最初は非常にとまどいましたが…更に調べていくと、何故だかは分かりませんが解決法は見付かりました。</p>
+<p>X Window Systemのツールxrandrを使ってモニターに新しいモードを追加すれば良い、ということです。手順的にはrootで/etc/xprofileファイルを作成し、以下のような内容にして保存し、再ログインすればよいとのことです。</p>
+<div class="code">
+    <div class="code-header"><h5>/etc/xprofile</h5></div>
+    <pre>#!/bin/bash
+xrandr --newmode "1368x768R"  72.25  1368 1416 1448 1528  768 771 781 790 +hsync -vsync
+xrandr --addmode eDP-1 "1368x768R"
+xrandr --output eDP-1 --mode "1368x768R"</pre>
+</div>
+<p>何だこの暗号は…! Linuxのコマンドが暗号じみているのは今に始まったことではないですがこれは特に暗号じみてます。ですが、あまり深く考えずに手を動かしていきましょう。1行目は起動プログラムにbashを指定します。2行目は、新しいモードを作成するのですが、この値はcvtコマンドから取得します。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre># cvt -r 1366 768
+# 1368x768 59.85 Hz (CVT) hsync: 47.28 kHz; pclk: 72.25 MHz
+Modeline "1368x768R"  72.25  1368 1416 1448 1528  768 771 781 790 +hsync -vsync
+</div>
+<p>Modelineの行からコピーして、xrandrの引数にします。3行目にあるeDP-1はモニターの名前で、xrandrを引数なしで実行すると利用可能なモニタのリストが表示されるのでそこから取ります。</p>
+<div class="code">
+    <div class="code-header"><h5>ターミナル</h5></div>
+    <pre># xrandr
+Screen 0: minimum 320 x 200, current 1368 x 768, maximum 8192 x 8192
+eDP-1 connected primary 1368x768+0+0 (normal left inverted right x axis y axis) 293mm x 164mm
+   960x540       59.82  
+   864x486       59.92    59.57  
+   640x480       59.94  
+   480x270       59.82  
+   432x243       59.92    59.57  
+   320x240       60.05  
+   1368x768_60.00  59.88* 
+DP-1 disconnected (normal left inverted right x axis y axis)
+HDMI-1 disconnected (normal left inverted right x axis y axis)
+DP-2 disconnected (normal left inverted right x axis y axis)
+HDMI-2 disconnected (normal left inverted right x axis y axis)
+</div>
+<p>connectedとなっている行の先頭がモニタ名なのでそれを上のxprofileに書き込みます。こうしてモニタに新しいモードを作ります。</p>
+<p>xprofileの最後の行でモニタに新しく作ったモードを有効化します。再ログインするとディスプレイの解像度がまともになっています。</p>
+<p>この手順はアメリカの2ちゃんねるとも呼ばれることがあるRedditにありましたのでリンクを貼っておきます⇒<a href="https://www.reddit.com/r/archlinux/comments/3rvp8y/xrandr_not_detecting_correct_resolution/">xrandr not detecting correct resolution : archlinux</a></p>
+<p>今回は以上です。</p>
+

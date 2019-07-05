@@ -1,0 +1,45 @@
+<h3>JQuery絶ちしてみました</h3>
+<p>このサイトでは始めJQueryの力を借りていました。大変便利なライブラリです。JavaScriptが嫌いだった私が何とかここまでやってこれたのもJQueryのおかげでございます。</p>
+<p>しかし使い慣れてきますと読み込みに時間がかかったり、JavaScriptとして不自由に感じたりしてくるので、JQuery無しで同じ機能を実装したくなってきました。</p>
+<p>何度か試行錯誤し、失敗を重ね、JQuery絶ちは私にはできないかもしれないという挫折感を何度か味わいながらも、最近ようやくJQuery絶ちに成功しましたよ。</p>
+<p>ポイントとなったのは、document.querySelectorという関数の存在に気付いたことでした。初期のDOMのgetElementByIdなどの嫌な印象が強かったため、避け続けているうちに、見逃していたのですが、このメソッドがあれば大体のことはJQueryの置き換えができると分かりました。</p>
+<p>参考：<a href="https://developer.mozilla.org/ja/docs/Web/API/Document/querySelector">MDN web docs: Document.querySelector()</a></p>
+<div class="code">
+    <div class="code-header">
+	<h5>JavaScript (JQuery使用)</h5>
+    </div>
+    <pre>$("#some_id")      ←IDで検索する場合
+$(".some_class")   ←クラスで検索する場合
+$(".some_class p") ←タグ名で検索する場合 + 入れ子となるセレクタの指定</pre>
+</div>
+<p>などのように書いていたものを</p>
+<div class="code">
+    <div class="code-header">
+	<h5>JavaScript</h5>
+    </div>
+    <pre>document.querySelector("#some_id")         ←IDで検索する場合
+document.querySelectorAll(".some_class")   ←クラスで検索する場合
+docoment.querySelectorAll(".some_class p") ←タグ名で検索 + 入れ子となるセレクタの指定</pre>
+</div>
+<p>とすれば良いだけになったのでさほど労力が変わらなくなりましたね。</p>
+<p>FirefoxやGoogle Chrome、Edgeはもちろんのこと、InternetExplorerでもバージョン8からサポートされているため現在でも使われているほとんどのブラウザでサポートされているということになります。知りませんでした…。</p>
+<p>参考：<a href="https://webrage.jp/techblog/pc_browser_share/">WebブラウザシェアランキングTOP10(日本国内・世界)</a></p>
+<p>しかしdocumentと書くのが面倒なので下のような関数を書いて楽してます。</p>
+<div class="code">
+    <div class="code-header">
+	<h5>JavaScript</h5>
+    </div>
+    <pre>function select(selector) {
+    var nodeList = document.querySelectorAll(selector);
+    return Array.prototype.slice.call(nodeList, 0);
+}
+
+↓使い方
+select("p").forEach(function(p) {
+    ... 何か処理を書く ...
+});
+</div>
+<p>Windows 10に入っているInternet Explorer 11 では、document.querySelectorAllの返り値のNodeListに、forEachメソッドが定義されておらず不便なので、Array.prototype.slice.callメソッドを用いてArrayに変換する処理を挟んでいます。このサイトでは古風なWindowsユーザを排除しないために対応策バッチリです。</p>
+<p>↓こんな記事を見付けましたが、今だにIE6を使っている人は流石に、…いないとは言えませんが、ちょっとまだ対応できませんね。持ってませんし。</p>
+<p><a href="https://king.mineo.jp/magazines/special/693">IE6がコーダーに嫌われていたなんて知らなかった | マイネオ</a></p>
+

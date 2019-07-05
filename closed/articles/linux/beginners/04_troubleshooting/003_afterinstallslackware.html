@@ -1,0 +1,233 @@
+<h3>SlackwareにWifiのファームウェアをインストールする</h3>
+<p><a href="article.php?entry=linux/beginners/05_troubleshooting/001">色んなLinuxをインストールしてみました</a>という記事で、<a href="article.php?entry=misc/others/01_self/004">Dynabook</a>に11のディストリビューションをインストールしたなかに、Slackware 14.2があるのですが、これがピンチに陥ってます。</p>
+<p>まず、インストールは成功しましたが、再起動後インストールしたSlackwareにログインし、Xウィンドウシステムの起動のためstartxコマンドを実行するとエラー終了してしまいました。それからインターネットも有線無線とも繋りません。</p>
+<p>別のディストリビューションでは、XウィンドウもインターネットもWifiも最初から起動したのですが。</p>
+<p>しかしここまでは分かっていることで、カーネルを再ビルドしてインストールすれば解決しました。</p>
+<p>別のディストリビューションでLinuxのカーネルをダウンロードし、手順に従ってビルド・インストールして再起動しました。その結果、Xウィンドウは起動し、有線LANも認識してインターネットに繋がるようにはなりました。</p>
+<p>しかしWifiは依然として認識されません。</p>
+<p>ヘタレの私はもはやこれまでかと諦めかけましたが、実は少し前まではWifiも繋がっていたのでできなくなったのは納得がいかず、諦めきれず、調べてみることにしました。</p>
+<p>まずrootユーザでifconfigを打ってみます。</p>
+<div class="code">
+    <div class="code-header">
+        <h5>ターミナル</h5>
+    </div>
+    <pre>root@ttdyna:~# ifconfig
+eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 192.168.1.197  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::b719:3bd3:ec5f:e4b  prefixlen 64  scopeid 0x20&lt;link&gt;
+        inet6 240f:3d:a066:1:5016:df2a:416d:817a  prefixlen 64  scopeid 0x0&lt;global&gt;
+        inet6 fe80::2254:c8d4:3574:5069  prefixlen 64  scopeid 0x20&lt;link&gt;
+        inet6 240f:3d:a066:1:d3c:6f05:dd6f:7a11  prefixlen 64  scopeid 0x0&lt;global&gt;
+        ether ec:21:e5:c8:61:31  txqueuelen 1000  (Ethernet)
+        RX packets 5710  bytes 663588 (648.0 KiB)
+        RX errors 0  dropped 2175  overruns 0  frame 0
+        TX packets 1429  bytes 152309 (148.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 16  memory 0xb1200000-b1220000  
+
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    </pre>
+</div>
+<p>あるはずのwlan0がないことが分かります。次にiwconfigを打ってみます。</p>
+<div class="code">
+    <div class="code-header">
+        <h5>ターミナル</h5>
+    </div>
+    <pre>root@ttdyna:~# iwconfig
+lo        no wireless extensions.
+
+eth0      no wireless extensions.</pre>
+</div>
+<p>やはりwlan0がありません。</p>
+<p>次にdmesgを打ってみます。</p>
+<div class="code">
+    <div class="code-header">
+        <h5>ターミナル</h5>
+    </div>
+    <pre>root@ttdyna:~# dmesg | grep -i wifi
+[    7.825970] Intel(R) Wireless WiFi driver for Linux
+[    7.826038] iwlwifi 0000:02:00.0: enabling device (0000 -> 0002)
+[    7.827437] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-26.ucode failed with error -2
+[    7.827450] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-25.ucode failed with error -2
+[    7.827459] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-24.ucode failed with error -2
+[    7.827467] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-23.ucode failed with error -2
+[    7.833406] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-22.ucode failed with error -2
+[    7.833410] iwlwifi 0000:02:00.0: no suitable firmware found!
+    </pre>
+</div>
+<p>さてさて、ようやくエラー箇所が分かりました。DynabookのWifiに対応したLinuxのデバイスドライバがないということでしょうかね。少し前はカーネルの再ビルドだけでWifiも繋がるようになってたので、Kernelの開発が進んでDynabookに対応するドライバが切り捨てられてしまったのでしょうか…。/lib/firmwareの中を覗いてみますと、iwlwifiと名の付くものがあるのが分かります。</p>
+<div class="code">
+    <div class="code-header">
+        <h5>ターミナル</h5>
+    </div>
+    <pre>root@ttdyna:~# ls /lib/firmware | grep iwlwifi
+LICENCE.iwlwifi_firmware
+iwlwifi-100-5.ucode
+iwlwifi-1000-3.ucode
+iwlwifi-1000-5.ucode
+iwlwifi-105-6.ucode
+iwlwifi-135-6.ucode
+iwlwifi-2000-6.ucode
+iwlwifi-2030-6.ucode
+iwlwifi-3160-10.ucode
+iwlwifi-3160-12.ucode
+iwlwifi-3160-13.ucode
+iwlwifi-3160-16.ucode
+iwlwifi-3160-7.ucode
+iwlwifi-3160-8.ucode
+iwlwifi-3160-9.ucode
+iwlwifi-3168-21.ucode
+iwlwifi-3945-2.ucode
+iwlwifi-4965-2.ucode
+iwlwifi-5000-1.ucode
+iwlwifi-5000-2.ucode
+iwlwifi-5000-5.ucode
+iwlwifi-5150-2.ucode
+iwlwifi-6000-4.ucode
+iwlwifi-6000g2a-5.ucode
+iwlwifi-6000g2a-6.ucode
+iwlwifi-6000g2b-5.ucode
+iwlwifi-6000g2b-6.ucode
+iwlwifi-6050-4.ucode
+iwlwifi-6050-5.ucode
+iwlwifi-7260-10.ucode
+iwlwifi-7260-12.ucode
+iwlwifi-7260-13.ucode
+iwlwifi-7260-16.ucode
+iwlwifi-7260-7.ucode
+iwlwifi-7260-8.ucode
+iwlwifi-7260-9.ucode
+iwlwifi-7265-10.ucode
+iwlwifi-7265-12.ucode
+iwlwifi-7265-13.ucode
+iwlwifi-7265-16.ucode
+iwlwifi-7265-8.ucode
+iwlwifi-7265-9.ucode
+iwlwifi-7265D-10.ucode@
+iwlwifi-7265D-12.ucode
+iwlwifi-7265D-13.ucode
+iwlwifi-7265D-16.ucode
+iwlwifi-7265D-21.ucode
+iwlwifi-8000C-13.ucode
+iwlwifi-8000C-16.ucode
+iwlwifi-8000C-21.ucode
+iwlwifi-8265-21.ucode
+    </pre>
+</div>
+<p>ん、よく見ますと、dmesgはiwlwifi-8265-25から末尾22までは確認しますが、/lib/firmwareにはiwlwifi-8265-21しかありません。つまり/lib/firmwareにiwlwifi-8265-22.ucodeがあれば良いということでしょうか。</p>
+<p>ググった結果、「ask ubuntu」に答えがありました。</p>
+<p><a href="https://askubuntu.com/questions/458843/how-does-the-linux-kernel-choose-which-firmware-version-to-load">How does the linux kernel choose which firmware version to load?</a></p>
+<blockquote><p>I think it depends on your kernel:</p>
+    <ul>
+	<li>3.10+ uses firmware -7</li>
+	<li>3.13+ uses firmware -8</li>
+	<li>3.14.9+ uses firmware -9</li>
+	<li>3.17+ uses firmware -10</li>
+    </ul>
+    <p>Source: <a href="http://wireless.kernel.org/en/users/Drivers/iwlwifi">http://wireless.kernel.org/en/users/Drivers/iwlwifi</a></p>
+    <p>Ubuntu 14.04 is 3.13 so loads 22.24.8.0.</p>
+    <p>Ubuntu 14.10 is 3.16 so loads 25.228.9.0.</p>
+    <p>I can connect with both, though the first was flaky for me... speedtest.net scores were 2-3Mbps down versus 25Mbps down with the second. YMMV.</p>
+</blockquote>
+<p>なるほどカーネルのバージョンごとに対応したファームウェアがあるのですね。ソースのURLを見に行きます。<a href="https://wireless.wiki.kernel.org/en/users/Drivers/iwlwifi">Linux Wireless</a></p>
+<img class="figure" src="images/linuxwirelesssite1.png" alt="Linux Wirelessのサイト">
+<p>サイトの下の方の表を見ると、iwlwifi-8265-22がありました。</p>
+<img class="figure" src="images/linuxwirelesssite2.png" alt="Linux Wirelessのサイト">
+<p>早速ダウンロードして、/lib/firmwareに放り込み、再起動してみます。</p>
+<img class="figure" src="images/slackwarewififound.jpg" alt="SlackwareのWifiが繋がりました。">
+<p>BINGO! やりました〜。ちょっと苦労しましたが中々楽しかったです。これでこれからもSlackwareが使えるので安心しました。</p>
+<p>一応、コマンドの出力も確認します。</p>
+<div class="code">
+    <div class="code-header">
+        <h5>ターミナル</h5>
+    </div>
+    <pre>root@ttdyna:~# ifconfig
+eth0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500
+        ether ec:21:e5:c8:61:31  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 16  memory 0xb1200000-b1220000  
+
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1  (Local Loopback)
+        RX packets 8  bytes 400 (400.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8  bytes 400 (400.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 192.168.1.108  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 240f:3d:a066:1:ba21:5d82:7e73:c426  prefixlen 64  scopeid 0x0&lt;global&gt;
+        inet6 fe80::9261:aeff:feb2:bc7c  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 90:61:ae:b2:bc:7c  txqueuelen 1000  (Ethernet)
+        RX packets 2396  bytes 1878166 (1.7 MiB)
+        RX errors 0  dropped 184  overruns 0  frame 0
+        TX packets 1193  bytes 150934 (147.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    </pre>
+</div>
+<p>wlan0が出ています。iwconfigでは。</p>
+<div class="code">
+    <div class="code-header">
+        <h5>ターミナル</h5>
+    </div>
+    <pre>root@ttdyna:~# iwconfig
+eth0      no wireless extensions.
+
+lo        no wireless extensions.
+
+wlan0     IEEE 802.11  ESSID:"TP-Link_6A58"  
+          Mode:Managed  Frequency:2.412 GHz  Access Point: 70:4F:57:BB:6A:57   
+          Bit Rate=144.4 Mb/s   Tx-Power=22 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Encryption key:off
+          Power Management:on
+          Link Quality=65/70  Signal level=-45 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:8   Missed beacon:0
+    </pre>
+</div>
+<p>wlan0が出ています。dmesgでは。</p>
+<div class="code">
+    <div class="code-header">
+        <h5>ターミナル</h5>
+    </div>
+    <pre>root@ttdyna:~# dmesg | grep -i wifi
+[    8.336928] Intel(R) Wireless WiFi driver for Linux
+[    8.336995] iwlwifi 0000:02:00.0: enabling device (0000 -> 0002)
+[    8.345764] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-26.ucode failed with error -2
+[    8.345776] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-25.ucode failed with error -2
+[    8.345784] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-24.ucode failed with error -2
+[    8.345792] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-8265-23.ucode failed with error -2
+[    8.614346] iwlwifi 0000:02:00.0: loaded firmware version 22.361476.0 op_mode iwlmvm
+[    8.672634] iwlwifi 0000:02:00.0: Detected Intel(R) Dual Band Wireless AC 8265, REV=0x230
+[    8.674699] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[    8.675329] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[   30.703190] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[   30.703475] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[   30.818405] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[   30.818691] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[   30.881139] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[   30.881780] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[   30.997390] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+[   30.997675] iwlwifi 0000:02:00.0: L1 Enabled - LTR Enabled
+    </pre>
+</div>
+<p>iwlwifiがロードされたようです。</p>
+<p>ただ自分が何をやったのかよく分かっていないのが怖いところです。まだ問題があり、最新のカーネル5.0.2をビルドしてインストールしたところ、Linuxが起動できませんでした。これについては原因が分かっていないので、当面は古い4.9系を使っていくつもりです。</p>
+<p>いかがでしたか？同じようなことでお困りの方のお役に立てれば幸いです。それではご機嫌ようさようなら!</p>
+
+
+
+

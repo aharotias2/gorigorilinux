@@ -1,0 +1,87 @@
+<h3>初めてのCプログラム (Windows編)</h3>
+<p>さてコンパイラのインストールまで済んだので早速プログラムを書いていきますか!</p>
+<p>まず、サクラエディタ (またはお好きなテキストエディタ) を起動します。</p>
+<p>下のような内容を書いて、「hello.c」として保存してください。保存するフォルダは、どこでも構いません。</p>
+<div class="code" name="hello.c">
+    <pre>#include &lt;stdio.h&gt;
+	
+int main(void) {
+    printf("Hello, world!");
+    return 0;
+}
+    </pre>
+</div>
+<p>これが、Cプログラムの最も簡単なものです。</p>
+<p>次に、コマンドプロンプトを起動します。そして「hello.c」を保存したフォルダに移動します。例えばデスクトップである場合、</p>
+<div class="code" name="コマンドプロンプト">
+    <pre>Microsoft Windows [Version 10.0.17134.706]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\あなた&gt;cd Desktop [Enter]
+
+C:\Users\あなた\Desktop>
+    </pre>
+</div>
+<p><img src="images/enter.svg">とあるところではエンターキーを押してください。</p>
+<p>で、ここでdirコマンドを打つと「hello.c」が出てくるはずです。</p>
+<div class="code" name="コマンドプロンプト">
+    <pre>C:\Users\あなた\Desktop>dir [Enter]
+ ドライブ C のボリューム ラベルは OS です
+ ボリューム シリアル番号は○○○○-○○○○です
+
+ C:\Users\あなた\Desktop のディレクトリ
+
+2019/04/12  21:51    &lt;DIR&gt;          .
+2019/04/12  21:51    &lt;DIR&gt;          ..
+2019/04/12  21:51                84 hello.c
+2019/04/12  20:45             1,150 サクラエディタ.lnk
+    </pre>
+</div>
+<p>出てきたので、ここでTCCを起動し、先ほどのhello.cをコンパイルします。tccが起動しない場合はおそらくパスが通っていないので前項の手順を見直していただいて環境変数PATHにtccフォルダのパスを追加してください。</p>
+<div class="code" name="コマンドプロンプト">
+    <pre>C:\Users\あなた\Desktop>tcc -o hello.exe hello.c [Enter]
+
+C:\Users\あなた\Desktop>
+    </pre>
+</div>
+<p>このコマンドは、tccを起動し、hello.cを入力として、hello.exeを出力するというものです。出力するファイルは拡張子の「.exe」がないと起動できませんので注意してください。もし、間違って「-o hello」などとしてしまった場合、「rename」コマンドかもしくはエクスプローラなどのファイルマネージャで名前を変更し、拡張子の「.exe」を付けて下さい。</p>
+<p>エンターキーを押して、何も出なかった場合は成功です。何か出たらそれは多分エラーです。と、ここまで来てTCCの唯一の欠点に気付いたのですが、それはエラーメッセージが全て英語であるということです。しかし作者がフランスの方なので英語であるだけ親切というものですが…。英語が苦手な方には厳しいかもしれませんが、これは英語を覚える良い機会ではないでしょうか。</p>
+<p>例えば、上のソースで「"Hello, world!\n"」に両側の「"」を付け忘れた場合どうなるかというと、</p>
+<div class="code" name="コマンドプロンプト">
+    <pre>C:\Users\あなた\Desktop>tcc -o hello.exe hello.c [Enter]
+hello.c:4 error: 'Hello' undeclared
+
+C:\Users\あなた\Desktop>
+    </pre>
+</div>
+<p>「hello.c」は分かりますよね。「:4」は4行目という意味ですね。「error: 」はこの先がエラー内容ですという意味ですね。ではそのエラー内容である「'Hello' undeclared」は何かと言うと「Helloという変数は宣言されていません」という意味になります。C言語では宣言されていない変数をいきなり使うことはできません。つまり「"」が付いていないよ、とは教えてくれないので注意が必要です。</p>
+<p>じゃあ、おっとっと〜と直しました。しかしその時、閉じカッコの後の「; (セミコロン)」を消してしまったらどうなるでしょう。</p>
+<div class="code" name="コマンドプロンプト">
+    <pre>C:\Users\あなた\Desktop>tcc -o hello.exe hello.c [Enter]
+hello.c:4 error: ';' expected (got "return")
+
+C:\Users\あなた\Desktop>
+    </pre>
+</div>
+<p>「error: 」のあとを見てみますと、「';' expected」とあります。「expect」という英単語が「期待する」という意味だと知っていれば、まあ分かるでしょう。ここにはセミコロンが必要だよ、という意味になります。「(got "return")」はセミコロンのあるべき位置にいきなり「return」が来ちゃったよという意味になります。つまり「return」の前にセミコロンが必要だよ、という意味です。</p>
+<p>ではまたおっとっと〜と直しました。しかしその時偶然最後の行の「}」を消してしまったらどうなるでしょうか？</p>
+<div class="code" name="コマンドプロンプト">
+    <pre>C:\Users\あなた\Desktop>tcc -o hello.exe hello.c [Enter]
+hello.c:7 error: identifier expected
+
+C:\Users\あなた\Desktop>
+    </pre>
+</div>
+<p>「error: 」まではいいとして、その後の「identifier」とは何でしょうか？筆者も分からないので調べてみたところ以下のYahoo!知恵袋にアンサーがありました。</p>
+<p><a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12137828417">Ｃ言語でコンパイルする際に エラー: expected id...</a></p>
+<p>どうやらこれもカッコがない時に起きるエラーのようですね。このようにコンパイラーのエラーメッセージは一部分かりにくいので慣れが必要です。ただ基本的にコンパイルエラーは文法間違いの指摘なので文法を覚えていればおおよその推測はできるようになります。真の問題は文法以外のエラーです。その場合はコンパイルは通るのですが動作がおかしい! 思ったのと違う!! というかたちで出てきます。しかしそれはまた別のお話です。</p>
+<p>それでは、エラーがなくなりましたらコンパイル成功しているはずですので、起動してみましょう。起動する時には「.exe」は要らないので「hello」と打てば良いです。</p>
+<div class="code" name="コマンドプロンプト">
+    <pre>C:\Users\あなた\Desktop>hello [Enter]
+Hello, world!
+
+C:\Users\あなた\Desktop>
+    </pre>
+</div>
+<p>「Hello, world!」と出ましたか？ そうですか、それはそれは、おめでとうございます! </p>
+<p>おそらくこれだけで満足してしまった方もいるかと思います。Hello, worldプログラムを何度でも繰り返し作られると良いと思います。私も自信を失いそうになった時はHello, worldプログラムをよく作ります。</p>

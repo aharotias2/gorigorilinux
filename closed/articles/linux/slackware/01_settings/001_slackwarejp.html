@@ -1,0 +1,62 @@
+<h3>Slackware 14.2 を日本語化する</h3>
+<p>Slackware Linuxは海外のディストリビューションであるため、当然、デフォルトで英語環境です。</p>
+<p>今回はSlackware Linux 14.2の日本語環境を整えていきたいと思います。そんなに手間はかかりませんよ。</p>
+<div class="outline"></div>
+<h4> まず、デスクトップ環境の言語を日本語にします。</h4>
+<p>Slackwareでは、ほとんどの設定をテキストファイルで行うことができます。</p>
+<p> 設定ファイルを編集するのに使うテキストエディタは何でも良いのですが、とりあえずVimを使います。Emacsをインストールしているならそれでも構いません。Nanoという手もあります。Windowsのノートパッド的なのが良ければ、残念ながら最初から入ってこないのですが、Leafpadをダウンロードしてきて使っても良いでしょう。そこは完全に自由です。</p>
+<p>デスクトップ環境は何でもいいですがXfceかFluxboxあたりを使っているイメージで進めます。</p>
+<p>コンソール画面か、またはxtermか何かのターミナルエミュレータを起動し、Vimで、ホームディレクトリにある<span style="text-decoration: underline;">.xinitrc</span>ファイルを開きます。</p>
+<div class="code" name="ターミナル">
+    <pre>testuser@testhost:~$ vim .xinitrc</pre>
+</div>
+<p>どこでも良いので、環境変数<span style="text-decoration: underline;">LANG</span>の値を以下のようにしてexportします。</p>
+<div class="code" name="~/.xinitrc">
+    <pre>export LANG=ja_JP.UTF-8</pre>
+</div>
+<p>入力メソッドにScimを使う場合は、以下の行も書き足します。</p>
+<div class="code" name="~/.xinitrc">
+    <pre>source /etc/profile.d/scim.sh</pre>
+</div>
+<p>これらの設定は「# Start the window manager:」とある行より上の行であればどこでも構いません。しかしファイルの末尾に書いてしまうと無効になりますのでご注意ください。</p>
+<h4>Xウィンドウ システムのキーボード配列を日本語化する。</h4>
+<p>日本で一般的に用いられているキーボード配列は"jp106"というものです。Xorg (X ウィンドウ システム) の設定ファイルを作成し、設定します。</p>
+<p><span style="text-decoration: underline;">/etc/X11/xorg.conf.d</span>というディレクトリに<span style="text-decoration: underline;">10-keyboard.conf</span>というファイルを作成し、以下の内容を書き込みます。この作業は<strong>root</strong>で行ないます。</p>
+<div class="code" name="/etc/X11/xorg.conf.d/10-keyboard.conf">
+    <pre>Section "InputClass"
+    Identifier "keyboard-all"
+    MatchIsKeyboard "on"
+    Driver "evdev"
+    Option "XkbLayout" "jp"
+    Option "XkbModel" "jp106"
+    Option "XkbOptions" "terminate:ctrl_alt_bksp"
+EndSection</pre>
+</div>
+<p>X11を再起動します。</p>
+<h4>日本語フォントをインストールする</h4>
+<p>最初から入っている日本語フォントもありますが、インターネット上にもっと良いフォントありますのでそちらをダウンロードして、使っていきたいと思います。</p>
+<p>おすすめはM+派生シリーズのMgen+です。まあ、何でも良いですが。FirefoxなどのブラウザでフォントのTTFファイルをダウンロードし、ホームディレクトリの<span style="text-decoration: underline;">.fonts</span>ディレクトリか、<span style="text-decoration: underline;">.local/share/fonts</span>ディレクトリに移動します。</p>
+<div class="code" name="ターミナル">
+    <pre>testuser@testhost:~$ cd Downloads
+testuser@testhost:~/Downloads$ unzip ダウンロードしたフォント.zip
+testuser@testhost:~/Downloads$ mv ダウンロードしたフォント.ttf ~/.fonts</pre>
+</div>
+<p>次にホームディレクトリの<span style="text-decoration: underline;">.config/fontconfig/fonts.conf</span>ファイルを編集します。</p>
+<p>まずフォントファイルがあるディレクトリを以下のタグで定義します。</p>
+<div class="code" name="~/.config/fontconfig/fonts.conf">
+    <pre>&lt;fontconfig&gt;
+  &lt;dir&gt;~/.fonts&lt;/dir&gt;
+  &lt;dir&gt;~/.local/share/fonts&lt;/dir&gt;</pre>
+</div>
+<p> こうするとGUIのアプリのフォント設定ダイアログなどで、インストールしたフォントを指定することができるようになります。</p>
+<p> ここで<strong>root</strong>になって、<span style="text-decoration: underline;">/etc/fonts/conf.d</span>にある、<span style="text-decoration: underline;">44-wqy-zenhei.conf</span>を削除しましょう。これは中国語のフォント設定ファイルで、これがあると漢字が全部中国語のフォントになってしまい、日本語のフォントが表示されなくなってしまいます。</p>
+<div class="code" name="ターミナル">
+    <pre>root@testhost:~# rm /etc/fonts/conf.d/44-wqy-zenhei.conf</pre>
+</div>
+<h4>Xを再起動して設定を適用する</h4>
+<p>Fluxbox (またはXfce) を終了して、Xウィンドウ システムを再起動します。</p>
+<div class="code" name="ターミナル">
+    <pre>testuser@testhost:~$ startx</pre>
+</div>
+<p>ちなみにfontconfigの設定は変更したあとXを再起動しなくても適用されます。</p>
+<p>こんなところで、とりあえず最低限の日本語環境は整ったと思います。</p>

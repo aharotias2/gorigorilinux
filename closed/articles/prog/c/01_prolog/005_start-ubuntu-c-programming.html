@@ -1,0 +1,60 @@
+<h3>初めてのCプログラム (Ubuntu編)</h3>
+<p>Ubuntu (ウブントゥ) はLinuxをベースとした代表的なディストリビューションでありOSです。今回はこのUbuntuを使ってCプログラミングを始めていきたいと思います。</p>
+<h4>テキストエディタでC言語プログラムを作成する</h4>
+<p>Ubuntuの画面の左下にあるアイコンをクリックすると、アプリケーションの一覧が表示されます。</p>
+<img class="figure" src="images/C/ubuntu1.png" alt="Ubuntuのデスクトップ画面">
+<p>アプリケーションランチャ画面になるので、ここで「テキストエディタ」をクリックします。</p>
+<img class="figure" src="images/C/ubuntu2.png" alt="Ubuntuのアプリケーションランチャー画面">
+<p>テキストエディタが開きました。</p>
+<img class="figure" src="images/C/ubuntu3.png" alt="テキストエディタが開いたところ">
+<p>ではここにC言語でプログラムを書いていきます。</p>
+<div class="code" name="~/Desktop/hello.c">
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, world!\n");
+    return 0;
+}
+    </pre>
+</div>
+<p>これを「hello.c」としてデスクトップに保存します。</p>
+<h4>C言語コンパイラーとして「gcc」をインストールする</h4>
+<p>次に、ターミナル (コマンドプロンプトのようなもの) を開きます。Ctrl + Alt + tで開きます。</p>
+<p>「gcc」とタイプしてエンターを押すと、gccがまだインストールされていないので「<b>sudo apt intall gcc</b>」というコマンドを打つようにアドバイスがあるのでそれに従って打ちます。</p>
+<div class="code" name="ターミナル">
+    <pre>あなた@あなたのホスト:~$ gcc --version [Enter]
+
+Command 'gcc' not found, but can be installed with:
+
+sudo apt install gcc
+
+あなた@あなたのホスト:~$ sudo apt install gcc [Enter]
+    </pre>
+</div>
+<p>すると色々出力され、最後までいくとgccがインストールされます。「gcc --version」と打って以下のような出力があれば成功です。</p>
+<div class="code" name="ターミナル">
+    <pre>あなた@あなたのホスト:~$ gcc --version [Enter]
+gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+あなた@あなたのホスト:~$ cd Desktop [Enter]
+あなた@あなたのホスト:~/Desktop$ gcc -o hello hello.c [Enter]
+    </pre>
+</div>
+<p>その後、「<b>gcc -o hello hello.c</b>」と打つと先ほど作ったプログラムがコンパイルされます。</p>
+<p>ここでも、何も出力されなければ成功です。された場合、恐らくそれはエラーです。直さなきゃいけません。あとでデバッグしましょう!</p>
+<div class="column"><p>参考までにですが、世間のUbuntu通によりますとgccを直接インストールせず、関連パッケージも一緒にインストールしてくれる「<b>build-essential</b>」をインストールした方が良いようです。私はその根拠がよく分からなかったので、今回はターミナルのアドバイスを採用してgccを直接インストールすることにしました。多分あとで「<b>make</b>」をインストールすることになると思います。</p>
+</div>
+<h4>C言語をコンパイルする + できたプログラムを実行する</h4>
+<p>では実際に今作ったプログラムを実行してみます。「hello」を実行するのですが、Linux (というよりbash) では環境変数PATHに登録されたディレクトリにあるファイルしか実行できませんので、その他のファイルはディレクトリまで指定して実行する必要があります。普通は実行ファイルがあるディレクトリに移動し、その場所を意味する「./」というパスを付けて実行します。すると以下のようになります。</p>
+<div class="code" name="ターミナル">
+    <pre>あなた@あなたのホスト:~$ cd Desktop [Enter]
+あなた@あなたのホスト:~/Desktop$ ./hello [Enter]
+Hello, world!
+    </pre>
+</div>
+<p>はい、これで初めてのC言語プログラムはできました。できましたか？ それはそれは、おめでとうございます!!</p>
+

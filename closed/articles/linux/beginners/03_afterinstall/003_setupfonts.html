@@ -1,0 +1,130 @@
+<h3>フォントの設定</h3>
+<p>こんにちは。今回はFontconfigを使ったLinuxでのフォントの細かい設定方法をまとめます。</p>
+<div class="outline"></div>
+<h4>Fontconfigとは</h4>
+<p>Fontconfigとは、X Window System系のGUI環境でフォントの管理を行うライブラリおよびツール群のパッケージです。XML形式のファイルを使って設定を行います。</p>
+<p>主にできること</p>
+<ul>
+    <li>MSゴシック、MS明朝などと言ったフォントを、Serif、Sans Serifのような一般名に割り当てられます。</li>
+    <li>アンチエイリアスの有無、ヒンティングの設定などを行えます。</li>
+    <li>フォントの文字の欠けを別のフォントで補うことができます。</li>
+</ul>
+<p>※ヒンティングとは、TrueTypeなどのベクターフォントをピクセルに合わせて調整することでアンチエイリアスによるぼやけた感じを軽減しクッキリとさせる機能です。</p>
+<h4>インストール方法</h4>
+<p>大体X Window Systemと同梱なので意識してインストールする必要はありません。</p>
+<h4>設定ファイルの場所</h4>
+<p>/etc/fonts/fonts.conf</p>
+<p>このファイルを起点として、外部ファイルも読み込んでいきます。</p>
+<h4>設定ファイルの形式</h4>
+<p>Fontconfigの設定ファイルは以下のような形式になっています。</p>
+<div class="code">
+    <div class="code-header"><h5>/etc/fonts/fonts.conf</h5></div>
+    <pre>&lt;?xml version="1.0"?&gt;&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;
+&lt;fontconfig&gt;
+    …この中に設定を記述します…
+&lt;/fontconfig&gt;
+&lt;/xml&gt;</pre>
+</div>
+<p>fontconfigタグの直下に書ける何種類かのタグのうち、主に使うのは下の4種類です。</p>
+<dl>
+    <dt>&lt;dir&gt;</dt>
+    <dd>フォントのTTFなどのファイルを置くディレクトリを指定します。</dd>
+    <dt>&lt;include&gt;</dt>
+    <dd>分割した設定ファイルを読み込みます。</dd>
+    <dt>&lt;match&gt;</dt>
+    <dd>フォントの設定を行います。</dd>
+    <dt>&lt;alias&gt;</dt>
+    <dd>sans-serif、serif、monospaceに実際のフォントを割り当てます。</dd>
+</dl>
+<h4>dirタグの使い方</h4>
+<p>フォントファイルを置いているディレクトリ(フォルダ)を指定します。</p>
+<div class="code">
+    <div class="code-header"><h5>fontconfigの設定ファイル</h5></div>
+    <pre>&lt;dir&gt;/path/to/the/directory/fonts&lt;/dir&gt;</pre>
+</div>
+<p>「~/」(チルダ)文字はユーザーのホームディレクトリとして使えます。</p>
+<h4>includeタグの使い方</h4>
+<p>分割されたfontconfigの設定ファイルのパスを指定します。</p>
+<div class="code">
+    <div class="code-header"><h5>fontconfigの設定ファイル</h5></div>
+    <pre>&lt;include ignore_missing="yes"&gt;/path/to/the/directory/font.conf&lt;/include&gt;</pre>
+</div>
+<p>「ignore_missing」属性はファイルが存在しない場合はエラーにせずスキップするように指示しています。</p>
+<h4>matchタグの使い方</h4>
+<p>&lt;match&gt;タグは、条件付きのフォントの設定を定義します。&lt;test&gt;タグで条件を決め、その後で&lt;edit&gt;タグで設定を決めます。</p>
+<div class="code">
+    <div class="code-header"><h5>fontconfigの設定ファイル</h5></div>
+    <pre>&lt;match&gt;
+  &lt;test qual="any" name="property" target="default" compare="eq"&gt;
+    何か条件
+  &lt;/test&gt;
+  &lt;edit name="property" mode="assign" binding="weak"&gt;
+    何か設定
+  &lt;/edit&gt;
+&lt;/match&gt;</pre>
+</div>
+<p>ハッキリ言ってルールを覚えて使いこなすのは極めて難しいと私は思いますので、いくつかの具体的な例を使ってテンプレ化したいと思います。</p>
+<h5>例: ブラウザなどで持っていないWindowsのフォントが指定されている部分に別のフォントを使うようにする</h5>
+<div class="code">
+    <div class="code-header"><h5>fontconfigの設定ファイル</h5></div>
+    <pre>&lt;match&gt;
+  &lt;test qual="any" name="family"&gt;
+    &lt;string&gt;MS ゴシック&lt;/string&gt;<span class="comment">&lt;!-- インターネットにはMSのフォントしか指定していないサイトもあります --&gt;</span>
+  &lt;/test&gt;
+  &lt;edit name="family" mode="assign"&gt;
+    &lt;string&gt;IPAゴシック&lt/string&gt;<span class="comment">&lt;!-- そういう場合にLinuxにインストールしてあるフォント名を使うように設定します --&gt;</span>
+  &lt;/edit&gt;
+&lt;/match&gt;</pre>
+</div>
+<h5>等幅フォント以外のフォントのヒンティングを有効にする</h5>
+<div class="code">
+    <div class="code-header"><h5>fontconfigの設定ファイル</h5></div>
+    <pre>&lt;match&gt;
+  &lt;test qual="any" name="family" compare="not_eq"&gt;
+    &lt;string&gt;monospace&lt;/string&gt;<span class="comment">&lt;!-- monospace以外のフォントを対象にします --&gt;</span>
+  &lt;/test&gt;
+  &lt;edit name="hinting" mode="assign"&gt;
+    &lt;bool&gt;true&lt/string&gt;<span class="comment">&lt;!-- ヒンティングを有効にします --&gt;</span>
+  &lt;/edit&gt;
+  &lt;edit name="hintstyle" mode="assign"&gt;
+    &lt;const&gt;hintmedium&lt/const&gt;<span class="comment">&lt;!-- ヒンティングの強度を中くらいにします --&gt;</span>
+  &lt;/edit&gt;
+&lt;/match&gt;</pre>
+</div>
+<p>なぜ等幅以外にするかと言うと等幅フォントをヒンティングすると幅が変わって等幅でなくなる不具合を避けるためです。もちろんご自分でやってみて等幅にヒンティングしても幅が変わらないのであればこの条件は必要ありません。その場合&lt;test&gt;タグは消して&lt;edit&gt;タグだけで機能します。</p>
+<p>ヒンティングの強度は弱い方からhintnone、hintslight、hintmedium、hintfullがあります。</p>
+<h5>等幅フォントのフォントのヒンティングを無効にする</h5>
+<div class="code">
+    <div class="code-header"><h5>fontconfigの設定ファイル</h5></div>
+    <pre>&lt;match&gt;
+  &lt;test qual="any" name="family" compare="eq"&gt;
+    &lt;string&gt;monospace&lt;/string&gt;<span class="comment">&lt;!-- monospaceのフォントを対象にします --&gt;</span>
+  &lt;/test&gt;
+  &lt;edit name="hinting" mode="assign"&gt;
+    &lt;bool&gt;false&lt/string&gt;<span class="comment">&lt;!-- ヒンティングを無効にします --&gt;</span>
+  &lt;/edit&gt;
+&lt;/match&gt;</pre>
+</div>
+<h4>aliasタグの使い方</h4>
+<p>aliasタグはフォントを別のフォントに置き換えるルールを定義します。&lt;alias&gt;の下の&lt;family&gt;タグがアプリケーションなどから指定するフォント名で、&lt;prefer&gt;タグで置き換えるフォントを指定します。例を示します。</p>
+<div class="code">
+    <div class="code-header"><h5>fontconfigの設定ファイル</h5></div>
+    <pre>&lt;alias&gt;
+  &lt;family&gt;Sans&lt;/family&gt;
+  &lt;prefer&gt;&lt;family&gt;好きなゴシック&lt;/family&gt;&lt;/prefer&gt;
+&lt;/alias&gt;</pre>
+</div>
+<p>この例ですと、アプリケーションなどでフォントにSansを指定した場合、「好きなゴシック」というフォントが実体になります。なお&lt;prefer&gt;タグの中には&lt;prefer&gt;タグを何個でも入れられます。</p>
+<h4>Fontconfig系のコマンド</h4>
+<p>Fontconfigの設定を確認できるコマンドが用意されています。よく使うものを挙げます。</p>
+<dl>
+    <dt>fc-cache - フォント情報のキャッシュを作成する</dt>
+    <dd>fc-cacheというコマンドを実行することでインストールされているフォントの情報を収めたキャッシュファイルを作成します。それにより、Fontconfigの設定を使用するアプリケーションの起動速度が早くなると言われています。</dd>
+    <dt>fc-list - インストールされているフォントの一覧を取得する</dt>
+    <dd>fc-listというコマンドでfontconfigが認識できるようインストールされたフォントの一覧を見ることが出きます。</dd>
+    <dt>fc-match - フォント名から辿って最も適切な実際のフォント名を取得する</dt>
+    <dd>aliasなどのタグで定義された関係をたどって最も適切な実際のフォント名を取得できます。例えばfc-match monospaceとすることでmonospaceというフォント名に対して実際に使われるフォントの名前を表示します。--allオプションを付加することで優先順が下のフォントのリストも表示できます。</dd>
+</dl>
+<h4>終わり</h4>
+<p>いかがでしたでしょうか？楽しんでいただけましたでしょうか？より詳細な情報は本家本元のサイトに行くの良いに決まっています。ググれば出てきますが一応リスペクトの意味も込めてここにもリンクを貼っておきます。よろしければご参照ください。それではあなたのフォントライフに幸あらんことを。</p>
+<p><a href="https://www.freedesktop.org/wiki/Software/fontconfig/">fontconfig | freedesktop.org</a></p> 

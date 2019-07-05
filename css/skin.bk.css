@@ -1,0 +1,391 @@
+/**********************************************************************************************
+ * フォント
+ **********************************************************************************************/
+@font-face {
+    font-family: "titlefont";
+    src: url("../fonts/FGGAUDonutP.ttf");
+}
+
+/**********************************************************************************************
+ * 全体
+ **********************************************************************************************/
+body {
+    background-color: antiquewhite;
+    background-image: url("../images/bgsand1.png");
+}
+
+a {
+    color: crimson;
+    text-decoration: none;
+}
+
+/**********************************************************************************************
+ * ヘッダー
+ **********************************************************************************************/
+.header {
+    margin-top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #B07070;
+    border: 1px solic #EEDEDF;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.7);
+}
+
+.header h1 {
+    color: chocolate;
+    font-size: x-large;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "titlefont";
+}
+
+.header p {
+    font-size: small;
+    margin: 5px 0;
+}
+
+.header h1 a {
+    color: chocolate;
+}
+
+.header h1 a:visited {
+    color: chocolate;
+}
+
+.header h1 a:hover {
+    color: darkorange;
+}
+
+/**********************************************************************************************
+ * 大メニュー
+ **********************************************************************************************/
+.big-menu {
+    background-color: chocolate;
+    color: #DCD0CD;
+    //box-shadow: 1px 3px 10px -5px rgba(0, 0, 0, 0.6);
+}
+
+.big-menu ul {
+    border-left: 1px solid #DCD0CD;
+}
+
+.big-menu li  {
+    border-right: 1px solid #DCD0CD;
+}
+
+.big-menu li a {
+    color: lightyellow;
+}
+
+.big-menu li a:visited {
+    color: lightyellow;
+}
+
+.big-menu li:hover {
+    background-color: darkorange;
+}
+
+
+/**********************************************************************************************
+ * 看板
+ **********************************************************************************************/
+.tux .desc {
+    color: #705050;
+    display: inline-block;
+    background-color: mintcream;
+    border: 1px solid peachpuff;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/**********************************************************************************************
+ * レイアウト
+ **********************************************************************************************/
+.rightpane {
+    border: #DCCDCD 1px solid;
+    //box-shadow: 3px 3px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.contents .centerpane {
+    background-color: white;
+    border: #DECDCD 1px solid;
+    //box-shadow: 3px 3px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/**********************************************************************************************
+ * ナビ
+ **********************************************************************************************/
+.contents .nav {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.contents .nav h3 {
+    background-color: darkorange;
+    color: white;
+    border-bottom: 1px solid #DCD0CD;
+    padding: 3px 3px 3px 14px;
+}
+
+.contents .nav ul {
+    list-style: none;
+}
+
+.contents .nav li {
+    border-bottom: 1px solid #DCD0CD;
+    padding: 8px 14px;
+}
+
+.contents .nav a {
+    color: #503030;
+}
+
+.contents .nav a:hover {
+    color: #A06060;
+}
+
+.contents .nav .datetime {
+    font-size: small;
+    color: #A09099;
+}
+
+/**********************************************************************************************
+ * パンくず
+ **********************************************************************************************/
+.contents .pankuzu {
+    margin: 4px 4px 4px 4px;
+    border-radius: 0 4px 0 0;
+    padding: 4px 3px 4px 46px;
+}
+
+.contents .pankuzu a {
+    color: chocolate;
+}
+
+.contents .pankuzu a:visited {
+    color: chocolate;
+}
+
+.contents .pankuzu a:hover {
+    color: gold;
+}
+
+.contents .pankuzu img {
+    margin: 0 10px;
+}
+
+/**********************************************************************************************
+ * レイアウト
+ **********************************************************************************************/
+.leftpane {
+}
+
+.rightpane {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/**********************************************************************************************
+ * 記事の目次
+ **********************************************************************************************/
+.outline {
+    border: #DCCDCD 1px solid;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.outline h3 {
+    background-color: darkturquoise;
+    color: white;
+}
+
+/**********************************************************************************************
+ * 記事
+ **********************************************************************************************/
+.contents .article h5 {
+    color: goldenrod;
+}
+
+.contents .article h6 {
+    color: darkmagenta;
+}
+
+.contents .article .datetime .mtime {
+    color: #909090;
+}
+
+.contents .article .comment {
+    font-style: italic;
+    color: slateblue;
+    font-size: 80%;
+}
+
+.contents .article .code {
+    background-color: #FFFCF8;
+    border: 1px solid #DECDCD;
+    //box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.contents .article .code .code-header {
+    background-color: #F8F0F0;
+    color: #303040;
+    border-bottom: dotted 1px #B0B0C8;
+}
+
+.contents .article .code .code-header h5 {
+    color: slategray;
+}
+
+.contents .article pre .comment {
+    color: #A09090;
+    
+}
+
+.contents .article .notice {
+    color: slategray;
+}
+
+.contents .article .figure-image {
+    border-bottom: 1px solid #E0D0D0;
+    border-radius: 2px;
+    padding: 8px 20px;
+}
+
+.contents .article .figure img {
+    border: 1px solid #DECDCD;
+    box-shadow: 1px 1px 3px 0px rgba(30, 100, 60, 0.2);
+}
+
+/**********************************************************************************************
+ * シェアボタン
+ **********************************************************************************************/
+
+.sharebuttons a {
+    color: white;
+}
+
+.sharebuttons a:visited {
+    color: white;
+}
+
+.sharebuttons button:hover {
+    margin: -2px;
+    border: 2px solid orange;
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.sharebuttons img {
+    box-shadow: 1px 2px 3px -0px rgba(0, 0, 0, 0.2);
+}
+
+.twitterbutton {
+    background-color: #55acee;
+    color: white;
+}
+
+.facebookbutton {
+    background-color: #4a6ea9;
+    color: white;
+}
+
+.hatenabutton {
+    background-color: #2089cb;
+    color: white;
+}
+
+.pocketbutton {
+    background-color: #ef3e56;
+    color: white;
+}
+
+.feedlybutton {
+    background-color: #20b446;
+    color: white;
+    padding: 0px 20px;
+}
+
+.success {
+    background-color: lightgreen;
+}
+
+.failure {
+    background-color: red;
+}
+
+/**********************************************************************************************
+ * コメント欄
+ **********************************************************************************************/
+.contents .comment_block {
+    border-top: 1px solid #BEBED0;
+}
+
+.comment_box {
+    //border-top: 1px solid #EDCDCD;
+    //border-left: 1px solid #EDCDCD;
+    //border-right: 1px solid #EDCDCD;
+    //border-bottom: 1px solid #EDCDCD;
+    //background-color: #FEFEFE;
+    border-left: 3px solid slateblue;
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.3);
+}
+
+.comment_reply .comment_box {
+    border-top: 0;
+    margin-left: 30px;
+}
+
+
+.comment_block input {
+    border: 1px solid #DECDCD;
+    box-shadow: 1px 1px 3px 0px rgba(0, 30, 0, 0.2);
+}
+
+.comment_block textarea {
+    border: 1px solid #DECDCD;
+    box-shadow: 1px 1px 3px 0px rgba(0, 30, 0, 0.2);
+}
+
+.comment_block button {
+    border: 1px solid #DECDCD;
+    background-color: chocolate;
+    color: white;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+/**********************************************************************************************
+ * ページネーション
+ **********************************************************************************************/
+.contents .pagination li {
+    display: inline;
+    padding: 10px;
+    margin: 10px 0;
+    color: #DCD0CD;
+    border-right: 1px solid #DCD0CD;
+    border-top: 1px solid #DCD0CD;
+    border-bottom: 1px solid #DCD0CD;
+}
+
+.contents .pagination li a {
+    color: #A09090;
+}
+
+.contents .pagination .current_page {
+    background-color: #E09090;
+    border: 1px solid #E09090;
+}
+
+/**********************************************************************************************
+ * フッター
+ **********************************************************************************************/
+.footer {
+    background-color: #C8C3B8;
+    border: 1px solid #CECDBD;
+}
+
+.footer-inner h5 a:hover {
+    border-bottom: 3px solid #C09090;
+}
+
+.footer-inner table td{
+    color: #505050;
+}
+

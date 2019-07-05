@@ -1,0 +1,39 @@
+<h3>C言語コンパイラーをインストールする (Windows編)</h3>
+<p>前項まででC言語プログラミングに必要なテキストエディタをインストールしたかと思います。今回はコンパイラーをインストールしましょう。</p>
+<h4>どれが良いか</h4>
+<p>Windowsで使えるC言語コンパイラーは色々あるのですが、ここでは最もお手軽と思われる「TCC (Tiny C Compiler)」をご紹介します。</p>
+<h4>TCC (Tiny C Compiler) の良いところ</h4>
+<p>TCCの良いところは何と言ってもダウンロードしたzipを解凍して即座に使えるところにあります。</p>
+<p>また、Linux界では特に有名なマルチメディア編集ソフト、「FFMpeg」の作者Fabrice Bellard氏が作ったものですので信頼性があります。そしてC言語の業界標準に則ったしっかりした作りのコンパイラーです。</p>
+<h4>TCCをインストールします</h4>
+<p>では、TCCの公式サイトにアクセスします。</p>
+<p><a src="https://bellard.org/tcc/">TCC: Tiny C Compiler</a></p>
+<img class="figure" src="images/C/installtcc1.png" alt="TCC公式サイトトップページ">
+<p>少し下にスクロールすると、ダウンロードぺージへのリンクがあります。</p>
+<img class="figure" src="images/C/installtcc2.png" alt="TCC公式サイトトップページ">
+<p>クリックして進み、ダウンロードできるファイルのリストのうち、「win」「64」「zip」の文字が含まれ、かつバージョン数字が最も大きいものを選んでクリックします。下図では、「tcc-0.9.27-win64-bin.zip」があたります。</p>
+<img class="figure" src="images/C/installtcc3.png" alt="TCCダウンロードページ">
+<p>Windowsのエクスプローラで、ダウンロード先のフォルダを開きます。</p>
+<img class="figure" src="images/C/installtcc4.png" alt="TCCをダウンロードしたフォルダ">
+<p>これを解凍し、できた「tcc」というフォルダを好きなところに移動します。</p>
+<img class="figure" src="images/C/installtcc5.png" alt="TCCをダウンロードしたフォルダ">
+<p>次にtccをコマンドプロンプトから実行できるようにする為に、環境変数PATHにTCCをインストールしたフォルダパスを追加します。</p>
+<p>やりかたは次のようになります。Windowsのスタートメニューを開き、「con」と入力すると「コントロールパネル」が出てくるのでコントロールパネルを開き、その中の「システム」をクリックします。</p>
+<img class="figure" src="images/C/installtcc6.png" alt="システムの設定">
+<p>「システムの詳細」をクリックします。</p>
+<img class="figure" src="images/C/installtcc7.png" alt="システムのプロパティ">
+<p>「システムのプロパティ」が開くので、下の方にある「環境変数...」をクリックします。</p>
+<img class="figure" src="images/C/installtcc8.png" alt="環境変数の設定画面">
+<p>「システム環境変数」にある「Path」の行でダブルクリックします。</p>
+<img class="figure" src="images/C/installtcc9.png" alt="環境変数名の編集画面">
+<p>まず「新規」ボタンを押し、次に「参照ボタン」を押します。そして表示されたフォルダ選択画面で先程移動した「tcc」というフォルダを選び追加します。</p>
+<p>これでインストールは完了です。</p>
+<p>tccがインストールされていることを確認するために、コマンドプロンプトを開きます。</p>
+<p>コマンドプロンプトは、スタートメニューを開き、「cmd」とタイプすると出てきますので、それをクリックして起動します。コマンドプロンプトが起動しましたら「tcc」とタイプしてエンターキーを押します。</p>
+<img class="figure" src="images/C/installtcc10.png" alt="コマンドプロンプト">
+<p>上図のようなヘルプテキストが出力されたら成功です。</p>
+<p>ちなみに何故ゴリゴリリヌックスというサイトでWindowsのやり方を説明しているかと言いますと、C言語を学ぶ上でOSの壁などは無意味だということを伝えたいからなのです。気が向きましたらMac OS Xでのやり方も載せるつもりです。次回から、C言語の実際の書き方を学んでいこうと思います。それでは〜。</p>
+
+
+
+

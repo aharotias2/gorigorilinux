@@ -1,0 +1,172 @@
+<h3>コメント欄のマークダウンの書き方</h3>
+<p>
+<p>このサイトのコメント欄ではマークダウン(Markdown)という記法をお使いいただけます。<br>
+    マークダウンの書き方は基本的に下にリストアップしたサイトを参考にしていますが、このサイト独自実装になっていて微妙に違うのでこの記事で例を出して説明したいと思いますので宜しければご覧になってください。</p>
+<table>
+    <tr>
+	<td><a href="https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa" target="_blank">Githubのマークダウン</a></td>
+	<td>多分最も有名な文書だと思われます。</td>
+    </tr>
+    <tr>
+	<td><a href="https://spec.commonmark.org/0.29">CommonMark 0.29 仕様</a></td>
+	<td>CommonMarkはあいまいなところのあるマークダウンの厳密なルールを提案したものです。ここまでしっかり作っていません。</td>
+    </tr>
+    <tr>
+	<td><a href="https://commonmark.org/help">CommonMark 簡易説明</a></td>
+	<td>CommonMarkの簡単な例です。</td>
+    </tr>
+    <tr>
+	<td><a href="https://ja.wikipedia.org/wiki/Markdown">Wikipediaのマークダウン</a></td>
+	<td>基本的な内容がまとまっています。</td>
+    </tr>
+</table>
+<div class="outline"></div>
+<h4>記法の例</h4>
+<h5>見出し</h5>
+<p>タイトルなど見出しとなる文は行頭に「#」を付けることで表現できます。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre># 見出し1
+## 見出し2
+### 見出し3
+#### 見出し4</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample01.png" alt="">
+<h5>本文</h5>
+<p>本文は何も印をつけません。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>これは本文です。
+これは本文2行目です。
+
+行を空けることで段落を表現します。
+2段落目2行目です。</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample02.png" alt="">
+<h5>太字</h5>
+<p>太字にして強調するには2つの「*」で囲みます。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>本文の**途中**で使えます。</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample03.png" alt="">
+<h5>斜体</h5>
+<p>斜体にして強調するには1つの「*」で囲みます。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>本文の*途中*で使えます。</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample04.png" alt="">
+<h5>下線</h5>
+<p>下線を引いて強調するには1つの「_」で囲みます。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>本文の_途中_で使えます。</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample05.png" alt="">
+<h5>取消線</h5>
+<p>取消線を引いて強調するには2つの「~」で囲みます。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>本文の~~途中で~~使えます。</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample06.png" alt="">
+<h5>コードサンプル</h5>
+<p>コードサンプルを書くこともできます。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>```ここはコードサンプルです
+def hoge():
+    print Hello
+```</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample07.png" alt="">
+<h5>インラインコード</h5>
+<p>文の途中に等幅文字の単語などを含めたいときには「インラインコード」が使えます。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>例えば`echo`コマンドについて語りたい時</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample12.png" alt="">
+<h5>引用</h5>
+<p>記事や他の方のコメントの引用を方法です。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>&gt; ここから引用です。
+&gt; 引用2行目です。
+&gt;
+&gt;&gt; ここも引用です。(多重引用)
+ここは本文です。</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample08.png" alt="">
+<h5>画像</h5>
+<p>画像を表示する方法です。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>![Ubuntuのロゴ](https://assets.ubuntu.com/v1/ad9a02ac-ubuntu-orange.gif)</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample09.png" alt="">
+<p>注意: 現在の仕様では、画像は1行を占有する必要があり、文の途中には書けません。</p>
+<h5>リンク</h5>
+<p>URLへのリンクを表示する方法です。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>これは[Google](https://www.google.co.jp)へのリンクです。</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample10.png" alt="">
+<h5>箇条書き</h5>
+<p>箇条書きのリストを書く方法です。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>
+* リスト項目1-1
+* リスト項目1-2
+* リスト項目1-3
+
+- リスト項目2-1
+- リスト項目2-2
+- リスト項目2-3
+
+1. リスト項目3-1
+1. リスト項目3-2
+1. リスト項目3-3
+
+1. リスト項目4-1
+  1. リスト項目4-1-1
+  1. リスト項目4-1-2
+    1. リスト項目4-1-2-1
+    1. リスト項目4-1-2-2
+1. リスト項目4-2
+   1. リスト項目4-2-1
+   1. リスト項目4-2-2
+   1. リスト項目4-2-3
+    </pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample11.png" alt="">
+<h5>枠で囲った文</h5>
+<p>何らかの理由により文を四角で囲みたい場合は行頭に「:」を書きます。</p>
+<h6>マークダウン</h6>
+<div class="sample">
+    <pre>: 人間は考える葦である
+:    ---- パスカル
+などのように格言を引用したいときとか
+: printf(*format*, *引数1*, *引数2*, ...)
+というふうに構文を書きたい場合などに用いてみてください。</pre>
+</div>
+<h6>表示</h6>
+<img class="figure-flat" src="images/分類なし/comment-sample13.png" alt="">
+<h4>終わりに</h4>
+<p>いかがだったでしょうか。分かりにくいところがありましたらすみません。<br>
+    コメント欄でご指摘いただければ対応しますのでよろしくお願いしますね。</p>
