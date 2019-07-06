@@ -232,7 +232,8 @@ img.topimage {
 }
 
 .rightpane {
-    background-color: rgba(30, 40, 50, 0.6);
+    /*background-color: rgba(30, 40, 50, 0.6);*/
+    background-color: rgba(20, 30, 40, 0.6);
     box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.5);
     border: 1px solid #404850;
 }
