@@ -6,6 +6,7 @@ Windowsに似たデスクトップ環境が最初から整っており、設定�
 公式サイト：[Main Page - Linux Mint](https://www.linuxmint.com)
 ## FerenOS
 LinuxMintを継承したディストリビューションです。Mintよりさらに簡単になっています。
+見た目はWindows 10にそっくりです。
 
 公式サイト：[Feren OS, made for today's and tomorrow's generation - Home](https://ferenos.weebly.com)
 ## Manjaro
@@ -21,10 +22,6 @@ RedHatという会社が開発・販売している商用のLinuxディストリ
 サーバー用途などで昔から根強い人気があり、インターネット上で閲覧できるLinuxのノウハウの多くがCentOSをベースにしてあります。
 
 公式サイト：[CentOS Project](https://www.centos.org)
-## Slackware
-古くからあるディストリビューションです。開発スピードは早くありませんが、安定が売りです。また、日常的に必要なコマンド類が始めから沢山入っていますので、設定は楽です。ただし、最新プログラムの追加はしばしば重労働になります。
-
-公式サイト：[The Slackware Linux Project](http://www.slackware.com)
 ## Ubuntu
 Canonicalという会社が開発しているディストリビューションです。
 万人に使いやすいわけではないのですが、設計思想に共感する開発者達により盛んに開発が進められており、常にLinuxの世界では話題の先頭に立つディストリビューションです。
@@ -35,4 +32,10 @@ Canonicalという会社が開発しているディストリビューション�
 SUSEという商用Linuxディストリビューションの無償版になります。何か特徴あったっけ？
 
 公式サイト：[openSUSE Wiki](https://ja.opensuse.org/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8)
+
+## Slackware
+初心者向きじゃないんですが、私がメインで使っているので紹介します。
+Slackwareは古くからあるディストリビューションです。開発スピードは早くありませんが、安定が売りです。また、日常的に必要なコマンド類が始めから沢山入っていますので、設定は楽です。ただし、最新プログラムの追加はしばしば重労働になります。
+
+公式サイト：[The Slackware Linux Project](http://www.slackware.com)
 
