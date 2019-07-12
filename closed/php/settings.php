@@ -9,6 +9,7 @@ $lifeColor = "turquoise";
 $slackwareColor = "royalblue";
 $beginnersColor = "red";
 $normalNewsColor = "olive";
+$diaryColor = "darkmagenta";
 $linuxAppsColor = "darkorange";
 $cLangColor = "#C1AB05";
 
@@ -37,15 +38,17 @@ $translations = [
     // 雑文
     ["misc", "雑文", "#EF857D"],
 
-    ["others", "分類なし", "darkolivegreen"],
+    ["self", "私事", "darkolivegreen"],
     ["01_self", "自己紹介", $othersColor],
-    ["02_old-stories", "思い出話", $othersColor],
-    ["03_diaries", "日記", $othersColor],
+    ["02_gadgets", "持ち物", $othersColor],
+    ["03_old-stories", "思い出話", $othersColor],
+    ["04_life", "生活", $othersColor],
+    ["05_social", "社会", $othersColor],
+    ["06_adult", "アダルト", $othersColor],
 
-    ["life", "生活", "steelblue"],
-    ["01_housing", "暮らし", $lifeColor],
-    ["02_social", "社会", $lifeColor],
-    ["03_adult", "アダルド", $lifeColor],
+    ["diary", "日記", "sienna"],
+    ["01_201905", "2019年7月", $diaryColor],
+    ["02_201907", "2019年7月", $diaryColor],
 
     ["news", "ニュース (IT、Linux関係ない)", "sienna"],
     ["01_201906", "2019年6月", $normalNewsColor],
