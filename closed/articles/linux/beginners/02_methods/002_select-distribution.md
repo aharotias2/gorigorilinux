@@ -9,7 +9,8 @@ LinuxMintを継承したディストリビューションです。Mintよりさ�
 
 公式サイト：[Feren OS, made for today's and tomorrow's generation - Home](https://ferenos.weebly.com)
 ## Manjaro
-ManjaroはArchLinuxをベースにした初心者向きのディストリビューションです。
+ManjaroはArchLinuxをベースにした初心者向きのディストリビューションです。まあ設定といいアプリケーションのインストールといい楽です。
+
 公式サイト：[Manjaro - enjoy the simplicity](https://manjaro.org)
 ## PuppyLinux
 子犬という意味のPuppyというディストリビューションは、とにかく軽量小型であることが特徴で、USBメモリにインストールして起動することもできます。
