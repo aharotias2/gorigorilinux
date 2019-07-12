@@ -11,7 +11,7 @@
 <?php } else { ?>
     <?php
     require_once("closed/php/Logger.php");
-    require_once("closed/php/MyFtp.php");
+    //require_once("closed/php/MyFtp.php");
     $rss = fopen("rss.xml", "w");
     if ($rss == false) {
         $log->error("open rss is failed");
@@ -161,7 +161,7 @@ EOT
             <?php include("closed/php/css.php"); ?>
         </head>
         <body>
-            <h3>RSS書き出し、FTP送信が完了した。</h3>
+            <h3>RSS書き出しが完了した。</h3>
             <p>以下の内容となる</p>
             <pre><?php
                  $f = fopen("rss.xml", "r");
