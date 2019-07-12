@@ -9,11 +9,20 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Sun, 30 Jun 2019 05:54:02 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 12 Jul 2019 12:26:16 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>カメラ買ったった</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/others/01_self/009</link>
+    <description>カメラ買いました。Nikonのデジタルカメラ「COOLPIX B500」です。3万円くらいでした。軽いです。外ではまだ使ったことがありませんが、結構ズームがしやすいです。これでネットのフリー素材に頼らず写真をブログなどに使えます。やっぱ素材は自分で作んないとですよね……。明日から作品します。</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/others/01_self/009</guid>
+    <pubDate>Fri, 12 Jul 2019 12:20:00 GMT</pubDate>
+  </item>
   <item>
     <title>Wacomタブレットを使えるようにする</title>
     <link>https://gorigorilinux.net/article.php?entry=linux/slackware/01_settings/006</link>
@@ -184,15 +193,6 @@
     <category>ITニュース</category>
     <guid>https://gorigorilinux.net/article.php?entry=itnews/2019/05_may/003</guid>
     <pubDate>Tue, 28 May 2019 11:50:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>椎名町住み始めた感想</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/life/01_housing/003</link>
-    <description>椎名町に引っ越して来て1週間経ちました。引っ越して良かったこと目白駅が使える (池袋回避)意外と池袋より目白の方が近くて、それが一番よかったです。下図は埼玉県から池袋に出る鉄道を赤く塗りつぶしたものです。青のエリアは池袋以外の山手線の駅に出るルートです。埼玉から通勤する人の大部分がいやがおうにも池袋に集結することになる気がします。もちろんこれは埼玉県民が悪いと言っているのではありません。画像はこちらからお借りしています： 埼玉鉄道バス路線図その池袋を回避して山手線に乗ると、本当に人が少なく空いていてかなり快適です。これは嬉しい誤算でしたわ。目白の駅舎は小さいのですがデザインはオシャレに感じます。これは朝のお出迎えとして悪くないですな。その他の良い所良い所良い理由銭...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/life/01_housing/003</guid>
-    <pubDate>Mon, 27 May 2019 11:40:00 GMT</pubDate>
   </item>
 </channel>
 </rss>
