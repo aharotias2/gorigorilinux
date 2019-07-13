@@ -79,6 +79,13 @@ Arch系のシステムでは`cups.service`の代わりに`org.cups.cupsd.service
 ```
 上のコマンドでは`echo`コマンドが出力した文字列「Hello, my printer!」を`lp`コマンドが標準入力から受け取り、プリンタに送信します。しばらく待っていると、印刷が行われます。
 
+### 画像を印刷する
+GIMPなどのアプリケーションで画像を作成し、sample.pngという名前で保存します。
+![GIMPで画像を作成する](images/Linux/lp-input-png.png)
+`lp`コマンドでsample.pngを印刷します。
+: lp sample.png
+無事、印刷できました。
+![印刷された画像](images/Linux/lp-output-png.jpg)
 ## サポートしているファイル形式
 CUPSはかなり多くのファイル形式をサポートしています。
 ↓のリンクはStackExchangeというサイトにあった質問と回答です。
