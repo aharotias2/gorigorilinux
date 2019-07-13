@@ -47,7 +47,7 @@ $translations = [
     ["06_adult", "アダルト", $othersColor],
 
     ["diary", "日記", "sienna"],
-    ["01_201905", "2019年7月", $diaryColor],
+    ["01_201905", "2019年5月", $diaryColor],
     ["02_201907", "2019年7月", $diaryColor],
 
     ["news", "ニュース (IT、Linux関係ない)", "sienna"],
