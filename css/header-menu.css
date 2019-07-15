@@ -1,0 +1,147 @@
+/*- Menu 1 --------------------------------------------------------------------*/
+.cp_navi_1 {
+    color: #888888;
+    overflow: hidden;
+}
+.cp_navi_1 ul {
+    margin: 0;
+    padding: 0;
+}
+.cp_navi_1 ul li {
+    display: inline-block;
+    list-style-type: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.cp_navi_1 > ul > li > a > .caret {
+    border-top: 4px solid #aaaaaa;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: '';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    vertical-align: middle;
+    -webkit-transition: color 0.1s linear;
+    transition: color 0.1s linear;
+}
+.cp_navi_1 > ul > li > a {
+    color: #aaaaaa;
+    display: block;
+    line-height: 56px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+.cp_navi_1 > ul > li:hover {
+    background-color: rgba(150, 160, 170, 0.5);
+}
+.cp_navi_1 > ul > li:hover > a {
+    color: rgb( 255, 255, 255 );
+}
+.cp_navi_1 > ul > li:hover > a > .caret {
+    border-top-color: rgb( 255, 255, 255 );
+}
+.cp_navi_1 > ul > li > div {
+    background-color: rgba(150,160, 170,0.5);
+    border-top: 0;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    display: none;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    width: 165px;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+.cp_navi_1 > ul > li:hover > div {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 3px 5px 5px -1px rgba(0, 0, 0, 0.3);
+}
+.cp_navi_1 > ul > li > div ul > li {
+    display: block;
+}
+.cp_navi_1 > ul > li > div ul > li > a {
+    color: #ffffff;
+    display: block;
+    padding: 12px 24px;
+    text-decoration: none;
+}
+.cp_navi_1 > ul > li > div ul > li:hover > a {
+    background-color: #A0A8B0;
+}
+/*- Menu 2 --------------------------------------------------------------------*/
+.cp_navi_2 {
+    color: #888888;
+    overflow: hidden;
+}
+.cp_navi_2 > ul {
+    margin: 0;
+    padding: 0 10px;
+    background-color: #303850;
+}
+.cp_navi_2 ul li {
+    display: inline-block;
+    list-style-type: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.cp_navi_2 > ul > li > a > .caret {
+    border-top: 4px solid #aaaaaa;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: '';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    vertical-align: middle;
+    -webkit-transition: color 0.1s linear;
+    transition: color 0.1s linear;
+}
+.cp_navi_2 > ul > li > a {
+    color: #aaaaaa;
+    display: block;
+    line-height: 46px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+.cp_navi_2 > ul > li:hover {
+    background-color: rgba(150, 160, 170, 0.1);
+}
+.cp_navi_2 > ul > li:hover > a {
+    color: rgb( 255, 255, 255 );
+}
+.cp_navi_2 > ul > li:hover > a > .caret {
+    border-top-color: rgb( 255, 255, 255 );
+}
+.cp_navi_2 > ul > li > div {
+    background-color: #404860;
+    border-top: 0;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    display: none;
+    margin: 0;
+    opacity: 1;
+    position: absolute;
+    width: 165px;
+    /*visibility: hidden;*/
+    -webkit-transiton: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+.cp_navi_2 > ul > li > div ul {
+    margin: 0;
+    box-shadow: 1px 10px 10px -3px rgba(0, 0, 0, 0.5);
+}
+.cp_navi_2 > ul > li > div ul > li {
+    display: block;
+}
+.cp_navi_2 > ul > li > div ul > li > a {
+    color: #ffffff;
+    display: block;
+    padding: 12px 24px;
+    text-decoration: none;
+}
+.cp_navi_2 > ul > li > div ul > li:hover > a {
+    background-color: rgba(80, 90, 100, 0.2);
+}

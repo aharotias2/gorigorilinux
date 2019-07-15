@@ -8,8 +8,9 @@
                 <a href="https://twitter.com/goodslacktanaka" target="_blank"><img src="images/twitter_main_button_flat.png"></a>
                 <a href="https://gorigorilinux.net/rss.xml" target="_blank"><img src="images/rss-icon.png"></a>
             </div>
-            <p>ITブログ - LinuxメインでプログラミングとかITニュースとか雑談とかいろいろ好き勝手に話します</p>
+	    <?php ttPutHeaderMenu(1); ?>
             <div style="clear:both"></div>
+            <p>ITブログ - LinuxメインでプログラミングとかITニュースとか雑談とかいろいろ好き勝手に話します</p>
         </div>
     </div>
 </div>

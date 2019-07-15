@@ -8,7 +8,8 @@
 <link rel="stylesheet" type="text/css" media="(min-width:501px) and (max-width:1200px)" href="css/basic-m.css">
 <link rel="stylesheet" type="text/css" media="(min-width:1201px)" href="css/basic-l.css">
 <style type="text/css">
- <?php include("css/skin3.css"); ?>
+    <?php include("css/header-menu.css"); ?>
+    <?php include("css/skin3.css"); ?>
 </style>
 <script type="text/javascript">
  <?php include("js/common.js"); ?>

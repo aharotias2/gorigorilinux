@@ -54,6 +54,15 @@ ul.mainmenu {
     font-size: x-large;
 }
 
+.cp_navi_1 {
+    display: none;
+}
+
+.cp_navi_2 {
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+}
 /**********************************************************************************************
  * インデックスページ
  **********************************************************************************************/
@@ -299,14 +308,14 @@ iframe.google-maps {
     font-size: x-large;
     font-weight: bold;
     font-style: italic;
-    padding: 15px 8px 4px 6px;
+    padding: 0px 8px 4px 6px;
     margin: 0;
 }
 
 .contents .article h4 {
     font-weight: bold;
     font-size: x-large;
-    padding: 8px 6px 8px 0px;
+    padding: 8px 0px 8px 10px;
     margin: 20px 0;
 }
 

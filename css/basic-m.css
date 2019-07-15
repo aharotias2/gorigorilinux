@@ -53,6 +53,14 @@ ul.mainmenu {
     font-size: x-large;
 }
 
+.cp_navi_1 {
+    display: none;
+}
+
+.cp_navi_2 {
+    display: block;
+}
+
 /**********************************************************************************************
  * インデックスページ
  **********************************************************************************************/
@@ -310,7 +318,7 @@ iframe.google-maps {
     font-size: x-large;
     font-weight: bold;
     font-style: italic;
-    padding: 30px 30px 4px 30px;
+    padding: 0px 30px 4px 30px;
     margin: 0;
 }
 

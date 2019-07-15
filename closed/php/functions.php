@@ -66,6 +66,61 @@ function ttGetParentCategory($category) {
     }
 }
 
+function ttPutHeaderMenu($position) {
+    $bigCategories = [];
+    $naviClass = $position == 1 ? "cp_navi_1" : "cp_navi_2";
+    echo "<div class=\"cp_navi $naviClass\">";
+    echo "<ul>";
+    echo "<li><a href=\".\">ホーム</a></li>";
+    foreach (scandir("closed/articles") as $bigCategory) {
+        if ($bigCategory[0] == ".") {
+            continue;
+        }
+        $bigCategories[] = $bigCategory;
+    }
+
+    foreach ($bigCategories as $bigCategory) {
+        $midCategories = [];
+        foreach (scandir("closed/articles/$bigCategory") as $midCategory) {
+            if ($midCategory[0] == ".") {
+                continue;
+            }
+            $midCategories[] = $midCategory;
+        }
+
+        echo "<li>";
+        if ($position == 1) {
+            echo "<a href=\"toc.php?category=$bigCategory\">";
+        } else {
+            echo "<a>";
+        }
+        echo translate($bigCategory)."<span class=\"caret\"></span>";
+        echo "</a>";
+        echo "<div>";
+        echo "<ul>";
+        foreach ($midCategories as $midCategory) {
+            $smallCategory = "";
+            foreach (scandir("closed/articles/$bigCategory/$midCategory") as $tmp) {
+                if ($tmp[0] != ".") {
+                    if ($smallCategory == "" || strcmp($smallCategory, $tmp) > 0) {
+                        $smallCategory = $tmp;
+                    }
+                }
+            }
+            echo "<li>";
+            echo "<a href=\"article.php?entry=$bigCategory/$midCategory/$smallCategory/001\">";
+            echo translate($midCategory);
+            echo "</a>";
+            echo "</li>";
+        }
+        echo "</ul>";
+        echo "</div>";
+        echo "</li>";
+    }
+    echo "</ul>";
+    echo "</div>";
+}
+
 function ttPutPankuzu($category) {
     $names = explode("/", $category);
     print(" <a href=\"toc.php?category=\">TOP</a> ");

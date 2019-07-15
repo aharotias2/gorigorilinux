@@ -63,6 +63,27 @@ ul.mainmenu {
     font-size: x-large;
 }
 
+.header-menu {
+    width: 1196px;
+    margin: 0px auto;
+    padding: 10px 0px;
+    background-color: rgba(30, 40, 50, 0.6);
+}
+
+.header-menu li {
+    display: inline;
+    padding: 10px;
+    margin: 0px -1px;
+}
+
+.cp_navi_1 {
+    display: block;
+    float: right;
+}
+
+.cp_navi_2 {
+    display: none;
+}
 /**********************************************************************************************
  * インデックスページ
  **********************************************************************************************/

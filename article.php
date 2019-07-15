@@ -16,6 +16,7 @@ $now = new Datetime(date('Y/m/d H:i:s'));
 if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_SESSION[$articleName]['time']) {
     $_SESSION[$articleName] = array('good' => 0, 'bad' => 0, 'time' => new Datetime(date('Y/m/d H:i:s')));
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -40,6 +41,7 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
         </div>
         <div class="contents">
             <div class="rightpane">
+		<?php ttPutHeaderMenu(2); ?>
                 <div class="pagenavi">
                     <?php ttPutPrevLink(); ttPutNextLink(); ?>
                     <div style="clear:both;"></div>

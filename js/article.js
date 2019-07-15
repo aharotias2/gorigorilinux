@@ -316,6 +316,31 @@ function onLoad() {
             }
         });
     };
+    select(".cp_navi_2 > ul > li").forEach(function(e) {
+	var childDiv = e.select("div")[0];
+	if (childDiv != null) {
+	    childDiv.style.display = "none";
+	}
+	e.onclick = function() {
+	    var e1 = this;
+	    select(".cp_navi_2 > ul > li").forEach(function(e2) {
+		if (!e1.isSameNode(e2)) {
+		    var childDiv = e2.select("div");
+		    if (childDiv.length > 0) {
+			e2.select("div")[0].style.display = "none";
+		    }
+		} else {
+		    var childDiv = e1.select("div")[0];
+		    var display = childDiv.style.display;
+		    if (display == "none") {
+			childDiv.style.display = "block";
+		    } else {
+			childDiv.style.display = "none";
+		    }
+		}
+	    });
+	};
+    });
     onResize();
 }
 
