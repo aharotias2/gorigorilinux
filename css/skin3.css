@@ -423,7 +423,7 @@ img.topimage {
     font-family: Monospace,monospace,mono;
     background-color: rgba(80, 90, 100, 0.4);
     border: 1px solid rgba(90, 100, 110, 0.4);
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 /**********************************************************************************************
