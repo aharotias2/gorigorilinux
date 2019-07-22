@@ -124,11 +124,11 @@
 .footer .footer-inner {
     max-width: 1200px;
     margin: 10px auto 0 auto;
-    padding: 30px 10px 30px 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 .footer .footer-inner .footer-block {
-    margin: 30px;
+    margin: 10px;
     float: left;
 }
 
