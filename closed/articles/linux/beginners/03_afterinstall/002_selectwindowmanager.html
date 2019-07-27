@@ -1,18 +1,54 @@
 <h3>ウィンドウマネージャを選ぼう (オプション)</h3>
-<p>デスクトップ環境ほど大袈裟じゃなくても良くてウィンドウだけあれば良いという場合は、ウィンドウマネージャというプログラムだけで使うこともできます。視覚的な設定ツールは別途用意か、使わないことになります。大抵の場合設定はテキストファイルを編集することで行います。どれもカスタマイズ性が大変高いです。</p>
+<p>デスクトップ環境ほど大袈裟じゃなくても良くてウィンドウだけあれば良いという場合は、ウィンドウマネージャというプログラムだけで使うこともできます。視覚的な設定ツールは別途用意か、使わないことになります。大抵の場合設定はテキストファイルを編集することで行います。メモリの使用料を抑えることができるため、性能があまりよくない古いPC上でも動かしやすく、どれもカスタマイズ性が大変高いです。</p>
+<h4>いろいろなウィンドウマネージャ</h4>
 <dl>
     <dt>TWM</dt>
-    <dd>最初期のウィンドウマネージャで外見はとにかく地味、というか最小限です。オシャレ要素は0です。公式サイトは行方不明です。</dd>
-    <dt><a href="http://www.fvwm.org/">FVWM</a></dt>
-    <dd>Motifに似ているウィンドウマネージャです。Motifというのははっきり言って古くさいUNIX独自のGUIツールキットです。しかしカスタマイズ次第でかっこよくなるみたいです。</dd>
+    <dd>最初期のウィンドウマネージャで外見はとにかく地味、というか最小限です。オシャレ要素は0です。公式サイトは行方不明です。<br>
+	<img  alt="TWM" class="figure"src="images/Linux/twm-desktop-sample-01.png"></dd>
+    <dt>FVWM</dt>
+    <dd>Motifに似ているウィンドウマネージャです。Motifというのははっきり言って古くさいUNIX独自のGUIツールキットです。しかしカスタマイズ次第でかっこよくなるみたいです。<br>
+	<a href="http://www.fvwm.org">FMWM公式サイト</a><br>
+	<img alt="FVWM2" class="figure" src="images/Linux/fvwm-desktop-sample-01.png"><br></dd>
     <dt>OpenBox</dt>
-    <dd>軽量で見た目もちょっとオシャレなウィンドウマネージャです。おしゃれと言ってもウィンドウのタイトルバーに光沢感があるだけですが。設定はXMLファイルでします。公式サイトが消えてます。</dd>
-    <dt><a href="https://www.windowmaker.org/">WindowMaker</a></dt>
-    <dd>Mac OS Xの前身、NextSTEPによくにたウィンドウマネージャです。</dd>
-    <dt><a href="http://joewing.net/projects/jwm/">JWM</a></dt>
-    <dd>非常に軽量なウィンドウマネージャです。見た目は色しか変えられませんが、設定をXMLで記述でき、使いやすいです。Puppy Linuxで使われています。</dd>
-    <dt><a href="https://ice-wm.org/">IceWM</a></dt>
-    <dd>Windows XP風のウィンドウマネージャです。</dd>
-    <dt><a href="https://i3wm.org/">i3</a></dt>
-    <dd>タイリングウィンドウマネージャと言われるもののひとつです。ウィンドウが重なり合わず、タイルのように配置されます。</dd>
+    <dd>軽量で見た目もちょっとオシャレなウィンドウマネージャです。おしゃれと言ってもウィンドウのタイトルバーに光沢感があるだけですが。設定はXMLファイルでします。<br>
+	<a href="http://openbox.org">OpenBox公式サイト</a><br>
+	<img class="figure" alt="OpenBox" src="images/Linux/openbox-desktop-sample-01.png"><br></dd>
+    <dt>FluxBox</dt>
+    <dd>OpenBoxと同じくBlackBoxというウィンドウマネージャから派生した軽量ウィンドウマネージャです。<br>
+	<a href="http://fluxbox.org">Fluxbox公式サイト</a><br>
+	<img class="figure" alt="FluxBox" src="images/Linux/fluxbox-desktop-sample-01.png"></dd>
+    <dt>WindowMaker</dt>
+    <dd>Mac OS Xの前身、NextSTEPによくにたウィンドウマネージャです。<br>
+	設定画面があるのでほぼデスクトップ環境と言っていいかもしれません。<br>
+	<a href="https://www.windowmaker.org">WindowMaker公式サイト</a><br>
+	<img class="figure" alt="WindowMaker" src="images/Linux/wmaker-desktop-sample-01.png"></dd>
+    <dt>JWM</dt>
+    <dd>非常に軽量なウィンドウマネージャです。見た目は色しか変えられませんが、設定をXMLで記述でき、使いやすいです。Puppy Linuxで使われています。<br>
+	<a href="http://joewing.net/projects/jwm">JWM公式サイト</a><br>
+	<img class="figure" alt="JWM" src="images/Linux/jwm-desktop-sample-01.png"></dd>
+    <dt>IceWM</dt>
+    <dd>Windows XP風のウィンドウマネージャです。<br>
+	<a href="https://ice-wm.org">IceWM公式サイト</a><br>
+	<img class="figure" alt="IceWM" src="images/Linux/icewm-desktop-sample-01.png">
+    </dd>
+    <dt>Enlightenment</dt>
+    <dd>ウィンドウマネージャ界のスーパーカーなどと形容する有識者もいます。WindowMakerやNextStepに似た感じで更に見た目をかっこ良くした感じです。<br>
+	設定機能なども最初から付いているのでほぼデスクトップ環境かもしれません。<br>
+	<a href="https://www.enlightenment.org">Enlightenment公式サイト</a></dd>
+    <dt>i3</dt>
+    <dd>タイリングウィンドウマネージャと言われるもののひとつです。<br>
+	ウィンドウが重なり合わず、タイルのように配置されます。<br>
+	最初は扱いに戸惑いますが、使い方を覚えれば非常に効率が良いそうです。<br>
+	<a href="https://i3wm.org">i3公式サイト</a></dd>
+    <dt>awesome</dt>
+    <dd>awesomeはi3と同じタイリングウィンドウマネージャです。<br>
+	パワーユーザ・開発者またはコンピュータをかっこ良く使いこなしたい方向けです。<br>
+	マウスを使わずに全ての操作ができることと、高いカスタマイズ性を誇っています。<br>
+	<a href="https://awesomewm.org">awesome公式サイト</a><br>
+	<img class="figure" alt="awesome" src="images/Linux/awesome-desktop-sample-01.png"></dd>
 </dl>
+<h4>結論</h4>
+<p>タイリングウィンドウマネージャは私は使えないのでちょっと紹介がしづらかったです。<br>
+    ただ、ギークとかハッカーと呼ばれ、または自称する人々はタイリングを好む人が多いようです。<br>
+    私はこの中で使うならJWMかOpenBoxが良いと思います。できることは少ないですが、設定ファイルが書きやすいからです。<br>
+    まあ最近のパソコンならよほどのことが無い限りGNOMEなどを入れてしまいますがね。</p>
