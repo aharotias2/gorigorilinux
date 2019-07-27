@@ -9,11 +9,29 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Fri, 12 Jul 2019 12:26:16 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 26 Jul 2019 16:08:58 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>Simplenote - フリーなマルチプラットフォーム同期型ノートアプリ</title>
+    <link>https://gorigorilinux.net/article.php?entry=apps/linux/02_texteditors/001</link>
+    <description>Simplenoteはノートアプリです。最大の特徴はMac、Windows、Linux、iOS、Androidのどのデバイスからも同期できることです。当然、ウェブブラウザからの利用も可能です。例えば出先でスマホしか持っていないという時でもササッとメモをとり、家でパソコンから細かく調べる際の参考にするなどの使い方ができます。要するにEvernoteの代替品です。EvernoteはLinux版のクライアントが無いので、Simplenoteがあると便利です。主な機能記事を書く記事はプレーンテキスト形式で保存されます。マークダウンプレビュー機能マークダウン記法も使えます。マークダウンプレビュー画面に切り替えることでウェブサイトのような視覚的効果を確認できます。タグづけノートの一つ一つに好きなタグを好きなだけ付けることができます。タグごとにノートを抽出し...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>アプリケーション</category>
+    <guid>https://gorigorilinux.net/article.php?entry=apps/linux/02_texteditors/001</guid>
+    <pubDate>Fri, 26 Jul 2019 16:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>壁掛け時計買いました</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/002</link>
+    <description>池袋のビックカメラで壁掛け時計買いました。セイコークロック株式会社の電波クロックです。このボタンを長押しして時間を調整します。正直ちょっと面倒くさかったです。上手くやれば電波を受信して時間を合わせられるようなんですがね。いずれにしても一度合わせられれば、あとは勝手に時間を調整してくれるようになります。やっぱり壁に時計があると時間を簡単に確認できて良いですね。</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/002</guid>
+    <pubDate>Sat, 13 Jul 2019 08:10:00 GMT</pubDate>
+  </item>
   <item>
     <title>カメラ買ったった</title>
     <link>https://gorigorilinux.net/article.php?entry=misc/others/01_self/009</link>
@@ -175,24 +193,6 @@
     <category>雑文</category>
     <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/002</guid>
     <pubDate>Wed, 29 May 2019 11:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>登戸で男がナイフを振り回し児童含む不特定多数を殺傷しその後自害</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/001</link>
-    <description>ZOZO前澤社長　川崎殺傷事件に沈痛「企業の社会的責任は人を作ることだ、と強く思った一日」 スポニチ川崎で子供達を狙う無差別殺傷事件が発生しました。ネットにはすでに多くの記事が挙がっておりどれをソースにしようか迷いましたがとりあえずファッション通販ZOZOTOWNの前澤社長のツイートの記事にします。ZOZOの前澤友作社長（43）が28日、自身のツイッターを更新。川崎市多摩区の路上で通学のバスを待つ小学生ら十数人が刃物で刺された事件について言及した。この日の夕方に再びツイッターで「みんながみんな、オギャーって希望を持って産まれてくるのに。どうして。。。」「企業の社会的責任は、商品やサービスを作るだけではなく、人を作ることだ、と強く思った一日」と自身の思いを投稿した。何故こんな事件が起きた...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/001</guid>
-    <pubDate>Wed, 29 May 2019 11:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Red Hatがロゴを変更し、謎の男が姿を消した</title>
-    <link>https://gorigorilinux.net/article.php?entry=itnews/2019/05_may/003</link>
-    <description>Redhatが長年お馴染だったロゴマークを換える発表をしました。ソース 1: 次世代の赤いフェドラハット・マークのお知らせ | RED HAT BLOGソース 2: Red Hatが新ロゴ発表、Shadowmanが消えフェドラハットのみに ～“不吉”なイメージを払拭 | PC Watch米Red Hatは、同社の新コーポレートロゴマークを発表した。以前のRed Hatロゴは、顔を隠してフェドラハットを被った「Shadowman」をあしらったものだったが、スマートフォンなどで上手くレンダリングできないことから、今回のロゴデザイン変更が行なわれた。?スマートフォンなどで上手くレンダリングできないという謎な理由にまごつきます。ロゴから想起する感情や考え、印象についての調査を実施したところ、「不吉、秘密っぽい、悪、コソコソしている」といった“憂慮すべき回答”がいくつか寄せ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>ITニュース</category>
-    <guid>https://gorigorilinux.net/article.php?entry=itnews/2019/05_may/003</guid>
-    <pubDate>Tue, 28 May 2019 11:50:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

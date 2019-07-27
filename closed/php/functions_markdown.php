@@ -33,10 +33,10 @@ function ttConvMdParts($parts) {
     $codePattern = '/\`([^\`]*)\`/';
     $parts = preg_replace($codePattern, "<span class=\"code-span\">$1</span>", $parts);
     if (mb_substr($parts, 0, 1) == "※") {
-	$parts = "<span class=\"come\">$parts</span>";
+        $parts = "<span class=\"come\">$parts</span>";
     } else {
-	$comePattern = '/(\(?※[0-9]*\)?)/';
-	$parts = preg_replace($comePattern, "<span class=\"come\">$1</span>", $parts);
+        $comePattern = '/(\(?※[0-9]*\)?)/';
+        $parts = preg_replace($comePattern, "<span class=\"come\">$1</span>", $parts);
     }
     $parts = str_replace("[:asterisk:]", "*", $parts);
     $parts = str_replace("[:backquote:]", "`", $parts);
@@ -83,8 +83,8 @@ function ttGetMarkdownByLambda($getLineFunc, $allowHtml = true) {
             $line = rtrim($line);
             $len = strlen($line);
             if ($len >= 2 && substr($line, 0, 2) == "--") {
-		$result .= "<!-- $line -->\n";
-		continue;
+                $result .= "<!-- $line -->\n";
+                continue;
             } else if ($len >= 2 && substr($line, 0, 2) == "# ") {
                 $type = "h3";
             } else if ($len >= 3 && substr($line, 0, 3) == "## ") {
@@ -93,14 +93,16 @@ function ttGetMarkdownByLambda($getLineFunc, $allowHtml = true) {
                 $type = "h5";
             } else if ($len >= 5 && substr($line, 0, 5) == "#### ") {
                 $type = "h6";
+            } else if ($len >= 5 && substr($line, 0, 6) == "##### ") {
+                $type = "h7";
             } else if ($len >= 1 && $line[0] == ">") {
                 $type = "blockquote";
             } else if ($len >= 1 && $line[0] == '!') {
                 $type = "img";
             } else if ($len >= 1 && $line[0] == '|') {
                 $type = "table";
-	    } else if (preg_match('/^( *[\*-] *)+$/', $line, $group)) {
-		$type = "hr";
+            } else if (preg_match('/^( *[\*-] *)+$/', $line, $group)) {
+                $type = "hr";
             } else if (preg_match("/^( *)[0-9]+\.(.*)/", $line, $group)) {
                 $type = "ol";
                 $indent = strlen($group[1]);
@@ -120,224 +122,228 @@ function ttGetMarkdownByLambda($getLineFunc, $allowHtml = true) {
             } else if ($allowHtml == true && $len >= 1 && ltrim($line[0]) == "<") {
                 $type = "html";
             } else {
-		$type = "p";
+                $type = "p";
             }
         }
 
         switch ($prevType) {
             case "blockquote":
-		if ($type != "blockquote") {
+                if ($type != "blockquote") {
                     $result .= "</blockquote>\n";
-		}
-		break;
+                }
+                break;
             case "sample":
-		if ($type != "sample") {
+                if ($type != "sample") {
                     $result .= "</pre>\n";
-		}
-		break;
+                }
+                break;
             case "p":
-		if ($type != "p") {
+                if ($type != "p") {
                     $result .= "</p>\n";
-		}
-		break;
+                }
+                break;
             case "table":
-		if ($type != "table") {
+                if ($type != "table") {
                     $result .= "</table>\n";
-		}
-		break;
+                }
+                break;
             case "ol":
             case "ul":
-		if ($type != "ol" && $type != "ul") {
+                if ($type != "ol" && $type != "ul") {
                     do {
-			$prevIndent = array_pop($indentList);
-			if ($prevType == "ul") {
+                        $prevIndent = array_pop($indentList);
+                        if ($prevType == "ul") {
                             $result .= "</ul>\n";
-			} else if ($prevType == "ol") {
+                        } else if ($prevType == "ol") {
                             $result .= "</ol>\n";
-			}
+                        }
                     } while ($prevIndent > 0);
-		}
-		break;
+                }
+                break;
         }
         
         switch ($type) {
-	    case "hr":
-		$result .= "<hr class=\"style1\">\n";
-		break;
-		
+            case "hr":
+                $result .= "<hr class=\"style1\">\n";
+                break;
+                
             case "comment":
-		$result .= "<!-- " . substr($line, 2) . " -->\n";
-		break;
-		
+                $result .= "<!-- " . substr($line, 2) . " -->\n";
+                break;
+                
             case "h3":
-		$result .= "<h3>" . ttConvMdParts(substr($line, 2)) . "</h3>\n";
-		break;
+                $result .= "<h3>" . ttConvMdParts(substr($line, 2)) . "</h3>\n";
+                break;
 
             case "h4":
-		$result .= "<h4>" . ttConvMdParts(substr($line, 3)) . "</h4>\n";
-		break;
+                $result .= "<h4>" . ttConvMdParts(substr($line, 3)) . "</h4>\n";
+                break;
 
             case "h5":
-		$result .= "<h5>" . ttConvMdParts(substr($line, 4)) . "</h5>\n";
-		break;
+                $result .= "<h5>" . ttConvMdParts(substr($line, 4)) . "</h5>\n";
+                break;
                 
             case "h6":
-		$result .= "<h6>" . ttConvMdParts(substr($line, 5)) . "</h6>\n";
-		break;
+                $result .= "<h6>" . ttConvMdParts(substr($line, 5)) . "</h6>\n";
+                break;
+                
+            case "h7":
+                $result .= "<p><strong><i>" . ttConvMdParts(substr($line, 5)) . "</i></strong></p>\n";
+                break;
                 
             case "blockquote":
-		if ($prevType != "blockquote") {
+                if ($prevType != "blockquote") {
                     $result .= "<blockquote>\n";
-		}
-		$inBlock = [];
-		do {
-		    $quotedLine = trim(substr($line, 1));
-		    if ($quotedLine == "") {
-			$quotedLine = "&nbsp;";
-		    }
-		    $inBlock[] = $quotedLine;
-		    $line = $getLineFunc();
-		} while ($line != false && trim($line)[0] == ">");
-		$inBlock[] = " \n";
-		$result .= ttGetMarkdownByLambda(function() use (&$inBlock) {
+                }
+                $inBlock = [];
+                do {
+                    $quotedLine = trim(substr($line, 1));
+                    if ($quotedLine == "") {
+                        $quotedLine = "&nbsp;";
+                    }
+                    $inBlock[] = $quotedLine;
+                    $line = $getLineFunc();
+                } while ($line != false && trim($line)[0] == ">");
+                $inBlock[] = " \n";
+                $result .= ttGetMarkdownByLambda(function() use (&$inBlock) {
                     return array_shift($inBlock);
-		});
-		$result .= "</blockquote>\n";
-		break;
+                });
+                $result .= "</blockquote>\n";
+                break;
 
             case "img":
-		if (preg_match('/\!\[([^\]]+)\]\(([^}]+) flat\)/', $line, $matches) > 0) {
+                if (preg_match('/\!\[([^\]]+)\]\(([^}]+) flat\)/', $line, $matches) > 0) {
                     $result .= "<img class=\"figure-flat\" src=\"" . $matches[2] . "\" alt=\"" . $matches[1] . "\">\n";
-		} else if (preg_match('/\!\[([^\]]+)\]\(([^\]]+)\)/', $line, $matches) > 0) {
+                } else if (preg_match('/\!\[([^\]]+)\]\(([^\]]+)\)/', $line, $matches) > 0) {
                     $result .= "<img class=\"figure\" src=\"" . $matches[2] . "\" alt=\"" . $matches[1] . "\">\n";
-		}                
-		break;
-		
+                }                
+                break;
+                
             case "ul":
             case "ol":
-		if ($prevType == "ul" || $prevType == "ol") {
+                if ($prevType == "ul" || $prevType == "ol") {
                     $len = count($indentList);
                     $prevIndent = $indentList[$len - 1];
                     if (count($indentList) >= 2) {
-			if ($indentList[$len - 1] > $indent && $indent > $indentList[$len - 2]) {
+                        if ($indentList[$len - 1] > $indent && $indent > $indentList[$len - 2]) {
                             $indent = $indentList[$len - 1];
-			}
+                        }
                     }
                     if ($prevIndent != $indent) {
-			if ($prevIndent < $indent) {
+                        if ($prevIndent < $indent) {
                             if ($type == "ul") {
-				$result .= "<ul>\n";
+                                $result .= "<ul>\n";
                             } else if ($type == "ol") {
-				$result .= "<ol>\n";
+                                $result .= "<ol>\n";
                             }
                             array_push($indentList, $indent);
-			} else if ($prevIndent > $indent) {
+                        } else if ($prevIndent > $indent) {
                             do {
-				if ($prevType == "ul") {
+                                if ($prevType == "ul") {
                                     $result .= "</ul>\n";
-				} else if ($prevType == "ol") {
+                                } else if ($prevType == "ol") {
                                     $result .= "</ol>\n";
-				}
-				array_pop($indentList);
-				$len--;
-				$prevIndent = $indentList[$len - 1];
+                                }
+                                array_pop($indentList);
+                                $len--;
+                                $prevIndent = $indentList[$len - 1];
                             } while ($prevIndent > $indent);
-			} else {
+                        } else {
                             if ($prevType != $type) {
-				if ($prevType == "ul") {
+                                if ($prevType == "ul") {
                                     $result .= "</ul>\n<ol>\n";
-				} else if ($prevType == "ol") {
+                                } else if ($prevType == "ol") {
                                     $result .= "</ol>\n<ul>\n";
-				}
+                                }
                             }
-			}
+                        }
                     }
-		} else if ($type == "ol" && $prevType != "ol") {
+                } else if ($type == "ol" && $prevType != "ol") {
                     $result .= "<ol>\n";
-		} else if ($type == "ul" && $prevType != "ul") {
+                } else if ($type == "ul" && $prevType != "ul") {
                     $result .= "<ul>\n";
-		}
-		$result .= "<li>" . ttConvMdParts($line) . "</li>\n";
-		break;
+                }
+                $result .= "<li>" . ttConvMdParts($line) . "</li>\n";
+                break;
 
             case "table":
-		if ($prevType != "table") {
+                if ($prevType != "table") {
                     $result .= "<table>\n";
                     $line2 = $getLineFunc($fp);
                     if ($line2 === false) {
-			break;
+                        break;
                     }
                     $line2 = rtrim($line2);
                     if (preg_match('/^ *\|-+/', $line2)) {
-			$result .= "<tr>";
-			$line = trim($line);
-			$line = substr($line, 1, strlen($line) - 2);
-			foreach (explode("|", $line) as $td) {
+                        $result .= "<tr>";
+                        $line = trim($line);
+                        $line = substr($line, 1, strlen($line) - 2);
+                        foreach (explode("|", $line) as $td) {
                             $result .= "<th>" . ttConvMdParts(trim($td)) . "</th>";
-			}
-			$result .= "</tr>\n";
+                        }
+                        $result .= "</tr>\n";
                     } else {
-			$result .= "<tr>";
-			$line = trim($line);
-			$line = substr($line, 1, strlen($line) - 2);
-			foreach (explode("|", $line) as $td) {
+                        $result .= "<tr>";
+                        $line = trim($line);
+                        $line = substr($line, 1, strlen($line) - 2);
+                        foreach (explode("|", $line) as $td) {
                             $result .= "<td>" . ttConvMdParts(trim($td)) . "</td>";
-			}
-			$result .= "</tr>\n<tr>";
-			$line2 = trim($line2);
-			$line2 = substr($line2, 1, strlen($line2) - 2);
-			foreach (explode("|", $line2) as $td) {
+                        }
+                        $result .= "</tr>\n<tr>";
+                        $line2 = trim($line2);
+                        $line2 = substr($line2, 1, strlen($line2) - 2);
+                        foreach (explode("|", $line2) as $td) {
                             $result .= "<td>" . ttConvMdParts(trim($td)) . "</td>";
-			}
-			$result .= "</tr>\n";
+                        }
+                        $result .= "</tr>\n";
                     }
-		} else {
+                } else {
                     $result .= "<tr>";
                     $line = trim($line);
                     $line = substr($line, 1, strlen($line) - 2);
                     foreach (explode("|", $line) as $td) {
-			$result .= "<td>" . ttConvMdParts(trim($td)) . "</td>";
+                        $result .= "<td>" . ttConvMdParts(trim($td)) . "</td>";
                     }
                     $result .= "</tr>\n";
-		}
-		break;
+                }
+                break;
 
             case "sample":
-		if ($prevType != "sample") {
+                if ($prevType != "sample") {
                     $result .= "<pre class=\"sample\">\n";
-		}
-		$result .= ttConvMdParts(substr($line, 1)) . "\n";
-		break;
-		
+                }
+                $result .= ttConvMdParts(substr($line, 1)) . "\n";
+                break;
+                
             case "p":
-		if ($prevType == "p") {
+                if ($prevType == "p") {
                     $result .= "<br>\n";
-		} else {
+                } else {
                     $result .= "<p>";
-		}
-		
-		$result .= ttConvMdParts($line);
-		break;
+                }
+                
+                $result .= ttConvMdParts($line);
+                break;
 
             case "html":
-		$result .= $line;
-		break;
+                $result .= $line;
+                break;
 
             case "code":
-		$result .= "<div class=\"code\" name=\"$codeName\">\n";
-		$result .= "<pre>";
-		while (($line = $getLineFunc()) !== false) {
+                $result .= "<div class=\"code\" name=\"$codeName\">\n";
+                $result .= "<pre>";
+                while (($line = $getLineFunc()) !== false) {
                     $len = strlen($line);
                     if ($len >= 3 && substr($line, 0, 3) == '```') {
-			break;
+                        break;
                     } else {
-			$result .= ttConvMdParts(htmlspecialchars($line));
+                        $result .= ttConvMdParts(htmlspecialchars($line));
                     }
-		}
-		$result = rtrim($result);
-		$result .= "</pre>\n";
-		$result .= "</div>\n";
-		break;
+                }
+                $result = rtrim($result);
+                $result .= "</pre>\n";
+                $result .= "</div>\n";
+                break;
         }
 
         $prevType = $type;

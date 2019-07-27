@@ -12,6 +12,7 @@ $normalNewsColor = "olive";
 $diaryColor = "darkmagenta";
 $linuxAppsColor = "darkorange";
 $cLangColor = "#C1AB05";
+$readmeColor = "midnightblue";
 
 $translations = [
     // プログラミング
@@ -25,6 +26,7 @@ $translations = [
 
     ["linux", "Linux", "blueviolet"],
     ["01_system", "システム系", $linuxAppsColor],
+    ["02_texteditors", "テキストエディタ", $linuxAppsColor],
 
     // ITニュース
     ["itnews", "ITニュース", "seagreen"],
@@ -52,6 +54,9 @@ $translations = [
 
     ["news", "ニュース (IT、Linux関係ない)", "sienna"],
     ["01_201906", "2019年6月", $normalNewsColor],
+
+    ["docs", "ドキュメント", "darkgreen"],
+    ["01_readmes", "README", $readmeColor],
 
     // Linux
     ["linux", "Linux", "darkolivegreen"],

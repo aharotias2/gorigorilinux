@@ -1,5 +1,5 @@
 # Linuxとは何か
-![ ](images/Linux/gnu-and-linux.png)
+--![ ](images/Linux/gnu-and-linux.png)
 「コンピュータ、ソフトなければ、ただの箱」という格言があります。
 
 コンピュータを動かすにはソフトウェアが必要です。

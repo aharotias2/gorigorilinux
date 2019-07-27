@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="footer-inner">
         <div class="footer-block">
-            <p>Blog Text is <br/>©Copyright 2019 田中喬之(Tanaka Takayuki)<br/> All rights reserved</p>
+            <p>© 2019 田中喬之(Tanaka Takayuki)</p>
         </div>
         <div class="footer-block">
             <p>Powered by <a href="http://www.php.net/">PHP</a> and <a href="https://lolipop.jp/">Lolipop.jp</a></p>

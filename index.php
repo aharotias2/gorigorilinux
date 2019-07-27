@@ -67,7 +67,7 @@ foreach ($array as $category) {
 			    <a href="index.php?category=todo&page=1&order=desc">TODO</a>
                         </li>
                         <li<?php echo ($bigCategory == "self")?' class="current_category"':''; ?>>
-			    <a href="article.php?entry=misc/others/01_self/001">このサイトについて</a>
+			    <a href="article.php?entry=misc/self/01_self/001">このサイトについて</a>
                         </li>
 			<li<?php echo ($bigCategory == "links")?' class="current_category"':''; ?>>
                             <a href="index.php?category=links&page=1&order=desc">リンク</a>
