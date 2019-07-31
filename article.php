@@ -36,9 +36,6 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
     </head>
     <body>
         <?php include("closed/php/header.php"); ?>
-        <div class="pankuzu">
-            <?php ttPutPankuzu($category); ?>
-        </div>
         <div class="contents">
             <div class="rightpane">
 		<?php ttPutHeaderMenu(2); ?>
