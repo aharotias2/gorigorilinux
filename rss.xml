@@ -9,11 +9,74 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Fri, 26 Jul 2019 16:08:58 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 25 Aug 2019 07:57:41 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>宣言と定義 (C、C++)</title>
+    <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/004</link>
+    <description>CやJavaでは変数を使う為にまず定義をしないといけません。宣言とは宣言とは、プログラム内で使う予定の変数の名前と保持する値の型、そして初期値をコンパイラに指示することで、宣言する文を宣言文と言います。Cの場合 int a = 1;上の文により、int型の変数aを初期値1で使うことをコンパイラに伝えます。定義とは定義というのは変数のためのメモリ領域を確保することをコンパイラに指示することです。例えば int a = 1;上の文は宣言文ですが、ローカル変数 (またはグローバル変数) のaのためのメモリ領域を確保するようにコンパイラに指示しているので定義文でもあります。この領域はスタックに確保されます。定義と宣言の使い分け一般的に定義と宣言は同じ意味の言葉です。しかし厳密に言えば、C、C++の場合、extern修飾子を用いて...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>プログラミング</category>
+    <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/004</guid>
+    <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>ポインタを理解する</title>
+    <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/003</link>
+    <description>はしがきC言語の難関がポインタです。ポインタを理解し使いこなすには若干想像力と慣れが必要ですね。今回はそんなポインタについて簡単にまとめたいと思います。ポインタの宣言ポインタが難しい原因。まずはっきり言ってC言語のポインタの文法が分かりにくいというのがあると思います。下はポインタ変数を宣言する文の例です。 int *a;整数型のポインタを宣言しています。同じことは次のようにも書けます。 int* a;微妙に違います。C言語では同じ型の変数はカンマで区切って一度に宣言できます。 int *a, *b, *c;これだと整数型のポインタを3個宣言したことになります。しかし次のようだと違います。 int *a, b, c;これだとポインタは最初のaだけで、bとcはただの整数です。では int* a, b, c;だとどうでしょうか。実はこれも同じでポイン...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>プログラミング</category>
+    <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/003</guid>
+    <pubDate>Sun, 25 Aug 2019 07:50:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>メモリの構造 - スタックとヒープ</title>
+    <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/002</link>
+    <description>プログラムはメモリというデータを記憶する領域を使って動作します。プログラムで使われるメモリは使い方によって下のように分類されています。コード領域 - コンピュータへの命令を記憶する固定領域静的領域 - 静的データを記憶する固定領域スタック - サイズの固定した可変データヒープ - サイズを固定しない可変データなおC/C++以外の言語では特に意識しなくても大丈夫な設計になっています。コード領域プログラムを起動するとハードディスクなどの長期保存領域からメモリという短期保存領域にプログラムがロードされます。プログラムはコンピュータへの命令の手順書ですが、この命令の手順書自体もメモリに保存されています。静的領域プログラムには変化しないデータも含まれています。例えばウィンドウに表示するタイ...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>プログラミング</category>
+    <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/002</guid>
+    <pubDate>Sat, 24 Aug 2019 15:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>プログラムの基本構造 - 逐次処理・条件分岐・繰り返し</title>
+    <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/001</link>
+    <description>前置きプログラムは機械語で実行されるコンピュータへの命令のまとまりですが、それだけだと理解が難しいので、色々整理する方法があります。プログラムがどんな構造になっているかという分類法が大昔に作られましたが、それは今でもある程度そのまま使えます。大別すると次の3つになります逐次処理条件分岐繰り返しプログラムの動作順序のことをアルゴリズムと言いますが、全てのアルゴリズムは上の3つのパターンの組合せだという考え方です。実は他にもあって、ジャンプしかしこれは特別な場合を除いて使わない方が良いとされています。この基本的な考え方で作られたプログラミング方法は「構造化プログラミング」と呼ばれたりします。構造化プログラミングをするために作られたプログラミング言語は非常に多く、ほ...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>プログラミング</category>
+    <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/001</guid>
+    <pubDate>Sat, 24 Aug 2019 10:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Bluetoothが繋がらなくなった場合</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/slackware/02_fixing/002</link>
+    <description>Slackware14.2を使っていて、色々更新などしていたらいつの間にかBluetoothが使えなくなっていました。このようにXFCEのステータスバーにあるBluetoothのアイコンが灰色になっていて、メニューを開いて「Bluetoothをオンにする」をクリックしても使えるようになりません。ググって解決しました。ファームウェアが入っていなかったdmesgコマンドでシステムエラーの内容を確認するrootユーザになってdmesgコマンドを打ちます。dmesgはLinux起動時のメッセージを表示するコマンドです。プロンプト$ dmesg [Enter]… (中略) …[ 26.230321] Bluetooth: hci0: Bootloader revision 0.0 build 26 week 38 2015[ 26.231305] Bluetooth: hci0: Device revision is 16[ 26.231308] Bluetooth: hci0: Secure boot is enabled[ 26.231311] Bluetooth: hci0: OTP lock is enabled[ 26.231313] Bluetooth: hci0: API lock is enabled[ 26.231315] Bluetooth: hci0: Debug loc...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/slackware/02_fixing/002</guid>
+    <pubDate>Fri, 23 Aug 2019 04:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>夏休みでした</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/002</link>
+    <description>15日から18日はお盆休みでした。その間の成果です。Spring Bootの勉強中先日買ったSpring Bootの本ですが、結構良いです。初版が古いので、Springのバージョンも昔のものですが、現在の最新版のSTS (Spring Tools Suite) とJVM (12) で問題なく動作します。内容はSTSのインストールインターネットからSpringプロジェクトの雛形をダウンロード依存性注入の説明 (各種アノテーションの使い方)データベースの使用ウェブアプリケーションの作成 (RESTアプリケーションとブラウザのウェブアプリケーション両方)クラウドへのデプロイSpringをサッと短時間で勉強したいという人にはおすすめです。Slackware-currentへの移行実験しましたSlackwareには安定板の14.2とローリングリリースのcurrentがあり、私は安定版の方をずっと使っていたのですが、今日一念発起して別の...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/002</guid>
+    <pubDate>Sun, 18 Aug 2019 10:20:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>本を買いました。</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/001</link>
+    <description>今日は近所の本屋に行ってプログラミングの本を買って来ました。一冊ずつ紹介します。はじめての Sprint Boot著：槙俊明出版：工学社これから仕事で使うのでSpringBootの本を。Javaプログラマなのに、こんな初歩的なことも知らないで何年やってきたのかと思われそうですが、もう3年以上はこの業界で仕事させてもらっています。Springの案件は初めてなんです。プロジェクト立ち上げではなく、手伝い程度の仕事なので、今から付け焼刃で十分ですよ。みんなの GO言語著：松木雅幸、mattn、藤原俊一郎、中島大一、上田拓也、牧大輔、鈴木健太出版：技術評論社これは仕事で使う訳じゃないですが個人的に興味があるので買いました。表紙から察するに小学生向けかな。薄いし私には丁度良さそうです。Python機械学習入門著：大曽根圭輔、関喜...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/001</guid>
+    <pubDate>Sun, 04 Aug 2019 13:50:00 GMT</pubDate>
+  </item>
   <item>
     <title>Simplenote - フリーなマルチプラットフォーム同期型ノートアプリ</title>
     <link>https://gorigorilinux.net/article.php?entry=apps/linux/02_texteditors/001</link>
@@ -130,69 +193,6 @@
     <category>Linux</category>
     <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/005</guid>
     <pubDate>Thu, 06 Jun 2019 13:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>echo - 文字列を書き出す</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/003</link>
-    <description>echoは文字列をファイルに書き出すシェル組込みコマンドです。デフォルトのファイルは「標準出力」であり、普通これはコマンドラインを指します(※注)。今回はこのechoコマンドについてさらりと説明します。(注：LinuxなどUNIX系のシステムではコマンドラインへの入出力もファイルへの入出力と同様に扱われます)基本的な使い方プロンプト$ echo こんにちは! [Enter]こんにちは!このように使います。変数の値を表示する変数は名前の頭に「$」を付けると中身を取り出すことができます。例えば「A」という変数に「こんにちは!」という値が設定されている時、echoコマンドで表示すると、プロンプト$ echo $Aこんにちは!このような結果となります。変数の値を設定する変数は「=」記号を使って設定できます。プロンプト$ A=こんにちは!この際「=...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/003</guid>
-    <pubDate>Sun, 02 Jun 2019 11:10:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>コマンドを入力する</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/002</link>
-    <description>ログインした後コマンドラインでログインした場合、変な設定をしていない限りそのまま指定されたシェルプログラムのプロンプトが表示されます。多くの場合、「Bash (バッシュ、バッシェルと呼ぶ人もいます)」というプログラムがデフォルトで指定されていますので、このサイトでもBashを前提に説明を行います。(「変な設定」とはログインしたら即GUIを立ち上げる設定などのことです。でも普通はしないと思いますが)プロンプトは普通「$ 」のような文字のあとに長方形のカーソルが点滅しており、ここでキーボードによるコマンドの入力待ち状態になっています。GUI環境でターミナルエミュレータを起動するログインは通常コマンドプロンプトから行いますが、GUI環境を使っている場合は「ターミナルエミュレータ(端末とも呼ばれる)...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/002</guid>
-    <pubDate>Sun, 02 Jun 2019 07:50:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>ログイン・ログアウト</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/001</link>
-    <description>Linuxを起動して最初に行なう作業であるログインと、ログアウトについて説明します。ログインとはLinuxを使うには起動した後まず登録されているユーザのユーザ名とパスワードによって認証を得る必要があります。これをログインと言います。ログインの方法基本的にはLinuxがインストールされているコンピュータの電源を入れて、起動処理が終わるとログインプロンプトが表示されるので、そこにユーザ名とパスワードを打ち込んでEnterキーを押せば良いだけです。また、suコマンドなどを使って別のユーザに切り替える時にもユーザ名とパスワードを指定してそれが正しければ別のユーザとしてログインできます。sshコマンドを使えば、ネットワーク接続している別のコンピュータにログインすることもでき、その時はそのコンピュータ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/001</guid>
-    <pubDate>Sun, 02 Jun 2019 08:20:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>今すぐLinuxを始めるメリット6選</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/beginners/01_reason/001</link>
-    <description>   このブログのテーマのひとつがLinuxの敷居の高いイメージをやわらげ、親しみを持ってもらうこと、というのがあるので、今回は、全くの初心者目線でLinuxを始める理由について考えたいと思います。 Linuxをやってみたくなるきっかけ Linuxをやってみたくなるきっかけは何があるだろうと考えてみました。   プログラミングの勉強がしたい  Windowsのアップデートについていけない  黒い画面に憧れている  好きな女の子がLinuxを使っている (別に女の子じゃなくても良いが)  タダで手に入る  仕事のため  こんなところでしょうか。 いずれにしても、それらの「きっかけ」は、実際にLinuxを始めてみるとあまりの難しさに耐ええないという感じもしますが。 Linuxをやる理由1: 好きな女の子がLinuxを使っている (別に女の子じゃなくても良いが) 案...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/beginners/01_reason/001</guid>
-    <pubDate>Sun, 16 Jun 2019 06:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>「一人で死ね」という言葉について</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/004</link>
-    <description>川崎殺傷「１人で死ねば」の声　事件や自殺誘うと懸念も | 朝日新聞デジタル 2019.5.31安藤優子キャスターが出演者に語りかけた。「社会に不満を持つ犯人像であれば」と前置きして、「すべてを敵に回して死んでいくわけですよね。自分１人で自分の命を絶てばすむことじゃないですか」。コメンテーターの北村晴男弁護士も「言ってはいけないことかもしれないけど、死にたいなら１人で死ねよ、と言いたくなりますよね」と続けた。落語家の立川志らくさんが「１人の頭のおかしい人が出てきて、死にたいなら１人で死んでくれよって、そういう人は」とコメント。そんな状況にネット上で異論を唱えたのが、貧困者らを支援するＮＰＯ「ほっとプラス」の藤田孝典代表理事。「次の凶行を生まないためにも、『１人で死ぬべき』とい...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/004</guid>
-    <pubDate>Tue, 04 Jun 2019 15:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>KAT-TUN田口容疑者の大麻報道について</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/003</link>
-    <description>カップルでハマる大麻の危険性 こっそり使うことにおもしろさ 週刊女性PRIME livedoorlivedoorニュースの人気コーナー「ざっくり言うと」によりますと田口淳之介容疑者らがハマった大麻の危険性を、週刊女性PRIMEが伝えたカップルの間だと、ふたりでこっそり使うことにおもしろさを覚える、と医師秘密を共有している優越感で周りに話したくなり、それが原因で捕まることもだそうです。このように最近有名芸能人の方々が相次いで薬物により逮捕されています。まあ大麻なんて別に殺人でも窃盗でもないので人生終わったというほどのものでもありません。ゆっくり人生考えなおせば良いと思います。大麻やら、コカインやら、やらないというのは社会人の最低限の資格みたいなものなので、犯罪とはちょっと違うと思います。世に出てく...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/003</guid>
-    <pubDate>Wed, 29 May 2019 11:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>ローラさん、電車内での自撮りを批判されてしまう</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/002</link>
-    <description>ローラが電車内の自撮りを投稿、乗客の顔隠さず 好感度急落中で「インスタ芸人」と揶揄も1次ソース(リアルライブ)モデルでタレントのローラがインスタグラムのストーリーズに投稿したある写真が、物議を醸している。記事によるとモデルでタレントのローラさんが小田原市の電車内で撮ってインスタグラムに投稿した写真が問題となっているようです。なんでも乗客の顔を隠してなかったとか。顔を隠すのは当然ですが、通行人が女性だった場合は胸まで隠した方が良いと思います。女性の胸が真夏日の強い日射しの下でくっきりとした影をつけているのが写っている状態で顔だけ隠すと想像力がかき立てられて余計まずいことになりかねませんので。本来ならお尻も隠した方が良いですが、さすがにその位置にボカシがあると逆に脱...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/002</guid>
-    <pubDate>Wed, 29 May 2019 11:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>
