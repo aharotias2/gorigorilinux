@@ -1,5 +1,6 @@
 # 管理人について
 ## プロフィール
+![著者近影](images/self/selfy01.jpg)
 田中喬之と申します。
 埼玉県在住で、今年(2019年)、32歳になりました。
 派遣でプログラマーのお仕事をさせていただいております。主な業務内容はJavaによるエンタープライズ・ウェブサービス開発の類です。このサイトは趣味で運営しています。
@@ -58,17 +59,14 @@ Slackware Linux 14.2 Xfceを載せたdynabookをメインで使っています�
 今まで時事ネタとか扱っていましたが、そういうものはこちらのブログに書こうと思います。
 あとは音楽とか好きなものについて語るというか書き散らすつもりです。
 
-ですのでこのサイトはプログラミングやLinuxのネタに特化するつもりです。
-
 ### Twitter
 このサイトの公式アカウントはこちらです。
 主に私のネタ集めにのみ使っています。ITニュースに関する感想を書くだけのアカウントです。
-[田中君さんちゃん (twitter.com/goodslacktanaka)](https://twitter.com/goodslacktanaka)
+[twitter.com/goodslacktanaka](https://twitter.com/goodslacktanaka)
 
 ### Github
 Githubのアカウントです。
 自作のプログラムを置いています。このサイトのソースコードも置いてあります。
 
 [私のGithubページ](https://github.com/aharotias2)
-![プロフィール画像 (眼鏡橋)](images/my-github-logo-mini.png)
 
