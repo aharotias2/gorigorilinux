@@ -4,7 +4,9 @@ function onLoad() {
 	    && a.href.indexOf("https://" + location.hostname) != 0
 	    && a.href.indexOf("/") != 0) {
 	    a.target = "_blank";
-            a.appendChild(newElement("img", {"src": "images/linkmark.png"}));
+            a.appendChild(newElement("img", {
+		"src": "images/linkmark.png", "width": "12px", "height": "12px"
+	    }));
         }
     });
 }

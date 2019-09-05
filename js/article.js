@@ -216,18 +216,23 @@ function onLoad() {
             location.href = this.select("a")[0].href;
         };
     });
+
     select(".latest_article_lite").forEach(function(latest_article_lite) {
         latest_article_lite.onclick = function() {
             location.href = this.children[0].children[0].href;
         }
     });
+
     select(".contents a").forEach(function(a) {
         if (a.href.indexOf("http") == 0
             && a.href.indexOf("http://" + location.hostname) != 0
             && a.href.indexOf("https://" + location.hostname) != 0) {
             var aUrl = new URL(a.href);
             a.target = aUrl.hostname;
-            a.appendChild(newElement("img", {"src": "images/linkmark.svg", "style": "padding-left:2px;"}));
+            a.appendChild(newElement("img", {
+		"src": "images/linkmark.svg",
+		"style": "padding-left:2px;width:16px;height:16px"
+	    }));
         }
     });
 

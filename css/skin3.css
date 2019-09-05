@@ -29,13 +29,10 @@ p {
 
 .code-span {
     font-family: monospace;
-    background-color: rgba(50, 70, 90, 0.2);
+    color: darkorange;
+    font-weight: bold;
     margin: 3px;
-    padding: 1px 5px;
-    /* border: 1px solid #505860; */
-    border-radius: 3px;
-    background-color: #505860;
-    /* box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.7) inset; */
+    padding: 1px 3px;
 }
 
 .come {
@@ -227,19 +224,19 @@ img.topimage {
  * レイアウト
  **********************************************************************************************/
 .leftpane {
-    //background-color: rgba(30, 40, 50, 0.8);
+    //background-color: rgba(20, 30, 40, 0.8);
     //border: 1px solid #607080;
 }
 
 .rightpane {
     /*background-color: rgba(30, 40, 50, 0.6);*/
-    background-color: rgba(20, 30, 40, 0.6);
+    background-color: rgba(20, 30, 40, 0.8);
     box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.5);
     border: 1px solid #404850;
 }
 
 .centerpane {
-    background-color: rgba(40, 48, 56, 0.8);
+    background-color: rgba(20, 38, 40, 0.8);
     border: 1px solid rgb(48, 58, 64);
 }    
 
@@ -345,19 +342,22 @@ img.topimage {
 }
 
 .contents .article .code {
-    background-color: #182028;
-    border: 1px solid #283038;
-    color: #B0B8C0;
+    border: 0;
 }
 
 .contents .article .code .code-header {
     background-color: #485058;
-    border-radius: 3px 3px 0 0;
     color: #606870;
 }
 
 .contents .article .code .code-header h5 {
     color: #9098A0;
+}
+
+.contents .article .code pre {
+    background-color: #081018;
+    color: #B0C0B8;
+    font-size: normal;
 }
 
 .contents .article pre .comment {

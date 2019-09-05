@@ -22,7 +22,10 @@ function onLoad() {
             && a.href.indexOf("https://" + location.hostname) != 0) {
             var aUrl = new URL(a.href);
             a.target = aUrl.hostname;
-            a.appendChild(newElement("img", {"src": "images/linkmark.svg"}));
+            a.appendChild(newElement("img", {
+		"src": "images/linkmark.svg",
+		"style": "height:14px;width:14px;margin-left:2px"
+	    }));
         }
     });
 }

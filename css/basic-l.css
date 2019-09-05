@@ -398,7 +398,6 @@ iframe.google-maps {
     padding: 0;
     margin: 10px 70px 10px 70px;
     border-radius: 2px;
-    box-shadow: 3px 5px 20px -10px rgba(0, 0, 0, 0.5);
 }
 
 .contents .article li {
@@ -409,7 +408,7 @@ iframe.google-maps {
 .contents .article .code .code-header {
     margin: 0;
     padding: 0px;
-    border-radius: 1px 1px 0 0;
+    border-radius: 3px 3px 0 0;
 }
 
 .contents .article .code .code-header h5 {
@@ -420,8 +419,9 @@ iframe.google-maps {
 }
 
 .contents .article pre {
-    padding: 8px;
+    padding: 12px;
     overflow-x: scroll;
+    border-radius: 0 0 3px 3px
 }
 
 .contents .article ul {
