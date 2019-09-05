@@ -117,7 +117,7 @@ function ttPutHeaderMenu($position) {
         echo "</div>";
         echo "</li>";
     }
-    echo "<li><a href=\"http://news.gorigorilinux.net\" target=\"gorigorilinuxblog\">ブログ</a></li>";
+    //echo "<li><a href=\"http://news.gorigorilinux.net\" target=\"gorigorilinuxblog\">ブログ</a></li>";
     echo "</ul>";
     echo "</div>";
 }
