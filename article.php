@@ -46,7 +46,7 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
                 <div class="article">
                     <div class="datetime">
                         <span class="mtime">
-                            最終更新日時: <?=ttGetFilemtime($articleUrl)?>
+                            <img src="images/time.svg" alt="最終更新日時:"><?=ttGetFilemtime($articleUrl)?>
                         </span>
                     </div>
                     <?php
