@@ -452,6 +452,7 @@
                      document.forms[0].submit();
                      return true;
                  };
+		 select("#formSubmit-2").onclick = select("#formSubmit").onclick;
              };
             </script>
         </head>
@@ -635,6 +636,7 @@
                         </tr>
                     </table>
 
+                    <button id="formSubmit-2" type="button">変更を保存する</button>
                     <button id="addNewItem" type="button">+ 記事を追加する</button>
                     <button id="formSubmit" type="button">変更を保存する</button>
                 </form>
