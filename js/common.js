@@ -60,12 +60,16 @@ function newElement(elementName, attributes, children) {
 }
 
 Element.prototype.select = function(selector) {
+    var result = null;
     if (selector.charAt(0) == "#") {
-        return this.querySelector(selector);
+        result = this.querySelector(selector);
     } else {
         var nodeList = this.querySelectorAll(selector);
-        return Array.prototype.slice.call(nodeList, 0);
+	if (nodeList != null) {
+            result = Array.prototype.slice.call(nodeList, 0);
+	}
     }
+    return result != null ? result : {};
 };
 
 Element.prototype.wrap = function(wrapper) {

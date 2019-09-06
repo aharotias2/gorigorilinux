@@ -123,4 +123,3 @@ $translations = [
     ["03_afterinstall", "Linux導入後にやりたいこと", $colors["beginnersColor"]],
     ["04_troubleshooting", "トラブル対策", $colors["beginnersColor"]],
 ];    
-

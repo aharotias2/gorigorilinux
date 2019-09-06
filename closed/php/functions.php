@@ -726,5 +726,21 @@ function ttConvertToJdate($datetime) {
 
 function ttGetFilemtime($file) {
     $t = filemtime($file);
-    return ttConvertToJdate(date("Y-m-d H:i:s", $t));
+    //return ttConvertToJdate(date("Y-m-d H:i:s", $t));
+    return date("Y.m.d H:i:s", $t);
+}
+
+function ttFindPath($entry) {
+    $dirs = explode("/", $entry);
+    if ($dirs[0] == "closed" && $dirs[1] == "articles" && count($dirs) == 6) {
+        $n = array_pop($dirs);
+        foreach (scandir(implode("/", $dirs)) as $fileName) {
+            if ($fileName !== "." && $fileName !== ".." && substr($fileName, 0, 3) === $n) {
+                return implode("/", $dirs) . "/" . $fileName;
+            }
+        }
+        return "";
+    } else {
+        return $entry;
+    }
 }

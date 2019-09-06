@@ -6,41 +6,17 @@ require($localPrefix . "functions_comments.php");
 require_once($localPrefix . "functions_markdown.php");
 $sqlite = new SQLiteClient();
 include($localPrefix . "functions.php");
-$page = isset($_GET['page']) ? $_GET['page'] : "";
-if ($page == "") {
-    $page = 1;
+$itemNum = isset($_GET['n']) ? $_GET['n'] : "0";
+$pageKind = $itemNum == 100 ? "recommended" : "recent";
+if ($pageKind == "recent") {
+    $rss = new SimpleXMLElement(file_get_contents("rss.xml"));
+    $item = $rss->channel->item[intval($itemNum)];
+    $articleUrl = ttFindPath("closed/articles/" . substr($item->link, strpos($item->link, "=") + 1));
+    $itemPubDate = date("Y.m.d H:i:s", strtotime($item->pubDate));
+} else if ($pageKind == "recommended") {
+    $articleUrl = ttFindPath("closed/articles/" . $_GET['entry']);
 }
-$bigCategory = isset($_GET['category']) ? $_GET['category'] : "";
-$order = isset($_GET['order']) ? $_GET['order'] : "";
-if ($order == "" || ($order != "desc" && $order != "asc")) {
-    $order = "desc";
-}
-if ($order == "desc") {
-    $reverseOrder = "asc";
-} else {
-    $reverseOrder = "desc";
-}
-$isConstPage = false;
-switch ($bigCategory) {
-    case "by_category":
-    case "todo":
-    case "links":
-	$isConstPage = true;
-	break;
-}
-$array = array("Linux", "アプリケーション", "プログラミング", "ITニュース", "雑文");
-$bigMenu = "";
-foreach ($array as $category) {
-    if (reverseTranslate($category) == $bigCategory) {
-        $bigMenu .= "<li class=\"current_category\">";
-    } else {
-        $bigMenu .= "<li>";
-    }
-    $categoryEn = reverseTranslate($category);
-    $bigMenu .= "<a href=\"index.php?category=$categoryEn&page=1&order=$order\">$category</a></li>";
-}
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
@@ -53,78 +29,91 @@ foreach ($array as $category) {
     <body>
         <?php include($localPrefix . "header.php"); ?>
         <div class="contents">
-            <div class="centerpane">
-                <div class="index_category_menu">
-                    <ul class="mainmenu">
-                        <li<?php echo ($bigCategory == "")?' class="current_category"':''; ?>>
-                            <a href="index.php?category=&page=1">全て</a>
-			</li>
-                        <?php echo $bigMenu; ?>
-                        <li<?php echo ($bigCategory == "by_category")?' class="current_category"':''; ?>>
-                            <a href="index.php?category=by_category&page=1&order=desc">カテゴリ別</a>
-                        </li>       
-                        <li<?php echo ($bigCategory == "todo")?' class="current_category"':''; ?>>
-			    <a href="index.php?category=todo&page=1&order=desc">TODO</a>
-                        </li>
-                        <li<?php echo ($bigCategory == "self")?' class="current_category"':''; ?>>
-			    <a href="article.php?entry=misc/self/01_self/001">このサイトについて</a>
-                        </li>
-			<li<?php echo ($bigCategory == "links")?' class="current_category"':''; ?>>
-                            <a href="index.php?category=links&page=1&order=desc">リンク</a>
-			</li>
-                    </ul>
-                </div>
-                <div class="index_latest_articles">
-		    <?php if ($isConstPage === false) { ?>
-			<div class="to_toc">
-			    <a href="toc.php?category=<?php echo $bigCategory ?>">記事一覧</a>
-			</div>
-			<div class="select_order" style="float:right">
-			    <select name="select_order">
-                                <option value="desc" <?php if ($order == "desc") echo "selected"; ?>>記事が新しい順</option>
-                                <option value="asc" <?php if ($order == "asc") echo "selected"; ?>>記事が古い順</option>
-			    </select>
-			</div>
-		    <?php } ?>
-                    <h3 class="toppageh3">
-                        <?php if ($bigCategory == "by_category") { ?>
-                            カテゴリ一覧
-                        <?php } else if ($bigCategory == "links") { ?>
-                            リンク集
-                        <?php } else if ($bigCategory == "todo") { ?>
-                            TODOリスト
-                        <?php } else  { ?>
-                            <?php if ($order == "desc") { ?>
-                                最近の記事
-                            <?php } else { ?>
-                                古い記事
-                            <?php } ?>
-                        <?php } ?>
-                    </h3>
-                    <div style="clear:both"></div>
+            <div class="rightpane">
+		<?php ttPutHeaderMenu(2); ?>
+		<?php if ($pageKind != "recommended") { ?>
+                    <div class="pagenavi">
+			<?php if ($itemNum > 0) { ?>
+			    <div class="left_float max_width_30per">
+				<a href="<?php echo "index.php?n=" . ($itemNum - 1);?>">
+				    <img src="images/next-page-left.svg">
+				</a>
+			    </div>
+			<?php } ?>
+			<?php if ($itemNum < 20) { ?>
+			    <div class="right_float max_width_30per">
+				<a href="<?php echo "index.php?n=" . ($itemNum + 1); ?>">
+				    <img src="images/prev-page-right.svg">
+				</a>
+			    </div>
+			<?php } ?>		    
+			<div style="clear:both;"></div>
+                    </div>
+		<?php } else { ?>
+		    <br>
+		<?php } ?>
+                <div class="article">
+                    <div class="datetime">
+                        <span class="mtime">
+			    <?php if ($pageKind != "recommended") { ?>
+				<img src="images/time.svg">公開:<?=$itemPubDate?>
+			    <?php } ?>
+                            <img src="images/update.png">更新:<?=ttGetFilemtime($articleUrl)?>
+                        </span>
+                    </div>
                     <?php
-                    if ($bigCategory == "by_category") {
-                        echo "<div class=\"toppagetoc\">";
-                        ttPutToc("", true, 2, true, true);
-                        echo "</div>";
-                    } else if ($bigCategory == "todo") {
-                        echo "<div class=\"article\">";
-                        include("closed/todo.html");
-                        echo "</div>";
-                    } else if ($bigCategory == "links") {
-                        echo "<div class=\"article\">";
-                        include("closed/links.html");
-                        echo "</div>";
-		    } else {
-			$filecount = ttPutLatestArticles($bigCategory, $order, $page, 10);
-			if ($filecount == 0) {
-			    echo "<div class=\"no_entries\">記事はまだありません</div>";
-			}
+                    $articleExtension = substr($articleUrl, strrpos($articleUrl, ".") + 1);
+                    if ($articleExtension == "md") {
+                        ttPutMarkdown($articleUrl);
+                    } else {
+                        include($articleUrl);
                     }
                     ?>
                 </div>
-                <div style="clear:both"></div>
+		<?php if ($pageKind != "recommended") { ?>
+                    <div class="pagenavi">
+			<?php if ($itemNum > 0) { ?>
+			    <div class="left_float max_width_30per">
+				<a href="<?php echo "index.php?n=" . ($itemNum - 1);?>">
+				    <img src="images/next-page-left.svg">
+				</a>
+			    </div>
+			<?php } ?>
+			<?php if ($itemNum < 20) { ?>
+			    <div class="right_float max_width_30per">
+				<a href="<?php echo "index.php?n=" . ($itemNum + 1); ?>">
+				    <img src="images/prev-page-right.svg">
+				</a>
+			    </div>
+			<?php } ?>		    
+			<div style="clear:both;"></div>
+                    </div>
+		<?php } ?>
+	    </div>
+            <div class="leftpane">
+                <div class="menu-header">
+                    <div class="menubutton"><img src="images/closemenubutton.svg"></div>
+                </div>
+                <div class="nav">
+                    <h3>最近の投稿</h3>
+                    <?php ttPutLatestArticlesLite(1, 10); ?>
+                </div>
+                <div class="nav">
+                    <h3>案内記事</h3>
+		    <ul>
+			<li>
+			    <ul>
+				<li><a href="index.php?n=100&entry=misc/self/01_self/001">このサイトについて</a></li>
+				<li><a href="index.php?n=100&entry=misc/self/01_self/002">管理人について</a></li>
+				<li><a href="index.php?n=100&entry=misc/self/01_self/003">コメント欄のマークダウンの書き方</a></li>
+				<li><a href="index.php?n=100&entry=misc/self/01_self/004">TODOリスト</a></li>
+				<li><a href="index.php?n=100&entry=misc/self/01_self/005">お気に入りリンク集</a></li>
+			    </ul>
+			</li>
+		    </ul>
+                </div>
             </div>
+            <div style="clear:both;"></div>
         </div>
         <?php include($localPrefix . "footer.php"); ?>
     </body>
