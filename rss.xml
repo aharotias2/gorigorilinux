@@ -9,7 +9,7 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Sun, 25 Aug 2019 07:57:41 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 05 Sep 2019 15:39:50 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
@@ -66,7 +66,7 @@
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
     <guid>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/002</guid>
-    <pubDate>Sun, 18 Aug 2019 10:20:00 GMT</pubDate>
+    <pubDate>Sun, 18 Aug 2019 13:10:00 GMT</pubDate>
   </item>
   <item>
     <title>本を買いました。</title>
@@ -93,16 +93,16 @@
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
     <guid>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/002</guid>
-    <pubDate>Sat, 13 Jul 2019 08:10:00 GMT</pubDate>
+    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
   <item>
     <title>カメラ買ったった</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/others/01_self/009</link>
-    <description>カメラ買いました。Nikonのデジタルカメラ「COOLPIX B500」です。3万円くらいでした。軽いです。外ではまだ使ったことがありませんが、結構ズームがしやすいです。これでネットのフリー素材に頼らず写真をブログなどに使えます。やっぱ素材は自分で作んないとですよね……。明日から作品します。</description>
+    <link>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/001</link>
+    <description>カメラ買いました。Nikonのデジタルカメラ「COOLPIX B500」です。3万円くらいでした。軽いです。外ではまだ使ったことがありませんが、結構ズームがしやすいです。これでネットのフリー素材に頼らず写真をブログなどに使えます。やっぱ素材は自分で作んないとですよね……。明日から作品づくりします。</description>
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/others/01_self/009</guid>
-    <pubDate>Fri, 12 Jul 2019 12:20:00 GMT</pubDate>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/001</guid>
+    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Wacomタブレットを使えるようにする</title>
@@ -111,7 +111,7 @@
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>Linux</category>
     <guid>https://gorigorilinux.net/article.php?entry=linux/slackware/01_settings/006</guid>
-    <pubDate>Sat, 29 Jun 2019 11:10:00 GMT</pubDate>
+    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
   <item>
     <title>growisofs - DVD-RにISOイメージを焼き込む</title>
@@ -124,30 +124,30 @@
   </item>
   <item>
     <title>我が家のゴールデン・コンビ</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/others/01_self/008</link>
-    <description>ASUSのVIVOBOOKをまた買いました。TP203Nです。MacBook Airとよく似ています。今日から我が家のゴールデンコンビです。見た目はMacの方がカッコいいです。写真だと見分けつきませんが。背面です。それにしても良く似ているから一瞬くらいなら人を騙せそうです。Mac使いこなせないからこのVivoBookを何とかMacに見せるしかありません。(俺の馬鹿Mac買った時についてきたオマケのAppleステッカー捨てちゃったよ……)金のVivoBookの使い道は今考え中です。タブレットモードができるのが良い所。このサイト的にはGNOMEのLinuxを入れてタッチスクリーンの動作を試してみるのを直近の目標とします。</description>
+    <link>https://gorigorilinux.net/article.php?entry=misc/self/02_gadgets/005</link>
+    <description>おそろいの2台ASUSのVIVOBOOKをまた買いました。TP203Nです。4万以下で買えるので比較的お手ごろです。MacBook Airとよく似ています。今日から我が家のゴールデンコンビです。見た目はMacの方がカッコいいです。写真だと見分けつきませんが。背面です。それにしても良く似ているから一瞬くらいなら人を騙せそうです。Mac使いこなせないからこのVivoBookを何とかMacに見せるしかありません (Mac買った時についてきたAppleステッカーを捨ててしまったことが悔やまれます……)。金のVivoBookの使い道は今考え中です。タブレットモードができるのが良い所。このサイト的にはGNOMEのLinuxを入れてタッチスクリーンの動作を試してみるのを直近の目標とします。金のVivoBook金のVivoBookにManjaro Linux GNOME editionを入れてみました。思ったよりもはるかに簡単過ぎ...</description>
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/others/01_self/008</guid>
-    <pubDate>Fri, 21 Jun 2019 15:00:00 GMT</pubDate>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/self/02_gadgets/005</guid>
+    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
   <item>
-    <title>「不良品」という言葉について再考</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/005</link>
-    <description>あらまし最初にこの話題が出てから2週間も経ってしまいまい今更ですが少し気になることがありました。以前の記事 (「一人で死ね」という言葉について) にて触れたお笑い芸人・松本人志さんのコメント「不良品」について考え直しました。松本さんの「不良品」発言に対する批判はネット上でも非常に多く、私が「不良品」という言葉を問題視しなかったのはちょっと人道的にまずかったような気がしてきましたので、恥ずかしいですがちょっとここで弁解させて下さい。「不良品」発言は何故問題ではないのか感覚的には決して自分には欠点はなく、完璧な人間だと思っているから「不良品」という言葉を聞いて不快にならなかったわけではありません。では何故なのかと言うと後付けですが、私は松本さんの「不良品」という言葉か...</description>
+    <title>私のMacBook Airのご紹介</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/self/02_gadgets/004</link>
+    <description>令和元年明けましておめでとうございます。今日は私の持っているMacBook Airのご紹介をさせていただきます。  仕様   価格  134,800円(税別)  ディスプレイ  Retinaディスプレイ (13インチ)  Touch ID  Touch ID内蔵  仕上げ  ゴールド  個人的評価 良い点   トラックパッドの感度が非常に良いです。モタつきが一切ありません。  画面が高精細で美しく、また縦横比が16:10なので縦に狭く感じることがありません。  ダークモードの画面が見やすく、ゴールドの外観とも合っています。  指紋認証は便利で良いです。  高過ぎない価格設定。レッツノートやVAIOより安い点は良いです。  電源ボタンがないのですが、フタを開けると自動的に起動します。  外観のデザイン的に「これはマズい」ようなところはないです。  キーボードが光るので暗いところでも見...</description>
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/news/01_201906/005</guid>
-    <pubDate>Sun, 16 Jun 2019 06:30:00 GMT</pubDate>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/self/02_gadgets/004</guid>
+    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
   <item>
     <title>コメント欄のマークダウンの書き方</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/others/01_self/003</link>
+    <link>https://gorigorilinux.net/article.php?entry=misc/self/01_self/003</link>
     <description> このサイトのコメント欄ではマークダウン(Markdown)という記法をお使いいただけます。  マークダウンの書き方は基本的に下にリストアップしたサイトを参考にしていますが、このサイト独自実装になっていて微妙に違うのでこの記事で例を出して説明したいと思いますので宜しければご覧になってください。    Githubのマークダウン  多分最も有名な文書だと思われます。    CommonMark 0.29 仕様  CommonMarkはあいまいなところのあるマークダウンの厳密なルールを提案したものです。ここまでしっかり作っていません。    CommonMark 簡易説明  CommonMarkの簡単な例です。    Wikipediaのマークダウン  基本的な内容がまとまっています。    記法の例 見出し タイトルなど見出しとなる文は行頭に「#」を付けることで表現できます。 マークダウン   # 見出し1 ...</description>
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/others/01_self/003</guid>
-    <pubDate>Sun, 16 Jun 2019 01:00:00 GMT</pubDate>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/self/01_self/003</guid>
+    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
   <item>
     <title>ロリポおじさんが復活? ロリポをなめるなと咆哮!!!!</title>
@@ -156,7 +156,7 @@
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>ITニュース</category>
     <guid>https://gorigorilinux.net/article.php?entry=itnews/2019/06_june/001</guid>
-    <pubDate>Fri, 14 Jun 2019 04:10:00 GMT</pubDate>
+    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
   <item>
     <title>find - ファイルを探す</title>
