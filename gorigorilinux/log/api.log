@@ -1,18 +1,18 @@
-SCRIPT_NAME: /home/ta/public_html/gorigorilinux/get-article-list.php
+SCRIPT_NAME: /home/ta/Public/gorigorilinux/get-article-list.php
 DOCUMENT_ROOT: 
-SERVER_URI: /~ta/gorigorilinux/get-article-list.php?article=Linux/Ubuntu/%E8%A8%AD%E5%AE%9A/001_setup-apache2-on-ubuntu.md
-cate: Linux/Ubuntu/設定/001_setup-apache2-on-ubuntu.md
-cate: linux/ubuntu/01_settings/001_setup-apache2-on-ubuntu.md
-path: /home/ta/public_html/gorigorilinux/closed/articles/linux/ubuntu/01_settings/001_setup-apache2-on-ubuntu.md
-filemtime: 2019-9-9-00-54-02
+SERVER_URI: /~ta/gorigorilinux/get-article-list.php?article=IT%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/2019%E5%B9%B4/6%E6%9C%88/001_lolipo-wo-nameruna.md
+cate: ITニュース/2019年/6月/001_lolipo-wo-nameruna.md
+cate: itnews/2019/06_june/001_lolipo-wo-nameruna.md
+path: /home/ta/Public/gorigorilinux/closed/articles/itnews/2019/06_june/001_lolipo-wo-nameruna.md
+filemtime: 2019-8-7-19-07-31
 RESULT: {
-    "itemLink": "https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001", 
+    "itemLink": "https://gorigorilinux.net/article.php?entry=itnews/2019/06_june/001", 
     "itemAuthor": "msg@singersongwriter.ciao.jp (田中喬之)", 
-    "itemCategory": "Linux", 
+    "itemCategory": "ITニュース", 
     "itemComment": "", 
-    "itemGuid": "https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001", 
+    "itemGuid": "https://gorigorilinux.net/article.php?entry=itnews/2019/06_june/001", 
     "itemSource": "", 
-    "itemTitle": "UbuntuでApacheサーバを動かす (PHP+CGIモード)", 
-    "itemDescription": "Ubuntu初心者です。今回はUbuntuでHTTPサーバーを起動してPHPで作ったウェブサイトを動かしてみます。Ubuntu独特の勝手を覚えるのが大変ですが、頑張りましょう!phpのインストールPHPはウェブ開発のために開発されたスクリプティング言語です。基本的にHTMLテンプレートエンジンとして使われています。aptコマンドでPHPと関連パッケージをインストールします。phpphp-cgiphp-sqlite3php-xmlphp-mbstringapache2のインストールapache2はUbuntuで使えるHTTPサーバのひとつです。これを起動すると、指定したディレクトリにあるHTMLファイルなどをウェブブラウザに表示させることができます。それではインストールしていきます。aptコマンドでapache2をインストールします。apache2ligapache2-mpm-itkapache2の設定Ubuntuでapache2の設定をするには、モジュールのロードと、設定フ...", 
-    "itemPubDate": "2019-9-9-00-54-02"
+    "itemTitle": "ロリポおじさんが復活? ロリポをなめるなと咆哮!!!!", 
+    "itemDescription": "いやぁ〜ついに来ましたよこの時が。ロリポをなめるな！レンサバ界のドン露璃舗悪慈酸が復活！？｜ロリポップ！レンタルサーバー https://t.co/ylVxVOR5hO #ロリポをなめるな&amp;mdash; 田中喬之＠ごりごりりぬっくす管理人 (@goodslacktanaka) 2019年6月13日クォリティ高っか!!露璃舗悪慈酸=ロリポおじさんって誰？と思いましたが、レンタルサーバ・ロリポップのマスコットであり、どうやら2年前に溶鉱炉に沈められていたようです。どうりで見たことないと思いました。ロリポップはとにかく遅い、重い、障害多い、セキュリティ弱い、などの弱点が指摘され「安かろう悪かろう」なサーバと見られがちです。しかしそれは違うぞ、と言う訳ですから、低価格が魅力だけど使い勝手とか大丈夫かな…と思っている方々の不安を払拭する激作となっており...", 
+    "itemPubDate": "2019-8-7-19-07-31"
 }

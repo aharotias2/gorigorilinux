@@ -9,7 +9,7 @@
 .menu-header {
     border: 1px solid #707880;
     height: 50px;
-    background-color: #404850;
+    background-color: black;
 }
 
 .menubutton {
@@ -95,7 +95,7 @@
 
 .rightpane {
     float: right;
-    margin: 0px 10px 30px 10px;
+    margin: 0;
 }
 
 /**********************************************************************

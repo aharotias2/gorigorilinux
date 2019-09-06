@@ -363,22 +363,21 @@ function onLoad() {
 }
 
 function onResize() {
-    if (window.innerWidth >= 1200) {
+    var contentsWidth = document.body.clientWidth;
+    if (contentsWidth >= 1200) {
         setCss({
             ".pankuzu": {"margin-left": "auto"},
             ".menubutton": {"display": "none"},
-            ".rightpane": {
-                "margin-left": "10px",
-                "width": "936px"
-            },
             ".leftpane": {
-                "width": "240px",
+                "width": "270px",
                 "display": "block",
                 "overflow-y": "auto",
                 "height": "",
                 "position": "",
-                "margin-right": "10px",
                 "box-shadow": ""
+            },
+            ".rightpane": {
+                "width": "930px"
             },
             "textarea": {
                 "width": (select(".article")[0].clientWidth - 100) + "px"
@@ -396,12 +395,11 @@ function onResize() {
                 }
             });
         }
-    } else if (window.innerWidth < 1200) {
-        if (window.innerWidth > 500) {
+    } else if (contentsWidth < 1200) {
+        if (contentsWidth > 500) {
             setCss({
                 ".rightpane": {
-                    "width": (document.body.clientWidth - 20) + "px",
-                    "margin-left": "10px",
+                    "width": "100%",
                     "height": ""
                 },
                 ".leftpane": {
@@ -418,7 +416,6 @@ function onResize() {
             setCss({
                 ".rightpane": {
                     "width": "100%",
-                    "margin-left": "0",
                     "height": ""
                 },
                 ".leftpane": {

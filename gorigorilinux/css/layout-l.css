@@ -22,13 +22,13 @@
 }
 
 .header-inner {
-    max-width: 1194px;
-    margin: 0px auto 0px auto;
+    max-width: 1200px;
+    margin: 0px 10px;
     padding: 0px 0px;
 }
 
 .big-menu .header-inner {
-    max-width: 1200px;
+    width: 100%;
     margin: 5px auto 0px auto;
 }
 
@@ -55,7 +55,7 @@
  **********************************************************************/
 .contents {
     max-width: 1200px;
-    margin: 0px auto 0px auto;
+    margin: 0px;
     padding: 0;
 }
 
@@ -96,14 +96,12 @@
     display: block;
     overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.0);
-    margin-top: -20px;
 }
 
 
 
 .rightpane {
     float: right;
-    margin-bottom: 20px;
 }
 
 /**********************************************************************
@@ -121,8 +119,8 @@
 }
 
 .footer .footer-inner {
-    max-width: 1200px;
-    margin: 10px auto 0 auto;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
     padding: 10px 10px 10px 10px;
 }
 

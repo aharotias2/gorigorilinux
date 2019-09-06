@@ -2,25 +2,23 @@
  * 全体
  **********************************************************************************************/
 body {
-    background-color: #345656;
-    background-image: url("images/bgsand2.png");
-    color: white;
+    color: black;
     font-family: sans-serif;
 }
 
 a {
-    color: #9098E0;
+    color: black;
     text-decoration: none;
     word-break: break-all;
     margin-bottom: -1px;
 }
 
 a:visited {
-    color: #9098E0;
+    color: black;
 }
 
 a:hover {
-    color: #B0B9F0;
+    color: black;
 }
 
 p {
@@ -29,14 +27,14 @@ p {
 
 .code-span {
     font-family: monospace;
-    color: darkorange;
+    color: black;
     font-weight: bold;
     margin: 3px;
     padding: 1px 3px;
 }
 
 .come {
-    color: #E08880;
+    color: black;
     font-size: 80%;
 }
 
@@ -44,12 +42,12 @@ p {
  * ヘッダー
  **********************************************************************************************/
 .header {
-    margin-top: 2px;
-    color: antiquewhite;
+    background-color: #008899;
+    color: black;
 }
 
 .header h1 {
-    color: #EEEDFE;
+    color: black;
     font-size: x-large;
     font-weight: normal;
     font-style: normal;
@@ -63,15 +61,15 @@ p {
 }
 
 .header h1 a {
-    color: #D0E0F0;
+    color: black;
 }
 
 .header h1 a:visited {
-    color: #D0E0F0;
+    color: black;
 }
 
 .header h1 a:hover {
-    color: white;
+    color: black;
 }
 
 .header .header-inner .twitter_main_button {
@@ -83,19 +81,23 @@ p {
     margin-bottom: -12px;
 }
 
+.contents {
+    /*background-image: url("images/bgsand2.png");*/
+    background-color: #F0F4F8;
+}
+
 /**********************************************************************************************
  * ナビ
  **********************************************************************************************/
 .contents .nav {
-    border: 1px solid #505960;
-    box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.5);
+    
+    
 }
 
 .contents .nav h3 {
-    background-color: #202830;
-    color: white;
-    border-bottom: 1px solid #505860;
-    padding: 3px 3px 3px 14px;
+    color: #D0D8E0;
+    background-color: #004455;
+    padding: 6px 3px 6px 12px;
 }
 
 .contents .nav ul {
@@ -103,26 +105,41 @@ p {
 }
 
 .contents .nav ul li h4.toc-category {
-    background-image: url("images/toch4bg.png");
-    color: #D8E0E8;
+    /*background-image: url("images/toch4bg.png");*/
+    background-color: #C0C8D0;
+    color: #407090;
+}
+
+.contents .nav ul li ul {
+    list-style-image: url('images/listmark1.png');
+    list-style-position: inside;
 }
 
 .contents .nav ul li ul li {
-    border-bottom: 1px solid #505860;
     padding: 8px 14px;
 }
 
 .contents .nav a {
-    color: #D0E0F0;
+    color: #404040;
 }
 
 .contents .nav a:hover {
-    color: #D0E0F0;
+    color: #404040;
+    border-bottom: dotted 1px #404040;
+}
+
+.contents .nav .category_article a {
+    color: #DDDDDD;
+}
+
+.contents .nav .category_article a:hover {
+    color: #FFFFFF;
+    border-bottom: dotted 1px #111111;
 }
 
 .contents .nav .datetime {
     font-size: small;
-    color: #D0E0F0;
+    color: black;
 }
 
 /**********************************************************************************************
@@ -139,7 +156,7 @@ img.topimage {
  * 最近の記事
  **********************************************************************************************/
 .latest_article {
-    border-top: 1px solid #404850;
+    
 }
 
 .latest_article h5 {
@@ -148,51 +165,47 @@ img.topimage {
 }
     
 .latest_article a {
-    color: #D0D8E0;
+    color: black;
 }
 .latest_article a:visited {
-    color: #D0D8E0;
+    color: black;
 }
 .latest_article a:hover {
-    color: #D0D8FF;
+    color: black;
 }
 
 .latest_article .date_article {
-    color: gray;
+    color: black;
 }
 
 .latest_article p {
     font-size: small;
-    color: #B0B8C0;
+    color: black;
 }
 
 .latest_article .category_article .category_article_piece {
-    color: white;
     font-size: 9pt;
-    border: 1px solid #404950;
+    
 }
 
 .latest_article .comments_count {
-    color: #D09090;
+    color: #303030;
 }
 
 /**********************************************************************************************
  * 他の記事へのリンク
  **********************************************************************************************/
 .latest_article_lite {
-    border-top: 1px solid #505860;
 }
 
 .latest_article_lite .date_article {
-    color: #808890;
 }
 
 .latest_article_lite .category_article_piece {
-    color: #E0E8F0;
 }
 
 .latest_article_lite .comments_count {
-    color: #808890;
+    color: #303030;
 }
 
 /**********************************************************************************************
@@ -200,20 +213,20 @@ img.topimage {
  **********************************************************************************************/
 .contents .pankuzu {
     margin: 4px 4px 4px 4px;
-    border-radius: 0 4px 0 0;
+    
     padding: 4px 3px 4px 46px;
 }
 
 .contents .pankuzu a {
-    color: #D0E0F0;
+    color: black;
 }
 
 .contents .pankuzu a:visited {
-    color: #D0E0F0;
+    color: black;
 }
 
 .contents .pankuzu a:hover {
-    color: #F0F0FF;
+    color: black;
 }
 
 .contents .pankuzu img {
@@ -224,20 +237,14 @@ img.topimage {
  * レイアウト
  **********************************************************************************************/
 .leftpane {
-    //background-color: rgba(20, 30, 40, 0.8);
-    //border: 1px solid #607080;
 }
 
 .rightpane {
-    /*background-color: rgba(30, 40, 50, 0.6);*/
-    background-color: rgba(20, 30, 40, 0.8);
-    box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.5);
-    border: 1px solid #404850;
+    background-color: white;
 }
 
 .centerpane {
-    background-color: rgba(20, 38, 40, 0.8);
-    border: 1px solid rgb(48, 58, 64);
+    background-color: white;
 }    
 
 /**********************************************************************************************
@@ -249,106 +256,104 @@ img.topimage {
 }
 
 .mainmenu li:hover {
-    background-color: rgba(60, 70, 80, 0.5);
-    color: #D0D8E0;
+    color: black;
 }
 
 /**********************************************************************************************
  * TOC
  **********************************************************************************************/
 .contents .toc a {
-    color: #E0E8F0;
-    border-bottom: 1px dotted #E0E8F0;
+    color: black;
+    
 }
 
 .contents .toc a:hover {
-    color: #9098E0;
-    border-bottom: 1px dotted #9098E0;
+    color: black;
+    
 }
 
 /**********************************************************************************************
  * 記事の目次
  **********************************************************************************************/
 .outline {
-    border: #506070 1px solid;
-    background-color: rgba(60, 70, 80, 0.8);
+    padding-top: 8px;
+    border: 1px solid lightsteelblue;
+    background-color: lavender;
 }
 
 .outline h3 {
-    background-color: darkturquoise;
-    color: white;
-    border: none;
+    color: black;
+    
 }
 
 .outline h4 {
-    border: none !important;
-    background-color: rgba(0, 0, 0, 0) !important;
+    
 }
 
 /**********************************************************************************************
  * 記事
  **********************************************************************************************/
 .contents .article h4 {
-    color: lightsteelblue;
-    border-left: 6px solid #3090D0;
+    color: black;
+    
 }
 
 .contents .article hr {
     margin: 10px 0;
-    border-top: 1px solid #606870;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 0px;
-    border-top: 1px solid #808890;
+    
+    
+    
+    
+    
 }
 
 .contents .article h5 {
-    color: violet;
+    color: black;
 }
 
 .contents .article h6 {
-    color: lawngreen;
+    color: black;
 }
 
 .contents .article a {
-    color: #E0E8F0;
-    border-bottom: 1px dotted #E0E8F0;
+    color: black;
+    
 }
 
 .contents .article .outline a {
-    color: #E0E8F0;
-    border-bottom: none;
+    color: black;
+    
 }
 
 .contents .article a:hover {
-    color: #9098E0;
-    border-bottom: 1px dotted #9098E0;
+    color: black;
+    
 }
 
 .contents .article .datetime .mtime {
-    color: #909090;
+    color: black;
 }
 
 .contents .article b, .contents .article strong {
     font-weight: bold;
     font-style: normal;
-    color: orange;
+    color: black;
 }
 
 .contents .article .comment {
     font-style: italic;
-    color: lightsteelblue;
+    color: black;
     font-size: 80%;
 }
 
 .contents .article .code {
-    border: 0;
+    
 }
 
 .contents .article .code .code-header {
     /*background-color: #485058;*/
-    background-color: darkolivegreen;
-    color: #D0D8E0;
+    background-color: mediumseagreen;
+    color: #E0E8F0;
 }
 
 .contents .article .code .code-header h5 {
@@ -356,13 +361,17 @@ img.topimage {
 }
 
 .contents .article .code pre {
-    background-color: #081018;
-    color: #B0C0B8;
+    background-color: #404850;
+    color: #DDDDDD;
     font-size: normal;
 }
 
+.contents .article .code pre strong {
+    color: orange;
+}
+
 .contents .article pre .comment {
-    color: #A09090;
+    color: black;
     font-size: 100%;
     font-style: normal;
 }
@@ -374,57 +383,56 @@ img.topimage {
 }
 
 .contents .article .column {
-    border: 1px solid #404850;
-    background-color: #202830;
+    
+    background-color: white;
 }
 
 .contents .article .column p {
-    color: #808890;
+    color: black;
 }
 
 .contents .article .column h5 {
-    color: #9098A0;
+    color: black;
 }
 
 .contents .article .notice {
-    color: slategray;
+    color: black;
 }
 
 .contents .article .figure-image {
-    //border-bottom: 1px solid #E0D0D0;
-    border-radius: 2px;
+    //
+    
     padding: 8px 20px;
 }
 
 .contents img.figure {
-    background-color: rgba(0, 10, 20, 0.4);
-    box-shadow: 1px 1px 10px -3px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    
 }
 
 .contents img.figure-flat {
 }
 
 .contents .figcaption {
-    color: #A0A8B0;
+    color: black;
     font-style: italic;
 }
 
 .contents .article dt {
-    color: blanchedalmond;
+    color: black;
 }
 
 .contents .article .syntax {
     font-family: Monospace monospace mono;
-    background-color: rgba(80, 90, 100, 0.4);
-    border: 1px solid rgba(90, 100, 110, 0.4);
-    border-radius: 8px;
+    background-color: white;
+    
+    
 }
 
 .contents .article .sample {
     font-family: Monospace,monospace,mono;
-    background-color: rgba(80, 90, 100, 0.4);
-    border: 1px solid rgba(90, 100, 110, 0.4);
-    border-radius: 0px;
+    background-color: #404850;
+    color: #D0D8E0;
 }
 
 /**********************************************************************************************
@@ -432,68 +440,43 @@ img.topimage {
  **********************************************************************************************/
 
 .sharebuttons {
-    border-top: 2px solid #404850;
+    
 }
 
 .sharebuttons a {
-    color: white;
+    color: black;
 }
 
 .sharebuttons a:visited {
-    color: white;
+    color: black;
 }
 
 .sharebuttons button:hover {
     margin: -2px;
-    border: 2px solid orange;
-    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+    
+    
 }
 
 .sharebuttons img {
-    box-shadow: 1px 2px 3px -0px rgba(0, 0, 0, 0.2);
-}
-
-.twitterbutton {
-    background-color: #55acee;
-    color: white;
-}
-
-.facebookbutton {
-    background-color: #4a6ea9;
-    color: white;
-}
-
-.hatenabutton {
-    background-color: #2089cb;
-    color: white;
-}
-
-.pocketbutton {
-    background-color: #ef3e56;
-    color: white;
-}
-
-.feedlybutton {
-    color: white;
-    padding: 0px 20px;
+    
 }
 
 .success {
-    background-color: lightgreen;
-    color: #333333;
+    background-color: white;
+    color: black;
 }
 
 .failure {
-    background-color: red;
+    background-color: white;
 }
 
 .filetype_directory {
     font-weight: bold;
-    color: royalblue;
+    color: black;
 }
 
 .filetype_executable {
-    color: red;
+    color: black;
 }
 
 .contents span .code {
@@ -504,63 +487,62 @@ img.topimage {
  * コメント欄
  **********************************************************************************************/
 .contents .comment_block {
-    border-top: 2px solid #404850;
+    
 }
 
 .comment_box {
-    border-left: 3px solid slateblue;
+    
     margin: 0px;
     padding: 10px;
 }
 
 .comment_reply .comment_box {
-    border-top: 0;
+    
     margin-left: 30px;
 }
 
 
 .comment_block input {
-    border: 1px solid #505860;
-    background-color: #303840;
-    color: #D0D8E0;
-    box-shadow: 1px 1px 5px -3px rgba(0, 30, 0, 0.5) inset;
+    
+    background-color: white;
+    color: black;
+    
 }
 
 .comment_block textarea {
-    border: 1px solid #505860;
-    background-color: #303840;
-    color: #D0D8E0;
-    box-shadow: 1px 1px 5px -3px rgba(0, 30, 0, 0.5) inset;
+    
+    background-color: white;
+    color: black;
+    
 }
 
 .comment_block button {
     cursor: pointer;
-    border: 1px solid chocolate;
-    background-color: chocolate;
+    border: 0;
+    background-color: red;
     color: white;
-    box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.4);
+    
 }
 
 #comment_cancel {
-    border: 1px solid #DECDCD;
-    background-color: royalblue;
-    color: white;
-    box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    color: black;
+    
 }
 
 .contents .comment .comment_user {
-    color: #90D8E0;
+    color: black;
 }
 
 .contents .comment .comment_text .sample {
-    border: 1px solid #606870;
+    
     padding: 10px;
     margin: 10px 0px;
 }
 
 .contents .comment .comment_text * {
     font-style: normal;
-    color: #E0E8F0;
+    color: black;
 }
 .contents .comment .comment_text h3 {
     font-size: 200%;
@@ -584,25 +566,25 @@ img.topimage {
 }
 .contents .comment .comment_text hr.style1 {
     margin: 10px 0;
-    border-top: 1px solid #606870;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 0px;
+    
+    
+    
+    
 }
 .contents .comment .comment_text .code h5 {
     font-size: 80%;
     font-weight: normal;
-    border: 1px solid #404850;
-    background-color: rgba(100, 110, 120, 0.5);
+    
+    background-color: white;
     padding: 5px 10px;
-    border-radius: 4px 4px 0 0;
+    
     margin-bottom: -1px;
 }
 .contents .comment .comment_text .code pre {
-    border: 1px solid #404850;
+    
     padding: 10px;
-    background-color: rgba(10, 20, 30, 0.4);
-    border-radius: 0 0 4px 4px;
+    background-color: white;
+    
 }
 .contents .comment .comment_text .code pre {
     font-family: mono,monospace,Monospace;
@@ -610,32 +592,32 @@ img.topimage {
 .contents .comment .comment_text strong {
     font-style: normal;
     font-weight: bold;
-    color: #F0F8FF;
+    color: black;
 }
 .contents .comment .comment_text i {
     font-style: italic;
-    color: #E0E8F0;
+    color: black;
 }
 .contents .comment .comment_text a {
-    color: #9098F0;
+    color: black;
     padding: 3px;
     margin: -3px;
 }
 .contents .comment .comment_text a:hover {
-    color: #9098F0;
-    background-color: rgba(100, 120, 140, 0.2);
+    color: black;
+    background-color: white;
     margin: -3px;
     padding: 3px;
 }
 .contents .comment .comment_text blockquote {
-    border-left: 3px solid #606870;
+    
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 .contents .comment .comment_text blockquote blockquote {
-    border-left: 3px solid #606870;
+    
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -644,12 +626,12 @@ img.topimage {
     margin-bottom: 0;
 }
 .contents .comment_block .no_comments {
-    background-color: #404858;
-    color: #C0C8D0;
+    background-color: white;
+    color: black;
 }
 
 .contents .comment_text .figure-image {
-    border-radius: 2px;
+    
     padding: 8px 20px;
 }
 
@@ -658,7 +640,7 @@ img.topimage {
 }
 
 .contents .comment_text .figcaption {
-    color: #9098A0;
+    color: black;
     font-style: italic;
 }
 
@@ -681,35 +663,35 @@ img.topimage {
 }
 
 .contents .pagination .leftend {
-    border-radius: 5px 0 0 5px;
-    border: 1px solid #404850;
+    
+    
 }
 
 .contents .pagination .rightend {
-    border-radius: 0 5px 5px 0;
-    border-left: none;
-    border-top: 1px solid #404850;
-    border-bottom: 1px solid #404850;
-    border-right: 1px solid #404850;
+    
+    
+    
+    
+    
 }
 
 .contents .pagination li {
     display: inline;
     padding: 10px;
     margin: 10px 0;
-    color: #D0D8E0;
-    border-right: 1px solid #404850;
-    border-top: 1px solid #404850;
-    border-bottom: 1px solid #404850;
+    color: black;
+    
+    
+    
 }
 
 .contents .pagination li a {
-    color: #D0D8E0;
+    color: black;
 }
 
 .contents .pagination .current_page {
-    background-color: #505890;
-    border: 1px solid #606870;
+    background-color: white;
+    
 }
 
 
@@ -718,49 +700,52 @@ img.topimage {
  **********************************************************************************************/
 #good-button {
     cursor: pointer;
-    border: 1px solid #505860;
-    background-color: #505860;
-    color: #D0D8E0;
-    box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.4);
+    background-color: gray;
+    color: white;
+    border: 0;
 }
 
 #good-button:hover {
-    border: 1px solid #606870;
-    background-color: #606870;
+    background-color: red;
+    border: 0;
 }
 
 #good-button.goodbad-pressed {
-    border: 0px solid sienna;
-    background-color: sienna;
+    border: 0;
+    
+    background-color: red;
     color: white;
-    box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.4) inset;
+    
 }
 #good-button.goodbad-pressed:hover {
-    border: 0px solid indianred;
-    background-color: indianred;
+    border: 0;
+    
+    background-color: gray;
     color: white;
-    box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.4) inset;
+    
 }
 #bad-button {
+    border: 0;
     cursor: pointer;
-    border: 1px solid #505860;
-    background-color: #505860;
-    color: #D0D8E0;
-    box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.4);
+    background-color: gray;
+    color: white;
+    
 }
 #bad-button:hover {
-    border: 1px solid #606870;
-    background-color: #606870;
+    background-color: blue;
+    border: 0;
 }
 #bad-button.goodbad-pressed {
-    border: 0px solid mediumorchid;
-    background-color: mediumorchid;
+    
+    border: 0;
+    background-color: blue;
     color: white;
-    box-shadow: 0px 1px 3px -1px rgba(0, 0, 0, 0.4) inset;
+    
 }
 #bad-button.goodbad-pressed:hover {
-    border: 0px solid orchid;
-    background-color: orchid;
+    
+    border: 0;
+    background-color: gray;
 }
 
 
@@ -768,14 +753,19 @@ img.topimage {
  * フッター
  **********************************************************************************************/
 .footer {
-    background-color: rgba(10, 20, 30, 0.4);
-    /*border: 1px solid #404850;*/
-    /*box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.5) inset;*/
-    color: #9098A0;
+    background-color: #D0D8E0;
+    color: #698A9B;
+}
+
+.footer a {
+    color: #99AABB;
+}
+
+.footer a:hover {
+    color: white;
 }
 
 .footer-inner h5 a:hover {
-    border-bottom: 3px solid #C09090;
 }
 
 /**********************************************************************************************
@@ -783,13 +773,13 @@ img.topimage {
  **********************************************************************************************/
 
 #memo_text {
-    background-color: #404850;
-    color: #D0D8E8;
+    background-color: white;
+    color: black;
 }
 
 .submit_memo {
-    background-color: chocolate;
-    border: darkred;
+    background-color: white;
+    
     margin: 10px;
     padding: 5px 10px;
     font-size: large;

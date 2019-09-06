@@ -16,10 +16,6 @@ if ($pageKind == "recent") {
 } else if ($pageKind == "recommended") {
     $articleUrl = ttFindPath("closed/articles/" . $_GET['entry']);
 }
-$dao = new CommentsDao(null);
-if ($dao != null) {
-    $commentsCount = $dao->getCommentsCount();
-}
 
 ?><!DOCTYPE html>
 <html lang="ja">
@@ -96,49 +92,7 @@ if ($dao != null) {
                 <?php } ?>
             </div>
             <div class="leftpane">
-                <div class="menu-header">
-                    <div class="menubutton"><img src="images/closemenubutton.svg"></div>
-                </div>
-                <div class="nav">
-                    <h3>最近の投稿</h3>
-                    <?php /*ttPutLatestArticlesFromRss(1, 10);*/ ?>
-                    <?php foreach ($rss->channel->item as $item) { ?>
-                        <?php
-                        $url = $item->link;
-                        $articleId = substr($item->link, strrpos($item->link, "=") + 1);
-                        $articleTitle = $item->title;
-			$articleName = $item->comments;
-                        $pubDate = date("Y.m.d H:i:s", strtotime($item->pubDate));
-                        $category = substr($articleId, 0, strrpos($articleId, "/"));
-			if (array_key_exists($articleName, $commentsCount)) {
-			    $count = $commentsCount[$item->comment];
-			} else {
-			    $count = 0;
-			}
-                        ?>
-                        <div class="latest_article_lite">
-                            <h4>
-                                <a href="article.php?entry=<?=$articleId?>"><?=$articleTitle?></a>
-                                <span class="comments_count">コメント: <?=$count?></span>
-                            </h4>
-                            <div class="category_article">
-                                <?php $tmp = ""; ?>
-                                <?php foreach (explode("/", $category) as $catName) { ?>
-                                    <?php
-                                    $tmp = $tmp . $catName;
-                                    $categoryColor = getCategoryColor($catName);
-                                    $categoryNameJa = translate($catName);
-                                    ?>
-                                    <a href="toc.php?category=<?=$tmp?>">
-                                        <span class="category_article_piece" style="background-color:<?=$categoryColor?>">
-                                            <?=$categoryNameJa?>
-                                        </span>
-                                    </a>
-                                <?php } ?>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </div>
+		<?php include("latest-articles.php"); ?>
                 <div class="nav">
                     <h3>案内記事</h3>
                     <ul>
