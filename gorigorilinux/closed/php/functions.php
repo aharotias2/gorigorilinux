@@ -71,7 +71,6 @@ function ttPutHeaderMenu($position) {
     $naviClass = $position == 1 ? "cp_navi_1" : "cp_navi_2";
     echo "<div class=\"cp_navi $naviClass\">";
     echo "<ul>";
-    echo "<li><a href=\".\">ホーム</a></li>";
     foreach (scandir("closed/articles") as $bigCategory) {
         if ($bigCategory[0] == ".") {
             continue;

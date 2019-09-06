@@ -28,7 +28,7 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
         <title><?php ttPutArticleTitle($articleUrl); ?>: <?php echo $siteTitle; ?></title>
         <script type="text/javascript">
          articleName = "<?php echo $articleName;?>";
-         session = {}
+         session = {};
          session.good = <?php echo $_SESSION[$articleName]['good']; ?>;
          session.bad = <?php echo $_SESSION[$articleName]['bad']; ?>;
         </script>
@@ -103,10 +103,13 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
                     <h3><?php echo translate(substr($parentCategory, strrpos($parentCategory, "/") + 1)); ?></h3>
                     <?php ttPutToc($parentCategory, false, 2, false); ?>
                 </div>
+		<?php include("latest-articles.php"); ?>
+<!-- 
                 <div class="nav">
                     <h3>最近の投稿</h3>
-                    <?php ttPutLatestArticlesLite(1, 5); ?>
+                    <?php /*ttPutLatestArticlesLite(1, 5);*/ ?>
                 </div>
+-->
             </div>
             <div style="clear:both;"></div>
         </div>

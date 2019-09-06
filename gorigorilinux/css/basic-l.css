@@ -13,7 +13,7 @@ ul.mainmenu {
 
 .mainmenu li.current_category {
     border-right: solid 4px dodgerblue;
-    background-color: rgba(112, 120, 128, 0.4);
+    background-color: white;
 }
 
 .mainmenu li {
@@ -67,7 +67,7 @@ ul.mainmenu {
     width: 1196px;
     margin: 0px auto;
     padding: 10px 0px;
-    background-color: rgba(30, 40, 50, 0.6);
+    background-color: white;
 }
 
 .header-menu li {
@@ -118,7 +118,7 @@ ul.mainmenu {
 .toppagetoc ul h4 {
     border-radius: 5px 5px 0 0;
     padding: 10px;
-    background-color: #505860;
+    background-color: white;
 }
 
 .toppagetoc ul li ul {
@@ -131,12 +131,12 @@ ul.mainmenu {
     margin: -1px;
     padding: 10px;
     border-radius: 0;
-    background-color: #202830;
+    background-color: white;
 }
 
 .toppagetoc ul li ul li h4 {
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: white;
 }
 
 .no_entries {
@@ -179,8 +179,7 @@ ul.mainmenu {
  * 他の記事へのリンク
  **********************************************************************************************/
 .contents .nav {
-    background-color: rgba(30, 40, 50, 0.5);
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .contents .nav ul li {
@@ -195,9 +194,8 @@ ul.mainmenu {
 }
 
 .contents .nav ul li h4.toc-category {
-    background-color: rgba(100, 116, 124, 0.7);
     padding: 8px 14px;
-    width: 210px;
+    width: 242px;
 }
 
 .contents .nav ul li ul li {
@@ -205,7 +203,6 @@ ul.mainmenu {
 }
 
 .contents .nav ul li ul li:hover {
-    background-color: rgba(110, 120, 130, 0.2);
     cursor: pointer;
 }
 
@@ -216,7 +213,6 @@ ul.mainmenu {
 }
 
 .latest_article_lite:hover {
-    background-color: rgba(110, 120, 130, 0.2);
     cursor: pointer;
 }
 
@@ -238,7 +234,6 @@ ul.mainmenu {
     margin: 1px;
     border-radius: 2px;
     font-size: x-small;
-    color: white;
 }
 
 .latest_article_lite .comments_count {
@@ -256,7 +251,7 @@ ul.mainmenu {
 .contents .toch3 {
     margin: 0;
     padding: 10px 10px 10px 30px;
-    background-color: #202830;
+    background-color: white;
 }
 
 
@@ -357,7 +352,7 @@ iframe.google-maps {
 .contents .article h4 {
     font-weight: bold;
     font-size: x-large;
-    padding:8px 8px 8px 54px;
+    padding:8px 8px 8px 60px;
     margin: 26px 0 0 0;
 }
 
@@ -464,7 +459,7 @@ iframe.google-maps {
     border-left: 1px solid #606870;
     border-right: 1px solid #606870;
     border-bottom: 2px solid #9090FD;
-    background-color: rgba(40, 40, 50, 0.5);
+    background-color: white;
     padding: 10px;
     margin: -1;
 }
@@ -487,7 +482,8 @@ iframe.google-maps {
 
 .contents .article .figure-image .figure {
     max-width: 100%;
-    box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.8);
+    border: solid 1px #DDDDDD;
+    /*box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.8);*/
 }
 
 .contents .article .figure-image .figure-flat {
@@ -505,7 +501,7 @@ iframe.google-maps {
     padding: 10px 35px;
     /*border: 1px solid #606870;*/
     border-left: 3px solid #606870;
-    background-color: #404850;
+    background-color: white;
 }
 
 .contents .article blockquote p {
@@ -603,8 +599,8 @@ iframe.google-maps {
     margin: 30px 10%;
     padding: 30px 10%;
     text-align: center;
-    background-color: #DDDDDD;
-    color: #444444;
+    background-color: white;
+    color: black;
 }
 
 .contents .comment_block .comment {
@@ -617,18 +613,18 @@ iframe.google-maps {
     display: inline;
     margin: 4px;
     font-weight: bold;
-    color: #402020;
+    color: black;
 }
 
 .contents .comment .comment_mail {
     display: inline;
     margin: 4px;
-    color: #807070;
+    color: black;
 }
 
 .contents .comment .comment_date {
     display: inline;
-    color: #807070;
+    color: black;
 }
 
 .contents .comment .comment_text {
@@ -639,11 +635,11 @@ iframe.google-maps {
 .contents .comment .reply_button {
     display: inline-block;
     border: 1px solid #DECDCD;
-    background-color: salmon;
+    background-color: white;
     border: 0;
     margin-left: 10px;
     padding: 0 2px 0 2px;
-    color: #EEEEDD;
+    color: black;
     font-size: small;
     width: 40px;
 }
@@ -651,11 +647,11 @@ iframe.google-maps {
 .contents .comment .delete_button {
     display: inline-block;
     border: 1px solid #DECDCD;
-    background-color: royalblue;
+    background-color: white;
     border: 0;
     margin-left: 10px;
     padding: 0 2px 0 2px;
-    color: #EEEEDD;
+    color: black;
     font-size: small;
     width: 40px;
 }

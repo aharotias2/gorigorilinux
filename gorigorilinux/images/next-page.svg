@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="95" height="30" viewBox="0 0 95 30">
-  <polyline points="95 15 75 0 75 30" stroke="#606870" stroke-width="1" fill="#606870"/>
-  <polyline points="15 0 0 0 15 15" stroke="#606870" stroke-width="1" fill="#606870"/>
-  <polyline points="15 15 0 30 15 30" stroke="#606870" stroke-width="1" fill="#606870"/>
-  <rect x="15" y="0" width="60" height="30" stroke="none" fill="#606870"/>
-  <text x="20" y="19" font-family="sans-serif" stroke="none" fill="#E0D0C0" font-size="12" font-weight="bold">次の記事へ</text>
+  <polyline points="95 15 75 0 75 30" stroke="#D0D8E0" stroke-width="1" fill="#D0D8E0"/>
+  <polyline points="15 0 0 0 15 15" stroke="#D0D8E0" stroke-width="1" fill="#D0D8E0"/>
+  <polyline points="15 15 0 30 15 30" stroke="#D0D8E0" stroke-width="1" fill="#D0D8E0"/>
+  <rect x="15" y="0" width="60" height="30" stroke="none" fill="#D0D8E0"/>
+  <text x="20" y="19" font-family="sans-serif" stroke="none" fill="#101820" font-size="12" font-weight="bold">次の記事へ</text>
 </svg>
 

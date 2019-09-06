@@ -14,7 +14,7 @@
     transition: all 0.2s;
 }
 .cp_navi_1 > ul > li > a > .caret {
-    border-top: 4px solid #aaaaaa;
+    border-top: 4px solid #dddddd;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     content: '';
@@ -26,23 +26,23 @@
     transition: color 0.1s linear;
 }
 .cp_navi_1 > ul > li > a {
-    color: #aaaaaa;
+    color: #dddddd;
     display: block;
     line-height: 52px;
     padding: 0 10px;
     text-decoration: none;
 }
 .cp_navi_1 > ul > li:hover {
-    background-color: rgba(40, 50, 60, 0.8);
+    background-color: rgba(240, 250, 255, 1.0);
 }
 .cp_navi_1 > ul > li:hover > a {
-    color: rgb( 255, 255, 255 );
+    color: rgb( 50, 50, 50 );
 }
 .cp_navi_1 > ul > li:hover > a > .caret {
     border-top-color: rgb( 255, 255, 255 );
 }
 .cp_navi_1 > ul > li > div {
-    background-color: rgba(40, 50, 60, 0.8);
+    background-color: rgba(240, 250, 255, 1.0);
     border-top: 0;
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
     display: none;
@@ -64,13 +64,14 @@
     display: block;
 }
 .cp_navi_1 > ul > li > div ul > li > a {
-    color: #ffffff;
+    color: #555555;
     display: block;
     padding: 12px 24px;
     text-decoration: none;
 }
 .cp_navi_1 > ul > li > div ul > li:hover > a {
-    background-color: rgba(60, 70, 80, 0.6);
+    background-color: rgba(60, 70, 80, 0.1);
+    color: #000000;
 }
 /*- Menu 2 --------------------------------------------------------------------*/
 .cp_navi_2 {
@@ -89,7 +90,7 @@
     transition: all 0.2s;
 }
 .cp_navi_2 > ul > li > a > .caret {
-    border-top: 4px solid #aaaaaa;
+    border-top: 4px solid #dddddd;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     content: '';
@@ -101,7 +102,7 @@
     transition: color 0.1s linear;
 }
 .cp_navi_2 > ul > li > a {
-    color: #aaaaaa;
+    color: #dddddd;
     display: block;
     line-height: 46px;
     padding: 0 10px;
@@ -141,7 +142,9 @@
     display: block;
     padding: 12px 24px;
     text-decoration: none;
+    margin-bottom: 0;
 }
 .cp_navi_2 > ul > li > div ul > li:hover > a {
     background-color: #606870;
+    margin-bottom: 0;
 }

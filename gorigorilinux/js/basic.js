@@ -12,7 +12,8 @@ function onLoad() {
 }
 
 function onResize() {
-    if (window.innerWidth >= 1200) {
+    var contentsWidth = document.body.clientWidth;
+    if (contentsWidth >= 1200) {
         setCss({
             ".pankuzu": {"margin-left": "auto"},
             ".menubutton": {"display": "none"},
@@ -30,8 +31,8 @@ function onResize() {
                 "box-shadow": ""
             }
         });
-    } else if (window.innerWidth < 1200) {
-        if (window.innerWidth > 500) {
+    } else if (contentsWidth < 1200) {
+        if (contentsWidth > 500) {
             setCss({
                 ".rightpane": {
                     "width": (document.body.clientWidth - 20) + "px",
