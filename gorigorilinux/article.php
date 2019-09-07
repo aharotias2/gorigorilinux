@@ -100,7 +100,7 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
                     <div class="menubutton"><img src="images/closemenubutton.svg"></div>
                 </div>
                 <div class="nav">
-                    <h3><?php echo translate(substr($parentCategory, strrpos($parentCategory, "/") + 1)); ?>の記事</h3>
+                    <h3><?php echo translate(substr($parentCategory, strrpos($parentCategory, "/") + 1)); ?></h3>
                     <?php ttPutToc($parentCategory, false, 2, false); ?>
                 </div>
                 <div class="nav">
