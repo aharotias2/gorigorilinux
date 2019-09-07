@@ -346,12 +346,13 @@ img.topimage {
 }
 
 .contents .article .code .code-header {
-    background-color: #485058;
-    color: #606870;
+    /*background-color: #485058;*/
+    background-color: darkolivegreen;
+    color: #D0D8E0;
 }
 
 .contents .article .code .code-header h5 {
-    color: #9098A0;
+    color: #D0D8E0;
 }
 
 .contents .article .code pre {

@@ -94,6 +94,7 @@ $translations = [
     ["01_201905", "2019年5月", $colors["diaryColor"]],
     ["02_201907", "2019年7月", $colors["diaryColor"]],
     ["03_201908", "2019年8月", $colors["diaryColor"]],
+    ["04_201909", "2019年9月", $colors["diaryColor"]],
 
     ["news", "ニュース (IT、Linux関係ない)", $colors["news"]],
     ["01_201906", "2019年6月", $colors["normalNewsColor"]],

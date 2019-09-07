@@ -9,11 +9,20 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Thu, 05 Sep 2019 15:39:50 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 07 Sep 2019 07:05:57 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>ASUSのポータブルモニター「MB16A」買いました (うまく動かない)</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/001</link>
+    <description>ノートパソコンの画面が狭いのでポータブルディスプレイが欲しくなりました。そこで早速買って来ました。ASUSのポータブル・モニター「MB16A」です。一も二もなく開封しました。USB Type-Cの端子をパソコンに接続しました。USB Type-CからType-Bに変換するアダプターも付属していました。画面がピカピカなのが好みの分かれるところかもしれませんね。写真を撮る時に自分が写りさえしなければ良いのですが。Windows 10では、まずドライバーのインストールが必要になります。DVDなどは付属していないので、インターネットからドライバを入手します。MB16AC Driver &amp; Tools | 液晶ディスプレイ | ASUS 日本ここからドライバを入手し、インストーラを起動してドライバをインストールしました。簡単に写りました。次はUbuntuに接続してみました。こちら...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/001</guid>
+    <pubDate>Sat, 07 Sep 2019 06:50:00 GMT</pubDate>
+  </item>
   <item>
     <title>宣言と定義 (C、C++)</title>
     <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/004</link>
@@ -184,15 +193,6 @@
     <category>Linux</category>
     <guid>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/001</guid>
     <pubDate>Sun, 02 Jun 2019 14:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>for - コマンドを繰り返す</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/005</link>
-    <description>基本的な使い方forはシェルの構文の「予約語」です。決まった順番で単語を並べることで意図した動作をさせることができるのが構文で、for文はその一つです。for [ループ変数] in [リスト]do [コマンド]doneこのような構文になります。「for」「in」「do」「done」は予約語と言ってシェルで決められた単語であり、[]で囲まれた「ループ変数」「リスト」「コマンド」は任意になります。ループ変数は繰り返し文の中で使われる変数で、1回の繰り返しにつきリストの単語が1つずつ割り当てられます。リストは単語をスペースで空けて行末まで並べたものです。リストはコマンドの出力にすることもできます。例えばseqコマンドで1〜10までのリストを作り、それをfor文に渡すことができます。seq 1 10の出力が1 2 3 4 5 6 7 8 9 10になるのでそれを利用す...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/005</guid>
-    <pubDate>Thu, 06 Jun 2019 13:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>
