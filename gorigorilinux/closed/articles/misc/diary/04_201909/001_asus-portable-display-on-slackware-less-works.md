@@ -8,6 +8,7 @@ ASUSのポータブル・モニター「MB16A」です。
 USB Type-Cの端子をパソコンに接続しました。USB Type-CからType-Bに変換するアダプターも付属していました。
 ![パソコンに接続したところ](images/diary/201909/asus-zenscreen-slackware-two-shot-small.jpg)
 画面がピカピカなのが好みの分かれるところかもしれませんね。写真を撮る時に自分が写りさえしなければ良いのですが。
+## Windows 10に接続
 ![Windows 10に接続したところ](images/diary/201909/asus-zenscreen-windows-two-shot-small.jpg)
 Windows 10では、まずドライバーのインストールが必要になります。DVDなどは付属していないので、インターネットからドライバを入手します。
 
@@ -16,6 +17,7 @@ Windows 10では、まずドライバーのインストールが必要になり�
 ここからドライバを入手し、インストーラを起動してドライバをインストールしました。
 簡単に写りました。
 
+## Ubuntu 18.04に接続
 次はUbuntuに接続してみました。
 
 ![Ubuntu 18.04に接続したところ](images/diary/201909/asus-zenscreen-ubuntu-twoshot-well-small.jpg)
@@ -35,6 +37,7 @@ bash:~$ sudo systemctl start displaylink-driver [Enter]
 ![Ubuntu 18.04で起動しているところ](images/diary/201909/asus-zenscreen-ubuntu-well-small.jpg)
 できて良かったです。
 
+## Slackware 14.2に接続
 次はいつも使っているSlackware 14.2で試してみます。
 ![Slackwareで起動したところ](images/diary/201909/asus-zenscreen-slackware-hang-pers-small.jpg)
 残念ながらSlackwareでは正常に起動することができませんでした。上の画像のような状態で止まってしまい、操作ができなくなってしまいました。
@@ -59,6 +62,7 @@ bash:~$ xrandr --setprovideroutputsource 1 0 [Enter]
 
 う〜ん、何とかならないものでしょうかね。
 
+## 付属品について
 ちなみに、謎のボールペンが付属していました。
 ![付属のボールペン](images/diary/201909/asus-zenscreen-pen-head-small.jpg)
 クリップの部分にZenScreenと印字されています。

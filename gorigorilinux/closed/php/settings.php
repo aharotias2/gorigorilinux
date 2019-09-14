@@ -42,6 +42,7 @@ $colors = [
     "commands" => "teal",
     "linuxCommandsColor" => "olive",
 
+    "ubuntu" => "orangered",
     "slackware" => "dimgray",
     "slackwareColor" => "royalblue",
 
@@ -114,6 +115,7 @@ $translations = [
     ["06_graphics", "画像・印刷", $colors["linuxCommandsColor"]],
     ["07_multimedia", "動画・音声", $colors["linuxCommandsColor"]],
 
+    ["ubuntu", "Ubuntu", $colors["ubuntu"]],
     ["slackware", "Slackware", $colors["slackware"]],
     ["01_settings", "設定", $colors["slackwareColor"]],
     ["02_fixing", "修理", $colors["slackwareColor"]],

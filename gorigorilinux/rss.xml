@@ -9,11 +9,20 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Sat, 07 Sep 2019 07:05:57 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 08 Sep 2019 15:57:38 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>UbuntuでApacheサーバを動かす (PHP+CGIモード)</title>
+    <link>https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001</link>
+    <description>Ubuntu初心者です。今回はUbuntuでHTTPサーバーを起動してPHPで作ったウェブサイトを動かしてみます。Ubuntu独特の勝手を覚えるのが大変ですが、頑張りましょう!phpのインストールPHPはウェブ開発のために開発されたスクリプティング言語です。基本的にHTMLテンプレートエンジンとして使われています。aptコマンドでPHPと関連パッケージをインストールします。phpphp-cgiphp-sqlite3php-xmlphp-mbstringapache2のインストールapache2はUbuntuで使えるHTTPサーバのひとつです。これを起動すると、指定したディレクトリにあるHTMLファイルなどをウェブブラウザに表示させることができます。それではインストールしていきます。aptコマンドでapache2をインストールします。apache2ligapache2-mpm-itkapache2の設定Ubuntuでapache2の設定をするには、モジュールのロードと、設定フ...</description>
+    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001</guid>
+    <pubDate>Sun, 08 Sep 2019 15:50:00 GMT</pubDate>
+  </item>
   <item>
     <title>ASUSのポータブルモニター「MB16A」買いました (うまく動かない)</title>
     <link>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/001</link>
@@ -184,15 +193,6 @@
     <category>Linux</category>
     <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/004</guid>
     <pubDate>Sun, 09 Jun 2019 14:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>pwd - ここはどこ?</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/001</link>
-    <description>Linuxコマンドラインは必ずファイルシステム中のどこかのディレクトリを作業ディレクトリとして使っています。作業ディレクトリにあるファイルはフルパスの指定をしなくてもファイル名の指定だけで使うことができます。pwdコマンドでは作業ディレクトリがどこなのかを表示するコマンドです。使い方は下記のようになります。プロンプト$ pwd [Enter]/home/me/anywhere/you/wantオプション/-P: リンクを伝わないシンボリックリンクによってディレクトリを本来の親ディレクトリ以外のディレクトリから開いた場合、通常pwdコマンドは親ディレクトリをリンク元のディレクトリとしますが、-Pオプションによってディレクトリの実体があるところの親ディレクトリを表示できます。例えば/aaa/bbb/cccというディレクトリへのシンボリックリンクが/eee/fff...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/001</guid>
-    <pubDate>Sun, 02 Jun 2019 14:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

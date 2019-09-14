@@ -1,0 +1,220 @@
+[2019/09/08 14:29:42] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 14:29:42] INFO: PARAM: article_name = low-power-pc-sucks
+[2019/09/08 14:29:42] INFO: ROW: none
+[2019/09/08 14:29:42] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 15:54:36] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 15:54:36] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 15:54:36] INFO: ROW: none
+[2019/09/08 15:54:36] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 15:56:06] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 15:56:06] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 15:56:06] INFO: ROW: none
+[2019/09/08 15:56:06] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 15:57:29] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 15:57:29] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 15:57:29] INFO: ROW: none
+[2019/09/08 15:57:29] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 15:59:28] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 15:59:28] INFO: PARAM: article_name = slackwarejp
+[2019/09/08 15:59:28] INFO: ROW: none
+[2019/09/08 15:59:28] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 15:59:32] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 15:59:32] INFO: PARAM: article_name = setuphttpd
+[2019/09/08 15:59:32] INFO: ROW: none
+[2019/09/08 15:59:32] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:03:04] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:03:04] INFO: PARAM: article_name = slackwarejp
+[2019/09/08 16:03:04] INFO: ROW: none
+[2019/09/08 16:03:04] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:03:07] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:03:07] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:03:07] INFO: ROW: none
+[2019/09/08 16:03:07] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:03:36] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:03:36] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:03:36] INFO: ROW: none
+[2019/09/08 16:03:36] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:04:02] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:04:02] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:04:02] INFO: ROW: none
+[2019/09/08 16:04:02] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:06:35] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:06:35] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:06:35] INFO: ROW: none
+[2019/09/08 16:06:35] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:07:12] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:07:12] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:07:12] INFO: ROW: none
+[2019/09/08 16:07:12] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:07:31] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:07:31] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:07:31] INFO: ROW: none
+[2019/09/08 16:07:31] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:11:35] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:11:35] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:11:35] INFO: ROW: none
+[2019/09/08 16:11:35] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:14:16] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:14:16] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:14:16] INFO: ROW: none
+[2019/09/08 16:14:16] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:14:32] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:14:32] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:14:32] INFO: ROW: none
+[2019/09/08 16:14:32] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:15:24] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:15:24] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:15:24] INFO: ROW: none
+[2019/09/08 16:15:24] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:15:44] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:15:44] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:15:44] INFO: ROW: none
+[2019/09/08 16:15:44] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:17:17] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:17:17] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:17:17] INFO: ROW: none
+[2019/09/08 16:17:17] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:18:44] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:18:44] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:18:44] INFO: ROW: none
+[2019/09/08 16:18:44] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:19:06] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:19:06] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:19:06] INFO: ROW: none
+[2019/09/08 16:19:06] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:25:01] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:25:01] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:25:01] INFO: ROW: none
+[2019/09/08 16:25:01] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:25:35] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:25:35] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:25:35] INFO: ROW: none
+[2019/09/08 16:25:35] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:29:23] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:29:23] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:29:23] INFO: ROW: none
+[2019/09/08 16:29:23] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:30:11] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:30:11] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:30:11] INFO: ROW: none
+[2019/09/08 16:30:11] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:31:19] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:31:19] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:31:19] INFO: ROW: none
+[2019/09/08 16:31:19] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 16:32:03] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 16:32:03] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 16:32:03] INFO: ROW: none
+[2019/09/08 16:32:03] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 18:23:07] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 18:23:07] INFO: PARAM: article_name = asus-portable-display-on-slackware-less-works
+[2019/09/08 18:23:07] INFO: ROW: none
+[2019/09/08 18:23:07] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 18:23:45] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 18:23:45] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 18:23:45] INFO: ROW: none
+[2019/09/08 18:23:45] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 21:27:59] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 21:27:59] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 21:27:59] INFO: ROW: none
+[2019/09/08 21:27:59] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 21:58:23] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 21:58:23] INFO: PARAM: article_name = asus-portable-display-on-slackware-less-works
+[2019/09/08 21:58:23] INFO: ROW: none
+[2019/09/08 21:58:23] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 23:46:48] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 23:46:48] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 23:46:48] INFO: ROW: none
+[2019/09/08 23:46:48] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 23:46:48] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 23:46:48] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 23:46:48] INFO: ROW: none
+[2019/09/08 23:46:48] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/08 23:59:53] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/08 23:59:53] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/08 23:59:53] INFO: ROW: none
+[2019/09/08 23:59:53] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:09:19] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:09:19] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:09:19] INFO: ROW: none
+[2019/09/09 00:09:19] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:10:21] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:10:21] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:10:21] INFO: ROW: none
+[2019/09/09 00:10:21] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:10:31] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:10:31] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:10:31] INFO: ROW: none
+[2019/09/09 00:10:31] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:13:56] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:13:56] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:13:56] INFO: ROW: none
+[2019/09/09 00:13:56] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:15:59] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:15:59] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:15:59] INFO: ROW: none
+[2019/09/09 00:15:59] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:19:10] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:19:10] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:19:10] INFO: ROW: none
+[2019/09/09 00:19:10] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:20:40] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:20:40] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:20:40] INFO: ROW: none
+[2019/09/09 00:20:40] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:22:14] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:22:14] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:22:14] INFO: ROW: none
+[2019/09/09 00:22:14] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:22:23] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:22:23] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:22:23] INFO: ROW: none
+[2019/09/09 00:22:23] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:22:57] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:22:57] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:22:57] INFO: ROW: none
+[2019/09/09 00:22:57] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:23:27] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:23:27] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:23:27] INFO: ROW: none
+[2019/09/09 00:23:27] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:41:32] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:41:32] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:41:32] INFO: ROW: none
+[2019/09/09 00:41:32] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:43:51] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:43:51] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:43:51] INFO: ROW: none
+[2019/09/09 00:43:51] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:50:15] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:50:15] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:50:15] INFO: ROW: none
+[2019/09/09 00:50:15] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:50:27] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:50:27] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:50:27] INFO: ROW: none
+[2019/09/09 00:50:27] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:50:36] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:50:36] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:50:36] INFO: ROW: none
+[2019/09/09 00:50:36] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:51:09] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:51:09] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:51:09] INFO: ROW: none
+[2019/09/09 00:51:09] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:51:23] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:51:23] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:51:23] INFO: ROW: none
+[2019/09/09 00:51:23] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:51:38] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:51:38] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:51:38] INFO: ROW: none
+[2019/09/09 00:51:38] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:52:14] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:52:14] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:52:14] INFO: ROW: none
+[2019/09/09 00:52:14] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/09 00:52:29] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/09 00:52:29] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/09 00:52:29] INFO: ROW: none
+[2019/09/09 00:52:29] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC

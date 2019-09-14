@@ -10,6 +10,8 @@ function ttPutMarkdown($filePath, $allowHtml = true) {
 $counter = 0;
 function ttConvMdParts($parts) {
     global $counter;
+    $parts = str_replace("\\<", "[:lt:]", $parts);
+    $parts = str_replace("\\>", "[:gt:]", $parts);
     $parts = str_replace("\\*", "[:asterisk:]", $parts);
     $parts = str_replace("\\`", "[:backquote:]", $parts);
     $parts = str_replace("\\_", "[:underscore:]", $parts);
@@ -38,6 +40,8 @@ function ttConvMdParts($parts) {
         $comePattern = '/(\(?※[0-9]*\)?)/';
         $parts = preg_replace($comePattern, "<span class=\"come\">$1</span>", $parts);
     }
+    $parts = str_replace("[:lt:]", "&lt;", $parts);
+    $parts = str_replace("[:gt:]", "&gt;", $parts);
     $parts = str_replace("[:asterisk:]", "*", $parts);
     $parts = str_replace("[:backquote:]", "`", $parts);
     $parts = str_replace("[:underscore:]", "_", $parts);

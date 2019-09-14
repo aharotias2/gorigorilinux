@@ -1,0 +1,18 @@
+SCRIPT_NAME: /home/ta/public_html/gorigorilinux/get-article-list.php
+DOCUMENT_ROOT: 
+SERVER_URI: /~ta/gorigorilinux/get-article-list.php?article=Linux/Ubuntu/%E8%A8%AD%E5%AE%9A/001_setup-apache2-on-ubuntu.md
+cate: Linux/Ubuntu/設定/001_setup-apache2-on-ubuntu.md
+cate: linux/ubuntu/01_settings/001_setup-apache2-on-ubuntu.md
+path: /home/ta/public_html/gorigorilinux/closed/articles/linux/ubuntu/01_settings/001_setup-apache2-on-ubuntu.md
+filemtime: 2019-9-9-00-54-02
+RESULT: {
+    "itemLink": "https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001", 
+    "itemAuthor": "msg@singersongwriter.ciao.jp (田中喬之)", 
+    "itemCategory": "Linux", 
+    "itemComment": "", 
+    "itemGuid": "https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001", 
+    "itemSource": "", 
+    "itemTitle": "UbuntuでApacheサーバを動かす (PHP+CGIモード)", 
+    "itemDescription": "Ubuntu初心者です。今回はUbuntuでHTTPサーバーを起動してPHPで作ったウェブサイトを動かしてみます。Ubuntu独特の勝手を覚えるのが大変ですが、頑張りましょう!phpのインストールPHPはウェブ開発のために開発されたスクリプティング言語です。基本的にHTMLテンプレートエンジンとして使われています。aptコマンドでPHPと関連パッケージをインストールします。phpphp-cgiphp-sqlite3php-xmlphp-mbstringapache2のインストールapache2はUbuntuで使えるHTTPサーバのひとつです。これを起動すると、指定したディレクトリにあるHTMLファイルなどをウェブブラウザに表示させることができます。それではインストールしていきます。aptコマンドでapache2をインストールします。apache2ligapache2-mpm-itkapache2の設定Ubuntuでapache2の設定をするには、モジュールのロードと、設定フ...", 
+    "itemPubDate": "2019-9-9-00-54-02"
+}
