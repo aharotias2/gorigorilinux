@@ -9,7 +9,7 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Sun, 08 Sep 2019 15:57:38 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 15 Sep 2019 00:37:20 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
@@ -18,26 +18,29 @@
     <title>UbuntuでApacheサーバを動かす (PHP+CGIモード)</title>
     <link>https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001</link>
     <description>Ubuntu初心者です。今回はUbuntuでHTTPサーバーを起動してPHPで作ったウェブサイトを動かしてみます。Ubuntu独特の勝手を覚えるのが大変ですが、頑張りましょう!phpのインストールPHPはウェブ開発のために開発されたスクリプティング言語です。基本的にHTMLテンプレートエンジンとして使われています。aptコマンドでPHPと関連パッケージをインストールします。phpphp-cgiphp-sqlite3php-xmlphp-mbstringapache2のインストールapache2はUbuntuで使えるHTTPサーバのひとつです。これを起動すると、指定したディレクトリにあるHTMLファイルなどをウェブブラウザに表示させることができます。それではインストールしていきます。aptコマンドでapache2をインストールします。apache2ligapache2-mpm-itkapache2の設定Ubuntuでapache2の設定をするには、モジュールのロードと、設定フ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
     <category>Linux</category>
+    <comments>setup-apache2-on-ubuntu</comments>
     <guid>https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001</guid>
     <pubDate>Sun, 08 Sep 2019 15:50:00 GMT</pubDate>
   </item>
   <item>
     <title>ASUSのポータブルモニター「MB16A」買いました (うまく動かない)</title>
     <link>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/001</link>
-    <description>ノートパソコンの画面が狭いのでポータブルディスプレイが欲しくなりました。そこで早速買って来ました。ASUSのポータブル・モニター「MB16A」です。一も二もなく開封しました。USB Type-Cの端子をパソコンに接続しました。USB Type-CからType-Bに変換するアダプターも付属していました。画面がピカピカなのが好みの分かれるところかもしれませんね。写真を撮る時に自分が写りさえしなければ良いのですが。Windows 10では、まずドライバーのインストールが必要になります。DVDなどは付属していないので、インターネットからドライバを入手します。MB16AC Driver &amp; Tools | 液晶ディスプレイ | ASUS 日本ここからドライバを入手し、インストーラを起動してドライバをインストールしました。簡単に写りました。次はUbuntuに接続してみました。こちら...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <description>ノートパソコンの画面が狭いのでポータブルディスプレイが欲しくなりました。そこで早速買って来ました。ASUSのポータブル・モニター「MB16A」です。一も二もなく開封しました。USB Type-Cの端子をパソコンに接続しました。USB Type-CからType-Bに変換するアダプターも付属していました。画面がピカピカなのが好みの分かれるところかもしれませんね。写真を撮る時に自分が写りさえしなければ良いのですが。Windows 10に接続Windows 10では、まずドライバーのインストールが必要になります。DVDなどは付属していないので、インターネットからドライバを入手します。MB16AC Driver &amp; Tools | 液晶ディスプレイ | ASUS 日本ここからドライバを入手し、インストーラを起動してドライバをインストールしました。簡単に写りました。Ubuntu 18.04に接続次はUbuntu...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
+    <comments>asus-portable-display-on-slackware-less-works</comments>
     <guid>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/001</guid>
-    <pubDate>Sat, 07 Sep 2019 06:50:00 GMT</pubDate>
+    <pubDate>Sun, 08 Sep 2019 12:50:00 GMT</pubDate>
   </item>
   <item>
     <title>宣言と定義 (C、C++)</title>
     <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/004</link>
     <description>CやJavaでは変数を使う為にまず定義をしないといけません。宣言とは宣言とは、プログラム内で使う予定の変数の名前と保持する値の型、そして初期値をコンパイラに指示することで、宣言する文を宣言文と言います。Cの場合 int a = 1;上の文により、int型の変数aを初期値1で使うことをコンパイラに伝えます。定義とは定義というのは変数のためのメモリ領域を確保することをコンパイラに指示することです。例えば int a = 1;上の文は宣言文ですが、ローカル変数 (またはグローバル変数) のaのためのメモリ領域を確保するようにコンパイラに指示しているので定義文でもあります。この領域はスタックに確保されます。定義と宣言の使い分け一般的に定義と宣言は同じ意味の言葉です。しかし厳密に言えば、C、C++の場合、extern修飾子を用いて...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
     <category>プログラミング</category>
+    <comments>declaration-and-definition</comments>
     <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/004</guid>
     <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
   </item>
@@ -45,26 +48,29 @@
     <title>ポインタを理解する</title>
     <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/003</link>
     <description>はしがきC言語の難関がポインタです。ポインタを理解し使いこなすには若干想像力と慣れが必要ですね。今回はそんなポインタについて簡単にまとめたいと思います。ポインタの宣言ポインタが難しい原因。まずはっきり言ってC言語のポインタの文法が分かりにくいというのがあると思います。下はポインタ変数を宣言する文の例です。 int *a;整数型のポインタを宣言しています。同じことは次のようにも書けます。 int* a;微妙に違います。C言語では同じ型の変数はカンマで区切って一度に宣言できます。 int *a, *b, *c;これだと整数型のポインタを3個宣言したことになります。しかし次のようだと違います。 int *a, b, c;これだとポインタは最初のaだけで、bとcはただの整数です。では int* a, b, c;だとどうでしょうか。実はこれも同じでポイン...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
     <category>プログラミング</category>
+    <comments>pointer</comments>
     <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/003</guid>
-    <pubDate>Sun, 25 Aug 2019 07:50:00 GMT</pubDate>
+    <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
   </item>
   <item>
     <title>メモリの構造 - スタックとヒープ</title>
     <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/002</link>
-    <description>プログラムはメモリというデータを記憶する領域を使って動作します。プログラムで使われるメモリは使い方によって下のように分類されています。コード領域 - コンピュータへの命令を記憶する固定領域静的領域 - 静的データを記憶する固定領域スタック - サイズの固定した可変データヒープ - サイズを固定しない可変データなおC/C++以外の言語では特に意識しなくても大丈夫な設計になっています。コード領域プログラムを起動するとハードディスクなどの長期保存領域からメモリという短期保存領域にプログラムがロードされます。プログラムはコンピュータへの命令の手順書ですが、この命令の手順書自体もメモリに保存されています。静的領域プログラムには変化しないデータも含まれています。例えばウィンドウに表示するタイ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <description>はしがきプログラムはメモリというデータを記憶する領域を使って動作します。メモリがどんな風に使われているのかイメージができるとプログラミングも面白くなりますし理解も深まります。プログラムで使われるメモリは使い方によって下のように分類されています。コード領域 - コンピュータへの命令を記憶する固定領域静的領域 - 静的データを記憶する固定領域スタック - サイズの固定した可変データヒープ - サイズを固定しない可変データなおC/C++以外の言語では特に意識しなくても大丈夫な設計になっています。コード領域プログラムを起動するとハードディスクなどの長期保存領域からメモリという短期保存領域にプログラムがロードされます。プログラムはコンピュータへの命令の手順書ですが、この命令の手順書自体もメ...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
     <category>プログラミング</category>
+    <comments>stack-and-heap</comments>
     <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/002</guid>
-    <pubDate>Sat, 24 Aug 2019 15:00:00 GMT</pubDate>
+    <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
   </item>
   <item>
-    <title>プログラムの基本構造 - 逐次処理・条件分岐・繰り返し</title>
+    <title>手続き型プログラムの基本 - 逐次処理・条件分岐・繰り返し</title>
     <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/001</link>
-    <description>前置きプログラムは機械語で実行されるコンピュータへの命令のまとまりですが、それだけだと理解が難しいので、色々整理する方法があります。プログラムがどんな構造になっているかという分類法が大昔に作られましたが、それは今でもある程度そのまま使えます。大別すると次の3つになります逐次処理条件分岐繰り返しプログラムの動作順序のことをアルゴリズムと言いますが、全てのアルゴリズムは上の3つのパターンの組合せだという考え方です。実は他にもあって、ジャンプしかしこれは特別な場合を除いて使わない方が良いとされています。この基本的な考え方で作られたプログラミング方法は「構造化プログラミング」と呼ばれたりします。構造化プログラミングをするために作られたプログラミング言語は非常に多く、ほ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <description>はしがきプログラムは機械語で実行されるコンピュータへの命令のまとまりですが、それだけだと理解が難しいので、色々整理する方法があります。今回は手続き型言語と呼ばれる最もポピュラーなプログラミング手法において使われている基本的なプログラムの構造をまとめます。プログラムがどんな構造になっているかという分類法が大昔に作られましたが、それは今でもある程度そのまま使えます。大別すると次の3つになります逐次処理条件分岐繰り返しプログラムの動作順序のことをアルゴリズムと言いますが、全てのアルゴリズムは上の3つのパターンの組合せだという考え方です。実は他にもあって、ジャンプしかしこれは特別な場合を除いて使わない方が良いとされています。この基本的な考え方で作られたプログラミング方...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
     <category>プログラミング</category>
+    <comments>2-way-of-proc</comments>
     <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/001</guid>
     <pubDate>Sat, 24 Aug 2019 10:00:00 GMT</pubDate>
   </item>
@@ -72,8 +78,9 @@
     <title>Bluetoothが繋がらなくなった場合</title>
     <link>https://gorigorilinux.net/article.php?entry=linux/slackware/02_fixing/002</link>
     <description>Slackware14.2を使っていて、色々更新などしていたらいつの間にかBluetoothが使えなくなっていました。このようにXFCEのステータスバーにあるBluetoothのアイコンが灰色になっていて、メニューを開いて「Bluetoothをオンにする」をクリックしても使えるようになりません。ググって解決しました。ファームウェアが入っていなかったdmesgコマンドでシステムエラーの内容を確認するrootユーザになってdmesgコマンドを打ちます。dmesgはLinux起動時のメッセージを表示するコマンドです。プロンプト$ dmesg [Enter]… (中略) …[ 26.230321] Bluetooth: hci0: Bootloader revision 0.0 build 26 week 38 2015[ 26.231305] Bluetooth: hci0: Device revision is 16[ 26.231308] Bluetooth: hci0: Secure boot is enabled[ 26.231311] Bluetooth: hci0: OTP lock is enabled[ 26.231313] Bluetooth: hci0: API lock is enabled[ 26.231315] Bluetooth: hci0: Debug loc...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
     <category>Linux</category>
+    <comments>add-bluetooth</comments>
     <guid>https://gorigorilinux.net/article.php?entry=linux/slackware/02_fixing/002</guid>
     <pubDate>Fri, 23 Aug 2019 04:00:00 GMT</pubDate>
   </item>

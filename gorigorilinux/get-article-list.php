@@ -24,6 +24,8 @@ $cate = implode("/", $tmp2);
 fwrite($logfile, "cate: $cate\n");
 $path = "$dir/closed/articles/" . $cate;
 fwrite($logfile, "path: $path\n");
+$articleName = substr($path, strrpos($path, "_") + 1);
+$articleName = substr($articleName, 0, strrpos($articleName, "."));
 if (strtolower($_SERVER['REQUEST_METHOD']) == "get") {
     if ($param == "cate") {
         $result = "";
@@ -44,9 +46,9 @@ if (strtolower($_SERVER['REQUEST_METHOD']) == "get") {
         $itemUrl = "https://gorigorilinux.net/article.php?entry=$entry";
         $resultJson = "{\n";
         $resultJson .= "    \"itemLink\": \"$itemUrl\", \n";
-        $resultJson .= "    \"itemAuthor\": \"msg@singersongwriter.ciao.jp (田中喬之)\", \n";
+        $resultJson .= "    \"itemAuthor\": \"info@singersongwriter.ciao.jp (田中喬之)\", \n";
         $resultJson .= "    \"itemCategory\": \"" . translate(substr($cate, 0, strpos($cate, '/'))) . "\", \n";
-        $resultJson .= "    \"itemComment\": \"\", \n";
+        $resultJson .= "    \"itemComment\": \"". $articleName ."\", \n";
         $resultJson .= "    \"itemGuid\": \"$itemUrl\", \n";
         $resultJson .= "    \"itemSource\": \"\", \n";
         $extension = substr($path, strrpos($path, "."));

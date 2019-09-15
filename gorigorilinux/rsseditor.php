@@ -213,12 +213,14 @@
 			 itemBlock.select(".item_year")[0].value = ftime[0];
 			 itemBlock.select(".item_month")[0].value = ftime[1];
 			 itemBlock.select(".item_day")[0].value = ftime[2];
-			 itemBlock.select(".item_hours")[0].value = ftime[3];
+			 var itemHours = Number(ftime[3]);
+			 itemBlock.select(".item_hours")[0].value = itemHours;
 			 var itemMinutes = Number(ftime[4]);
 			 if (itemMinutes < 10) {
 			     itemMinutes = "00";
 			 } else {
-			     itemMinutes = Math.round(itemMinutes / 10) * 10;
+			     itemMinutes = Math.floor(itemMinutes / 10) * 10;
+			     console.log("itemMinutes: " + itemMinutes);
 			 }
 			 itemBlock.select(".item_minutes")[0].value = itemMinutes;
 			 itemBlock.select(".item_minutes")[0].onchange = setDateString;
@@ -351,6 +353,10 @@
                                              dateInputs.parentNode.select("select[name='item_year" + itemCount + "']")[0].value = itemDate.getFullYear();
                                              dateInputs.parentNode.select("select[name='item_month" + itemCount + "']")[0].value = itemDate.getMonth() + 1;
                                              dateInputs.parentNode.select("select[name='item_day" + itemCount + "']")[0].value = itemDate.getDate();
+					     var hours = itemDate.getHours();
+					     if (hours == 0) {
+						 hours = "0";
+					     }
                                              dateInputs.parentNode.select("select[name='item_hours" + itemCount + "']")[0].value = itemDate.getHours();
                                              var minutes = Math.floor(itemDate.getMinutes() / 10) * 10;
                                              if (minutes == 0) {
