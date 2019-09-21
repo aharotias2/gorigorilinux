@@ -316,8 +316,8 @@ img.topimage {
 }
 
 .contents .article a {
-    color: black;
-    
+    color: indigo;
+    border-bottom: dotted 1px indigo;
 }
 
 .contents .article .outline a {
@@ -326,8 +326,8 @@ img.topimage {
 }
 
 .contents .article a:hover {
-    color: black;
-    
+    color: royalblue;
+    border-bottom: dotted 1px royalblue;
 }
 
 .contents .article .datetime .mtime {
@@ -503,14 +503,16 @@ img.topimage {
 
 
 .comment_block input {
-    
+    border: 1px solid #A0B0C0;
+    border-radius: 3px;
     background-color: white;
     color: black;
     
 }
 
 .comment_block textarea {
-    
+    border: 1px solid #A0B0C0;
+    border-radius: 3px;
     background-color: white;
     color: black;
     
@@ -519,14 +521,14 @@ img.topimage {
 .comment_block button {
     cursor: pointer;
     border: 0;
-    background-color: red;
+    background-color: tomato;
     color: white;
     
 }
 
 #comment_cancel {
-    background-color: white;
-    color: black;
+    background-color: mediumorchid;
+    color: white;
     
 }
 
@@ -700,52 +702,52 @@ img.topimage {
  **********************************************************************************************/
 #good-button {
     cursor: pointer;
-    background-color: gray;
+    background-color: #A0A0A0;
     color: white;
     border: 0;
 }
 
 #good-button:hover {
-    background-color: red;
+    background-color: tomato;
     border: 0;
 }
 
 #good-button.goodbad-pressed {
     border: 0;
     
-    background-color: red;
+    background-color: tomato;
     color: white;
     
 }
 #good-button.goodbad-pressed:hover {
     border: 0;
     
-    background-color: gray;
+    background-color: tomato;
     color: white;
     
 }
 #bad-button {
     border: 0;
     cursor: pointer;
-    background-color: gray;
+    background-color: #A0A0A0;
     color: white;
     
 }
 #bad-button:hover {
-    background-color: blue;
+    background-color: magenta;
     border: 0;
 }
 #bad-button.goodbad-pressed {
     
     border: 0;
-    background-color: blue;
+    background-color: magenta;
     color: white;
     
 }
 #bad-button.goodbad-pressed:hover {
     
     border: 0;
-    background-color: gray;
+    background-color: magenta;
 }
 
 

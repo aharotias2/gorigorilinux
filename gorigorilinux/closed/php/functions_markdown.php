@@ -15,6 +15,8 @@ function ttConvMdParts($parts) {
     $parts = str_replace("\\*", "[:asterisk:]", $parts);
     $parts = str_replace("\\`", "[:backquote:]", $parts);
     $parts = str_replace("\\_", "[:underscore:]", $parts);
+    $parts = str_replace("\\(", "[:openparen:]", $parts);
+    $parts = str_replace("\\)", "[:closeparen:]", $parts);
     $linkPattern = '/\[([^\]]*)\]\(([^\)]*)\)/';
     preg_match_all($linkPattern, $parts, $out, PREG_SET_ORDER);
     foreach ($out as $m) {
@@ -45,6 +47,8 @@ function ttConvMdParts($parts) {
     $parts = str_replace("[:asterisk:]", "*", $parts);
     $parts = str_replace("[:backquote:]", "`", $parts);
     $parts = str_replace("[:underscore:]", "_", $parts);
+    $parts = str_replace("[:openparen:]", "(", $parts);
+    $parts = str_replace("[:closeparen:]", ")", $parts);
     return $parts;
 }
 
