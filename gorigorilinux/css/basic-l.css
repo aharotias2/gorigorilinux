@@ -497,11 +497,11 @@ iframe.google-maps {
 }
 
 .contents .article blockquote {
-    margin: 10px 60px 4px 57px;
-    padding: 10px 35px;
-    /*border: 1px solid #606870;*/
-    border-left: 3px solid #606870;
-    background-color: white;
+    margin: 10px 60px 4px 60px;
+    padding: 2px 25px;
+    border-left: 3px solid cornflowerblue;
+    font-style: italic;
+    color: #404850;
 }
 
 .contents .article blockquote p {

@@ -2313,3 +2313,145 @@
 [2019/09/07 14:03:44] INFO: PARAM: article_name = my-religion
 [2019/09/07 14:03:44] INFO: ROW: none
 [2019/09/07 14:03:44] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:54:37] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:54:37] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:54:37] INFO: ROW: none
+[2019/09/21 11:54:37] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:54:39] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:54:39] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:54:39] INFO: ROW: none
+[2019/09/21 11:54:39] INFO: GOODBAD exists: false
+
+[2019/09/21 11:54:39] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 1, bad: 0
+[2019/09/21 11:54:42] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:54:42] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:54:42] INFO: ROW: none
+[2019/09/21 11:54:42] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:54:53] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:54:53] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:54:53] INFO: ROW: none
+[2019/09/21 11:54:53] INFO: GOODBAD exists: false
+
+[2019/09/21 11:54:53] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: -1, bad: 1
+[2019/09/21 11:54:56] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:54:56] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:54:56] INFO: ROW: none
+[2019/09/21 11:54:56] INFO: GOODBAD exists: false
+
+[2019/09/21 11:54:56] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 1, bad: -1
+[2019/09/21 11:54:57] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:54:57] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:54:57] INFO: ROW: none
+[2019/09/21 11:54:57] INFO: GOODBAD exists: false
+
+[2019/09/21 11:54:57] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: -1, bad: 1
+[2019/09/21 11:54:59] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:54:59] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:54:59] INFO: ROW: none
+[2019/09/21 11:54:59] INFO: GOODBAD exists: false
+
+[2019/09/21 11:54:59] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 1, bad: -1
+[2019/09/21 11:55:14] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:14] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:14] INFO: ROW: none
+[2019/09/21 11:55:14] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:55:15] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:15] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:15] INFO: ROW: none
+[2019/09/21 11:55:15] INFO: GOODBAD exists: false
+
+[2019/09/21 11:55:15] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: -1, bad: 0
+[2019/09/21 11:55:22] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:22] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:22] INFO: ROW: none
+[2019/09/21 11:55:22] INFO: GOODBAD exists: false
+
+[2019/09/21 11:55:22] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 0, bad: 1
+[2019/09/21 11:55:25] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:25] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:25] INFO: ROW: none
+[2019/09/21 11:55:25] INFO: GOODBAD exists: false
+
+[2019/09/21 11:55:25] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 0, bad: -1
+[2019/09/21 11:55:27] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:27] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:27] INFO: ROW: none
+[2019/09/21 11:55:27] INFO: GOODBAD exists: false
+
+[2019/09/21 11:55:27] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 0, bad: 1
+[2019/09/21 11:55:53] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:53] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:53] INFO: ROW: none
+[2019/09/21 11:55:53] INFO: GOODBAD exists: false
+
+[2019/09/21 11:55:53] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 0, bad: -1
+[2019/09/21 11:55:53] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:53] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:53] INFO: ROW: none
+[2019/09/21 11:55:53] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:55:55] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:55] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:55] INFO: ROW: none
+[2019/09/21 11:55:55] INFO: GOODBAD exists: false
+
+[2019/09/21 11:55:55] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 1, bad: 0
+[2019/09/21 11:55:56] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:56] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:56] INFO: ROW: none
+[2019/09/21 11:55:56] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:55:58] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:58] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:58] INFO: ROW: none
+[2019/09/21 11:55:58] INFO: GOODBAD exists: false
+
+[2019/09/21 11:55:58] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: -1, bad: 0
+[2019/09/21 11:55:59] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:55:59] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:55:59] INFO: ROW: none
+[2019/09/21 11:55:59] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:56:14] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:56:14] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:56:14] INFO: ROW: none
+[2019/09/21 11:56:14] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:56:15] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:56:15] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:56:15] INFO: ROW: none
+[2019/09/21 11:56:15] INFO: GOODBAD exists: false
+
+[2019/09/21 11:56:15] INFO: SQL: INSERT INTO goodbad (article_name, good, bad) VALUES (:article_name, :good, :bad),  articleName: rms-resigns-mit-and-fsf, good: 1, bad: 0
+[2019/09/21 11:56:16] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:56:16] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:56:16] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 1, bad = 0
+[2019/09/21 11:56:16] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:56:18] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:56:18] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:56:18] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 1, bad = 0
+[2019/09/21 11:56:18] INFO: GOODBAD exists: true
+
+[2019/09/21 11:56:18] INFO: SQL: UPDATE goodbad SET good = :good, bad = :bad WHERE article_name = :article_name
+[2019/09/21 11:56:19] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:56:19] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:56:19] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 1
+[2019/09/21 11:56:19] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:57:54] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:57:54] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:57:54] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 1
+[2019/09/21 11:57:54] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 11:59:41] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 11:59:41] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 11:59:41] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 1
+[2019/09/21 11:59:41] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 12:00:02] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 12:00:02] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 12:00:02] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 1
+[2019/09/21 12:00:02] INFO: GOODBAD exists: true
+
+[2019/09/21 12:00:02] INFO: SQL: UPDATE goodbad SET good = :good, bad = :bad WHERE article_name = :article_name
+[2019/09/21 12:02:05] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 12:02:05] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 12:02:05] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 0
+[2019/09/21 12:02:05] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/21 12:02:25] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/21 12:02:25] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/21 12:02:25] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 0
+[2019/09/21 12:02:25] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC

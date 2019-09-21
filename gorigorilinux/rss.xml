@@ -9,11 +9,21 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Sun, 15 Sep 2019 00:37:20 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 21 Sep 2019 03:04:45 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>リチャード・ストールマン氏がMITとFSFから辞任</title>
+    <link>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/002</link>
+    <description>GNUの創始者である計算機科学者のリチャード・ストールマン氏が9月16日、フリーソフトウェア財団 (FSF) の代表を離任しました。CNETなど国内外の多くのメディアで報じられています。記事：リチャード・ストールマン氏がフリーソフトウェア財団とMITの役職辞任--疑惑の投資家関連コメント巡り | CNET Japan 2019.09.17CNETの記事はVICEというサイトの下の記事を元にしています。Famed Computer Scientist Richard Stallman Described Epstein Victims As 'Entirely Willing' | VICE 2019.09.14FSFのサイトでもこの件について報告がされています。Richard M. Stallman resigns | FREE SOFTWARE FOUNDATIONOn September 16, 2019, Richard M. Stallman, founder and president of the Free Software Foundation, resigned as president and from its board of directors.&amp;nbsp;The board will be conducting a search for a new president, beginning immediately. Further details of the sear...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <comments>rms-resigns-mit-and-fsf</comments>
+    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/002</guid>
+    <pubDate>Sat, 21 Sep 2019 02:50:00 GMT</pubDate>
+  </item>
   <item>
     <title>UbuntuでApacheサーバを動かす (PHP+CGIモード)</title>
     <link>https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001</link>
@@ -191,15 +201,6 @@
     <category>Linux</category>
     <guid>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/004</guid>
     <pubDate>Mon, 10 Jun 2019 14:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>シェルスクリプトを書く</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/004</link>
-    <description>シェルスクリプトとはコマンドはシェルから実行するのが基本ですが、ファイルにコマンドを書いておいてそれをシェルから実行させることもできます。そういったファイルをシェルスクリプトと言います。シェルスクリプトファイルは普通のテキストファイルです。スクリプトとはスクリプト言語が記述されたテキストファイルのことです。スクリプト言語とはテキストとして記述されたソースを別のプログラムが読み込んで実行する形式のプログラミング言語です。BashやPerl、Python、Rubyなどのことです。シェルスクリプトを実行するのはBashなどのシェルです。簡単なスクリプトの例スクリプトのソース「こんにちは」というメッセージを出力するシェルスクリプトは以下のようになります。#!/bin/bashecho &amp;quot;こんにちは&amp;quot;Shebang (シバン)...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/01_shell/004</guid>
-    <pubDate>Sun, 09 Jun 2019 14:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

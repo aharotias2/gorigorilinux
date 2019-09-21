@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-  <polyline points="5 5 1 5 1 11 7 11 7 8" stroke="#E8E8E8" stroke-width="1" fill="none"/> 
-  <polyline points="3 9 9 3" stroke="#E8E8E8" stroke-width="1" fill="none"/>
-  <polyline points="5 3 9 3 9 8" stroke="#E8E8E8" stroke-width="1" stroke-linejoin="miter" fill="none"/>
+  <polyline points="5 5 1 5 1 11 7 11 7 8" stroke="indigo" stroke-width="1" fill="none"/> 
+  <polyline points="3 9 9 3" stroke="indigo" stroke-width="1" fill="none"/>
+  <polyline points="5 3 9 3 9 8" stroke="indigo" stroke-width="1" stroke-linejoin="miter" fill="none"/>
 </svg>
 

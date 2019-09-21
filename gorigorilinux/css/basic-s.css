@@ -463,8 +463,10 @@ iframe.google-maps {
 .contents .article blockquote {
     margin: 8px 6px 8px 6px;
     padding: 30px 20px;
-    border-top: 2px solid #505860;
-    border-bottom: 2px solid #505860;
+    border-top: 2px solid #D0D8E0;
+    border-bottom: 2px solid #D0D8E0;
+    font-style: italic;
+    color: #508090;
 }
 
 
