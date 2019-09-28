@@ -1,206 +1,211 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-  <atom:link href="https://gorigorilinux.net/rss.xml" rel="self" type="application/rss+xml" />
-  <title>ごりごりりぬっくす</title>
-  <link>https://gorigorilinux.net</link>
-  <description>ITブログ - LinuxメインでプログラミングとかITニュースとか雑談とかいろいろ好き勝手に話します</description>
-  <language>ja</language>
-  <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
-  <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
-  <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Sat, 21 Sep 2019 03:04:45 GMT</lastBuildDate>
-  <category>IT</category>
-  <ttl>60</ttl>
-  <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
-  <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
-  <item>
-    <title>リチャード・ストールマン氏がMITとFSFから辞任</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/002</link>
-    <description>GNUの創始者である計算機科学者のリチャード・ストールマン氏が9月16日、フリーソフトウェア財団 (FSF) の代表を離任しました。CNETなど国内外の多くのメディアで報じられています。記事：リチャード・ストールマン氏がフリーソフトウェア財団とMITの役職辞任--疑惑の投資家関連コメント巡り | CNET Japan 2019.09.17CNETの記事はVICEというサイトの下の記事を元にしています。Famed Computer Scientist Richard Stallman Described Epstein Victims As 'Entirely Willing' | VICE 2019.09.14FSFのサイトでもこの件について報告がされています。Richard M. Stallman resigns | FREE SOFTWARE FOUNDATIONOn September 16, 2019, Richard M. Stallman, founder and president of the Free Software Foundation, resigned as president and from its board of directors.&amp;nbsp;The board will be conducting a search for a new president, beginning immediately. Further details of the sear...</description>
-    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <comments>rms-resigns-mit-and-fsf</comments>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/002</guid>
-    <pubDate>Sat, 21 Sep 2019 02:50:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>UbuntuでApacheサーバを動かす (PHP+CGIモード)</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001</link>
-    <description>Ubuntu初心者です。今回はUbuntuでHTTPサーバーを起動してPHPで作ったウェブサイトを動かしてみます。Ubuntu独特の勝手を覚えるのが大変ですが、頑張りましょう!phpのインストールPHPはウェブ開発のために開発されたスクリプティング言語です。基本的にHTMLテンプレートエンジンとして使われています。aptコマンドでPHPと関連パッケージをインストールします。phpphp-cgiphp-sqlite3php-xmlphp-mbstringapache2のインストールapache2はUbuntuで使えるHTTPサーバのひとつです。これを起動すると、指定したディレクトリにあるHTMLファイルなどをウェブブラウザに表示させることができます。それではインストールしていきます。aptコマンドでapache2をインストールします。apache2ligapache2-mpm-itkapache2の設定Ubuntuでapache2の設定をするには、モジュールのロードと、設定フ...</description>
-    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <comments>setup-apache2-on-ubuntu</comments>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/ubuntu/01_settings/001</guid>
-    <pubDate>Sun, 08 Sep 2019 15:50:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>ASUSのポータブルモニター「MB16A」買いました (うまく動かない)</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/001</link>
-    <description>ノートパソコンの画面が狭いのでポータブルディスプレイが欲しくなりました。そこで早速買って来ました。ASUSのポータブル・モニター「MB16A」です。一も二もなく開封しました。USB Type-Cの端子をパソコンに接続しました。USB Type-CからType-Bに変換するアダプターも付属していました。画面がピカピカなのが好みの分かれるところかもしれませんね。写真を撮る時に自分が写りさえしなければ良いのですが。Windows 10に接続Windows 10では、まずドライバーのインストールが必要になります。DVDなどは付属していないので、インターネットからドライバを入手します。MB16AC Driver &amp; Tools | 液晶ディスプレイ | ASUS 日本ここからドライバを入手し、インストーラを起動してドライバをインストールしました。簡単に写りました。Ubuntu 18.04に接続次はUbuntu...</description>
-    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <comments>asus-portable-display-on-slackware-less-works</comments>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/001</guid>
-    <pubDate>Sun, 08 Sep 2019 12:50:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>宣言と定義 (C、C++)</title>
-    <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/004</link>
-    <description>CやJavaでは変数を使う為にまず定義をしないといけません。宣言とは宣言とは、プログラム内で使う予定の変数の名前と保持する値の型、そして初期値をコンパイラに指示することで、宣言する文を宣言文と言います。Cの場合 int a = 1;上の文により、int型の変数aを初期値1で使うことをコンパイラに伝えます。定義とは定義というのは変数のためのメモリ領域を確保することをコンパイラに指示することです。例えば int a = 1;上の文は宣言文ですが、ローカル変数 (またはグローバル変数) のaのためのメモリ領域を確保するようにコンパイラに指示しているので定義文でもあります。この領域はスタックに確保されます。定義と宣言の使い分け一般的に定義と宣言は同じ意味の言葉です。しかし厳密に言えば、C、C++の場合、extern修飾子を用いて...</description>
-    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>プログラミング</category>
-    <comments>declaration-and-definition</comments>
-    <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/004</guid>
-    <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>ポインタを理解する</title>
-    <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/003</link>
-    <description>はしがきC言語の難関がポインタです。ポインタを理解し使いこなすには若干想像力と慣れが必要ですね。今回はそんなポインタについて簡単にまとめたいと思います。ポインタの宣言ポインタが難しい原因。まずはっきり言ってC言語のポインタの文法が分かりにくいというのがあると思います。下はポインタ変数を宣言する文の例です。 int *a;整数型のポインタを宣言しています。同じことは次のようにも書けます。 int* a;微妙に違います。C言語では同じ型の変数はカンマで区切って一度に宣言できます。 int *a, *b, *c;これだと整数型のポインタを3個宣言したことになります。しかし次のようだと違います。 int *a, b, c;これだとポインタは最初のaだけで、bとcはただの整数です。では int* a, b, c;だとどうでしょうか。実はこれも同じでポイン...</description>
-    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>プログラミング</category>
-    <comments>pointer</comments>
-    <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/003</guid>
-    <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>メモリの構造 - スタックとヒープ</title>
-    <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/002</link>
-    <description>はしがきプログラムはメモリというデータを記憶する領域を使って動作します。メモリがどんな風に使われているのかイメージができるとプログラミングも面白くなりますし理解も深まります。プログラムで使われるメモリは使い方によって下のように分類されています。コード領域 - コンピュータへの命令を記憶する固定領域静的領域 - 静的データを記憶する固定領域スタック - サイズの固定した可変データヒープ - サイズを固定しない可変データなおC/C++以外の言語では特に意識しなくても大丈夫な設計になっています。コード領域プログラムを起動するとハードディスクなどの長期保存領域からメモリという短期保存領域にプログラムがロードされます。プログラムはコンピュータへの命令の手順書ですが、この命令の手順書自体もメ...</description>
-    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>プログラミング</category>
-    <comments>stack-and-heap</comments>
-    <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/002</guid>
-    <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>手続き型プログラムの基本 - 逐次処理・条件分岐・繰り返し</title>
-    <link>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/001</link>
-    <description>はしがきプログラムは機械語で実行されるコンピュータへの命令のまとまりですが、それだけだと理解が難しいので、色々整理する方法があります。今回は手続き型言語と呼ばれる最もポピュラーなプログラミング手法において使われている基本的なプログラムの構造をまとめます。プログラムがどんな構造になっているかという分類法が大昔に作られましたが、それは今でもある程度そのまま使えます。大別すると次の3つになります逐次処理条件分岐繰り返しプログラムの動作順序のことをアルゴリズムと言いますが、全てのアルゴリズムは上の3つのパターンの組合せだという考え方です。実は他にもあって、ジャンプしかしこれは特別な場合を除いて使わない方が良いとされています。この基本的な考え方で作られたプログラミング方...</description>
-    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>プログラミング</category>
-    <comments>2-way-of-proc</comments>
-    <guid>https://gorigorilinux.net/article.php?entry=prog/general/01_basic/001</guid>
-    <pubDate>Sat, 24 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Bluetoothが繋がらなくなった場合</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/slackware/02_fixing/002</link>
-    <description>Slackware14.2を使っていて、色々更新などしていたらいつの間にかBluetoothが使えなくなっていました。このようにXFCEのステータスバーにあるBluetoothのアイコンが灰色になっていて、メニューを開いて「Bluetoothをオンにする」をクリックしても使えるようになりません。ググって解決しました。ファームウェアが入っていなかったdmesgコマンドでシステムエラーの内容を確認するrootユーザになってdmesgコマンドを打ちます。dmesgはLinux起動時のメッセージを表示するコマンドです。プロンプト$ dmesg [Enter]… (中略) …[ 26.230321] Bluetooth: hci0: Bootloader revision 0.0 build 26 week 38 2015[ 26.231305] Bluetooth: hci0: Device revision is 16[ 26.231308] Bluetooth: hci0: Secure boot is enabled[ 26.231311] Bluetooth: hci0: OTP lock is enabled[ 26.231313] Bluetooth: hci0: API lock is enabled[ 26.231315] Bluetooth: hci0: Debug loc...</description>
-    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <comments>add-bluetooth</comments>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/slackware/02_fixing/002</guid>
-    <pubDate>Fri, 23 Aug 2019 04:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>夏休みでした</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/002</link>
-    <description>15日から18日はお盆休みでした。その間の成果です。Spring Bootの勉強中先日買ったSpring Bootの本ですが、結構良いです。初版が古いので、Springのバージョンも昔のものですが、現在の最新版のSTS (Spring Tools Suite) とJVM (12) で問題なく動作します。内容はSTSのインストールインターネットからSpringプロジェクトの雛形をダウンロード依存性注入の説明 (各種アノテーションの使い方)データベースの使用ウェブアプリケーションの作成 (RESTアプリケーションとブラウザのウェブアプリケーション両方)クラウドへのデプロイSpringをサッと短時間で勉強したいという人にはおすすめです。Slackware-currentへの移行実験しましたSlackwareには安定板の14.2とローリングリリースのcurrentがあり、私は安定版の方をずっと使っていたのですが、今日一念発起して別の...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/002</guid>
-    <pubDate>Sun, 18 Aug 2019 13:10:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>本を買いました。</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/001</link>
-    <description>今日は近所の本屋に行ってプログラミングの本を買って来ました。一冊ずつ紹介します。はじめての Sprint Boot著：槙俊明出版：工学社これから仕事で使うのでSpringBootの本を。Javaプログラマなのに、こんな初歩的なことも知らないで何年やってきたのかと思われそうですが、もう3年以上はこの業界で仕事させてもらっています。Springの案件は初めてなんです。プロジェクト立ち上げではなく、手伝い程度の仕事なので、今から付け焼刃で十分ですよ。みんなの GO言語著：松木雅幸、mattn、藤原俊一郎、中島大一、上田拓也、牧大輔、鈴木健太出版：技術評論社これは仕事で使う訳じゃないですが個人的に興味があるので買いました。表紙から察するに小学生向けかな。薄いし私には丁度良さそうです。Python機械学習入門著：大曽根圭輔、関喜...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/03_201908/001</guid>
-    <pubDate>Sun, 04 Aug 2019 13:50:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Simplenote - フリーなマルチプラットフォーム同期型ノートアプリ</title>
-    <link>https://gorigorilinux.net/article.php?entry=apps/linux/02_texteditors/001</link>
-    <description>Simplenoteはノートアプリです。最大の特徴はMac、Windows、Linux、iOS、Androidのどのデバイスからも同期できることです。当然、ウェブブラウザからの利用も可能です。例えば出先でスマホしか持っていないという時でもササッとメモをとり、家でパソコンから細かく調べる際の参考にするなどの使い方ができます。要するにEvernoteの代替品です。EvernoteはLinux版のクライアントが無いので、Simplenoteがあると便利です。主な機能記事を書く記事はプレーンテキスト形式で保存されます。マークダウンプレビュー機能マークダウン記法も使えます。マークダウンプレビュー画面に切り替えることでウェブサイトのような視覚的効果を確認できます。タグづけノートの一つ一つに好きなタグを好きなだけ付けることができます。タグごとにノートを抽出し...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>アプリケーション</category>
-    <guid>https://gorigorilinux.net/article.php?entry=apps/linux/02_texteditors/001</guid>
-    <pubDate>Fri, 26 Jul 2019 16:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>壁掛け時計買いました</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/002</link>
-    <description>池袋のビックカメラで壁掛け時計買いました。セイコークロック株式会社の電波クロックです。このボタンを長押しして時間を調整します。正直ちょっと面倒くさかったです。上手くやれば電波を受信して時間を合わせられるようなんですがね。いずれにしても一度合わせられれば、あとは勝手に時間を調整してくれるようになります。やっぱり壁に時計があると時間を簡単に確認できて良いですね。</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/002</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>カメラ買ったった</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/001</link>
-    <description>カメラ買いました。Nikonのデジタルカメラ「COOLPIX B500」です。3万円くらいでした。軽いです。外ではまだ使ったことがありませんが、結構ズームがしやすいです。これでネットのフリー素材に頼らず写真をブログなどに使えます。やっぱ素材は自分で作んないとですよね……。明日から作品づくりします。</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/diary/02_201907/001</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Wacomタブレットを使えるようにする</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/slackware/01_settings/006</link>
-    <description>まず、以下のサイトに行き、必要なソースをダウンロードします。The Linux Wacom Projectカーネルドライバー (Kernel Driver) というリンクからGithubのサイトに飛びます。GithubのWikiページに飛ぶので、Codeタブを開きます。GithubのCodeページからReleaseタブを開きます。GithubのReleaseページに飛んだら下にスクロールします。GithubのReleaseをスクロールし、「input-wacom-XXXX.tar.bz2」(XXXXは最新の数字) をクリックしてドライバーのソースをダウンロードします。ソースをダウンロードしたら、以下の手順で解凍、ビルド、インストールを行います。(バージョンが0.43.0の場合)プロンプト$ tar -xf input-wacom-input-wacom-0.43.0.tar.gz [Enter]プロンプト$ cd input-wacom-input-wacom-0.43.0 [Enter]プロンプト$ ./autogen.sh prefix=/usr libdir=/lib64 [Enter]autoreconf: Entering directory `.'autoreconf: configure.ac: not...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/slackware/01_settings/006</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>growisofs - DVD-RにISOイメージを焼き込む</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/commands/08_dvd/001</link>
-    <description>growisofsはISOイメージをDVDに書き込むことができるコマンドです。例 growisofs -dvd-compat -Z /dev/sr0 /home/あなた/フォルダ/archlinux-2019.06.01-x86_64.isogrowisofs … コマンド名です。-dvd-compat … DVD-Rに書き込む時はこのオプションを付けます。-Z … DVDに新規書き込みするときのフラグでこの後に続けてデバイスのパス (例:/dev/sr0)を置きます。〜.iso … ISOイメージファイルです。絶対パス、相対パスどちらでも良いです。ISOファイルをダウンロードする下のリンクにはISOファイルの一例としてUbuntuのインストールディスクがあります。Ubuntu Desktop 日本語 Remixのダウンロード | Ubuntu Japanese Team上のサイトのISOイメージをダウンロードします。出力先を決めるDVDを入れますlsblkコマンドでDVDドライブを探します。プロンプト$ lsblk --output=KNAME,LABEL,SIZE,TYPE,MODEL | sortKNAME ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/08_dvd/001</guid>
-    <pubDate>Sat, 22 Jun 2019 03:40:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>我が家のゴールデン・コンビ</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/self/02_gadgets/005</link>
-    <description>おそろいの2台ASUSのVIVOBOOKをまた買いました。TP203Nです。4万以下で買えるので比較的お手ごろです。MacBook Airとよく似ています。今日から我が家のゴールデンコンビです。見た目はMacの方がカッコいいです。写真だと見分けつきませんが。背面です。それにしても良く似ているから一瞬くらいなら人を騙せそうです。Mac使いこなせないからこのVivoBookを何とかMacに見せるしかありません (Mac買った時についてきたAppleステッカーを捨ててしまったことが悔やまれます……)。金のVivoBookの使い道は今考え中です。タブレットモードができるのが良い所。このサイト的にはGNOMEのLinuxを入れてタッチスクリーンの動作を試してみるのを直近の目標とします。金のVivoBook金のVivoBookにManjaro Linux GNOME editionを入れてみました。思ったよりもはるかに簡単過ぎ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/self/02_gadgets/005</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>私のMacBook Airのご紹介</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/self/02_gadgets/004</link>
-    <description>令和元年明けましておめでとうございます。今日は私の持っているMacBook Airのご紹介をさせていただきます。  仕様   価格  134,800円(税別)  ディスプレイ  Retinaディスプレイ (13インチ)  Touch ID  Touch ID内蔵  仕上げ  ゴールド  個人的評価 良い点   トラックパッドの感度が非常に良いです。モタつきが一切ありません。  画面が高精細で美しく、また縦横比が16:10なので縦に狭く感じることがありません。  ダークモードの画面が見やすく、ゴールドの外観とも合っています。  指紋認証は便利で良いです。  高過ぎない価格設定。レッツノートやVAIOより安い点は良いです。  電源ボタンがないのですが、フタを開けると自動的に起動します。  外観のデザイン的に「これはマズい」ようなところはないです。  キーボードが光るので暗いところでも見...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/self/02_gadgets/004</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>コメント欄のマークダウンの書き方</title>
-    <link>https://gorigorilinux.net/article.php?entry=misc/self/01_self/003</link>
-    <description> このサイトのコメント欄ではマークダウン(Markdown)という記法をお使いいただけます。  マークダウンの書き方は基本的に下にリストアップしたサイトを参考にしていますが、このサイト独自実装になっていて微妙に違うのでこの記事で例を出して説明したいと思いますので宜しければご覧になってください。    Githubのマークダウン  多分最も有名な文書だと思われます。    CommonMark 0.29 仕様  CommonMarkはあいまいなところのあるマークダウンの厳密なルールを提案したものです。ここまでしっかり作っていません。    CommonMark 簡易説明  CommonMarkの簡単な例です。    Wikipediaのマークダウン  基本的な内容がまとまっています。    記法の例 見出し タイトルなど見出しとなる文は行頭に「#」を付けることで表現できます。 マークダウン   # 見出し1 ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/article.php?entry=misc/self/01_self/003</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>ロリポおじさんが復活? ロリポをなめるなと咆哮!!!!</title>
-    <link>https://gorigorilinux.net/article.php?entry=itnews/2019/06_june/001</link>
-    <description>いやぁ〜ついに来ましたよこの時が。ロリポをなめるな！レンサバ界のドン露璃舗悪慈酸が復活！？｜ロリポップ！レンタルサーバー https://t.co/ylVxVOR5hO #ロリポをなめるな&amp;mdash; 田中喬之＠ごりごりりぬっくす管理人 (@goodslacktanaka) 2019年6月13日クォリティ高っか!!露璃舗悪慈酸=ロリポおじさんって誰？と思いましたが、レンタルサーバ・ロリポップのマスコットであり、どうやら2年前に溶鉱炉に沈められていたようです。どうりで見たことないと思いました。ロリポップはとにかく遅い、重い、障害多い、セキュリティ弱い、などの弱点が指摘され「安かろう悪かろう」なサーバと見られがちです。しかしそれは違うぞ、と言う訳ですから、低価格が魅力だけど使い勝手とか大丈夫かな…と思っている方々の不安を払拭する激作となっており...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>ITニュース</category>
-    <guid>https://gorigorilinux.net/article.php?entry=itnews/2019/06_june/001</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>find - ファイルを探す</title>
-    <link>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/004</link>
-    <description>findコマンドはディレクトリを指定し、そこから辿れる全てファイルの一覧を表示します。引数の構文 find [オプション] [パス] [エクスプレッション]findコマンドではオプションを指定する機会はあまりないと思います。つまり、findの後にパスを指定して、その後の[エクスプレッション]によって検索条件を制御します。[エクスプレッション]には[オプション]、[テスト]、[アクション]の3種類があります。ディレクトリ内のファイルを全て表示する普通に実行するfindコマンドを引数なしで実行すると、現在の作業ディレクトリから辿れる全てのディレクトリとファイルの一覧を出力します。プロンプト$ find [Enter]../.bash_profile./.mozilla./.mozilla/systemextensionsdev./.mozilla/extensions./.mozilla/firefox./.mozilla/firefox/1d5vmv5t.default./.mozilla/firefox/1d5vmv5t.default/prefs.js./.mo...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/article.php?entry=linux/commands/02_filesystem/004</guid>
-    <pubDate>Mon, 10 Jun 2019 14:00:00 GMT</pubDate>
-  </item>
-</channel>
+  <channel>
+    <atom:link href="https://gorigorilinux.net/rss.xml" rel="self" type="application/rss+xml" />
+    <title>ごりごりりぬっくす</title>
+    <link>https://gorigorilinux.net</link>
+    <description>ITブログ - LinuxメインでプログラミングとかITニュースとか雑談とかいろいろ好き勝手に話します</description>
+    <language>ja</language>
+    <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
+    <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
+    <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
+    <lastBuildDate>Sat, 21 Sep 2019 03:04:45 GMT</lastBuildDate>
+    <category>IT</category>
+    <ttl>60</ttl>
+    <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
+    <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+    <item>
+      <title>リチャード・ストールマン氏がMITとFSFから辞任</title>
+      <link>https://gorigorilinux.net/article.php?entry=rms-resigns-mit-and-fsf</link>
+      <description>GNUの創始者である計算機科学者のリチャード・ストールマン氏が9月16日、フリーソフトウェア財団 (FSF) の代表を離任しました。CNETなど国内外の多くのメディアで報じられています。記事：リチャード・ストールマン氏がフリーソフトウェア財団とMITの役職辞任--疑惑の投資家関連コメント巡り | CNET Japan 2019.09.17CNETの記事はVICEというサイトの下の記事を元にしています。Famed Computer Scientist Richard Stallman Described Epstein Victims As 'Entirely Willing' | VICE 2019.09.14FSFのサイトでもこの件について報告がされています。Richard M. Stallman resigns | FREE SOFTWARE FOUNDATIONOn September 16, 2019, Richard M. Stallman, founder and president of the Free Software Foundation, resigned as president and from its board of directors.&amp;nbsp;The board will be conducting a search for a new president, beginning immediately. Further details of the sear...</description>
+      <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <comments>rms-resigns-mit-and-fsf</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=rms-resigns-mit-and-fsf</guid>
+      <pubDate>Sat, 21 Sep 2019 02:50:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>UbuntuでApacheサーバを動かす (PHP+CGIモード)</title>
+      <link>https://gorigorilinux.net/article.php?entry=setup-apache2-on-ubuntu</link>
+      <description>Ubuntu初心者です。今回はUbuntuでHTTPサーバーを起動してPHPで作ったウェブサイトを動かしてみます。Ubuntu独特の勝手を覚えるのが大変ですが、頑張りましょう!phpのインストールPHPはウェブ開発のために開発されたスクリプティング言語です。基本的にHTMLテンプレートエンジンとして使われています。aptコマンドでPHPと関連パッケージをインストールします。phpphp-cgiphp-sqlite3php-xmlphp-mbstringapache2のインストールapache2はUbuntuで使えるHTTPサーバのひとつです。これを起動すると、指定したディレクトリにあるHTMLファイルなどをウェブブラウザに表示させることができます。それではインストールしていきます。aptコマンドでapache2をインストールします。apache2ligapache2-mpm-itkapache2の設定Ubuntuでapache2の設定をするには、モジュールのロードと、設定フ...</description>
+      <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>Linux</category>
+      <comments>setup-apache2-on-ubuntu</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=setup-apache2-on-ubuntu</guid>
+      <pubDate>Sun, 08 Sep 2019 15:50:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ASUSのポータブルモニター「MB16A」買いました (うまく動かない)</title>
+      <link>https://gorigorilinux.net/article.php?entry=asus-portable-display-on-slackware-less-works</link>
+      <description>ノートパソコンの画面が狭いのでポータブルディスプレイが欲しくなりました。そこで早速買って来ました。ASUSのポータブル・モニター「MB16A」です。一も二もなく開封しました。USB Type-Cの端子をパソコンに接続しました。USB Type-CからType-Bに変換するアダプターも付属していました。画面がピカピカなのが好みの分かれるところかもしれませんね。写真を撮る時に自分が写りさえしなければ良いのですが。Windows 10に接続Windows 10では、まずドライバーのインストールが必要になります。DVDなどは付属していないので、インターネットからドライバを入手します。MB16AC Driver &amp; Tools | 液晶ディスプレイ | ASUS 日本ここからドライバを入手し、インストーラを起動してドライバをインストールしました。簡単に写りました。Ubuntu 18.04に接続次はUbuntu...</description>
+      <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <comments>asus-portable-display-on-slackware-less-works</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=asus-portable-display-on-slackware-less-works</guid>
+      <pubDate>Sun, 08 Sep 2019 12:50:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>宣言と定義 (C、C++)</title>
+      <link>https://gorigorilinux.net/article.php?entry=declaration-and-definition</link>
+      <description>CやJavaでは変数を使う為にまず定義をしないといけません。宣言とは宣言とは、プログラム内で使う予定の変数の名前と保持する値の型、そして初期値をコンパイラに指示することで、宣言する文を宣言文と言います。Cの場合 int a = 1;上の文により、int型の変数aを初期値1で使うことをコンパイラに伝えます。定義とは定義というのは変数のためのメモリ領域を確保することをコンパイラに指示することです。例えば int a = 1;上の文は宣言文ですが、ローカル変数 (またはグローバル変数) のaのためのメモリ領域を確保するようにコンパイラに指示しているので定義文でもあります。この領域はスタックに確保されます。定義と宣言の使い分け一般的に定義と宣言は同じ意味の言葉です。しかし厳密に言えば、C、C++の場合、extern修飾子を用いて...</description>
+      <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>プログラミング</category>
+      <comments>declaration-and-definition</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=declaration-and-definition</guid>
+      <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ポインタを理解する</title>
+      <link>https://gorigorilinux.net/article.php?entry=pointer</link>
+      <description>はしがきC言語の難関がポインタです。ポインタを理解し使いこなすには若干想像力と慣れが必要ですね。今回はそんなポインタについて簡単にまとめたいと思います。ポインタの宣言ポインタが難しい原因。まずはっきり言ってC言語のポインタの文法が分かりにくいというのがあると思います。下はポインタ変数を宣言する文の例です。 int *a;整数型のポインタを宣言しています。同じことは次のようにも書けます。 int* a;微妙に違います。C言語では同じ型の変数はカンマで区切って一度に宣言できます。 int *a, *b, *c;これだと整数型のポインタを3個宣言したことになります。しかし次のようだと違います。 int *a, b, c;これだとポインタは最初のaだけで、bとcはただの整数です。では int* a, b, c;だとどうでしょうか。実はこれも同じでポイン...</description>
+      <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>プログラミング</category>
+      <comments>pointer</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=pointer</guid>
+      <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>メモリの構造 - スタックとヒープ</title>
+      <link>https://gorigorilinux.net/article.php?entry=stack-and-heap</link>
+      <description>はしがきプログラムはメモリというデータを記憶する領域を使って動作します。メモリがどんな風に使われているのかイメージができるとプログラミングも面白くなりますし理解も深まります。プログラムで使われるメモリは使い方によって下のように分類されています。コード領域 - コンピュータへの命令を記憶する固定領域静的領域 - 静的データを記憶する固定領域スタック - サイズの固定した可変データヒープ - サイズを固定しない可変データなおC/C++以外の言語では特に意識しなくても大丈夫な設計になっています。コード領域プログラムを起動するとハードディスクなどの長期保存領域からメモリという短期保存領域にプログラムがロードされます。プログラムはコンピュータへの命令の手順書ですが、この命令の手順書自体もメ...</description>
+      <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>プログラミング</category>
+      <comments>stack-and-heap</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=stack-and-heap</guid>
+      <pubDate>Sun, 25 Aug 2019 07:10:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>手続き型プログラムの基本 - 逐次処理・条件分岐・繰り返し</title>
+      <link>https://gorigorilinux.net/article.php?entry=2-way-of-proc</link>
+      <description>はしがきプログラムは機械語で実行されるコンピュータへの命令のまとまりですが、それだけだと理解が難しいので、色々整理する方法があります。今回は手続き型言語と呼ばれる最もポピュラーなプログラミング手法において使われている基本的なプログラムの構造をまとめます。プログラムがどんな構造になっているかという分類法が大昔に作られましたが、それは今でもある程度そのまま使えます。大別すると次の3つになります逐次処理条件分岐繰り返しプログラムの動作順序のことをアルゴリズムと言いますが、全てのアルゴリズムは上の3つのパターンの組合せだという考え方です。実は他にもあって、ジャンプしかしこれは特別な場合を除いて使わない方が良いとされています。この基本的な考え方で作られたプログラミング方...</description>
+      <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>プログラミング</category>
+      <comments>2-way-of-proc</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=2-way-of-proc</guid>
+      <pubDate>Sat, 24 Aug 2019 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Bluetoothが繋がらなくなった場合</title>
+      <link>https://gorigorilinux.net/article.php?entry=add-bluetooth</link>
+      <description>Slackware14.2を使っていて、色々更新などしていたらいつの間にかBluetoothが使えなくなっていました。このようにXFCEのステータスバーにあるBluetoothのアイコンが灰色になっていて、メニューを開いて「Bluetoothをオンにする」をクリックしても使えるようになりません。ググって解決しました。ファームウェアが入っていなかったdmesgコマンドでシステムエラーの内容を確認するrootユーザになってdmesgコマンドを打ちます。dmesgはLinux起動時のメッセージを表示するコマンドです。プロンプト$ dmesg [Enter]… (中略) …[ 26.230321] Bluetooth: hci0: Bootloader revision 0.0 build 26 week 38 2015[ 26.231305] Bluetooth: hci0: Device revision is 16[ 26.231308] Bluetooth: hci0: Secure boot is enabled[ 26.231311] Bluetooth: hci0: OTP lock is enabled[ 26.231313] Bluetooth: hci0: API lock is enabled[ 26.231315] Bluetooth: hci0: Debug loc...</description>
+      <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>Linux</category>
+      <comments>add-bluetooth</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=add-bluetooth</guid>
+      <pubDate>Fri, 23 Aug 2019 04:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>夏休みでした</title>
+      <link>https://gorigorilinux.net/article.php?entry=practicing-spring</link>
+      <description>15日から18日はお盆休みでした。その間の成果です。Spring Bootの勉強中先日買ったSpring Bootの本ですが、結構良いです。初版が古いので、Springのバージョンも昔のものですが、現在の最新版のSTS (Spring Tools Suite) とJVM (12) で問題なく動作します。内容はSTSのインストールインターネットからSpringプロジェクトの雛形をダウンロード依存性注入の説明 (各種アノテーションの使い方)データベースの使用ウェブアプリケーションの作成 (RESTアプリケーションとブラウザのウェブアプリケーション両方)クラウドへのデプロイSpringをサッと短時間で勉強したいという人にはおすすめです。Slackware-currentへの移行実験しましたSlackwareには安定板の14.2とローリングリリースのcurrentがあり、私は安定版の方をずっと使っていたのですが、今日一念発起して別の...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <comments>practicing-spring</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=practicing-spring</guid>
+      <pubDate>Sun, 18 Aug 2019 13:10:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>本を買いました。</title>
+      <link>https://gorigorilinux.net/article.php?entry=bought-programming-books</link>
+      <description>今日は近所の本屋に行ってプログラミングの本を買って来ました。一冊ずつ紹介します。はじめての Sprint Boot著：槙俊明出版：工学社これから仕事で使うのでSpringBootの本を。Javaプログラマなのに、こんな初歩的なことも知らないで何年やってきたのかと思われそうですが、もう3年以上はこの業界で仕事させてもらっています。Springの案件は初めてなんです。プロジェクト立ち上げではなく、手伝い程度の仕事なので、今から付け焼刃で十分ですよ。みんなの GO言語著：松木雅幸、mattn、藤原俊一郎、中島大一、上田拓也、牧大輔、鈴木健太出版：技術評論社これは仕事で使う訳じゃないですが個人的に興味があるので買いました。表紙から察するに小学生向けかな。薄いし私には丁度良さそうです。Python機械学習入門著：大曽根圭輔、関喜...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <comments>bought-programming-books</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=bought-programming-books</guid>
+      <pubDate>Sun, 04 Aug 2019 13:50:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Simplenote - フリーなマルチプラットフォーム同期型ノートアプリ</title>
+      <link>https://gorigorilinux.net/article.php?entry=simplenote</link>
+      <description>Simplenoteはノートアプリです。最大の特徴はMac、Windows、Linux、iOS、Androidのどのデバイスからも同期できることです。当然、ウェブブラウザからの利用も可能です。例えば出先でスマホしか持っていないという時でもササッとメモをとり、家でパソコンから細かく調べる際の参考にするなどの使い方ができます。要するにEvernoteの代替品です。EvernoteはLinux版のクライアントが無いので、Simplenoteがあると便利です。主な機能記事を書く記事はプレーンテキスト形式で保存されます。マークダウンプレビュー機能マークダウン記法も使えます。マークダウンプレビュー画面に切り替えることでウェブサイトのような視覚的効果を確認できます。タグづけノートの一つ一つに好きなタグを好きなだけ付けることができます。タグごとにノートを抽出し...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>アプリケーション</category>
+      <comments>simplenote</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=simplenote</guid>
+      <pubDate>Fri, 26 Jul 2019 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>壁掛け時計買いました</title>
+      <link>https://gorigorilinux.net/article.php?entry=my-wallclock</link>
+      <description>池袋のビックカメラで壁掛け時計買いました。セイコークロック株式会社の電波クロックです。このボタンを長押しして時間を調整します。正直ちょっと面倒くさかったです。上手くやれば電波を受信して時間を合わせられるようなんですがね。いずれにしても一度合わせられれば、あとは勝手に時間を調整してくれるようになります。やっぱり壁に時計があると時間を簡単に確認できて良いですね。</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <comments>my-wallclock</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=my-wallclock</guid>
+      <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>カメラ買ったった</title>
+      <link>https://gorigorilinux.net/article.php?entry=my-first-camera</link>
+      <description>カメラ買いました。Nikonのデジタルカメラ「COOLPIX B500」です。3万円くらいでした。軽いです。外ではまだ使ったことがありませんが、結構ズームがしやすいです。これでネットのフリー素材に頼らず写真をブログなどに使えます。やっぱ素材は自分で作んないとですよね……。明日から作品づくりします。</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <comments>my-first-camera</comments>
+      <guid>https://gorigorilinux.net/article.php?entry=my-first-camera</guid>
+      <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Wacomタブレットを使えるようにする</title>
+      <link>https://gorigorilinux.net/article.php?entry=setupwacom</link>
+      <description>まず、以下のサイトに行き、必要なソースをダウンロードします。The Linux Wacom Projectカーネルドライバー (Kernel Driver) というリンクからGithubのサイトに飛びます。GithubのWikiページに飛ぶので、Codeタブを開きます。GithubのCodeページからReleaseタブを開きます。GithubのReleaseページに飛んだら下にスクロールします。GithubのReleaseをスクロールし、「input-wacom-XXXX.tar.bz2」(XXXXは最新の数字) をクリックしてドライバーのソースをダウンロードします。ソースをダウンロードしたら、以下の手順で解凍、ビルド、インストールを行います。(バージョンが0.43.0の場合)プロンプト$ tar -xf input-wacom-input-wacom-0.43.0.tar.gz [Enter]プロンプト$ cd input-wacom-input-wacom-0.43.0 [Enter]プロンプト$ ./autogen.sh prefix=/usr libdir=/lib64 [Enter]autoreconf: Entering directory `.'autoreconf: configure.ac: not...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>Linux</category>
+      <guid>https://gorigorilinux.net/article.php?entry=setupwacom</guid>
+      <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>growisofs - DVD-RにISOイメージを焼き込む</title>
+      <link>https://gorigorilinux.net/article.php?entry=growisofs</link>
+      <description>growisofsはISOイメージをDVDに書き込むことができるコマンドです。例 growisofs -dvd-compat -Z /dev/sr0 /home/あなた/フォルダ/archlinux-2019.06.01-x86_64.isogrowisofs … コマンド名です。-dvd-compat … DVD-Rに書き込む時はこのオプションを付けます。-Z … DVDに新規書き込みするときのフラグでこの後に続けてデバイスのパス (例:/dev/sr0)を置きます。〜.iso … ISOイメージファイルです。絶対パス、相対パスどちらでも良いです。ISOファイルをダウンロードする下のリンクにはISOファイルの一例としてUbuntuのインストールディスクがあります。Ubuntu Desktop 日本語 Remixのダウンロード | Ubuntu Japanese Team上のサイトのISOイメージをダウンロードします。出力先を決めるDVDを入れますlsblkコマンドでDVDドライブを探します。プロンプト$ lsblk --output=KNAME,LABEL,SIZE,TYPE,MODEL | sortKNAME ...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>Linux</category>
+      <guid>https://gorigorilinux.net/article.php?entry=growisofs</guid>
+      <pubDate>Sat, 22 Jun 2019 03:40:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>我が家のゴールデン・コンビ</title>
+      <link>https://gorigorilinux.net/article.php?entry=my-golden-combi</link>
+      <description>おそろいの2台ASUSのVIVOBOOKをまた買いました。TP203Nです。4万以下で買えるので比較的お手ごろです。MacBook Airとよく似ています。今日から我が家のゴールデンコンビです。見た目はMacの方がカッコいいです。写真だと見分けつきませんが。背面です。それにしても良く似ているから一瞬くらいなら人を騙せそうです。Mac使いこなせないからこのVivoBookを何とかMacに見せるしかありません (Mac買った時についてきたAppleステッカーを捨ててしまったことが悔やまれます……)。金のVivoBookの使い道は今考え中です。タブレットモードができるのが良い所。このサイト的にはGNOMEのLinuxを入れてタッチスクリーンの動作を試してみるのを直近の目標とします。金のVivoBook金のVivoBookにManjaro Linux GNOME editionを入れてみました。思ったよりもはるかに簡単過ぎ...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <guid>https://gorigorilinux.net/article.php?entry=my-golden-combi</guid>
+      <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>私のMacBook Airのご紹介</title>
+      <link>https://gorigorilinux.net/article.php?entry=mymacbookair</link>
+      <description>令和元年明けましておめでとうございます。今日は私の持っているMacBook Airのご紹介をさせていただきます。  仕様   価格  134,800円(税別)  ディスプレイ  Retinaディスプレイ (13インチ)  Touch ID  Touch ID内蔵  仕上げ  ゴールド  個人的評価 良い点   トラックパッドの感度が非常に良いです。モタつきが一切ありません。  画面が高精細で美しく、また縦横比が16:10なので縦に狭く感じることがありません。  ダークモードの画面が見やすく、ゴールドの外観とも合っています。  指紋認証は便利で良いです。  高過ぎない価格設定。レッツノートやVAIOより安い点は良いです。  電源ボタンがないのですが、フタを開けると自動的に起動します。  外観のデザイン的に「これはマズい」ようなところはないです。  キーボードが光るので暗いところでも見...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <guid>https://gorigorilinux.net/article.php?entry=mymacbookair</guid>
+      <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>コメント欄のマークダウンの書き方</title>
+      <link>https://gorigorilinux.net/article.php?entry=markdown</link>
+      <description> このサイトのコメント欄ではマークダウン(Markdown)という記法をお使いいただけます。  マークダウンの書き方は基本的に下にリストアップしたサイトを参考にしていますが、このサイト独自実装になっていて微妙に違うのでこの記事で例を出して説明したいと思いますので宜しければご覧になってください。    Githubのマークダウン  多分最も有名な文書だと思われます。    CommonMark 0.29 仕様  CommonMarkはあいまいなところのあるマークダウンの厳密なルールを提案したものです。ここまでしっかり作っていません。    CommonMark 簡易説明  CommonMarkの簡単な例です。    Wikipediaのマークダウン  基本的な内容がまとまっています。    記法の例 見出し タイトルなど見出しとなる文は行頭に「#」を付けることで表現できます。 マークダウン   # 見出し1 ...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>雑文</category>
+      <guid>https://gorigorilinux.net/article.php?entry=markdown</guid>
+      <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ロリポおじさんが復活? ロリポをなめるなと咆哮!!!!</title>
+      <link>https://gorigorilinux.net/article.php?entry=lolipo-wo-nameruna</link>
+      <description>いやぁ〜ついに来ましたよこの時が。ロリポをなめるな！レンサバ界のドン露璃舗悪慈酸が復活！？｜ロリポップ！レンタルサーバー https://t.co/ylVxVOR5hO #ロリポをなめるな&amp;mdash; 田中喬之＠ごりごりりぬっくす管理人 (@goodslacktanaka) 2019年6月13日クォリティ高っか!!露璃舗悪慈酸=ロリポおじさんって誰？と思いましたが、レンタルサーバ・ロリポップのマスコットであり、どうやら2年前に溶鉱炉に沈められていたようです。どうりで見たことないと思いました。ロリポップはとにかく遅い、重い、障害多い、セキュリティ弱い、などの弱点が指摘され「安かろう悪かろう」なサーバと見られがちです。しかしそれは違うぞ、と言う訳ですから、低価格が魅力だけど使い勝手とか大丈夫かな…と思っている方々の不安を払拭する激作となっており...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>ITニュース</category>
+      <guid>https://gorigorilinux.net/article.php?entry=lolipo-wo-nameruna</guid>
+      <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>find - ファイルを探す</title>
+      <link>https://gorigorilinux.net/article.php?entry=find</link>
+      <description>findコマンドはディレクトリを指定し、そこから辿れる全てファイルの一覧を表示します。引数の構文 find [オプション] [パス] [エクスプレッション]findコマンドではオプションを指定する機会はあまりないと思います。つまり、findの後にパスを指定して、その後の[エクスプレッション]によって検索条件を制御します。[エクスプレッション]には[オプション]、[テスト]、[アクション]の3種類があります。ディレクトリ内のファイルを全て表示する普通に実行するfindコマンドを引数なしで実行すると、現在の作業ディレクトリから辿れる全てのディレクトリとファイルの一覧を出力します。プロンプト$ find [Enter]../.bash_profile./.mozilla./.mozilla/systemextensionsdev./.mozilla/extensions./.mozilla/firefox./.mozilla/firefox/1d5vmv5t.default./.mozilla/firefox/1d5vmv5t.default/prefs.js./.mo...</description>
+      <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
+      <category>Linux</category>
+      <guid>https://gorigorilinux.net/article.php?entry=find</guid>
+      <pubDate>Mon, 10 Jun 2019 14:00:00 GMT</pubDate>
+    </item>
+  </channel>
 </rss>

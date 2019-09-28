@@ -30,7 +30,7 @@ function onLoad() {
     
     select(".nav ul li a").forEach(function(element) {
         if (element.href.indexOf(location.search) >= 0) {
-            element.href = 'javascript:void(0);';
+            //element.href = 'javascript:void(0);';
         }
     });
 

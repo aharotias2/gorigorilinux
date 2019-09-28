@@ -20,6 +20,6 @@ $dao->insert($articleName, $userName, $mailAddress, $comment, $anchor);
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta http-equiv="refresh" content="0; URL='article.php?entry=<?php echo $entry; ?>'" />
+        <meta http-equiv="refresh" content="0; URL='entry-<?php echo $entry; ?>'" />
     </head>
 </html>

@@ -6,7 +6,7 @@ include($localPrefix . "functions.php");
 $category = $_GET['category'];
 $jaCategory = null;
 foreach (explode("/", $category) as $name) {
-    if (sizeof($jaCategory) > 0) {
+    if (count($jaCategory) > 0) {
         $jaCategory .= "/";
     }
     $name = translate($name);
@@ -32,16 +32,17 @@ foreach (explode("/", $category) as $name) {
     </head>
     <body>
         <?php include($localPrefix . "header.php"); ?>
-        <?php if ($category != "") { ?>
-            <div class="pankuzu">
-                <?php ttPutPankuzu(ttGetParentCategory($category)); ?>
-            </div>
-        <?php } ?>
         <div class="contents">
             <div class="centerpane">
-                <h3 class="toch3"><?php echo $jaCategory . ($jaCategory != "" ? "の" : "") . "記事一覧"; ?></h3>
+                <h3 class="toch3">
+		    <?php if ($category != "") { ?>
+			<?php MyHTMLUtils::putPankuzu($category); ?>
+		    <?php } else { ?>
+			全ての記事
+		    <?php } ?>
+		</h3>
                 <div class="toc">
-                    <?php ttPutToc($category, true, -1, true); ?>
+		    <?php MyHTMLUtils::putToc($category, true, -1, true); ?>
                 </div>
             </div>
             <div style="clear:both;"></div>

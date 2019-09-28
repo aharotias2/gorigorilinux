@@ -20,11 +20,13 @@ $i = 0;
     <?php foreach ($rss->channel->item as $item) { ?>
         <?php
         $url = $item->link;
-        $articleId = substr($item->link, strrpos($item->link, "=") + 1);
+        $entry = substr($item->link, strrpos($item->link, "=") + 1);
+	$articlePath = MyFileUtils::findArticlePath($entry);
         $articleTitle = $item->title;
-	$articleName = $item->comments;
+	$articleName = $entry;
         $pubDate = date("Y.m.d", strtotime($item->pubDate));
-        $category = substr($articleId, 0, strrpos($articleId, "/"));
+        $category = substr($articlePath, 0, strrpos($articlePath, "/"));
+	$category = substr($category, strlen("closed/articles/"));
 	if (array_key_exists($articleName, $commentsCount)) {
 	    $count = $commentsCount[$item->comment];
 	} else {
@@ -33,27 +35,13 @@ $i = 0;
         ?>
         <div class="latest_article_lite">
             <h4>
-                <a href="article.php?entry=<?=$articleId?>">
+                <a href="entry-<?=$articleName?>">
 		    <?=$articleTitle?>
 		    <span class="date_article"><?=$pubDate?></span>
                     <span class="comments_count">コメント: <?=$count?></span>
 		</a>
             </h4>
-            <div class="category_article">
-                <?php $tmp = ""; ?>
-                <?php foreach (explode("/", $category) as $catName) { ?>
-                    <?php
-                    $tmp = $tmp . $catName;
-                    $categoryColor = getCategoryColor($catName);
-                    $categoryNameJa = translate($catName);
-                    ?>
-                    <a href="toc.php?category=<?=$tmp?>">
-                        <span class="category_article_piece" style="background-color:<?=$categoryColor?>">
-                            <?=$categoryNameJa?>
-                        </span>
-                    </a>
-                <?php } ?>
-            </div>
+	    <?php MyHTMLUtils::putArticleCategory($category); ?>
         </div>
 	<?php
 	$i++;

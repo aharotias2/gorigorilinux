@@ -43,7 +43,7 @@ if (strtolower($_SERVER['REQUEST_METHOD']) == "get") {
         echo "[$result]";
     } else if ($param == "article") {
         $entry = dirname($cate) . "/" . substr(basename($cate), 0, 3);
-        $itemUrl = "https://gorigorilinux.net/article.php?entry=$entry";
+        $itemUrl = "https://gorigorilinux.net/entry-$entry";
         $resultJson = "{\n";
         $resultJson .= "    \"itemLink\": \"$itemUrl\", \n";
         $resultJson .= "    \"itemAuthor\": \"info@singersongwriter.ciao.jp (田中喬之)\", \n";

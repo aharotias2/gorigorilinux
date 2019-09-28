@@ -2,6 +2,7 @@
 require_once("Logger.php");
 require_once("CommentsDao.php");
 require_once("GoodBadDao.php");
+require_once("MyMarkdown.php");
 
 class SQLiteClient {
     private $dns;
@@ -53,7 +54,6 @@ class SQLiteClient {
     }
 
     public function putComments($articleName, $commentNo = 0) {
-	require_once("functions_markdown.php");
 	global $logger;
         try {
             $dao = new CommentsDao($this->dns);
@@ -64,11 +64,13 @@ class SQLiteClient {
                 foreach ($comments as $comment) {
                     echo "<div class=\"comment\">\n";
                     echo "  <div class=\"comment_box\">\n";
-                    echo "    <div class=\"comment_user\">" . $comment['user_name'] . "</div>\n";
-                    echo "    <div class=\"comment_mail\">" . $comment['mail_address'] . "</div>\n";
-                    echo "    <div class=\"comment_date\">" . ttConvertToJdate($comment['post_date']) . "</div>\n";
+		    echo "    <div class=\"comment_header\">\n";
+                    echo "      <div class=\"comment_user\">" . $comment['user_name'] . "</div>\n";
+                    echo "      <div class=\"comment_mail\">" . $comment['mail_address'] . "</div>\n";
+                    echo "      <div class=\"comment_date\">" . $comment['post_date'] . "</div>\n";
+		    echo "    </div>\n";
                     echo "    <div class=\"comment_text\">";
-		    echo ttGetMarkdownFromText($comment['comment'] . "\n \n", false /* not allow html */);
+		    echo MyMarkdown::getMarkdownFromText($comment['comment'] . "\n \n", false /* not allow html */);
 		    echo "</div>\n";
                     if ($commentNo == 0) {
                         echo "    <div class=\"reply_block\">\n";

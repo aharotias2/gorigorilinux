@@ -494,7 +494,7 @@ img.topimage {
 .comment_box {
     
     margin: 0px;
-    padding: 10px;
+    padding: 0px;
 }
 
 .comment_reply .comment_box {
@@ -533,12 +533,18 @@ img.topimage {
     
 }
 
+.contents .comment .comment_header {
+    border-bottom: 2px solid lightblue;
+    padding-bottom: 8px;
+}
+
 .contents .comment .comment_user {
     color: black;
 }
 
 .contents .comment .comment_text .sample {
-    
+    background-color: #606060;
+    color: #DDDDDD;
     padding: 10px;
     margin: 10px 0px;
 }
@@ -569,10 +575,7 @@ img.topimage {
 }
 .contents .comment .comment_text hr.style1 {
     margin: 10px 0;
-    
-    
-    
-    
+    color: #FFFFFF;
 }
 .contents .comment .comment_text .code h5 {
     font-size: 80%;
@@ -613,11 +616,11 @@ img.topimage {
     padding: 3px;
 }
 .contents .comment .comment_text blockquote {
-    
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-left: 2px solid royalblue;
 }
 .contents .comment .comment_text blockquote blockquote {
     
