@@ -3,7 +3,6 @@
 session_start();
 $localPrefix = "closed/php/";
 require($localPrefix . "functions_comments.php");
-require_once($localPrefix . "functions_markdown.php");
 $sqlite = new SQLiteClient();
 include($localPrefix . "functions.php");
 $itemNum = isset($_GET['n']) ? $_GET['n'] : "0";
@@ -11,12 +10,16 @@ $pageKind = $itemNum == 100 ? "recommended" : "recent";
 if ($pageKind == "recent") {
     $rss = new SimpleXMLElement(file_get_contents("rss.xml"));
     $item = $rss->channel->item[intval($itemNum)];
-    $articleUrl = ttFindPath("closed/articles/" . substr($item->link, strpos($item->link, "=") + 1));
+    $entry = substr($item->link, strrpos($item->link, "=") + 1);
+    $articleUrl = MyFileUtils::findArticlePath($entry);
     $itemPubDate = date("Y.m.d H:i:s", strtotime($item->pubDate));
+    $articleCategory = substr($articleUrl, 0, strrpos($articleUrl, "/"));
+    $articleCategory = substr($articleCategory, strlen("closed/articles/"));
 } else if ($pageKind == "recommended") {
-    $articleUrl = ttFindPath("closed/articles/" . $_GET['entry']);
+    $articleUrl = MyFileUtils::findArticlePath($_GET['entry']);
+    $articleCategory = substr($articleUrl, strlen("closed/articles/"));
+    $articleCategory = substr($articleCategory, 0, strrpos($articleCategory, "/"));
 }
-
 ?><!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -31,19 +34,19 @@ if ($pageKind == "recent") {
         <?php include($localPrefix . "header.php"); ?>
         <div class="contents">
             <div class="rightpane">
-                <?php ttPutHeaderMenu(2); ?>
+                <?php MyHTMLUtils::putHeaderMenu(2); ?>
                 <?php if ($pageKind != "recommended") { ?>
                     <div class="pagenavi">
                         <?php if ($itemNum > 0) { ?>
                             <div class="left_float max_width_30per">
-                                <a href="<?php echo "index.php?n=" . ($itemNum - 1);?>">
+                                <a href="<?php echo "p" . ($itemNum - 1);?>">
                                     <img src="images/next-page-left.svg">
                                 </a>
                             </div>
                         <?php } ?>
                         <?php if ($itemNum < 20) { ?>
                             <div class="right_float max_width_30per">
-                                <a href="<?php echo "index.php?n=" . ($itemNum + 1); ?>">
+                                <a href="<?php echo "p" . ($itemNum + 1); ?>">
                                     <img src="images/prev-page-right.svg">
                                 </a>
                             </div>
@@ -59,15 +62,22 @@ if ($pageKind == "recent") {
                             <?php if ($pageKind != "recommended") { ?>
                                 <img src="images/time.svg">公開:<?=$itemPubDate?>
                             <?php } ?>
-                            <img src="images/update.png">更新:<?=ttGetFilemtime($articleUrl)?>
+                            <img src="images/update.png">更新:<?=MyFileUtils::getFilemtime($articleUrl)?>
                         </span>
+			<div class="nav">
+			    <div class="latest_article_lite">
+				<?php MyHTMLUtils::putArticleCategory($articleCategory); ?>
+			    </div>
+			</div>
                     </div>
                     <?php
                     $articleExtension = substr($articleUrl, strrpos($articleUrl, ".") + 1);
                     if ($articleExtension == "md") {
-                        ttPutMarkdown($articleUrl);
+                        MyMarkdown::putMarkdown($articleUrl);
                     } else {
-                        include($articleUrl);
+			if ($articleUrl != null) {
+                            include($articleUrl);
+			}
                     }
                     ?>
                 </div>
@@ -75,14 +85,14 @@ if ($pageKind == "recent") {
                     <div class="pagenavi">
                         <?php if ($itemNum > 0) { ?>
                             <div class="left_float max_width_30per">
-                                <a href="<?php echo "index.php?n=" . ($itemNum - 1);?>">
+                                <a href="<?php echo "p" . ($itemNum - 1);?>">
                                     <img src="images/next-page-left.svg">
                                 </a>
                             </div>
                         <?php } ?>
                         <?php if ($itemNum < 20) { ?>
                             <div class="right_float max_width_30per">
-                                <a href="<?php echo "index.php?n=" . ($itemNum + 1); ?>">
+                                <a href="<?php echo "p" . ($itemNum + 1); ?>">
                                     <img src="images/prev-page-right.svg">
                                 </a>
                             </div>
@@ -98,11 +108,11 @@ if ($pageKind == "recent") {
                     <ul>
                         <li>
                             <ul>
-                                <li><a href="index.php?n=100&entry=misc/self/01_self/001">このサイトについて</a></li>
-                                <li><a href="index.php?n=100&entry=misc/self/01_self/002">管理人について</a></li>
-                                <li><a href="index.php?n=100&entry=misc/self/01_self/003">コメント欄のマークダウンの書き方</a></li>
-                                <li><a href="index.php?n=100&entry=misc/self/01_self/004">TODOリスト</a></li>
-                                <li><a href="index.php?n=100&entry=misc/self/01_self/005">お気に入りリンク集</a></li>
+                                <li><a href="index.php?n=100&entry=aboutthissize">このサイトについて</a></li>
+                                <li><a href="index.php?n=100&entry=about-administrator">管理人について</a></li>
+                                <li><a href="index.php?n=100&entry=markdown">コメント欄のマークダウンの書き方</a></li>
+                                <li><a href="index.php?n=100&entry=todo">TODOリスト</a></li>
+                                <li><a href="index.php?n=100&entry=links">お気に入りリンク集</a></li>
                             </ul>
                         </li>
                     </ul>

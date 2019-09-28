@@ -582,13 +582,13 @@ iframe.google-maps {
 
 .contents .comment .comment_user {
     display: inline;
-    margin: 4px;
+    margin: 4px 0;
     font-weight: bold;
 }
 
 .contents .comment .comment_mail {
     display: inline;
-    margin: 4px;
+    margin: 4px 0;
     color: #807070;
 }
 
@@ -599,7 +599,7 @@ iframe.google-maps {
 
 .contents .comment .comment_text {
     display: block;
-    margin: 8px 4px 8px 4px;
+    margin: 8px 0;
     
 }
 
