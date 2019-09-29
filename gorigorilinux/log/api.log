@@ -1,18 +1,1 @@
-SCRIPT_NAME: /home/ubuntu-home/public_html/gorigorilinux/get-article-list.php
-DOCUMENT_ROOT: 
-SERVER_URI: /~ta/gorigorilinux/get-article-list.php?article=%E9%9B%91%E6%96%87/%E6%97%A5%E8%A8%98/2019%E5%B9%B49%E6%9C%88/002_rms-resigns-mit-and-fsf.md
-cate: 雑文/日記/2019年9月/002_rms-resigns-mit-and-fsf.md
-cate: misc/diary/04_201909/002_rms-resigns-mit-and-fsf.md
-path: /home/ubuntu-home/public_html/gorigorilinux/closed/articles/misc/diary/04_201909/002_rms-resigns-mit-and-fsf.md
-filemtime: 2019-9-21-11-59-27
-RESULT: {
-    "itemLink": "https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/002", 
-    "itemAuthor": "info@singersongwriter.ciao.jp (田中喬之)", 
-    "itemCategory": "雑文", 
-    "itemComment": "rms-resigns-mit-and-fsf", 
-    "itemGuid": "https://gorigorilinux.net/article.php?entry=misc/diary/04_201909/002", 
-    "itemSource": "", 
-    "itemTitle": "リチャード・ストールマン氏がMITとFSFから辞任", 
-    "itemDescription": "GNUの創始者である計算機科学者のリチャード・ストールマン氏が9月16日、フリーソフトウェア財団 (FSF) の代表を離任しました。CNETなど国内外の多くのメディアで報じられています。記事：リチャード・ストールマン氏がフリーソフトウェア財団とMITの役職辞任--疑惑の投資家関連コメント巡り | CNET Japan 2019.09.17CNETの記事はVICEというサイトの下の記事を元にしています。Famed Computer Scientist Richard Stallman Described Epstein Victims As 'Entirely Willing' | VICE 2019.09.14FSFのサイトでもこの件について報告がされています。Richard M. Stallman resigns | FREE SOFTWARE FOUNDATIONOn September 16, 2019, Richard M. Stallman, founder and president of the Free Software Foundation, resigned as president and from its board of directors.&amp;nbsp;The board will be conducting a search for a new president, beginning immediately. Further details of the sear...", 
-    "itemPubDate": "2019-9-21-11-59-27"
-}
+
