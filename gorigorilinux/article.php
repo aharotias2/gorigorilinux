@@ -96,12 +96,6 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
                     <?php MyHTMLUtils::putToc($parentCategory, false, 2, false); ?>
                 </div>
 		<?php include("latest-articles.php"); ?>
-		<!-- 
-                     <div class="nav">
-                     <h3>最近の投稿</h3>
-                     <?php /*ttPutLatestArticlesLite(1, 5);*/ ?>
-                     </div>
-		-->
             </div>
             <div style="clear:both;"></div>
         </div>

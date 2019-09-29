@@ -33,3 +33,10 @@ function getCategoryColor($cateName) {
         }
     }
 }
+
+function getNthMatch($pattern, $string, $n) {
+    if (preg_match($pattern, $string, $matches, PREG_OFFSET_CAPTURE)) {
+	return $matches[$n][0];
+    }
+    return null;
+}

@@ -2,6 +2,14 @@
 require_once("MyMarkdown.php");
 
 class MyArticleUtils {
+    public static function getEntryFromUrl($url) {
+        return substr($url, strpos($url, '/entry-') + 7);
+    }
+
+    public static function getUrlFromEntry($entry) {
+        return 'entry-' . $entry;
+    }
+
     public static function getArticleTitle($pathName) {
         $file = fopen($pathName, "r") or die("unable to open file $pathName");
         $h3 = fgets($file);
@@ -78,6 +86,14 @@ class MyArticleUtils {
         }
     }
 
+    public static function getPrevEntry($entry) {
+        return getNthMatch('/[0-9]{3}_([a-z0-9-]+)\.(md|html)$/', self::getPrevEntryPath($entry), 1);
+    }
+    
+    public static function getNextEntry($entry) {
+        return getNthMatch('/[0-9]{3}_([a-z0-9-]+)\.(md|html)$/', self::getNextEntryPath($entry), 1);
+    }
+
     public static function getNextEntryPath($entry) {
         $path = MyFileUtils::findArticlePath($entry);
         $fileName = substr($path, strrpos($path, "/") + 1);
@@ -100,7 +116,7 @@ class MyArticleUtils {
         }
         return null;
     }
-
+    
     public static function getPrevEntryPath($entry) {
         $path = MyFileUtils::findArticlePath($entry);
         $fileName = substr($path, strrpos($path, "/") + 1);
