@@ -26,11 +26,9 @@ class MyHTMLUtils {
                 $midCategoryName = $midCategory[1];
                 $midCategoryChildren = $midCategory[2];
                 $midCategoryFirstArticle = $midCategoryChildren[0][2][0][1];
-                preg_match("/[0-9]+_(.*)\.(md|html)$/", $midCategoryFirstArticle, $matches, PREG_OFFSET_CAPTURE);
-                $midCategoryFirstEntry = $matches[1][0];
-                
+                $midCategoryFirstEntry = getNthMatch('/[0-9]+_(.*)\.(md|html)$/', $midCategoryFirstArticle, 1);
                 echo "<li>";
-                echo "<a href=\"entry-$midCategoryFirstEntry\">";
+                echo "<a href=\"" . MyArticleUtils::getUrlFromEntry($midCategoryFirstEntry) . "\">";
                 echo translate($midCategoryName);
                 echo "</a>";
                 echo "</li>";
@@ -66,12 +64,10 @@ class MyHTMLUtils {
     }
 
     public static function putPrevLink($entry) {
-        $prevUrl = MyArticleUtils::getPrevEntryPath($entry);
-        if ($prevUrl != null) {
-            preg_match("/[0-9]{3}_(.+)\.(md|html)$/", $prevUrl, $matches, PREG_OFFSET_CAPTURE);
-            $prevEntry = $matches[1][0];
+        $prevEntry = MyArticleUtils::getPrevEntry($entry);
+        if ($prevEntry != null) {
             echo "<div class=\"left_float max_width_30per\">\n";
-            echo "<a href=\"entry-$prevEntry\">";
+            echo "<a href=\"" . MyArticleUtils::getUrlFromEntry($prevEntry) . "\">";
             echo "<img src=\"images/prev-page.svg\">";
             echo "</a>";
             echo "</div>\n";
@@ -79,12 +75,10 @@ class MyHTMLUtils {
     }
 
     public static function putNextLink($entry) {
-        $nextUrl = MyArticleUtils::getNextEntryPath($entry);
-        if ($nextUrl != null) {
-            preg_match("/[0-9]{3}_(.+)\.(md|html)$/", $nextUrl, $matches, PREG_OFFSET_CAPTURE);
-            $nextEntry = $matches[1][0];
+        $nextEntry = MyArticleUtils::getNextEntry($entry);
+        if ($nextEntry != null) {
             echo "<div class=\"right_float max_width_30per\">\n";
-            echo "<a href=\"entry-$nextEntry\">";
+            echo "<a href=\"" . MyArticleUtils::getUrlFromEntry($nextEntry) . "\">";
             echo "<img src=\"images/next-page.svg\">";
             echo "</a>";
             echo "</div>\n";
@@ -104,9 +98,8 @@ class MyHTMLUtils {
                     echo '<h4 class="toc-category">';
                     if ($linkh4) {
                         if ($digFirstFile && count($children) > 0) {
-                            preg_match("/[0-9]{3}_(.+)\.(md|html)$/", $children[0][1], $matches, PREG_OFFSET_CAPTURE);
-                            $firstFile = $matches[1][0];
-                            echo '<a href="entry-' . $firstFile;
+                            $firstFile = getNthMatch("/[0-9]{3}_(.+)\.(md|html)$/", $children[0][1], 1);
+                            echo '<a href="'. MyArticleUtils::getUrlFromEntry($firstFile);
                         } else {
                             echo '<a href="toc.php?category=';
                             echo ($category === "" ? "" : $category . "/") . $name;
@@ -128,14 +121,14 @@ class MyHTMLUtils {
                     echo "</li>\n";
                 }
             } else {
-                if (!preg_match("/^[0-9]{3}_(.*)\.(md|html)$/", $name, $matches, PREG_OFFSET_CAPTURE)) {
+                $entry = getNthMatch('/^[0-9]{3}_(.*)\.(md|html)$/', $name, 1);
+		if ($entry == null) {
                     return;
                 }
-                $entry = $matches[1][0];
                 $fullPath = MyFileUtils::findArticlePath($entry);
 
                 echo '<li>';
-                echo '<a href="entry-' . $entry . '">';
+                echo '<a href="' . MyArticleUtils::getUrlFromEntry($entry) . '">';
                 echo MyArticleUtils::getArticleTitle($fullPath);
                 if ($printDate) {
                     echo " <span class=\"datetime\">" . MyFileUtils::getFilemtime($fullPath) . "</span>";
@@ -181,5 +174,4 @@ class MyHTMLUtils {
             }
         }
     }
-    
 }

@@ -20,7 +20,7 @@ $i = 0;
     <?php foreach ($rss->channel->item as $item) { ?>
         <?php
         $url = $item->link;
-        $entry = substr($item->link, strrpos($item->link, "=") + 1);
+        $entry = MyArticleUtils::getEntryFromUrl($item->link);
 	$articlePath = MyFileUtils::findArticlePath($entry);
         $articleTitle = $item->title;
 	$articleName = $entry;
@@ -32,10 +32,11 @@ $i = 0;
 	} else {
 	    $count = 0;
 	}
+	$articleUrl = MyArticleUtils::getUrlFromEntry($articleName);
         ?>
         <div class="latest_article_lite">
             <h4>
-                <a href="entry-<?=$articleName?>">
+                <a href="<?=$articleUrl?>">
 		    <?=$articleTitle?>
 		    <span class="date_article"><?=$pubDate?></span>
                     <span class="comments_count">コメント: <?=$count?></span>

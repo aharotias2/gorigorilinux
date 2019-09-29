@@ -38,7 +38,6 @@ class MyFileUtils {
     
     public static function getFilemtime($file) {
         $t = filemtime($file);
-        //return ttConvertToJdate(date("Y-m-d H:i:s", $t));
         return date("Y.m.d H:i:s", $t);
     }
 

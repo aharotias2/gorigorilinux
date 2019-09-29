@@ -4,11 +4,18 @@
  * コメントを投稿する。
  */
 require_once("closed/php/functions.php");
-require_once("closed/php/CommentsDao.php");
 $dao = new CommentsDao();
+
 function get_param($param) {
-    return filter_input(INPUT_POST, $param);
+    if (isset($_GET[$param])) {
+	return $_GET[$param];
+    } else if (isset($_POST[$param])) {
+	return $_POST[$param];
+    } else {
+	return null;
+    }
 }
+
 $entry = get_param("entry");
 $articleName = get_param("article_name");
 $userName = get_param("user_name");
@@ -16,10 +23,11 @@ $mailAddress = get_param("mail_address");
 $comment = get_param("comment");
 $anchor = get_param("anchor");
 $dao->insert($articleName, $userName, $mailAddress, $comment, $anchor);
+$articleUrl = MyArticleUtils::getUrlFromEntry($entry);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta http-equiv="refresh" content="0; URL='entry-<?php echo $entry; ?>'" />
+        <meta http-equiv="refresh" content="0; URL='<?=$articleUrl?>'" />
     </head>
 </html>

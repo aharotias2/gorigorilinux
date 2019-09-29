@@ -3743,3 +3743,192 @@
 [2019/09/29 17:35:48] INFO: PARAM: article_name = installwineditor
 [2019/09/29 17:35:48] INFO: ROW: none
 [2019/09/29 17:35:48] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 19:14:25] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 19:14:25] INFO: PARAM: article_name = asus-portable-display-on-slackware-less-works
+[2019/09/29 19:14:25] INFO: ROW: none
+[2019/09/29 19:14:25] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 19:16:33] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 19:16:33] INFO: PARAM: article_name = startlinux
+[2019/09/29 19:16:33] INFO: ROW: none
+[2019/09/29 19:16:33] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 19:17:02] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 19:17:02] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/29 19:17:02] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 0
+[2019/09/29 19:17:02] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 19:17:09] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 19:17:09] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/29 19:17:09] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 0
+[2019/09/29 19:17:09] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 19:17:09] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 19:17:09] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/29 19:17:09] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 0
+[2019/09/29 19:17:09] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 19:17:14] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 19:17:14] INFO: PARAM: article_name = declaration-and-definition
+[2019/09/29 19:17:14] INFO: ROW: none
+[2019/09/29 19:17:14] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:05:16] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:05:16] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/29 21:05:16] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 0
+[2019/09/29 21:05:16] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:05:16] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:05:16] INFO: PARAM: article_name = rms-resigns-mit-and-fsf
+[2019/09/29 21:05:16] INFO: ROW: article_name = rms-resigns-mit-and-fsf, good = 0, bad = 0
+[2019/09/29 21:05:16] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:05:19] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:05:19] INFO: PARAM: article_name = asus-portable-display-on-slackware-less-works
+[2019/09/29 21:05:19] INFO: ROW: none
+[2019/09/29 21:05:19] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:05:48] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:05:48] INFO: PARAM: article_name = asus-portable-display-on-slackware-less-works
+[2019/09/29 21:05:48] INFO: ROW: none
+[2019/09/29 21:05:48] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:06:14] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:06:14] INFO: PARAM: article_name = asus-portable-display-on-slackware-less-works
+[2019/09/29 21:06:14] INFO: ROW: none
+[2019/09/29 21:06:14] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:06:43] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:06:43] INFO: PARAM: article_name = asus-portable-display-on-slackware-less-works
+[2019/09/29 21:06:43] INFO: ROW: none
+[2019/09/29 21:06:43] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:32] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:32] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/29 21:07:32] INFO: ROW: none
+[2019/09/29 21:07:32] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:32] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:32] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/29 21:07:32] INFO: ROW: none
+[2019/09/29 21:07:32] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:39] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:39] INFO: PARAM: article_name = declaration-and-definition
+[2019/09/29 21:07:39] INFO: ROW: none
+[2019/09/29 21:07:39] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:42] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:42] INFO: PARAM: article_name = pointer
+[2019/09/29 21:07:42] INFO: ROW: none
+[2019/09/29 21:07:42] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:43] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:43] INFO: PARAM: article_name = declaration-and-definition
+[2019/09/29 21:07:43] INFO: ROW: none
+[2019/09/29 21:07:43] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:44] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:44] INFO: PARAM: article_name = what-is-oop
+[2019/09/29 21:07:44] INFO: ROW: none
+[2019/09/29 21:07:44] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:45] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:45] INFO: PARAM: article_name = declaration-and-definition
+[2019/09/29 21:07:45] INFO: ROW: none
+[2019/09/29 21:07:45] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:46] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:46] INFO: PARAM: article_name = pointer
+[2019/09/29 21:07:46] INFO: ROW: none
+[2019/09/29 21:07:46] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:47] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:47] INFO: PARAM: article_name = stack-and-heap
+[2019/09/29 21:07:47] INFO: ROW: none
+[2019/09/29 21:07:47] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:07:49] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:07:49] INFO: PARAM: article_name = stack-and-heap
+[2019/09/29 21:07:49] INFO: ROW: none
+[2019/09/29 21:07:49] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:10:13] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:10:13] INFO: PARAM: article_name = login
+[2019/09/29 21:10:13] INFO: ROW: none
+[2019/09/29 21:10:13] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:10:26] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:10:26] INFO: PARAM: article_name = login
+[2019/09/29 21:10:26] INFO: ROW: none
+[2019/09/29 21:10:26] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:10:28] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:10:28] INFO: PARAM: article_name = input-commands
+[2019/09/29 21:10:28] INFO: ROW: none
+[2019/09/29 21:10:28] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:10:30] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:10:30] INFO: PARAM: article_name = echo
+[2019/09/29 21:10:30] INFO: ROW: none
+[2019/09/29 21:10:30] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:10:32] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:10:32] INFO: PARAM: article_name = shell-script
+[2019/09/29 21:10:32] INFO: ROW: none
+[2019/09/29 21:10:32] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:10:42] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:10:42] INFO: PARAM: article_name = shell-script
+[2019/09/29 21:10:42] INFO: ROW: none
+[2019/09/29 21:10:42] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:10:50] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:10:50] INFO: PARAM: article_name = shell-script
+[2019/09/29 21:10:50] INFO: ROW: none
+[2019/09/29 21:10:50] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:08] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:08] INFO: PARAM: article_name = shell-script
+[2019/09/29 21:13:08] INFO: ROW: none
+[2019/09/29 21:13:08] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:11] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:11] INFO: PARAM: article_name = echo
+[2019/09/29 21:13:11] INFO: ROW: none
+[2019/09/29 21:13:11] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:13] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:13] INFO: PARAM: article_name = shell-script
+[2019/09/29 21:13:13] INFO: ROW: none
+[2019/09/29 21:13:13] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:15] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:15] INFO: PARAM: article_name = for
+[2019/09/29 21:13:15] INFO: ROW: none
+[2019/09/29 21:13:15] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:16] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:16] INFO: PARAM: article_name = while
+[2019/09/29 21:13:16] INFO: ROW: none
+[2019/09/29 21:13:16] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:20] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:20] INFO: PARAM: article_name = pwd
+[2019/09/29 21:13:20] INFO: ROW: none
+[2019/09/29 21:13:20] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:21] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:21] INFO: PARAM: article_name = cd
+[2019/09/29 21:13:21] INFO: ROW: none
+[2019/09/29 21:13:21] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:22] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:22] INFO: PARAM: article_name = ls
+[2019/09/29 21:13:22] INFO: ROW: none
+[2019/09/29 21:13:22] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:23] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:23] INFO: PARAM: article_name = find
+[2019/09/29 21:13:23] INFO: ROW: article_name = find, good = 1, bad = 0
+[2019/09/29 21:13:23] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:23] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:23] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:23] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:24] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:24] INFO: PARAM: article_name = mv
+[2019/09/29 21:13:24] INFO: ROW: none
+[2019/09/29 21:13:24] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 21:13:25] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 21:13:25] INFO: PARAM: article_name = cp
+[2019/09/29 21:13:25] INFO: ROW: none
+[2019/09/29 21:13:25] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 22:58:47] INFO: SQL: 
+[2019/09/29 22:58:47] INFO: SQL: executed[FAILED] with [cp, 名無しさん, , cpコマンドはたくさんファイルをコピーするときに何%できたかわかればいいんですがね。, 0]
+[2019/09/29 22:58:47] ERROR: SQL: HY000; 8; attempt to write a readonly database
+[2019/09/29 22:58:47] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 22:58:47] INFO: PARAM: article_name = cp
+[2019/09/29 22:58:47] INFO: ROW: none
+[2019/09/29 22:58:47] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 23:01:00] INFO: SQL: 
+[2019/09/29 23:01:01] INFO: SQL: executed[SUCCESS] with [cp, 名無しさん, , 何%コピー完了したかわかるといいんだけどね。, 0]
+[2019/09/29 23:01:01] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 23:01:01] INFO: PARAM: article_name = cp
+[2019/09/29 23:01:01] INFO: ROW: none
+[2019/09/29 23:01:01] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 23:01:01] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 23:03:45] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 23:03:45] INFO: PARAM: article_name = spacefm
+[2019/09/29 23:03:45] INFO: ROW: none
+[2019/09/29 23:03:45] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 23:05:48] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 23:05:48] INFO: PARAM: article_name = asus-portable-display-on-slackware-less-works
+[2019/09/29 23:05:48] INFO: ROW: none
+[2019/09/29 23:05:48] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/29 23:05:55] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/29 23:05:55] INFO: PARAM: article_name = bought-programming-books
+[2019/09/29 23:05:55] INFO: ROW: none
+[2019/09/29 23:05:55] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC

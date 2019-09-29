@@ -10,7 +10,7 @@ $pageKind = $itemNum == 100 ? "recommended" : "recent";
 if ($pageKind == "recent") {
     $rss = new SimpleXMLElement(file_get_contents("rss.xml"));
     $item = $rss->channel->item[intval($itemNum)];
-    $entry = substr($item->link, strrpos($item->link, "=") + 1);
+    $entry = MyArticleUtils::getEntryFromUrl($item->link);
     $articleUrl = MyFileUtils::findArticlePath($entry);
     $itemPubDate = date("Y.m.d H:i:s", strtotime($item->pubDate));
     $articleCategory = substr($articleUrl, 0, strrpos($articleUrl, "/"));
