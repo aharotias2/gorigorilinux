@@ -28,7 +28,7 @@ $i = 0;
         $category = substr($articlePath, 0, strrpos($articlePath, "/"));
 	$category = substr($category, strlen("closed/articles/"));
 	if (array_key_exists($articleName, $commentsCount)) {
-	    $count = $commentsCount[$item->comment];
+	    $count = $commentsCount[$articleName];
 	} else {
 	    $count = 0;
 	}

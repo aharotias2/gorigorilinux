@@ -1,4 +1,4 @@
 RewriteEngine On
-RewriteRule entry-(.*)$ article.php?entry=$1
 RewriteRule p([0-9]+)$ index.php?n=$1
+RewriteRule entry-(.*)$ article.php?entry=$1
 
