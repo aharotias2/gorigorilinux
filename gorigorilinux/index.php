@@ -3,22 +3,25 @@
 session_start();
 $localPrefix = "closed/php/";
 require($localPrefix . "functions_comments.php");
-$sqlite = new SQLiteClient();
 include($localPrefix . "functions.php");
+
+$article = new ArticleInfo();
+$sqlite = new SQLiteClient();
 $itemNum = isset($_GET['n']) ? $_GET['n'] : "0";
 $pageKind = $itemNum == 100 ? "recommended" : "recent";
 if ($pageKind == "recent") {
     $rss = new SimpleXMLElement(file_get_contents("rss.xml"));
     $item = $rss->channel->item[intval($itemNum)];
-    $entry = MyArticleUtils::getEntryFromUrl($item->link);
-    $articleUrl = MyFileUtils::findArticlePath($entry);
-    $itemPubDate = date("Y.m.d H:i:s", strtotime($item->pubDate));
-    $articleCategory = substr($articleUrl, 0, strrpos($articleUrl, "/"));
-    $articleCategory = substr($articleCategory, strlen("closed/articles/"));
+    $article->id = MyArticleUtils::getEntryFromUrl($item->link);
+    $article->url = MyFileUtils::findArticlePath($article->id);
+    $article->pubDate = date("Y.m.d H:i:s", strtotime($item->pubDate));
+    $article->category = substr($article->url, 0, strrpos($article->url, "/"));
+    $article->category = substr($article->category, strlen("closed/articles/"));
 } else if ($pageKind == "recommended") {
-    $articleUrl = MyFileUtils::findArticlePath($_GET['entry']);
-    $articleCategory = substr($articleUrl, strlen("closed/articles/"));
-    $articleCategory = substr($articleCategory, 0, strrpos($articleCategory, "/"));
+    $article->id = $_GET['entry'];
+    $article->url = MyFileUtils::findArticlePath($article->id);
+    $article->category = substr($article->url, strlen("closed/articles/"));
+    $article->category = substr($article->category, 0, strrpos($article->category, "/"));
 }
 ?><!DOCTYPE html>
 <html lang="ja">
@@ -33,6 +36,10 @@ if ($pageKind == "recent") {
     <body>
         <?php include($localPrefix . "header.php"); ?>
         <div class="contents">
+            <div class="leftpane">
+                <?php include("latest-articles.php"); ?>
+		<?php include("about-this-site-list.html"); ?>
+            </div>
             <div class="rightpane">
                 <?php MyHTMLUtils::putHeaderMenu(2); ?>
                 <?php if ($pageKind != "recommended") { ?>
@@ -62,22 +69,22 @@ if ($pageKind == "recent") {
                             <?php if ($pageKind != "recommended") { ?>
                                 <img src="images/time.svg">公開:<?=$itemPubDate?>
                             <?php } ?>
-                            <img src="images/update.png">更新:<?=MyFileUtils::getFilemtime($articleUrl)?>
+                            <img src="images/update.png">更新:<?=MyFileUtils::getFilemtime($article->url)?>
                         </span>
-			<div class="nav">
-			    <div class="latest_article_lite">
-				<?php MyHTMLUtils::putArticleCategory($articleCategory); ?>
-			    </div>
-			</div>
+                        <div class="nav">
+                            <div class="latest_article_lite">
+                                <?php MyHTMLUtils::putArticleCategory($article->category); ?>
+                            </div>
+                        </div>
                     </div>
                     <?php
-                    $articleExtension = substr($articleUrl, strrpos($articleUrl, ".") + 1);
+                    $articleExtension = substr($article->url, strrpos($article->url, ".") + 1);
                     if ($articleExtension == "md") {
-                        MyMarkdown::putMarkdown($articleUrl);
+                        MyMarkdown::putMarkdown($article->url);
                     } else {
-			if ($articleUrl != null) {
-                            include($articleUrl);
-			}
+                        if ($article->url != null) {
+                            include($article->url);
+                        }
                     }
                     ?>
                 </div>
@@ -100,23 +107,6 @@ if ($pageKind == "recent") {
                         <div style="clear:both;"></div>
                     </div>
                 <?php } ?>
-            </div>
-            <div class="leftpane">
-		<?php include("latest-articles.php"); ?>
-                <div class="nav">
-                    <h3>案内記事</h3>
-                    <ul>
-                        <li>
-                            <ul>
-                                <li><a href="index.php?n=100&entry=aboutthissize">このサイトについて</a></li>
-                                <li><a href="index.php?n=100&entry=about-administrator">管理人について</a></li>
-                                <li><a href="index.php?n=100&entry=markdown">コメント欄のマークダウンの書き方</a></li>
-                                <li><a href="index.php?n=100&entry=todo">TODOリスト</a></li>
-                                <li><a href="index.php?n=100&entry=links">お気に入りリンク集</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
             </div>
             <div style="clear:both;"></div>
         </div>

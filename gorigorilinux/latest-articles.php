@@ -16,30 +16,29 @@ $i = 0;
     <h3>最近の投稿</h3>
     <?php foreach ($rss->channel->item as $item) { ?>
         <?php
-        $url = $item->link;
-        $entry = MyArticleUtils::getEntryFromUrl($item->link);
-	$articlePath = MyFileUtils::findArticlePath($entry);
-        $articleTitle = $item->title;
-	$articleName = $entry;
-        $pubDate = date("Y.m.d", strtotime($item->pubDate));
-        $category = substr($articlePath, 0, strrpos($articlePath, "/"));
-	$category = substr($category, strlen("closed/articles/"));
-	if (array_key_exists($articleName, $commentsCount)) {
-	    $count = $commentsCount[$articleName];
+	$mini = new ArticleInfo();
+        $mini->id = MyArticleUtils::getEntryFromUrl($item->link);
+	$mini->path = MyFileUtils::findArticlePath($mini->id);
+        $mini->title = $item->title;
+        $mini->pubDate = date("Y.m.d", strtotime($item->pubDate));
+        $mini->category = substr($mini->path, 0, strrpos($mini->path, "/"));
+	$mini->category = substr($mini->category, strlen("closed/articles/"));
+	if (array_key_exists($article->id, $commentsCount)) {
+	    $count = $commentsCount[$mini->id];
 	} else {
 	    $count = 0;
 	}
-	$articleUrl = MyArticleUtils::getUrlFromEntry($articleName);
+	$mini->url = MyArticleUtils::getUrlFromEntry($mini->id);
         ?>
         <div class="latest_article_lite">
             <h4>
-                <a href="<?=$articleUrl?>">
-		    <?=$articleTitle?>
-		    <span class="date_article"><?=$pubDate?></span>
+                <a href="<?=$mini->url?>">
+		    <?=$mini->title?>
+		    <span class="date_article"><?=$mini->pubDate?></span>
                     <span class="comments_count">コメント: <?=$count?></span>
 		</a>
             </h4>
-	    <?php MyHTMLUtils::putArticleCategory($category); ?>
+	    <?php MyHTMLUtils::putArticleCategory($mini->category); ?>
         </div>
 	<?php
 	$i++;
