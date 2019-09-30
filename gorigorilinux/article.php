@@ -2,18 +2,17 @@
 <?php
 session_start();
 require_once("closed/php/functions.php");
+$article = new ArticleInfo();
 $sqlite = new SQLiteClient();
-$entry = $_GET['entry'];
-$articleUrl = MyFileUtils::findArticlePath($entry);
-$category = substr(dirname($articleUrl), strlen("closed/articles/"));
-$articleUrl = MyFileUtils::findArticlePath($entry);
-$articleName = MyArticleUtils::getArticleName($articleUrl);
-$articleTitle = MyArticleUtils::getArticleTitle($articleUrl);
+$article->id = $_GET['entry'];
+$article->url = MyFileUtils::findArticlePath($article->id);
+$article->category = substr(dirname($article->url), strlen("closed/articles/"));
+$article->parent = dirname($article->category);
+$article->title = MyArticleUtils::getArticleTitle($article->url);
 $fullUrl = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$parentCategory = MyArticleUtils::getParentCategory($category);
 $now = new Datetime(date('Y/m/d H:i:s'));
-if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_SESSION[$articleName]['time']) {
-    $_SESSION[$articleName] = array('good' => 0, 'bad' => 0, 'time' => new Datetime(date('Y/m/d H:i:s')));
+if (!isset($_SESSION[$article->id]) || $now->sub(new DateInterval('PT24H')) > $_SESSION[$article->id]['time']) {
+    $_SESSION[$article->id] = array('good' => 0, 'bad' => 0, 'time' => new Datetime(date('Y/m/d H:i:s')));
 }
 ?>
 <!DOCTYPE html>
@@ -23,50 +22,60 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
         <meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))' />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="https://gorigorilinux.net/favicon.png" />
-        <title><?php MyHTMLUtils::putArticleTitle($articleUrl); ?>: <?php echo $siteTitle; ?></title>
+        <title><?php MyHTMLUtils::putArticleTitle($article->url); ?>: <?=$siteTitle?></title>
         <script type="text/javascript">
-         articleName = "<?php echo $articleName;?>";
+         articleName = "<?php=$article->id?>";
          session = {};
-         session.good = <?php echo $_SESSION[$articleName]['good']; ?>;
-         session.bad = <?php echo $_SESSION[$articleName]['bad']; ?>;
+         session.good = <?=$_SESSION[$article->id]['good']?>;
+         session.bad = <?=$_SESSION[$article->id]['bad']?>;
         </script>
         <?php include("closed/php/css.php"); ?>
     </head>
     <body>
         <?php include("closed/php/header.php"); ?>
         <div class="contents">
+            <div class="leftpane">
+                <div class="menu-header">
+                    <div class="menubutton"><img src="images/closemenubutton.svg"></div>
+                </div>
+                <div class="nav">
+                    <h3><?php echo translate(substr($article->parent, strrpos($article->parent, "/") + 1)); ?></h3>
+                    <?php MyHTMLUtils::putToc($article->parent, false, 2, false); ?>
+                </div>
+		<?php include("latest-articles.php"); ?>
+            </div>
             <div class="rightpane">
 		<?php MyHTMLUtils::putHeaderMenu(2); ?>
                 <div class="pagenavi">
-                    <?php MyHTMLUtils::putPrevLink($entry); MyHTMLUtils::putNextLink($entry); ?>
+                    <?php MyHTMLUtils::putPrevLink($article->id); MyHTMLUtils::putNextLink($article->id); ?>
                     <div style="clear:both;"></div>
                 </div>
                 <div class="article">
                     <div class="datetime">
                         <span class="mtime">
-                            <img src="images/time.svg" alt="最終更新日時:"><?=MyFileUtils::getFilemtime($articleUrl)?>
+                            <img src="images/time.svg" alt="最終更新日時:"><?=MyFileUtils::getFilemtime($article->url)?>
                         </span>
                     </div>
                     <?php
-                    $articleExtension = substr($articleUrl, strrpos($articleUrl, ".") + 1);
+                    $articleExtension = substr($article->url, strrpos($article->url, ".") + 1);
                     if ($articleExtension == "md") {
-                        MyMarkdown::putMarkdown($articleUrl);
+                        MyMarkdown::putMarkdown($article->url);
                     } else {
-                        include($articleUrl);
+                        include($article->url);
                     }
                     ?>
                 </div>
                 <div class="pagenavi">
-                    <?php MyHTMLUtils::putPrevLink($entry); MyHTMLUtils::putNextLink($entry); ?>
+                    <?php MyHTMLUtils::putPrevLink($article->id); MyHTMLUtils::putNextLink($article->id); ?>
                     <div style="clear:both;"></div>
                 </div>
                 <div class="comment_block">
                     <h4>評価・コメントをお残しください...</h4>
                     <div class="goodbad comment_switch">
                         <?php
-                        $good = $_SESSION[$articleName]['good'];
-                        $bad = $_SESSION[$articleName]['bad'];
-                        $sqlite->putGoodbad($articleName, $good, $bad);
+                        $good = $_SESSION[$article->id]['good'];
+                        $bad = $_SESSION[$article->id]['bad'];
+                        $sqlite->putGoodbad($article->id, $good, $bad);
                         ?>
                         <button id="comment_switcher">コメントする</button>
                     </div>
@@ -76,26 +85,16 @@ if (!isset($_SESSION[$articleName]) || $now->sub(new DateInterval('PT24H')) > $_
                             <p>おなまえ: <br><input type="text" id="comment_user" name="user_name"></p>
                             <p>メール: <br><input type="text" id="comment_mail" name="mail_address"></p>
                             <p>
-                                <input type="hidden" name="entry" value="<?php echo $entry ?>">
-                                <input type="hidden" name="article_name" value="<?php echo $articleName ?>">
+                                <input type="hidden" name="entry" value="<?=$article->id?>">
+                                <input type="hidden" name="article_name" value="<?=$article->id?>">
                                 <input type="hidden" name="anchor" value="0">
                                 <button id="comment_submit" name="submit">コメントする</button>
                                 <button id="comment_cancel" name="comment_cancel">キャンセル</button>
                             </p>
                         </form>
                     </div>
-                    <?php $sqlite->putComments($articleName); ?>
+                    <?php $sqlite->putComments($article->id); ?>
                 </div>
-            </div>
-            <div class="leftpane">
-                <div class="menu-header">
-                    <div class="menubutton"><img src="images/closemenubutton.svg"></div>
-                </div>
-                <div class="nav">
-                    <h3><?php echo translate(substr($parentCategory, strrpos($parentCategory, "/") + 1)); ?></h3>
-                    <?php MyHTMLUtils::putToc($parentCategory, false, 2, false); ?>
-                </div>
-		<?php include("latest-articles.php"); ?>
             </div>
             <div style="clear:both;"></div>
         </div>

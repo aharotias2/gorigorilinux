@@ -1,4 +1,5 @@
 <?php
+require_once("ArticleInfo.php");
 require_once("MyFileUtils.php");
 require_once("MyHTMLUtils.php");
 require_once("MyArticleUtils.php");
