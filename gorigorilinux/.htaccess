@@ -1,4 +1,9 @@
 RewriteEngine On
+RewriteRule about-this-site$ index.php?n=100&entry=aboutthissize
+RewriteRule about-administrator$ index.php?n=100&entry=about-administrator
+RewriteRule markdown$ index.php?n=100&entry=markdown
+RewriteRule todo index.php?n=100&entry=todo
+RewriteRule links index.php?n=100&entry=links
 RewriteRule p([0-9]+)$ index.php?n=$1
 RewriteRule entry-(.*)$ article.php?entry=$1
 

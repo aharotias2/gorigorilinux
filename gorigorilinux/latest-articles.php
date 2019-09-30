@@ -12,9 +12,6 @@ if ($dao != null) {
 $latestArticlesMaxSize = 10;
 $i = 0;
 ?>
-<div class="menu-header">
-    <div class="menubutton"><img src="images/closemenubutton.svg"></div>
-</div>
 <div class="nav">
     <h3>最近の投稿</h3>
     <?php foreach ($rss->channel->item as $item) { ?>
