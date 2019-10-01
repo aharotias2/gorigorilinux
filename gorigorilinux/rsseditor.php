@@ -21,15 +21,12 @@
             <?php include("closed/php/css.php"); ?>
             <style type="text/css">
              .contents {
-                 background-color: rgba(40, 50, 60, 0.4);
                  padding: 30px;
              }
              td {
                  padding: 2px;
              }
              input, textarea {
-                 background-color: #303840;
-                 color: #D0D8E0;
                  padding: 5px;
                  border: 1px inset #707880;
                  border-radius: 3px;
@@ -53,11 +50,9 @@
                  margin: 5px 30px;
              }
              select {
+		 border: 1px solid gray;
                  padding: 5px;
-                 background-color: #606870;
-                 border: 1px outset #303840;
                  border-radius: 3px;
-                 color: #E0E8F0;
              }
              .channelItemBlock {
                  border: 2px groove #707880;
