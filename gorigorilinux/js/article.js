@@ -110,7 +110,7 @@ function onLoad() {
             pre.innerHTML = pre.innerHTML.replace(/\[Enter\]/g, "<img src=\"images/enter.svg\">");
         }
     });
-                
+    
     select("#comment_switcher").onclick = function() {
         setCss({
             ".comment_switch": {
@@ -204,8 +204,10 @@ function onLoad() {
             var img = this.select("img")[0];
             var src = img.getAttribute("src");
             if (src == "images/menubutton.svg") {
+                document.body.style.overflow = "hidden";
                 select(".leftpane")[0].style.display =  "block";
             } else {
+                document.body.style.overflow = "visible";
                 select(".leftpane")[0].style.display = "none";
             }
         };
@@ -230,9 +232,9 @@ function onLoad() {
             var aUrl = new URL(a.href);
             a.target = aUrl.hostname;
             a.appendChild(newElement("img", {
-		"src": "images/linkmark.svg",
-		"style": "padding-left:2px;width:16px;height:16px"
-	    }));
+                "src": "images/linkmark.svg",
+                "style": "padding-left:2px;width:16px;height:16px"
+            }));
         }
     });
 
@@ -322,29 +324,29 @@ function onLoad() {
         });
     };
     select(".cp_navi_2 > ul > li").forEach(function(e) {
-	var childDiv = e.select("div")[0];
-	if (childDiv != null) {
-	    childDiv.style.display = "none";
-	}
-	e.onclick = function() {
-	    var e1 = this;
-	    select(".cp_navi_2 > ul > li").forEach(function(e2) {
-		if (!e1.isSameNode(e2)) {
-		    var childDiv = e2.select("div");
-		    if (childDiv.length > 0) {
-			e2.select("div")[0].style.display = "none";
-		    }
-		} else {
-		    var childDiv = e1.select("div")[0];
-		    var display = childDiv.style.display;
-		    if (display == "none") {
-			childDiv.style.display = "block";
-		    } else {
-			childDiv.style.display = "none";
-		    }
-		}
-	    });
-	};
+        var childDiv = e.select("div")[0];
+        if (childDiv != null) {
+            childDiv.style.display = "none";
+        }
+        e.onclick = function() {
+            var e1 = this;
+            select(".cp_navi_2 > ul > li").forEach(function(e2) {
+                if (!e1.isSameNode(e2)) {
+                    var childDiv = e2.select("div");
+                    if (childDiv.length > 0) {
+                        e2.select("div")[0].style.display = "none";
+                    }
+                } else {
+                    var childDiv = e1.select("div")[0];
+                    var display = childDiv.style.display;
+                    if (display == "none") {
+                        childDiv.style.display = "block";
+                    } else {
+                        childDiv.style.display = "none";
+                    }
+                }
+            });
+        };
     });
     onResize();
 }
@@ -409,6 +411,9 @@ function onResize() {
                 ".leftpane": {
                     "width": "100%",
                     "box-shadow": ""
+                },
+                ".cp_navi_2": {
+                    "width": "100%"
                 }
             });
             setCss({
@@ -417,12 +422,22 @@ function onResize() {
                 }
             });
         }
+        if (window.innerWidth < 1200) {
+            setCss({
+                ".menubutton": {
+                    "display": "block"
+                }
+            });
+        } else {
+            setCss({
+                ".menubutton": {
+                    "display": "none"
+                }
+            });
+        }
         setCss({
             ".pankuzu": {
                 "margin-left": "6px"
-            },
-            ".menubutton": {
-                "display": "block"
             },
             ".leftpane": {
                 "margin-right": "0",

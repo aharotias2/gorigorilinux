@@ -37,6 +37,9 @@ if ($pageKind == "recent") {
         <?php include($localPrefix . "header.php"); ?>
         <div class="contents">
             <div class="leftpane">
+                <div class="menu-header">
+                    <div class="menubutton"><img src="images/closemenubutton.svg"></div>
+                </div>
                 <?php include("latest-articles.php"); ?>
 		<?php include("about-this-site-list.html"); ?>
             </div>

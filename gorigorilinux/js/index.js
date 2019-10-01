@@ -28,13 +28,6 @@ function onLoad() {
         h3.parentNode.insertBefore(datetime, h3.nextSibling);
     });
 
-    /*
-      select(".nav ul li a").forEach(function(element) {
-      if (element.href.indexOf(location.search) >= 0) {
-      element.href = 'javascript:void(0);';
-      }
-      });
-    */
     var outlineBlock = select(".outline")[0];
     if (outlineBlock != null) {
         var outline = newElement("ul");
@@ -205,8 +198,10 @@ function onLoad() {
             var img = this.select("img")[0];
             var src = img.getAttribute("src");
             if (src == "images/menubutton.svg") {
+                document.body.style.overflow = "hidden";
                 select(".leftpane")[0].style.display =  "block";
             } else {
+                document.body.style.overflow = "visible";
                 select(".leftpane")[0].style.display = "none";
             }
         };
@@ -393,9 +388,7 @@ function onResize() {
                 ".leftpane": {
                     "width": "400px",
                     "box-shadow": "-1px 3px 10px -3px rgba(0, 0, 0, 0.5)"
-                }
-            });
-            setCss({
+                },
                 "textarea": {
                     "width": (select(".article")[0].clientWidth - 80) + "px",
                 }
@@ -409,20 +402,31 @@ function onResize() {
                 ".leftpane": {
                     "width": "100%",
                     "box-shadow": ""
-                }
-            });
-            setCss({
+                },
+                ".cp_navi_2": {
+                    "width": "100%"
+                },
                 ".comment_block textarea": {
                     "width": (select(".rightpane")[0].clientWidth - 40) + "px",
+                }
+            });
+        }
+        if (window.innerWidth < 1200) {
+            setCss({
+                ".menubutton": {
+                    "display": "block"
+                }
+            });
+        } else {
+            setCss({
+                ".menubutton": {
+                    "display": "none"
                 }
             });
         }
         setCss({
             ".pankuzu": {
                 "margin-left": "6px"
-            },
-            ".menubutton": {
-                "display": "block"
             },
             ".leftpane": {
                 "margin-right": "0",
