@@ -1,1 +1,18 @@
-
+SCRIPT_NAME: /home/ubuntu-home/public_html/gorigorilinux/get-article-list.php
+DOCUMENT_ROOT: 
+SERVER_URI: /~ta/gorigorilinux/get-article-list.php?article=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/Java/%E6%BA%96%E5%82%99/001_start-java.md
+cate: プログラミング/Java/準備/001_start-java.md
+cate: prog/java/01_prolog/001_start-java.md
+path: /home/ubuntu-home/public_html/gorigorilinux/closed/articles/prog/java/01_prolog/001_start-java.md
+filemtime: 2019-10-1-07-08-54
+RESULT: {
+    "itemLink": "https://gorigorilinux.net/entry-start-java", 
+    "itemAuthor": "info@singersongwriter.ciao.jp (田中喬之)", 
+    "itemCategory": "プログラミング", 
+    "itemComment": "", 
+    "itemGuid": "https://gorigorilinux.net/entry-start-java", 
+    "itemSource": "", 
+    "itemTitle": "はじめてのJava", 
+    "itemDescription": "早速始めようテキストエディタを開いてください。テキストエディタとは、Windowsで言うところの「メモ帳」や「サクラエディタ」、「秀丸」などのアプリケーションのことを言います。そして下のような内容を書いて「Test.java」という名前をつけて保存してください。public class Test { public static void main(String[] args) { System.out.println(&amp;quot;はじめてのJava!&amp;quot;); }}これは何かと言うと、Java言語で書かれたプログラムのソースコードです。このプログラムをコンパイルして実行すると画面に「はじめてのJava!」と表示されます。JavaコンパイラのインストールJavaコンパイラとJava仮想マシンのダウンロードソースコードのままで動かすことはできません。JavaコンパイラとJavaバーチャルマシン(JVM)をインストールする必要があります。それらはOracleという...", 
+    "itemPubDate": "2019-10-1-07-08-54"
+}

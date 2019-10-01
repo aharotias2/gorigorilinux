@@ -1,1 +1,109 @@
 
+[2019/09/30 21:42:21] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/30 21:42:21] INFO: PARAM: article_name = startlinux
+[2019/09/30 21:42:21] INFO: ROW: none
+[2019/09/30 21:42:21] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/30 21:42:41] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/30 21:42:41] INFO: PARAM: article_name = startc
+[2019/09/30 21:42:41] INFO: ROW: none
+[2019/09/30 21:42:41] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/30 21:42:45] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/30 21:42:45] INFO: PARAM: article_name = startc
+[2019/09/30 21:42:45] INFO: ROW: none
+[2019/09/30 21:42:45] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/30 21:42:47] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/30 21:42:47] INFO: PARAM: article_name = installwintcc
+[2019/09/30 21:42:47] INFO: ROW: none
+[2019/09/30 21:42:47] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/30 21:42:49] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/30 21:42:49] INFO: PARAM: article_name = startwinprogramming
+[2019/09/30 21:42:49] INFO: ROW: none
+[2019/09/30 21:42:49] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/30 22:32:49] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/30 22:32:49] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/30 22:32:49] INFO: ROW: none
+[2019/09/30 22:32:49] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/30 22:35:34] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/30 22:35:34] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/30 22:35:34] INFO: ROW: none
+[2019/09/30 22:35:34] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/09/30 22:40:16] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/09/30 22:40:16] INFO: PARAM: article_name = setup-apache2-on-ubuntu
+[2019/09/30 22:40:16] INFO: ROW: none
+[2019/09/30 22:40:16] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:08:12] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:08:12] INFO: PARAM: article_name = start-java
+[2019/10/01 07:08:12] INFO: ROW: none
+[2019/10/01 07:08:12] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:09:12] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:09:12] INFO: PARAM: article_name = start-java
+[2019/10/01 07:09:12] INFO: ROW: none
+[2019/10/01 07:09:12] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:12:28] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:12:28] INFO: PARAM: article_name = 2-way-of-proc
+[2019/10/01 07:12:28] INFO: ROW: none
+[2019/10/01 07:12:28] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:12:31] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:12:31] INFO: PARAM: article_name = what-is-oop
+[2019/10/01 07:12:31] INFO: ROW: none
+[2019/10/01 07:12:31] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:12:36] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:12:36] INFO: PARAM: article_name = class-and-instance
+[2019/10/01 07:12:36] INFO: ROW: none
+[2019/10/01 07:12:36] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:12:43] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:12:43] INFO: PARAM: article_name = 2-way-of-proc
+[2019/10/01 07:12:43] INFO: ROW: none
+[2019/10/01 07:12:43] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:13:29] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:13:29] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:13:29] INFO: ROW: none
+[2019/10/01 07:13:29] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:15:37] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:15:37] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:15:37] INFO: ROW: none
+[2019/10/01 07:15:37] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:15:47] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:15:47] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:15:47] INFO: ROW: none
+[2019/10/01 07:15:47] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:16:00] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:16:00] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:16:00] INFO: ROW: none
+[2019/10/01 07:16:00] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:16:13] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:16:13] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:16:13] INFO: ROW: none
+[2019/10/01 07:16:13] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:16:21] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:16:21] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:16:21] INFO: ROW: none
+[2019/10/01 07:16:21] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:16:43] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:16:43] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:16:43] INFO: ROW: none
+[2019/10/01 07:16:43] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:16:54] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:16:54] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:16:54] INFO: ROW: none
+[2019/10/01 07:16:54] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:17:07] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:17:07] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:17:07] INFO: ROW: none
+[2019/10/01 07:17:07] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:17:16] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:17:16] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:17:16] INFO: ROW: none
+[2019/10/01 07:17:16] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:17:22] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:17:22] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:17:22] INFO: ROW: none
+[2019/10/01 07:17:22] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:17:37] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:17:37] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:17:37] INFO: ROW: none
+[2019/10/01 07:17:37] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
+[2019/10/01 07:17:47] INFO: SQL: SELECT good, bad FROM goodbad WHERE article_name = :article_name
+[2019/10/01 07:17:47] INFO: PARAM: article_name = stack-and-heap
+[2019/10/01 07:17:47] INFO: ROW: none
+[2019/10/01 07:17:47] INFO: SQL: SELECT comment_no, user_name, mail_address, comment, anchor, post_date FROM comments WHERE article_name = :article_name AND anchor = :anchor AND delete_flag = 0 ORDER BY post_date ASC
