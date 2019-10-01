@@ -42,13 +42,13 @@ if (strtolower($_SERVER['REQUEST_METHOD']) == "get") {
         fwrite($logfile, "[$result]\n");
         echo "[$result]";
     } else if ($param == "article") {
-        $entry = dirname($cate) . "/" . substr(basename($cate), 0, 3);
+        $entry = getNthMatch("/[0-9]{3}_(.*)\.(md|html)$/", $cate, 1);
         $itemUrl = "https://gorigorilinux.net/" . MyArticleUtils::getUrlFromEntry($entry);
         $resultJson = "{\n";
         $resultJson .= "    \"itemLink\": \"$itemUrl\", \n";
         $resultJson .= "    \"itemAuthor\": \"info@singersongwriter.ciao.jp (田中喬之)\", \n";
         $resultJson .= "    \"itemCategory\": \"" . translate(substr($cate, 0, strpos($cate, '/'))) . "\", \n";
-        $resultJson .= "    \"itemComment\": \"". $articleName ."\", \n";
+        $resultJson .= "    \"itemComment\": \"\", \n";
         $resultJson .= "    \"itemGuid\": \"$itemUrl\", \n";
         $resultJson .= "    \"itemSource\": \"\", \n";
         $extension = substr($path, strrpos($path, "."));
@@ -61,7 +61,7 @@ if (strtolower($_SERVER['REQUEST_METHOD']) == "get") {
             } else if ($extension == ".md" && preg_match('/^# (.*)$/', $line, $matches) == 1) {
                 $resultJson .= "    \"itemTitle\": \"" . $matches[1] . "\", \n";
             }
-            $description = htmlspecialchars(ttGetArticleText($path, 1000));
+            $description = htmlspecialchars(MyArticleUtils::getArticleText($path, 1000));
             $description = str_replace("\\", "\\\\", $description);
             $resultJson .= "    \"itemDescription\": \"$description\", \n";
             $ftime = date('Y-n-j-H-i-s', filemtime($path));

@@ -6,8 +6,8 @@
 ```Test.java
 public class Test {
     public static void main(String[] args) {
-	    System.out.println("はじめてのJava!");
-	}
+        System.out.println("はじめてのJava!");
+    }
 }
 ```
 これは何かと言うと、Java言語で書かれたプログラムのソースコードです。

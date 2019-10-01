@@ -37,7 +37,6 @@ class MyArticleUtils {
             }
             fclose($file);
         } else if ($extension == ".md") {
-            require_once("functions_markdown.php");
             $html = MyMarkdown::getMarkdown($pathName);
             $lines = explode("\n", $html);
             array_shift($lines);
