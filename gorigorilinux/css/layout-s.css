@@ -8,9 +8,8 @@
 
 
 .menu-header {
-    border: 1px solid #707880;
     height: 50px;
-    background-color: rgba(20, 30, 40, 0.3);
+    background-color: #008899;
 }
 
 .menubutton {
