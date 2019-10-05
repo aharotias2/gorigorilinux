@@ -12,8 +12,8 @@ class MyMarkdown {
 	$parts = str_replace("\\_", "[:underscore:]", $parts);
 	$parts = str_replace("\\(", "[:openparen:]", $parts);
 	$parts = str_replace("\\)", "[:closeparen:]", $parts);
-	$linkPattern = '/\[([^\]]*)\]\(([^\)]*)\)/';
-	preg_match_all($linkPattern, $parts, $out, PREG_SET_ORDER);
+	$linkPattern2 = '/\[([^\]]*)\]\(([^\)]*)\)/';
+	preg_match_all($linkPattern2, $parts, $out, PREG_SET_ORDER);
 	foreach ($out as $m) {
             $converted = str_replace("_", "[:underscore:]", $m[2]);
             $subject = "[{$m[1]}]({$m[2]})";
@@ -117,9 +117,6 @@ class MyMarkdown {
 		} else if ($len >= 3 && substr($line, 0, 3) == '```') {
                     $type = "code";
                     $codeName = substr($line, 3);
-                    if ($codeName == "") {
-			$codeName = "No Title";
-                    }
 		} else if ($len >= 1 && $line[0] == ":") {
                     $type = "sample";
 		} else if ($allowHtml == true && $len >= 1 && ltrim($line[0]) == "<") {

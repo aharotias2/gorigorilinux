@@ -9,6 +9,7 @@ $colors = [
     "cLangColor" => "darkgreen",
 
     "java" => "forestgreen",
+    "javaColor" => "limegreen",
 
     "general" => "seagreen",
     "generalColors" => "royalblue",
@@ -58,6 +59,8 @@ $translations = [
     ["01_prolog", "準備", $colors["cLangColor"]],
 
     ["java", "Java", $colors["java"]],
+    ["02_javabasic", "Javaの基本", $colors["javaColor"]],
+    ["03_gtk", "Java-GTK", $colors["javaColor"]],
 
     ["general", "プログラミング総合", $colors["general"]],
     ["01_basic", "超基本", $colors["generalColors"]],

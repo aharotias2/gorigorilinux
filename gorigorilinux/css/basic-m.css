@@ -468,7 +468,8 @@ iframe.google-maps {
 
 .contents .article .figure-image .figure {
     max-width: 100%;
-    box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.8);
+    border: solid 1px #DDDDDD;
+    /*box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.8);*/
 }
 
 .contents .article .figure-image .figure-flat {

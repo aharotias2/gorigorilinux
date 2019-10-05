@@ -353,22 +353,24 @@ img.topimage {
 }
 
 .contents .article .code .code-header {
-    /*background-color: #485058;*/
     background-color: mediumseagreen;
     color: #E0E8F0;
 }
 
 .contents .article .code .code-header h5 {
-    color: #D0D8E0;
+    color: #E0E8F0;
 }
 
 .contents .article .code pre {
     background-color: #404850;
     color: #DDDDDD;
-    font-size: normal;
+    font-size: medium;
 }
 
 .contents .article .code pre strong {
+    color: orange;
+}
+.contents .article .code pre b {
     color: orange;
 }
 
@@ -474,15 +476,26 @@ img.topimage {
 
 .filetype_directory {
     font-weight: bold;
-    color: black;
+    color: royalblue;
 }
 
 .filetype_executable {
-    color: black;
+    color: tomato;
 }
 
 .contents span .code {
     font-family: monospace;
+}
+
+#look-comments {
+    text-align: center;
+}
+
+#look-comments-link > a {
+    background-color: #CCDDDD;
+    padding: 8px;
+    border-radius: 100px;
+    color: #226677;
 }
 
 /**********************************************************************************************
@@ -792,3 +805,38 @@ img.topimage {
     font-size: large;
 }
 
+/**********************************************************************************************
+ * シンタックスハイライター
+ **********************************************************************************************/
+/* キーワード */
+div.code .kw {
+    color: gold;
+    font-weight: normal;
+}
+/* 文字列 */
+div.code .str {
+    color: limegreen;
+}
+/* コメント */
+div.code .cmt {
+    color: #778899;
+}
+/* ディレクティブ */
+div.code .dcv {
+    color: sandybrown;
+}
+/* プロンプト */
+div.code .ppt {
+    color: limegreen;
+    font-weight: bold;
+}
+/* 型・クラス */
+div.code .cls {
+    color: deepskyblue;
+}
+/* 関数・メソッド */
+div.code .fnc {
+    color: mediumturquoise;
+}
+
+    

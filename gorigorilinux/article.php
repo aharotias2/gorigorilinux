@@ -14,6 +14,12 @@ $now = new Datetime(date('Y/m/d H:i:s'));
 if (!isset($_SESSION[$article->id]) || $now->sub(new DateInterval('PT24H')) > $_SESSION[$article->id]['time']) {
     $_SESSION[$article->id] = array('good' => 0, 'bad' => 0, 'time' => new Datetime(date('Y/m/d H:i:s')));
 }
+
+$dao = new CommentsDao(null);
+if ($dao != null) {
+    $commentsCount = $dao->getCommentsCount();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -69,7 +75,7 @@ if (!isset($_SESSION[$article->id]) || $now->sub(new DateInterval('PT24H')) > $_
                     <?php MyHTMLUtils::putPrevLink($article->id); MyHTMLUtils::putNextLink($article->id); ?>
                     <div style="clear:both;"></div>
                 </div>
-                <div class="comment_block">
+                <div id="commentblock" class="comment_block">
                     <h4>評価・コメントをお残しください...</h4>
                     <div class="goodbad comment_switch">
                         <?php

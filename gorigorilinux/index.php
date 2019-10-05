@@ -5,6 +5,11 @@ $localPrefix = "closed/php/";
 require($localPrefix . "functions_comments.php");
 include($localPrefix . "functions.php");
 
+$dao = new CommentsDao(null);
+if ($dao != null) {
+    $commentsCount = $dao->getCommentsCount();
+}
+
 $article = new ArticleInfo();
 $sqlite = new SQLiteClient();
 $itemNum = isset($_GET['n']) ? $_GET['n'] : "0";
@@ -15,13 +20,15 @@ if ($pageKind == "recent") {
     $article->id = MyArticleUtils::getEntryFromUrl($item->link);
     $article->url = MyFileUtils::findArticlePath($article->id);
     $article->pubDate = date("Y.m.d H:i:s", strtotime($item->pubDate));
-    $article->category = substr($article->url, 0, strrpos($article->url, "/"));
-    $article->category = substr($article->category, strlen("closed/articles/"));
+    $c = substr($article->url, 0, strrpos($article->url, "/"));
+    $c = substr($c, strlen("closed/articles/"));
+    $article->category = substr($c, 0, strrpos($c, "/"));
 } else if ($pageKind == "recommended") {
     $article->id = $_GET['entry'];
     $article->url = MyFileUtils::findArticlePath($article->id);
-    $article->category = substr($article->url, strlen("closed/articles/"));
-    $article->category = substr($article->category, 0, strrpos($article->category, "/"));
+    $c = substr($article->url, strlen("closed/articles/"));
+    $c = substr($c, 0, strrpos($c, "/"));
+    $article->category = substr($c, 0, strrpos($c, "/"));
 }
 ?><!DOCTYPE html>
 <html lang="ja">
@@ -70,15 +77,17 @@ if ($pageKind == "recent") {
                     <div class="datetime">
                         <span class="mtime">
                             <?php if ($pageKind != "recommended") { ?>
-                                <img src="images/time.svg">公開:<?=$itemPubDate?>
+                                <img src="images/time.svg">公開:<?=$article->pubDate?>
                             <?php } ?>
                             <img src="images/update.png">更新:<?=MyFileUtils::getFilemtime($article->url)?>
                         </span>
-                        <div class="nav">
-                            <div class="latest_article_lite">
-                                <?php MyHTMLUtils::putArticleCategory($article->category); ?>
-                            </div>
-                        </div>
+                        <span class="nav">
+                            <span class="latest_article_lite">
+				<span class="category_article">
+				    <?php MyHTMLUtils::putArticleCategorySingle($article->category); ?>
+				</span
+                            </span>
+                        </span>
                     </div>
                     <?php
                     $articleExtension = substr($article->url, strrpos($article->url, ".") + 1);
@@ -91,6 +100,17 @@ if ($pageKind == "recent") {
                     }
                     ?>
                 </div>
+		<div id="look-comments">
+		    <div id="look-comments-link">
+			<a href="<?=MyArticleUtils::getUrlFromEntry($article->id)?>#commentblock">
+			    <?php if ($commentsCount[$article->id] > 0) { ?>
+				コメントを見る
+			    <?php } else { ?>
+				コメントをする
+			    <?php } ?>
+			</a>
+		    </div>
+		</div>
                 <?php if ($pageKind != "recommended") { ?>
                     <div class="pagenavi">
                         <?php if ($itemNum > 0) { ?>

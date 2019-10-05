@@ -21,10 +21,13 @@ class CommentsDao {
     private $deleteSql = "UPDATE comments SET delete_flag = 1 "
                        . "WHERE article_name = :article_name AND comment_no = :comment_no";
 
+    private $recentCommentsSql = "SELECT article_name, user_name, post_date FROM comments "
+                               . "ORDER BY post_date desc LIMIT ";
+    
     public function insert($articleName, $user, $mail, $comment, $anchor) {
-	global $logger;
-	global $pdo;
-	$logger->info("SQL: $sql");
+        global $logger;
+        global $pdo;
+        $logger->info("SQL: $sql");
         $stmt = $pdo->prepare($this->insertSql);
         $params = [
             ':article_name' => $articleName,
@@ -34,14 +37,14 @@ class CommentsDao {
             ':anchor' => $anchor
         ];
         $result = $stmt->execute($params);
-	$logger->info("SQL: executed[" . ($result ? "SUCCESS" : "FAILED") . "] with [" . implode(", ", $params) . "]");
+        $logger->info("SQL: executed[" . ($result ? "SUCCESS" : "FAILED") . "] with [" . implode(", ", $params) . "]");
         if (!$result) {
-	    $logger->error("SQL: " . implode("; ", $stmt->errorInfo()));
+            $logger->error("SQL: " . implode("; ", $stmt->errorInfo()));
         }
     }
 
     public function getCommentsCount() {
-	global $pdo;
+        global $pdo;
         $stmt = $pdo->query($this->commentCountSql);
         $result = [];
         while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
@@ -50,17 +53,31 @@ class CommentsDao {
         return $result;
     }
 
-    public function getComment($articleName, $anchor) {
-	global $logger;
+    public function getRecentComments($limit) {
 	global $pdo;
-	$logger->info("SQL: " . $this->getCommentSql);
+	$stmt = $pdo->query($this->getRecentCommentsSql + $limit);
+	$result = [];
+	while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+	    $result[] = [
+		'article_name' => $row['article_name'],
+		'user_name' => $row['user_name'],
+		'post_date' => $row['post_date']
+	    ];
+	}
+	return $result;
+    }
+    
+    public function getComment($articleName, $anchor) {
+        global $logger;
+        global $pdo;
+        $logger->info("SQL: " . $this->getCommentSql);
         $stmt = $pdo->prepare($this->getCommentSql);
         $result = $stmt->execute([
             ':article_name' => $articleName,
             ':anchor' => $anchor
         ]);
         if (!$result) {
-	    $logger->error("SQL FAILED: " . implode("; ", $stmt->errorInfo()));
+            $logger->error("SQL FAILED: " . implode("; ", $stmt->errorInfo()));
         } else {
             $result = [];
             while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
@@ -78,7 +95,7 @@ class CommentsDao {
     }
 
     public function delete($articleName, $anchor) {
-	global $pdo;
+        global $pdo;
         $stmt = $pdo->prepare($this->deleteSql);
         $stmt->execute([
             ':article_name' => $articleName,

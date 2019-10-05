@@ -1,12 +1,7 @@
 <?php
-if ($rss == null) {
+if (!isset($rss)) {
     $rss = new SimpleXMLElement(file_get_contents("rss.xml"));
     $item = $rss->channel->item[intval($itemNum)];
-}
-
-$dao = new CommentsDao(null);
-if ($dao != null) {
-    $commentsCount = $dao->getCommentsCount();
 }
 
 $latestArticlesMaxSize = 10;
@@ -22,23 +17,28 @@ $i = 0;
         $mini->title = $item->title;
         $mini->pubDate = date("Y.m.d", strtotime($item->pubDate));
         $mini->category = substr($mini->path, 0, strrpos($mini->path, "/"));
+        $mini->category = substr($mini->category, 0, strrpos($mini->category, "/"));
 	$mini->category = substr($mini->category, strlen("closed/articles/"));
-	if (array_key_exists($article->id, $commentsCount)) {
+	if (array_key_exists($mini->id, $commentsCount)) {
 	    $count = $commentsCount[$mini->id];
 	} else {
 	    $count = 0;
 	}
-	$mini->url = MyArticleUtils::getUrlFromEntry($mini->id);
+	$mini->url = 'p' . $i;
         ?>
         <div class="latest_article_lite">
             <h4>
+		<span class="category_article">
+		    <?php MyHTMLUtils::putArticleCategorySingle($mini->category); ?>
+		</span>
                 <a href="<?=$mini->url?>">
 		    <?=$mini->title?>
 		    <span class="date_article"><?=$mini->pubDate?></span>
-                    <span class="comments_count">コメント: <?=$count?></span>
+		    <?php if ($count > 0) { ?>
+			<span class="comments_count">コメント: <?=$count?></span>
+		    <?php } ?>
 		</a>
             </h4>
-	    <?php MyHTMLUtils::putArticleCategory($mini->category); ?>
         </div>
 	<?php
 	$i++;

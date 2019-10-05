@@ -41,20 +41,24 @@ class MyHTMLUtils {
         echo "</div>";
     }
 
+    public static function putArticleCategorySingle($category) {
+	$catName = substr($category, strrpos($category, "/") + 1);
+        $categoryColor = getCategoryColor($catName);
+        $categoryNameJa = translate($catName);
+        echo '<a href="toc.php?category='.$category.'">';
+        echo '<span class="category_article_piece" style="background-color:'.$categoryColor.'">';
+        echo $categoryNameJa;
+        echo '</span>';
+        echo '</a>';
+    }
+    
     public static function putArticleCategory($category) {
         echo '<div class="category_article">';
         $tmp = "";
         foreach (explode("/", $category) as $catName) {
-            $tmp = $tmp . $catName;
-            $categoryColor = getCategoryColor($catName);
-            $categoryNameJa = translate($catName);
-
-            echo '<a href="toc.php?category='.$tmp.'">';
-            echo '<span class="category_article_piece" style="background-color:'.$categoryColor.'">';
-            echo $categoryNameJa;
-            echo '</span>';
-            echo '</a>';
-            $tmp = $tmp . "/";
+	    $tmp .= $catName;
+	    self::putArticleCategorySingle($tmp);
+	    $tmp .= "/";
         }
         echo '</div>';
     }

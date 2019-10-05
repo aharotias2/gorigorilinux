@@ -1,4 +1,10 @@
 function onLoad() {
+    select(".contents p").forEach(function(pa) {
+	pa.innerHTML = pa.innerHTML.split("\n")
+	    .map(e => e.replace(/:&gt;/g, "<img src=\"images/breadcrumbdelim-red.svg\">"))
+	    .join("\n");
+    });
+
     setCss({".contents .article dt a img": {
         "vertical-align": "middle",
         "margin": "3px"
@@ -89,8 +95,8 @@ function onLoad() {
 
     select(".code").forEach(function(code) {
         var codeName = code.getAttribute("name");
-        if (codeName != null) {
-            var pre = code.select("pre")[0];
+        var pre = code.select("pre")[0];
+        if (codeName != null && codeName.charAt(0) != '.') {
             code.insertBefore(
                 newElement(
                     "div", {
@@ -101,8 +107,10 @@ function onLoad() {
                 ),
                 pre
             );
-            pre.innerHTML = pre.innerHTML.replace(/\[Enter\]/g, "<img src=\"images/enter.svg\">");
-        }
+        } else {
+	    pre.style["border-radius"] = "3px";
+	}
+        pre.innerHTML = pre.innerHTML.replace(/\[Enter\]/g, "<img src=\"images/enter.svg\">");
     });
     
     select("#comment_switcher").onclick = function() {
@@ -473,6 +481,7 @@ function onResize() {
 window.onload = function() {
     onLoad();
     onResize();
+    syntaxHiliter.executeAll();
 };
 
 window.onresize =function() {
