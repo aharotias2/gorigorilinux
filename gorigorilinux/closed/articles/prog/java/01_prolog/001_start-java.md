@@ -16,6 +16,7 @@ public class Test {
 ### JavaコンパイラとJava仮想マシンのダウンロード
 ソースコードのままで動かすことはできません。
 JavaコンパイラとJavaバーチャルマシン(JVM)をインストールする必要があります。
+
 それらはOracleという企業が無償で提供しています。
 Googleで「jdk」と検索するとほぼ先頭にでてきます。
 
@@ -40,12 +41,21 @@ ZIPなどで梱包されたこれをダウンロードしたら展開して好�
 Windowsの場合、「コントロールパネル」→「システム」→「詳細設定」→「環境変数」と見ていって環境変数を追加します。
 Linuxの場合、システムのプロファイルまたはシェルの設定ファイル「.bashrc」などに環境変数を記入します。
 
+例:
+```bashrc.sh
+#!/bin/bash
+
+export JAVA\_HOME=/opt/jdk
+export JRE\_HOME=$JAVA\_HOME/jre
+export PATH=$PATH:$JAVA\_HOME/bin
+```
+
 再起動が必要な場合は再起動します。
 
 ### Javaインストールの確認
 コマンドプロンプトまたはターミナルエミュレータを開き、`javac -version`と打ち、標準出力にバージョン情報が表示されたらインストール成功です。
 ```ターミナル
-プロンプト$ javac -version [Enter]
+bash-$ javac -version [Enter]
 javac 12.0.2
 ```
 上の例ではバージョン12をインストールした場合の出力です。
@@ -54,7 +64,7 @@ javac 12.0.2
 ターミナルを開き、先ほど「Test.java」を保存したディレクトリに`cd`コマンドで移動します。
 そこで「Test.java」を引数にして`javac`コマンドを起動してコンパイルします。
 ```ターミナル
-プロンプト$ javac Test.java [Enter]
+bash-$ javac Test.java [Enter]
 ```
 エラーがない場合は何も出力されずに正常終了します。
 `ls`コマンドを打ち、ディレクトリの中を確認すると、「Test.java」の隣に「Test.class」というファイルができているはずです。
@@ -63,7 +73,7 @@ javac 12.0.2
 ## プログラムを実行する
 クラスファイルを引数にして、今度は`java`コマンドを実行します。するとJava仮想マシンが起動してクラスファイルを実行します。
 ```ターミナル
-プロンプト$ java Test [Enter]
+bash-$ java Test [Enter]
 はじめてのJava!
 ```
 このような表示になれば成功です。

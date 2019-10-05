@@ -9,11 +9,20 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Tue, 01 Oct 2019 14:38:30 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 05 Oct 2019 11:32:26 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>JavaでGTKアプリケーションを作ってみる</title>
+    <link>https://gorigorilinux.net/entry-start-java-gnome-gtk</link>
+    <description>Ubuntuで動くGTKを使ったGUIのアプリケーションをJavaで作ってみます。準備Javaのインストール好きなJDKをインストールします。JDKは色々な種類がありますが、ここではOracle JDK 13を使います。リンク: Java SE Downloads | Oracle.comIDEのインストールIDEをインストールします。Javaそのものも普通のテキストエディタで手書きは大変です。GTKもまた、中々手書きが大変なAPIです。どうしましょう。IDEがあるではありませんか。ということで個人的に慣れ親しんだEclipseをインストールします。リンク: https://www.eclipse.orgGTK+のインストールUbuntuの場合aptを使ってgtkの開発環境をインストールします。$ sudo apt install libgtk-3-devJava-GNOMEのインストールjava-gnomeのバインディングを公開しているサイトがあります。リンク: The java-gnome User Interface LibraryUbuntuの場合aptコマン...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>プログラミング</category>
+    <guid>https://gorigorilinux.net/entry-start-java-gnome-gtk</guid>
+    <pubDate>Sat, 05 Oct 2019 11:10:00 GMT</pubDate>
+  </item>
   <item>
     <title>はじめてのJava</title>
     <link>https://gorigorilinux.net/entry-start-java</link>
@@ -45,12 +54,12 @@
   </item>
   <item>
     <title>ASUSのポータブルモニター「MB16A」買いました (うまく動かない)</title>
-    <link>https://gorigorilinux.net/entry-asus-portable-display-on-slackware-less-works</link>
+    <link>https://gorigorilinux.net/entry-i-bought-asus-zenscreen</link>
     <description>ノートパソコンの画面が狭いのでポータブルディスプレイが欲しくなりました。そこで早速買って来ました。ASUSのポータブル・モニター「MB16A」です。一も二もなく開封しました。USB Type-Cの端子をパソコンに接続しました。USB Type-CからType-Bに変換するアダプターも付属していました。画面がピカピカなのが好みの分かれるところかもしれませんね。写真を撮る時に自分が写りさえしなければ良いのですが。Windows 10に接続Windows 10では、まずドライバーのインストールが必要になります。DVDなどは付属していないので、インターネットからドライバを入手します。MB16AC Driver &amp; Tools | 液晶ディスプレイ | ASUS 日本ここからドライバを入手し、インストーラを起動してドライバをインストールしました。簡単に写りました。Ubuntu 18.04に接続次はUbuntu...</description>
     <author>info@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
-    <comments>asus-portable-display-on-slackware-less-works</comments>
-    <guid>https://gorigorilinux.net/entry-asus-portable-display-on-slackware-less-works</guid>
+    <comments>i-bought-asus-zenscreen</comments>
+    <guid>https://gorigorilinux.net/entry-i-bought-asus-zenscreen</guid>
     <pubDate>Sun, 08 Sep 2019 12:50:00 GMT</pubDate>
   </item>
   <item>
@@ -196,15 +205,6 @@
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
     <guid>https://gorigorilinux.net/entry-markdown</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>ロリポおじさんが復活? ロリポをなめるなと咆哮!!!!</title>
-    <link>https://gorigorilinux.net/entry-lolipo-wo-nameruna</link>
-    <description>いやぁ〜ついに来ましたよこの時が。ロリポをなめるな！レンサバ界のドン露璃舗悪慈酸が復活！？｜ロリポップ！レンタルサーバー https://t.co/ylVxVOR5hO #ロリポをなめるな&amp;mdash; 田中喬之＠ごりごりりぬっくす管理人 (@goodslacktanaka) 2019年6月13日クォリティ高っか!!露璃舗悪慈酸=ロリポおじさんって誰？と思いましたが、レンタルサーバ・ロリポップのマスコットであり、どうやら2年前に溶鉱炉に沈められていたようです。どうりで見たことないと思いました。ロリポップはとにかく遅い、重い、障害多い、セキュリティ弱い、などの弱点が指摘され「安かろう悪かろう」なサーバと見られがちです。しかしそれは違うぞ、と言う訳ですから、低価格が魅力だけど使い勝手とか大丈夫かな…と思っている方々の不安を払拭する激作となっており...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>ITニュース</category>
-    <guid>https://gorigorilinux.net/entry-lolipo-wo-nameruna</guid>
     <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
 </channel>
