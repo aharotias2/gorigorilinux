@@ -6,28 +6,37 @@ $article = new ArticleInfo();
 $sqlite = new SQLiteClient();
 $article->id = $_GET['entry'];
 $article->url = MyFileUtils::findArticlePath($article->id);
-$article->category = substr(dirname($article->url), strlen("closed/articles/"));
-$article->parent = dirname($article->category);
-$article->title = MyArticleUtils::getArticleTitle($article->url);
-$fullUrl = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$now = new Datetime(date('Y/m/d H:i:s'));
-if (!isset($_SESSION[$article->id]) || $now->sub(new DateInterval('PT24H')) > $_SESSION[$article->id]['time']) {
-    $_SESSION[$article->id] = array('good' => 0, 'bad' => 0, 'time' => new Datetime(date('Y/m/d H:i:s')));
-}
+if ($article->url != null) {
+    $article->category = substr(dirname($article->url), strlen("closed/articles/"));
+    $article->parent = dirname($article->category);
+    $article->title = MyArticleUtils::getArticleTitle($article->url);
+    $fullUrl = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $now = new Datetime(date('Y/m/d H:i:s'));
+    if (!isset($_SESSION[$article->id]) || $now->sub(new DateInterval('PT24H')) > $_SESSION[$article->id]['time']) {
+        $_SESSION[$article->id] = array('good' => 0, 'bad' => 0, 'time' => new Datetime(date('Y/m/d H:i:s')));
+    }
 
-$dao = new CommentsDao(null);
-if ($dao != null) {
-    $commentsCount = $dao->getCommentsCount();
+    $dao = new CommentsDao(null);
+    if ($dao != null) {
+        $commentsCount = $dao->getCommentsCount();
+    }
 }
-
 ?>
 <!DOCTYPE html>
+<?php if ($article->url == null) { ?>
+    <html lang="ja">
+        <head>
+            <meta http-equiv="refresh" content="0; URL='.'" />
+        </head>
+    </html>
+    <?php return; ?>
+<?php } ?>
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))' />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="https://gorigorilinux.net/favicon.png" />
+        <link rel="icon" href="https://gorigorilinux.net/favicon.png" />
         <title><?php MyHTMLUtils::putArticleTitle($article->url); ?>: <?=$siteTitle?></title>
         <script type="text/javascript">
          articleName = "<?php=$article->id?>";
@@ -48,10 +57,10 @@ if ($dao != null) {
                     <h3><?php echo translate(substr($article->parent, strrpos($article->parent, "/") + 1)); ?></h3>
                     <?php MyHTMLUtils::putToc($article->parent, false, 2, false); ?>
                 </div>
-		<?php include("latest-articles.php"); ?>
+                <?php include("latest-articles.php"); ?>
             </div>
             <div class="rightpane">
-		<?php MyHTMLUtils::putHeaderMenu(2); ?>
+                <?php MyHTMLUtils::putHeaderMenu(2); ?>
                 <div class="pagenavi">
                     <?php MyHTMLUtils::putPrevLink($article->id); MyHTMLUtils::putNextLink($article->id); ?>
                     <div style="clear:both;"></div>

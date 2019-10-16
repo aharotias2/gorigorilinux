@@ -558,18 +558,19 @@ iframe.google-maps {
 }
 
 .contents .comment_block {
-    padding: 20px 60px 20px 60px;
+    padding: 20px 0px 20px 0px;
     margin-top: 10px;
 }
 
 .contents .comment_block .comment_switch {
-    margin: 0px -4px 0px -4px;
+    margin: 0px 60px 0px 60px;
 }
 
 .comment_block h4 {
     font-size: large;
     font-style: italic;
     font-weight: bold;
+    margin: 0 60px;
 }
 
 .comment_block input {
@@ -592,7 +593,7 @@ iframe.google-maps {
 }
 
 .contents .comment_block .post_block {
-    margin: 10px 0 10px 0;
+    margin: 10px 60px 10px 60px;
 }
 
 .contents .comment_block .no_comments {
@@ -601,6 +602,10 @@ iframe.google-maps {
     text-align: center;
     background-color: white;
     color: black;
+}
+
+.contents .comment_block .comment_header {
+    margin: 0 60px;
 }
 
 .contents .comment_block .comment {
@@ -632,7 +637,11 @@ iframe.google-maps {
     margin: 8px 0px;
 }
 
-.contents .comment .reply_button {
+.contents .reply_block {
+    margin-left: 60px;
+}
+
+.contents .comment_post .reply_button {
     display: inline-block;
     border: 1px solid #DECDCD;
     background-color: salmon;
@@ -721,6 +730,14 @@ iframe.google-maps {
     font-size: medium;
     margin: 8px;
 }
+
+.contents .comment_post pre {
+    padding: 12px;
+    overflow-x: scroll;
+    border-radius: 0 0 3px 3px
+}
+
+
 /**********************************************************************************************
  * シェアボタン
  **********************************************************************************************/

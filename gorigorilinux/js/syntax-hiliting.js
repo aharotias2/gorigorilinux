@@ -10,7 +10,7 @@ var syntaxHiliter = {
         "class", "private", "public", "protected", "import",
         "package", "extends", "implements", "abstract",
         "new", "module", "var", "requires", "exports",
-	"boolean", "true", "false"
+	"boolean", "true", "false", "interface", "virtual"
    ],
     shellKeywords: [
         "alias", "if", "then", "else", "elif", "while", "for", "in", "case",
@@ -26,7 +26,7 @@ var syntaxHiliter = {
         case "java":
             text = text.split("\n")
 		.map(line => line
-		     .replace(/"([^"]+)"/, '<span klass="str">"$1"</span>')
+		     .replace(/"([^"]+)"/g, '<span klass="str">"$1"</span>')
 		     .replace(/(\/\/.*)$/, '<span klass="cmt">$1</span>')
 		     .replace(/(@[A-Z][a-zA-Z0-9_]*)\b/, '<span klass="dcv">$1</span>')
 		     .replace(/\b([A-Z][A-Z0-9_]*)\b/g, '<span klass="cnst">$1</span>')
@@ -46,6 +46,12 @@ var syntaxHiliter = {
             text = this.markUpWithSpan(text, this.commonCLikeKeywords, "kw");
             text = text.replace("klass", "class");
             break;
+	case "c++":
+            text = text.replace(/"([^"]+)"/, '<span klass="str">"$1"</span>');
+            text = text.replace(/(#.*)/, '<span klass="dcv">$1</span>');
+            text = this.markUpWithSpan(text, this.commonCLikeKeywords.concat(this.commonOOPKeywords), "kw");
+            text = text.replace("klass", "class");
+	    break;
         case "vala":
             text = this.markUpWithSpan(text, this.commonCLikeKeywords, "kw");
             break;

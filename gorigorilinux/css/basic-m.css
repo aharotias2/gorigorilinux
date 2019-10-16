@@ -532,18 +532,19 @@ iframe.google-maps {
 }
 
 .contents .comment_block {
-    padding: 12px 30px 12px 30px;
+    padding: 12px 0px 12px 0px;
     margin-top: 10px;
 }
 
 .contents .comment_block .comment_switch {
-    margin: 0px -4px 0px -4px;
+    margin: 0px 26px 0px 26px;
 }
 
 .comment_block h4 {
     font-size: large;
     font-style: italic;
     font-weight: bold;
+    margin: 0 30px;
 }
 
 .comment_block input {
@@ -575,36 +576,44 @@ iframe.google-maps {
     text-align: center;
 }
 
-.contents .comment_block .comment {
+.contents .comment_block .comment_post {
     //border-top: 1px solid #EFDEDE;
     padding: 12px 0 10px 0;
     margin: 5px 0 5px 0;
 }
 
-.contents .comment .comment_user {
+.comment_header {
+    margin: 0 30px;
+}
+
+.contents .comment_post .comment_user {
     display: inline;
     margin: 4px 0;
     font-weight: bold;
 }
 
-.contents .comment .comment_mail {
+.contents .comment_post .comment_mail {
     display: inline;
     margin: 4px 0;
     color: #807070;
 }
 
-.contents .comment .comment_date {
+.contents .comment_post .comment_date {
     display: inline;
     color: #807070;
 }
 
-.contents .comment .comment_text {
+.contents .comment_post .comment_text {
     display: block;
     margin: 8px 0;
     
 }
 
-.contents .comment .reply_button {
+.contents .comment_post .reply_block {
+    margin: 0 30px;
+}
+
+.contents .comment_post .reply_button {
     display: inline-block;
     border: 1px solid #DECDCD;
     background-color: salmon;
@@ -616,7 +625,7 @@ iframe.google-maps {
     width: 40px;
 }
 
-.contents .comment .delete_button {
+.contents .comment_post .delete_button {
     display: inline-block;
     border: 1px solid #DECDCD;
     background-color: royalblue;
@@ -628,17 +637,17 @@ iframe.google-maps {
     width: 40px;
 }
 
-.contents .comment .comment_reply {
+.contents .comment_post .comment_reply {
     margin-top: 0;
     padding-top: 0;
 }
 
-.contents .comment .comment_reply .comment {
+.contents .comment_post .comment_reply .comment_post {
     margin: 0;
     padding: 0;
 }
 
-.contents .comment .comment_reply .comment .comment_box {
+.contents .comment_post .comment_reply .comment_post .comment_box {
     margin-top: 0;
 }
 

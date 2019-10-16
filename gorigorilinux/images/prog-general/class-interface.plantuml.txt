@@ -1,0 +1,31 @@
+@startuml
+
+interface ショップ {
+  +order()
+  +doRegister()
+}
+
+class Bシェルマート南大塚本店 {
+  __パブリック(公開)__
+  +list(): 一覧
+  +getNewCart(): カート
+  +order(Cart): オーダー
+  +doRegister(Coin): 支払い
+}
+
+class ヤマザキストアー西川口店 {
+  __パブリック(公開)__
+  +list(): 一覧
+  +getNewCart(): カート
+  +order(Cart): オーダー
+  +doRegister(Coin): 支払い
+}
+
+Bシェルマート南大塚本店 --up--|> ショップ: 実装
+ヤマザキストアー西川口店 --up--|> ショップ: 実装
+西池袋店 --up--|> Bシェルマート南大塚本店: 継承
+北赤羽店 --up--|> Bシェルマート南大塚本店: 継承
+所沢店 --up--|> ヤマザキストアー西川口店: 継承
+二子玉川店 --up--|> ヤマザキストアー西川口店: 継承
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+
+title Bシェルマートクラス図
+
+
+class Bシェルマート南大塚本店 {
+  __パブリック(公開)__
+  +list(): 一覧
+  +getNewCart(): カート
+  +order(Cart): オーダー
+  +doRegister(Coin): 支払い
+  --プライベート(非公開)--
+  -refresh(): 棚整理
+  -report(): 収支報告
+}
+
+class Bシェルマート西池袋 {
+  --プライベート(非公開)--
+  -refreshOden(): おでん
+  -fryChicken(): 唐揚げ
+}
+
+class Bシェルマート北赤羽 {
+  __パブリック(公開)__
+  +payUtility(Sheet): 光熱費
+}
+
+class Bシェルマート東新宿 {
+  __パブリック(公開)__
+  +getAmazonItem(String): 荷物受取
+}
+
+Bシェルマート南大塚本店 <|-down- Bシェルマート西池袋: 継承
+Bシェルマート南大塚本店 <|-down- Bシェルマート北赤羽: 継承
+Bシェルマート南大塚本店 <|-down- Bシェルマート東新宿: 継承
+@enduml

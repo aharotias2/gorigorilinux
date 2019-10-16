@@ -62,7 +62,7 @@ class SQLiteClient {
                 echo "<div class=\"no_comments\">コメントはまだありません。</div>";
             } else {
                 foreach ($comments as $comment) {
-                    echo "<div class=\"comment\">\n";
+                    echo "<div class=\"comment_post article\">\n";
                     echo "  <div class=\"comment_box\">\n";
 		    echo "    <div class=\"comment_header\">\n";
                     echo "      <div class=\"comment_user\">" . $comment['user_name'] . "</div>\n";

@@ -44,7 +44,7 @@ p {
  **********************************************************************************************/
 .header {
     background-color: #008899;
-    border-bottom: 2px solid #99AACC;
+    border-bottom: 2px solid #8899AA;
     color: black;
 }
 
@@ -375,7 +375,6 @@ img.topimage {
 }
 
 .contents .article pre .comment {
-    color: black;
     font-size: 100%;
     font-style: normal;
 }
@@ -556,98 +555,92 @@ img.topimage {
     color: black;
 }
 
-.contents .comment .comment_text .sample {
+.contents .comment_block .no_comments {
+    background-color: white;
+    color: black;
+}
+
+/*
+.contents .comment_post .comment_text .sample {
     background-color: #606060;
     color: #DDDDDD;
     padding: 10px;
     margin: 10px 0px;
 }
 
-.contents .comment .comment_text * {
+.contents .comment_post .comment_text * {
     font-style: normal;
     color: black;
 }
-.contents .comment .comment_text h3 {
+.contents .comment_post .comment_text h3 {
     font-size: 200%;
     font-weight: bold;
 }
-.contents .comment .comment_text h4 {
+.contents .comment_post .comment_text h4 {
     font-size: 150%;
     font-weight: bold;
 }
-.contents .comment .comment_text h5 {
+.contents .comment_post .comment_text h5 {
     font-size: 120%;
     font-weight: bold;
 }
-.contents .comment .comment_text h6 {
+.contents .comment_post .comment_text h6 {
     font-size: 110%;
     font-weight: bold;
 }
-.contents .comment .comment_text p {
+.contents .comment_post .comment_text p {
     margin-bottom: 20px;
     font-weight: normal;
 }
-.contents .comment .comment_text hr.style1 {
+.contents .comment_post .comment_text hr.style1 {
     margin: 10px 0;
     color: #FFFFFF;
 }
-.contents .comment .comment_text .code h5 {
+.contents .comment_post .comment_text .code h5 {
     font-size: 80%;
     font-weight: normal;
-    
-    background-color: white;
+    color: #E0E8F0;
     padding: 5px 10px;
-    
     margin-bottom: -1px;
 }
-.contents .comment .comment_text .code pre {
-    
-    padding: 10px;
-    background-color: white;
-    
-}
-.contents .comment .comment_text .code pre {
+.contents .comment_post .comment_text .code pre {
+    background-color: #404850;
+    color: #DDDDDD;
+    font-size: medium;
     font-family: mono,monospace,Monospace;
 }
-.contents .comment .comment_text strong {
+.contents .comment_post .comment_text b {
     font-style: normal;
     font-weight: bold;
-    color: black;
+    color: orange;
 }
-.contents .comment .comment_text i {
+.contents .comment_post .comment_text i {
     font-style: italic;
-    color: black;
 }
-.contents .comment .comment_text a {
-    color: black;
+.contents .comment_post .comment_text a {
     padding: 3px;
     margin: -3px;
 }
-.contents .comment .comment_text a:hover {
-    color: black;
+.contents .comment_post .comment_text a:hover {
     background-color: white;
     margin: -3px;
     padding: 3px;
 }
-.contents .comment .comment_text blockquote {
+.contents .comment_post .comment_text blockquote {
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-left: 2px solid royalblue;
 }
-.contents .comment .comment_text blockquote blockquote {
+.contents .comment_post .comment_text blockquote blockquote {
     
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.contents .comment .comment_text blockquote p {
+.contents .comment_post .comment_text blockquote p {
     margin-bottom: 0;
-}
-.contents .comment_block .no_comments {
-    background-color: white;
-    color: black;
 }
 
 .contents .comment_text .figure-image {
@@ -667,7 +660,7 @@ img.topimage {
 .contents .comment_text ul, .contents .comment_text ol {
     margin-left: 1.2em;
 }
-
+*/
 
 /**********************************************************************************************
  * ページネーション
@@ -823,7 +816,7 @@ div.code .cmt {
 }
 /* ディレクティブ */
 div.code .dcv {
-    color: sandybrown;
+    color: violet;
 }
 /* プロンプト */
 div.code .ppt {
@@ -836,7 +829,7 @@ div.code .cls {
 }
 /* 関数・メソッド */
 div.code .fnc {
-    color: mediumturquoise;
+    color: salmon;
 }
 
     

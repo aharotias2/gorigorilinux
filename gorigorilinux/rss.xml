@@ -9,11 +9,29 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Sat, 05 Oct 2019 11:32:26 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 14 Oct 2019 06:34:59 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>オブジェクト指向の簡単な説明 - 継承・カプセル化・多態性</title>
+    <link>https://gorigorilinux.net/entry-inheritance-encapsulation-polymorphism</link>
+    <description>今回はオブジェクト指向プログラミングの重要な概念である「カプセル化」「継承」「多態性」についてです。カプセル化だいたいどの仕事でもそうでしょうが、お客さんが知っていないといけない仕事と、お客さんが知らなくて良い仕事があります。お客さんが知らなくて良い仕事の詳細を隠しておくことはお客さんを混乱させずお店をクリーンに整理された状態に見せるために重要です。このことを「カプセル化」と言います。ここに、Bシェルマートというコンビニエンスストアがあるとします。図1はBシェルマート南大塚本店のクラス図です。この図にはBシェルマート南大塚本店の業務が箇条書きにしてあります。この場合、前回の記事で説明したlist: 一覧getNewCart: 新しいカートorder: 注文doRegister: 会計はパブリックなメソッドで、お...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>プログラミング</category>
+    <guid>https://gorigorilinux.net/entry-inheritance-encapsulation-polymorphism</guid>
+    <pubDate>Sun, 13 Oct 2019 08:30:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>オブジェクト指向の簡単な説明 (クラスとインスタンス)</title>
+    <link>https://gorigorilinux.net/entry-objects-and-classes</link>
+    <description>今回からはプログラミングの初心者の方のために、オブジェクト指向を「コンビニ」で説明します。ただし範囲が広くなるので、今回は最も基本となる概念である「クラス」と「インスタンス」について解説していきます。オブジェクト指向というものは「どう作るか」よりも「どう使うか」の方が大事なのでいきなり用例から入っていきます。んまずコンビニを開店します。Convini convini = new Convini();次にコンビニに来店し、カートを手に取ります。Cart cart = convini.getNewCart();コンビニの商品を一覧で確認します。convini.list(&amp;quot;おにぎり&amp;quot;);上のメソッドの出力が以下のようになります (という設定です)。商品番号 商品名 価格1001 鮭おにぎり 1221002 シーチキン 1281003 おかか 124...カートに鮭おにぎりを2個と、シーチキンを1個入れます。cart.add(...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>プログラミング</category>
+    <guid>https://gorigorilinux.net/entry-objects-and-classes</guid>
+    <pubDate>Fri, 11 Oct 2019 09:00:00 GMT</pubDate>
+  </item>
   <item>
     <title>JavaでGTKアプリケーションを作ってみる</title>
     <link>https://gorigorilinux.net/entry-start-java-gnome-gtk</link>
@@ -187,24 +205,6 @@
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>雑文</category>
     <guid>https://gorigorilinux.net/entry-my-golden-combi</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>私のMacBook Airのご紹介</title>
-    <link>https://gorigorilinux.net/entry-mymacbookair</link>
-    <description>令和元年明けましておめでとうございます。今日は私の持っているMacBook Airのご紹介をさせていただきます。  仕様   価格  134,800円(税別)  ディスプレイ  Retinaディスプレイ (13インチ)  Touch ID  Touch ID内蔵  仕上げ  ゴールド  個人的評価 良い点   トラックパッドの感度が非常に良いです。モタつきが一切ありません。  画面が高精細で美しく、また縦横比が16:10なので縦に狭く感じることがありません。  ダークモードの画面が見やすく、ゴールドの外観とも合っています。  指紋認証は便利で良いです。  高過ぎない価格設定。レッツノートやVAIOより安い点は良いです。  電源ボタンがないのですが、フタを開けると自動的に起動します。  外観のデザイン的に「これはマズい」ようなところはないです。  キーボードが光るので暗いところでも見...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/entry-mymacbookair</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>コメント欄のマークダウンの書き方</title>
-    <link>https://gorigorilinux.net/entry-markdown</link>
-    <description> このサイトのコメント欄ではマークダウン(Markdown)という記法をお使いいただけます。  マークダウンの書き方は基本的に下にリストアップしたサイトを参考にしていますが、このサイト独自実装になっていて微妙に違うのでこの記事で例を出して説明したいと思いますので宜しければご覧になってください。    Githubのマークダウン  多分最も有名な文書だと思われます。    CommonMark 0.29 仕様  CommonMarkはあいまいなところのあるマークダウンの厳密なルールを提案したものです。ここまでしっかり作っていません。    CommonMark 簡易説明  CommonMarkの簡単な例です。    Wikipediaのマークダウン  基本的な内容がまとまっています。    記法の例 見出し タイトルなど見出しとなる文は行頭に「#」を付けることで表現できます。 マークダウン   # 見出し1 ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/entry-markdown</guid>
     <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
 </channel>

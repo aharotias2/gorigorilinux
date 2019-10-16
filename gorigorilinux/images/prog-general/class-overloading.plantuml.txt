@@ -1,0 +1,40 @@
+@startuml
+
+title 支払い方法対応
+
+class Bシェルマート {
+ +doRegister()
+}
+
+class カード読み取り機 {
+ +read(ほげペイ)
+ +read(ふがペイ)
+ +read(ぴよペイ)
+}
+
+class ほげペイ {
+ +chargeHoge()
+ +payHoge()
+}
+
+class ふがペイ {
+ +chargeFuga()
+ +payFuga()
+}
+
+class ぴよペイ {
+ +chargePiyo()
+ +payPiyo()
+}
+
+客A *--> ほげペイ: 使用
+客B *--> ふがペイ: 使用
+客C *--> ぴよペイ: 使用
+
+ほげペイ --> カード読み取り機: read(ほげペイ)\n呼び出し >
+ふがペイ --> カード読み取り機: read(ふがペイ)\n呼び出し >
+ぴよペイ --> カード読み取り機: read(ぴよペイ)\n呼び出し >
+
+カード読み取り機 <--* Bシェルマート: 使用
+
+@enduml
