@@ -11,6 +11,9 @@ $colors = [
     "java" => "forestgreen",
     "javaColor" => "limegreen",
 
+    "vala" => "red",
+    "valaColor" => "darkred",
+    
     "general" => "seagreen",
     "generalColors" => "royalblue",
 
@@ -65,6 +68,9 @@ $translations = [
     ["general", "プログラミング総合", $colors["general"]],
     ["01_basic", "超基本", $colors["generalColors"]],
     ["02_oop", "オブジェクト指向", $colors["generalColors"]],
+
+    ["vala", "Vala", $colors["vala"]],
+    ["01_vala-basic", "基本", $colors["valaColor"]],
     
     // アプリケーション
     ["apps", "アプリケーション", $colors["apps"]],
@@ -99,6 +105,7 @@ $translations = [
     ["02_201907", "2019年7月", $colors["diaryColor"]],
     ["03_201908", "2019年8月", $colors["diaryColor"]],
     ["04_201909", "2019年9月", $colors["diaryColor"]],
+    ["05_201910", "2019年10月", $colors["diaryColor"]],
 
     ["news", "ニュース (IT、Linux関係ない)", $colors["news"]],
     ["01_201906", "2019年6月", $colors["normalNewsColor"]],

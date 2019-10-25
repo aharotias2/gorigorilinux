@@ -101,6 +101,10 @@ function onLoad() {
 
     select(".code").forEach(function(code) {
         var codeName = code.getAttribute("name");
+	var displayName = codeName;
+	if (displayName.charAt(0) == '_') {
+	    displayName = displayName.slice(1, displayName.lastIndexOf("."));
+	}
         var pre = code.select("pre")[0];
         if (codeName != null && codeName.charAt(0) != ".") {
             code.insertBefore(
@@ -108,7 +112,7 @@ function onLoad() {
                     "div", {
                         "class": "code-header"
                     }, [
-                        newElement("h5", {}, [code.getAttribute("name")])
+                        newElement("h5", {}, [displayName])
                     ]
                 ),
                 pre
@@ -356,7 +360,6 @@ function onLoad() {
             });
         };
     });
-    onResize();
 }
 
 function onResize() {
@@ -490,6 +493,7 @@ function onResize() {
 }
 
 window.onload = function() {
+    onResize();
     onLoad();
     syntaxHiliter.executeAll();
 };

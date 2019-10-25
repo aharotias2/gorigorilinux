@@ -16,6 +16,10 @@ var syntaxHiliter = {
         "alias", "if", "then", "else", "elif", "while", "for", "in", "case",
         "do", "done", "fi", "esac", "function", "exit", "source", "export"
     ],
+    valaKeywords: [
+	"bool", "string", "unowned", "weak", "signal", "out", "ref", "connect",
+	"delete", "get", "set"
+    ],
     markUpWithSpan: function(text, keywords, className) {
         var pattern = '(' + keywords.map(e => '\\b' + e + '\\b').join('|') + ')';
         var regex = new RegExp(pattern, 'g');
@@ -53,7 +57,17 @@ var syntaxHiliter = {
             text = text.replace("klass", "class");
 	    break;
         case "vala":
-            text = this.markUpWithSpan(text, this.commonCLikeKeywords, "kw");
+            text = text.split("\n")
+		.map(line => line
+		     .replace(/"([^"]+)"/g, '<span klass="str">"$1"</span>')
+		     .replace(/(\/\/.*)$/, '<span klass="cmt">$1</span>')
+		     .replace(/(\[[A-Z][a-zA-Z0-9_]*\])/, '<span klass="dcv">$1</span>')
+		     .replace(/\b([A-Z][A-Z0-9_]*)\b/g, '<span klass="cnst">$1</span>')
+		     .replace(/\b([A-Z][a-zA-Z0-9_]+)\b/g, '<span klass="cls">$1</span>')
+		     .replace(/\b([a-z][A-Za-z0-9_]*)\(/g, '<span klass="fnc">$1</span>('))
+		.join("\n");
+            text = this.markUpWithSpan(text, this.commonCLikeKeywords.concat(this.commonOOPKeywords).concat(this.valaKeywords), "kw");
+            text = text.replace(/klass/g, "class");
             break;
         case "html":
             text = this.markUpWithSpan(text, this.commonCLikeKeywords, "kw");
@@ -80,15 +94,15 @@ var syntaxHiliter = {
     executeAll: function() {
         var elements = select("div.code");
         for (var i = 0; i < elements.length; i++) {
-            let name = elements[i].getAttribute("name");
-            let pre = elements[i].select("pre")[0];
-            let type = "";
+            var name = elements[i].getAttribute("name");
+            var pre = elements[i].select("pre")[0];
+            var type = "";
             if (name == "ターミナル") {
                 type = "terminal";
             } else {
                 type = name.substring(name.lastIndexOf('.') + 1);
             }
-            let text = pre.innerHTML;
+            var text = pre.innerHTML;
             pre.innerHTML = this.execute(text, type);
 	    pre.select(".str, .cmt, .dcv").forEach(function(elem) {
 		elem.innerHTML = elem.innerHTML.replace(/<[^>]*>/g, '')

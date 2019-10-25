@@ -297,16 +297,10 @@ img.topimage {
  **********************************************************************************************/
 .contents .article h4 {
     color: black;
-    
 }
 
 .contents .article hr {
     margin: 10px 0;
-    
-    
-    
-    
-    
 }
 
 .contents .article h5 {
@@ -436,6 +430,38 @@ img.topimage {
     font-family: Monospace,monospace,mono;
     background-color: #404850;
     color: #D0D8E0;
+}
+
+.article table.diff {
+    border: 0;
+}
+
+.article table.diff thead td {
+    padding: 5px 10px;
+    background-color: mediumseagreen;
+    color: white;
+}
+
+.article table.diff td {
+    margin: 0;
+    padding: 0;
+}
+
+.article table.diff thead td {
+    border: 1px solid mediumseagreen;
+}
+
+.article table.diff tbody td {
+    border: 1px solid #707880;
+}
+
+.article table.diff .code {
+    margin: 0;
+    padding: 0;
+}
+
+.article table.diff .code pre {
+    border-radius: 0 !important;
 }
 
 /**********************************************************************************************
@@ -803,8 +829,8 @@ img.topimage {
  **********************************************************************************************/
 /* キーワード */
 div.code .kw {
-    color: gold;
-    font-weight: normal;
+    color: #c1ab05;
+    font-weight: bold;
 }
 /* 文字列 */
 div.code .str {

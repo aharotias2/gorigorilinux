@@ -44,23 +44,10 @@ bash:~$ sudo systemctl start displaylink-driver [Enter]
 
 まずSlackbuildsからdkmsのSlackBuildファイルをダウンロードしてdkmsをインストールし、その後Ubuntuの時と同じようにドライバをインストールしました。
 その後[SlackDocsの記事](https://docs.slackware.com/howtos:hardware:displaylink)に従ってコマンドを打ちました。
-```ターミナル
-bash:~$ su [Enter]
-bash:~# insmod /lib/modules/4.9.186/kernel/drivers/gpu/drm/evdi/evdi.ko [Enter]
-bash:~# modprobe evdi [Enter]
-bash:~# cd /opt/displaylink [Enter]
-bash:~# ./DisplayLinkManager & [Enter]
-bash:~# exit [Enter]
-bash:~$ xrandr --listproviders [Enter]
-Provider 0: id: 0x49 cap: 0xb, Source Output, Sink Output, Sink Offload crtcs: 4 outputs: 6 associated providers: 0 name:Intel
-Provider 1: id: 0x17a cap: 0x3, Source Output, Sink Output crtcs: 1 outputs: 1 associated providers: 0 name:modesetting
-bash:~$ xrandr --setprovideroutputsource 1 0 [Enter]
-```
-上の最後のコマンドを実行すると止まってしまいました。
 
-![Slackwareで起動して止まっているところ](images/diary/201909/asus-zenscreen-slackware-hang-small.jpg)
-
-う〜ん、何とかならないものでしょうかね。
+[この記事](https://www.phoronix.com/scan.php?page=news_item&px=Linux-USB-Type-C-Port-DP-Driver)によりますと、「TYPEC\_DP\_ALTMODE」という機能拡張がLinuxカーネルの4.19移行に導入されるようです。
+私がこのSlackwareで使っているのは自分でビルドした4.9.186ですので、動かないのは当然ということなのでした。
+しかしむやみにバージョン上げると動かなくなりそうで嫌なんですよね…。
 
 ## 付属品について
 ちなみに、謎のボールペンが付属していました。

@@ -9,11 +9,29 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Mon, 14 Oct 2019 06:34:59 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 22 Oct 2019 10:59:23 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>Valaのメモリ管理 (参照)</title>
+    <link>https://gorigorilinux.net/entry-vala-ownership-and-references</link>
+    <description>Valaはオブジェクト指向プログラミング言語のひとつで、LinuxなどのUnix系・UnixライクなOSで使われている代表的なデスクトップ環境であるGNOMEを構成するGTK+ツールキットを使ったGUIアプリケーションの記述を簡単にできるように設計されています。もちろんGTK+はクロスプラットフォームなのでGNOME以外の環境でも使うことができます。今回はVala言語の仕様の中でも独特で少し難解なメモリ管理方法についてまとめました。Valaのクラスと参照カウントValaではメモリを「参照カウント」によって管理しています。Valaソースでクラスのインスタンスを生成した時には以下のような処理が行われます。クラスからインスタンスを生成する。そのインスタンスの参照カウントを1増やす。インスタンスへの参照を変数に代入する。変数が使われなくなっ...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>プログラミング</category>
+    <guid>https://gorigorilinux.net/entry-vala-ownership-and-references</guid>
+    <pubDate>Tue, 22 Oct 2019 10:50:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>サブのディスプレイを買いました。</title>
+    <link>https://gorigorilinux.net/entry-bought_yoyokit_display</link>
+    <description>ノートパソコンの横でYoutubeを流していたいのでサブ的なディスプレイを買いました。Yoyokit モニター ディスプレイインチ/フルHD/IPS/HDMI/VGA (13.3インチ1080P) | Amazon.co.jp特徴HDMIかVGAによる接続が可能電源はACアダプタ画面は少し光沢あり (ピカピカではないがアンチグレアでもない)フルHDサイズ (1920x1080)評価画質が良いです。13インチフルHDなので画素の粗さは目立ちません。HDMIはノートパソコンに接続してすぐに表示されて良いね。箱から出してすぐに使えた。XFCEだと、サブのディスプレイをノートパソコンの左に置く設定も簡単にできて良い。デザインは可もなく不可もない感じで、ASUSのようなギラついたかっこよさはないですが、別に変でもないですね。スタンドのギミックはよく考えられており、角度の調節がしやすいです。私は縦めの...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>雑文</category>
+    <guid>https://gorigorilinux.net/entry-bought_yoyokit_display</guid>
+    <pubDate>Sat, 19 Oct 2019 19:10:00 GMT</pubDate>
+  </item>
   <item>
     <title>オブジェクト指向の簡単な説明 - 継承・カプセル化・多態性</title>
     <link>https://gorigorilinux.net/entry-inheritance-encapsulation-polymorphism</link>
@@ -187,24 +205,6 @@
     <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
     <category>Linux</category>
     <guid>https://gorigorilinux.net/entry-setupwacom</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>growisofs - DVD-RにISOイメージを焼き込む</title>
-    <link>https://gorigorilinux.net/entry-growisofs</link>
-    <description>growisofsはISOイメージをDVDに書き込むことができるコマンドです。例 growisofs -dvd-compat -Z /dev/sr0 /home/あなた/フォルダ/archlinux-2019.06.01-x86_64.isogrowisofs … コマンド名です。-dvd-compat … DVD-Rに書き込む時はこのオプションを付けます。-Z … DVDに新規書き込みするときのフラグでこの後に続けてデバイスのパス (例:/dev/sr0)を置きます。〜.iso … ISOイメージファイルです。絶対パス、相対パスどちらでも良いです。ISOファイルをダウンロードする下のリンクにはISOファイルの一例としてUbuntuのインストールディスクがあります。Ubuntu Desktop 日本語 Remixのダウンロード | Ubuntu Japanese Team上のサイトのISOイメージをダウンロードします。出力先を決めるDVDを入れますlsblkコマンドでDVDドライブを探します。プロンプト$ lsblk --output=KNAME,LABEL,SIZE,TYPE,MODEL | sortKNAME ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/entry-growisofs</guid>
-    <pubDate>Sat, 22 Jun 2019 03:40:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>我が家のゴールデン・コンビ</title>
-    <link>https://gorigorilinux.net/entry-my-golden-combi</link>
-    <description>おそろいの2台ASUSのVIVOBOOKをまた買いました。TP203Nです。4万以下で買えるので比較的お手ごろです。MacBook Airとよく似ています。今日から我が家のゴールデンコンビです。見た目はMacの方がカッコいいです。写真だと見分けつきませんが。背面です。それにしても良く似ているから一瞬くらいなら人を騙せそうです。Mac使いこなせないからこのVivoBookを何とかMacに見せるしかありません (Mac買った時についてきたAppleステッカーを捨ててしまったことが悔やまれます……)。金のVivoBookの使い道は今考え中です。タブレットモードができるのが良い所。このサイト的にはGNOMEのLinuxを入れてタッチスクリーンの動作を試してみるのを直近の目標とします。金のVivoBook金のVivoBookにManjaro Linux GNOME editionを入れてみました。思ったよりもはるかに簡単過ぎ...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <guid>https://gorigorilinux.net/entry-my-golden-combi</guid>
     <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
 </channel>
