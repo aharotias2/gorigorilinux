@@ -40,7 +40,7 @@ if ($pageKind == "recent") {
         <title><?php print($siteTitle); ?></title>
         <?php include("closed/php/css.php"); ?>
     </head>
-    <body>
+    <body style="visibility:hidden;">
         <?php include($localPrefix . "header.php"); ?>
         <div class="contents">
             <div class="leftpane">

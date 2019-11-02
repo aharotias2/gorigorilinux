@@ -227,7 +227,7 @@ function onLoad() {
 
     select(".latest_article_lite").forEach(function(latest_article_lite) {
         latest_article_lite.onclick = function() {
-            location.href = this.children[0].children[0].href;
+            location.href = this.children[0].children[1].href;
         }
     });
 
@@ -483,6 +483,7 @@ function onResize() {
 
 window.onload = function() {
     onResize();
+    document.body.style.visibility = "visible";
     onLoad();
     syntaxHiliter.executeAll();
 };
@@ -490,3 +491,5 @@ window.onload = function() {
 window.onresize =function() {
     onResize();
 };
+
+

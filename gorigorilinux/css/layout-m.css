@@ -8,7 +8,8 @@
 
 .menu-header {
     height: 50px;
-    background-color: #008899;
+    border-bottom: 2px solid #1068B0;
+    background-color: #404850;
 }
 
 .menubutton {
@@ -68,7 +69,7 @@
 
 .centerpane {
     max-width: 100%;
-    margin: 0px 10px 10px 10px;
+    margin: 0px 0px 0px 0px;
     padding: 0px;
 }
 
@@ -89,7 +90,7 @@
     right: 0px;
     display: none;
     overflow-y: scroll;
-    background-color: rgba(50, 60, 70, 1.0);
+    background-color: white;
 }
 
 .rightpane {
@@ -101,7 +102,7 @@
  * TOC
  **********************************************************************/
 .toc {
-    margin: 10px 12px 20px 12px;
+    margin: 10px 12px 0px 12px;
 }
 
 /**********************************************************************

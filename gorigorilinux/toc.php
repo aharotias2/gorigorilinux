@@ -21,14 +21,6 @@ foreach (explode("/", $category) as $name) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php print($siteTitle); ?></title>
         <?php include("closed/php/css.php"); ?>
-        <style type="text/css">
-         <?php include("css/common.css"); ?>
-         <?php include("css/skin3.css"); ?>
-        </style>
-        <script type="text/javascript">
-         <?php include("js/common.js"); ?>
-         <?php include("js/basic.js"); ?>
-        </script>
     </head>
     <body>
         <?php include($localPrefix . "header.php"); ?>

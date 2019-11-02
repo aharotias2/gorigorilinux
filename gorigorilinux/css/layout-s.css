@@ -87,7 +87,7 @@
     right: 0;
     display: none;
     overflow-y: scroll;
-    background-color: rgba(50, 60, 70, 1.0);
+    background-color: white;
 }
 
 .rightpane {

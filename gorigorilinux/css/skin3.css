@@ -43,8 +43,8 @@ p {
  * ヘッダー
  **********************************************************************************************/
 .header {
-    background-color: #008899;
-    border-bottom: 2px solid #8899AA;
+    background-color: #404850;
+    border-bottom: 2px solid #1068B0;
     color: black;
 }
 
@@ -98,7 +98,7 @@ p {
 
 .contents .nav h3 {
     color: #D0D8E0;
-    background-color: #004455;
+    background-color: #303840;
     padding: 6px 3px 6px 12px;
 }
 
@@ -829,7 +829,7 @@ img.topimage {
  **********************************************************************************************/
 /* キーワード */
 div.code .kw {
-    color: #c1ab05;
+    color: orange;
     font-weight: bold;
 }
 /* 文字列 */

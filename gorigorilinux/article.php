@@ -46,7 +46,7 @@ if ($article->url != null) {
         </script>
         <?php include("closed/php/css.php"); ?>
     </head>
-    <body>
+    <body style="visibility:hidden;">
         <?php include("closed/php/header.php"); ?>
         <div class="contents">
             <div class="leftpane">

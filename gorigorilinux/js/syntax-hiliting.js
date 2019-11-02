@@ -97,16 +97,18 @@ var syntaxHiliter = {
             var name = elements[i].getAttribute("name");
             var pre = elements[i].select("pre")[0];
             var type = "";
-            if (name == "ターミナル") {
-                type = "terminal";
-            } else {
-                type = name.substring(name.lastIndexOf('.') + 1);
-            }
-            var text = pre.innerHTML;
-            pre.innerHTML = this.execute(text, type);
-	    pre.select(".str, .cmt, .dcv").forEach(function(elem) {
-		elem.innerHTML = elem.innerHTML.replace(/<[^>]*>/g, '')
-	    });
+	    if (name != null) {
+		if (name == "ターミナル") {
+                    type = "terminal";
+		} else {
+                    type = name.substring(name.lastIndexOf('.') + 1);
+		}
+		var text = pre.innerHTML;
+		pre.innerHTML = this.execute(text, type);
+		pre.select(".str, .cmt, .dcv").forEach(function(elem) {
+		    elem.innerHTML = elem.innerHTML.replace(/<[^>]*>/g, '')
+		});
+	    }
         }
     }
 };
