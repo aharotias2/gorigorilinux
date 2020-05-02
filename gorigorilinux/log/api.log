@@ -1,18 +1,18 @@
-SCRIPT_NAME: /home/ubuntu-home/public_html/gorigorilinux/get-article-list.php
+SCRIPT_NAME: /home/ta/Public/gorigorilinux/get-article-list.php
 DOCUMENT_ROOT: 
-SERVER_URI: /~ta/gorigorilinux/get-article-list.php?article=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E7%B7%8F%E5%90%88/%E8%B6%85%E5%9F%BA%E6%9C%AC/006_inheritance-encapsulation-polymorphism.md
-cate: プログラミング/プログラミング総合/超基本/006_inheritance-encapsulation-polymorphism.md
-cate: prog/general/01_basic/006_inheritance-encapsulation-polymorphism.md
-path: /home/ubuntu-home/public_html/gorigorilinux/closed/articles/prog/general/01_basic/006_inheritance-encapsulation-polymorphism.md
-filemtime: 2019-10-13-17-30-56
+SERVER_URI: /~ta/gorigorilinux/get-article-list.php?article=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/%E8%87%AA%E4%BD%9C/%E9%9F%B3%E6%A5%BD/001_mpd.md
+cate: アプリケーション/自作/音楽/001_mpd.md
+cate: apps/mine/02_mine_multimedia/001_mpd.md
+path: /home/ta/Public/gorigorilinux/closed/articles/apps/mine/02_mine_multimedia/001_mpd.md
+filemtime: 2019-12-1-22-42-18
 RESULT: {
-    "itemLink": "https://gorigorilinux.net/entry-inheritance-encapsulation-polymorphism", 
+    "itemLink": "https://gorigorilinux.net/entry-mpd", 
     "itemAuthor": "info@singersongwriter.ciao.jp (田中喬之)", 
-    "itemCategory": "プログラミング", 
+    "itemCategory": "アプリケーション", 
     "itemComment": "", 
-    "itemGuid": "https://gorigorilinux.net/entry-inheritance-encapsulation-polymorphism", 
+    "itemGuid": "https://gorigorilinux.net/entry-mpd", 
     "itemSource": "", 
-    "itemTitle": "オブジェクト指向の簡単な説明 - 継承・カプセル化・多態性", 
-    "itemDescription": "今回はオブジェクト指向プログラミングの重要な概念である「カプセル化」「継承」「多態性」についてです。カプセル化だいたいどの仕事でもそうでしょうが、お客さんが知っていないといけない仕事と、お客さんが知らなくて良い仕事があります。お客さんが知らなくて良い仕事の詳細を隠しておくことはお客さんを混乱させずお店をクリーンに整理された状態に見せるために重要です。このことを「カプセル化」と言います。ここに、Bシェルマートというコンビニエンスストアがあるとします。図1はBシェルマート南大塚本店のクラス図です。この図にはBシェルマート南大塚本店の業務が箇条書きにしてあります。この場合、前回の記事で説明したlist: 一覧getNewCart: 新しいカートorder: 注文doRegister: 会計はパブリックなメソッドで、お...", 
-    "itemPubDate": "2019-10-13-17-30-56"
+    "itemTitle": "mpd - MPlayerフロントエンド", 
+    "itemDescription": "mpdはmplayerというマルチメディア再生ソフトのグラフィカルフロントエンドです。現在のところ、音声(音楽)の再生のみに対応しています。モデルとしたのはWindows Storeで公開されているMFPlayerというアプリです。ただ説明なしにいきなり使ってもらえるようなレベルにするのって案外難しいようで開発始めて2年目なのにいまだに微妙なできです…。じゃあ何で発表するのかというといつか発表しようと考えていて、煮詰まってきたからです!アプリの特徴ローカルのファイルシステム上に存在するmp3やFLAC、WAVなどの楽曲ファイルを再生するアプリです。フォルダの中に入っている楽曲をプレイリストとして順番に再生します。フォルダ階層が深い場合、中にある全ての楽曲ファイルを再生します。このフォルダのなかの曲全部再生したい! とい...", 
+    "itemPubDate": "2019-12-1-22-42-18"
 }

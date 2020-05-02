@@ -80,6 +80,7 @@ var syntaxHiliter = {
         case "terminal":
             text = text.split("\n")
                 .map(e => e.replace(/^([^ ]*[\$#])([^!])/g, '<span class="ppt">$1</span>$2')
+		     .replace(/"([^"]+)"/g, '<span klass="str">"$1"</span>')
 		     .replace(/(\$\{?[A-Za-z0-9_]+\}?)/g, '<span class="cls">$1</span>')
 		     .replace(/^(\#\!.*)/, '<span class="dcv">$1</span>'))
                 .join("\n");
@@ -99,7 +100,7 @@ var syntaxHiliter = {
             var type = "";
 	    if (name != null) {
 		if (name == "ターミナル") {
-                    type = "terminal";
+		    type = "text";
 		} else {
                     type = name.substring(name.lastIndexOf('.') + 1);
 		}

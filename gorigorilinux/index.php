@@ -1,4 +1,3 @@
-#!/usr/bin/php-cgi
 <?php
 session_start();
 $localPrefix = "closed/php/";
@@ -40,7 +39,7 @@ if ($pageKind == "recent") {
         <title><?php print($siteTitle); ?></title>
         <?php include("closed/php/css.php"); ?>
     </head>
-    <body style="visibility:hidden;">
+    <body>
         <?php include($localPrefix . "header.php"); ?>
         <div class="contents">
             <div class="leftpane">
@@ -49,6 +48,12 @@ if ($pageKind == "recent") {
                 </div>
                 <?php include("latest-articles.php"); ?>
 		<?php include("about-this-site-list.html"); ?>
+		<div class="nav">
+		    <h3>ツイッター</h3>
+		    <div class="twitter-timeline-div">
+			<a class="twitter-timeline" data-width="250" data-height="700" href="https://twitter.com/goodslacktanaka?ref_src=twsrc%5Etfw">Tweets by goodslacktanaka</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		    </div>
+		</div>
             </div>
             <div class="rightpane">
                 <?php MyHTMLUtils::putHeaderMenu(2); ?>

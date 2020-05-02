@@ -1,4 +1,3 @@
-#!/usr/bin/php-cgi
 <?php
 session_start();
 echo "Content-Type: application/json; charset=utf-8\n\n";

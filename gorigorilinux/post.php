@@ -1,4 +1,3 @@
-#!/usr/bin/php-cgi
 <?php
 /*
  * コメントを投稿する。
@@ -30,8 +29,6 @@ $articleUrl = MyArticleUtils::getUrlFromEntry($articleName);
         <meta http-equiv="refresh" content="0; URL='<?=$articleUrl?>'" />
     </head>
     <body>
-        <?=$articleName?><br>
-        <?=$userName?><br>
-        <?=$articleUrl?>
+	<p>送信中です。</p>
     </body>
 </html>

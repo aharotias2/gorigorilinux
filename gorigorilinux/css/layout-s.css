@@ -9,7 +9,8 @@
 
 .menu-header {
     height: 50px;
-    background-color: #008899;
+    /*border-bottom: 2px solid #1068B0;*/
+    background-color: #404850;
 }
 
 .menubutton {

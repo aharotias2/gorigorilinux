@@ -339,6 +339,7 @@ iframe.google-maps {
     font-size: x-large;
     padding: 8px 30px 8px 24px;
     margin: 20px 0;
+    border-left: 4px solid #909294;
 }
 
 .contents .article h4 img {

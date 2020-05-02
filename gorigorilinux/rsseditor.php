@@ -1,4 +1,3 @@
-#!/usr/bin/php-cgi
 <?php session_start(); ?>
 <?php if ($_SESSION['role'] !== "admin") { ?>
 

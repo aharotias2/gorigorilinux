@@ -9,11 +9,39 @@
   <rating>(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "https://gorigorilinux.net" r (SS~~000 1 SS~~000 1))</rating>
   <copyright>Copyright (C) 2019 - Tanaka Takayuki</copyright>
   <pubDate>Mon, 15 Apr 2019 23:06:07 GMT</pubDate>
-  <lastBuildDate>Tue, 22 Oct 2019 10:59:23 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 01 Dec 2019 13:49:30 GMT</lastBuildDate>
   <category>IT</category>
   <ttl>60</ttl>
   <managingEditor>msg@singersongwriter.ciao.jp (田中喬之)</managingEditor>
   <webMaster>msg@singersongwriter.ciao.jp (田中喬之)</webMaster>
+  <item>
+    <title>mpd - MPlayerフロントエンド</title>
+    <link>https://gorigorilinux.net/entry-mpd</link>
+    <description>mpdはmplayerというマルチメディア再生ソフトのグラフィカルフロントエンドです。現在のところ、音声(音楽)の再生のみに対応しています。モデルとしたのはWindows Storeで公開されているMFPlayerというアプリです。ただ説明なしにいきなり使ってもらえるようなレベルにするのって案外難しいようで開発始めて2年目なのにいまだに微妙なできです…。じゃあ何で発表するのかというといつか発表しようと考えていて、煮詰まってきたからです!アプリの特徴ローカルのファイルシステム上に存在するmp3やFLAC、WAVなどの楽曲ファイルを再生するアプリです。フォルダの中に入っている楽曲をプレイリストとして順番に再生します。フォルダ階層が深い場合、中にある全ての楽曲ファイルを再生します。このフォルダのなかの曲全部再生したい! とい...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>アプリケーション</category>
+    <comments>Linux用自作アプリの紹介です</comments>
+    <guid>https://gorigorilinux.net/entry-mpd</guid>
+    <pubDate>Sun, 01 Dec 2019 13:40:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>SlackwareをインストールしたノートパソコンをWifiのアクセスポイントにする</title>
+    <link>https://gorigorilinux.net/entry-setup-wifi-access-point</link>
+    <description>先日、Amazonから知らない方の差出人で無線ルータがギフトとして贈られてきたんですが、いきなりこんなものもらっても困ると思い、放置しつつ、でもあると便利だよな、自分で買おうかな、と考えていました。しかしよく考えたらスマホではテザリングという機能があってルータ代わりに使えるので、デスクトップLinuxでもできるんじゃないかと思い、調べてやってみたところできましたので記録として公開しておきます。と言いましても、ググりまくった結果、あるサイトの解決方法が効いたというだけなので、そのサイトのほぼ丸写しになってしまいますが。目的デスクトップLinuxをスマホのテザリングのようにWifiアクセスポイントにする。私の使っている環境はSlackware 14.2 64ビットです。hostapdのインストールSlackBuilds.orgに行き、「host...</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>Linux</category>
+    <guid>https://gorigorilinux.net/entry-setup-wifi-access-point</guid>
+    <pubDate>Fri, 15 Nov 2019 17:40:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>tpv - 小さな画像ビューア</title>
+    <link>https://gorigorilinux.net/entry-tpv</link>
+    <description>ちょっとした画像ビューアを作りました。更新履歴2019/11/10 アップロードダウンロードtpv-0.1.tar.gzソースtpv-0.1-src.tar.gzGithubGithub上のページです。tpv | Githubgitでクローンするコマンドです。git clone https://github.com/aharotias2/tpv.git</description>
+    <author>info@singersongwriter.ciao.jp (田中喬之)</author>
+    <category>アプリケーション</category>
+    <guid>https://gorigorilinux.net/entry-tpv</guid>
+    <pubDate>Sun, 10 Nov 2019 09:50:00 GMT</pubDate>
+  </item>
   <item>
     <title>Valaのメモリ管理 (参照)</title>
     <link>https://gorigorilinux.net/entry-vala-ownership-and-references</link>
@@ -177,35 +205,6 @@
     <comments>simplenote</comments>
     <guid>https://gorigorilinux.net/entry-simplenote</guid>
     <pubDate>Fri, 26 Jul 2019 16:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>壁掛け時計買いました</title>
-    <link>https://gorigorilinux.net/entry-my-wallclock</link>
-    <description>池袋のビックカメラで壁掛け時計買いました。セイコークロック株式会社の電波クロックです。このボタンを長押しして時間を調整します。正直ちょっと面倒くさかったです。上手くやれば電波を受信して時間を合わせられるようなんですがね。いずれにしても一度合わせられれば、あとは勝手に時間を調整してくれるようになります。やっぱり壁に時計があると時間を簡単に確認できて良いですね。</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <comments>my-wallclock</comments>
-    <guid>https://gorigorilinux.net/entry-my-wallclock</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>カメラ買ったった</title>
-    <link>https://gorigorilinux.net/entry-my-first-camera</link>
-    <description>カメラ買いました。Nikonのデジタルカメラ「COOLPIX B500」です。3万円くらいでした。軽いです。外ではまだ使ったことがありませんが、結構ズームがしやすいです。これでネットのフリー素材に頼らず写真をブログなどに使えます。やっぱ素材は自分で作んないとですよね……。明日から作品づくりします。</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>雑文</category>
-    <comments>my-first-camera</comments>
-    <guid>https://gorigorilinux.net/entry-my-first-camera</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Wacomタブレットを使えるようにする</title>
-    <link>https://gorigorilinux.net/entry-setupwacom</link>
-    <description>まず、以下のサイトに行き、必要なソースをダウンロードします。The Linux Wacom Projectカーネルドライバー (Kernel Driver) というリンクからGithubのサイトに飛びます。GithubのWikiページに飛ぶので、Codeタブを開きます。GithubのCodeページからReleaseタブを開きます。GithubのReleaseページに飛んだら下にスクロールします。GithubのReleaseをスクロールし、「input-wacom-XXXX.tar.bz2」(XXXXは最新の数字) をクリックしてドライバーのソースをダウンロードします。ソースをダウンロードしたら、以下の手順で解凍、ビルド、インストールを行います。(バージョンが0.43.0の場合)プロンプト$ tar -xf input-wacom-input-wacom-0.43.0.tar.gz [Enter]プロンプト$ cd input-wacom-input-wacom-0.43.0 [Enter]プロンプト$ ./autogen.sh prefix=/usr libdir=/lib64 [Enter]autoreconf: Entering directory `.'autoreconf: configure.ac: not...</description>
-    <author>msg@singersongwriter.ciao.jp (田中喬之)</author>
-    <category>Linux</category>
-    <guid>https://gorigorilinux.net/entry-setupwacom</guid>
-    <pubDate>Wed, 07 Aug 2019 10:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

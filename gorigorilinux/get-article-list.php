@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 echo "Content-type: application/json; charset=utf-8\n\n";
 include("closed/php/functions.php");

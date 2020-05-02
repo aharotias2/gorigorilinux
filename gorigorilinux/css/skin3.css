@@ -44,7 +44,7 @@ p {
  **********************************************************************************************/
 .header {
     background-color: #404850;
-    border-bottom: 2px solid #1068B0;
+    /*border-bottom: 2px solid #1068B0;*/
     color: black;
 }
 
@@ -84,7 +84,7 @@ p {
 }
 
 .contents {
-    /*background-image: url("images/bgsand2.png");*/
+    /*background-image: url("../images/bgsand2.png");*/
     background-color: #F0F4F8;
 }
 
@@ -107,13 +107,13 @@ p {
 }
 
 .contents .nav ul li h4.toc-category {
-    /*background-image: url("images/toch4bg.png");*/
+    /*background-image: url("../images/toch4bg.png");*/
     background-color: #C0C8D0;
     color: #407090;
 }
 
 .contents .nav ul li ul {
-    list-style-image: url('images/listmark1.png');
+    list-style-image: url('../images/listmark1.png');
     list-style-position: inside;
 }
 
@@ -374,7 +374,7 @@ img.topimage {
 }
 
 .contents .article blockquote {
-    background-image: url("images/quote-start.png"), url("images/quote-end.png");
+    background-image: url("../images/quote-start.png"), url("../images/quote-end.png");
     background-repeat: no-repeat, no-repeat;
     background-position: top left, bottom right;
 }
@@ -428,8 +428,11 @@ img.topimage {
 
 .contents .article .sample {
     font-family: Monospace,monospace,mono;
+/*
     background-color: #404850;
     color: #D0D8E0;
+*/
+    border: 2px solid #909294;
 }
 
 .article table.diff {

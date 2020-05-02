@@ -4,7 +4,7 @@ date_default_timezone_set("Asia/Tokyo");
 // 色の設定
 $colors = [
     "prog" => "darkcyan",
-
+    
     "c" => "darkslategray", //slate green
     "cLangColor" => "darkgreen",
 
@@ -22,6 +22,9 @@ $colors = [
     "linuxApp" => "mediumblue",
     "linuxAppsColor" => "darkorange",
 
+    "myApp" => "steelblue",
+    "myAppsColor" => "royalblue",
+    
     "itnews" => "seagreen",
 
     "2019" => "chocolate",
@@ -80,6 +83,10 @@ $translations = [
     ["02_texteditors", "テキストエディタ", $colors["linuxAppsColor"]],
     ["03_multimedia", "マルチメディア", $colors["linuxAppsColor"]],
 
+    ["mine", "自作", $colors["myApp"]],
+    ["01_graphics", "画像系", $colors["myAppsColor"]],
+    ["02_mine_multimedia", "音楽", $colors["myAppsColor"]],
+    
     // ITニュース
     ["itnews", "ITニュース", $colors["itnews"]],
 
